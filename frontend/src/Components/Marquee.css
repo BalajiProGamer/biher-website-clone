@@ -1,0 +1,45 @@
+/* Marquee Container */
+.marquee-container {
+  background-color: white;
+  padding: 0 auto;
+  width: 75%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Marquee Text */
+.marquee-text {
+  font-size: 16px;
+  color: #000;
+  margin-left: 10px;
+}
+
+/* Bell Icon */
+.bell-icon {
+  font-size: 24px;
+  color: yellow;
+  animation: bell-ring 1s infinite;
+}
+
+/* Bell Ring Animation */
+@keyframes bell-ring {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(0); }
+  75% { transform: rotate(-15deg); }
+  100% { transform: rotate(0); }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+  .marquee-container {
+      width: 100%;
+  }
+
+  .marquee-text {
+      font-size: 14px;
+  }
+}

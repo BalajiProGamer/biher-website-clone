@@ -1,0 +1,92 @@
+.career-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.career-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.career-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.career-image {
+  flex: 1;
+}
+
+.career-img {
+  width: 100%;
+  height: auto;
+}
+
+.footer {
+  width: 100%;
+  background-color: #002b5c;
+  color: white;
+  padding: 20px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.social-media a {
+  color: white;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.social-media i {
+  font-size: 20px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.header-text {
+  font-size: 18px;
+}
+
+.home-link {
+  color: inherit;
+  text-decoration: none;
+}

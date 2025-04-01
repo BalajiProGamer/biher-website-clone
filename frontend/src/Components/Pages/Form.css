@@ -1,0 +1,99 @@
+.lms-container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 5px;
+  background: white;
+  text-align: left;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: normal;
+}
+
+.highlight {
+  color: red;
+  font-weight: bold;
+}
+
+.form-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #f8f8f8;
+  padding: 15px;
+  position: relative;
+}
+
+.lms-logo {
+  background: black;
+  color: white;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  width: 150px;
+  text-align: center;
+}
+
+.lms-form {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+select {
+  width: 180px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+select:disabled {
+  background: #e0e0e0;
+}
+
+.admission-banner {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 5px;
+}
+
+.lms-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.lms-table th,
+.lms-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.lms-table th {
+  background: #f0f0f0;
+}
+
+.lms-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: gray;
+}

@@ -1,0 +1,134 @@
+.secondary-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #006599;
+  padding: 10px 20px;
+  /* position:fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0; */
+}
+
+.logo img {
+  height: 80px;
+}
+
+.secondary-nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.secondary-nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.secondary-nav-links a svg {
+  margin-right: 8px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px;
+  display: block;
+  text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.about-content {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.about-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .secondary-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .secondary-nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+  .secondary-nav-links a {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid white; /* Add grid line */
+  }
+  .secondary-nav-links a:last-child {
+    border-bottom: none; /* Remove grid line from the last item */
+  }
+}
+/* Default Dropdown Styling */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  min-width: 200px;
+  z-index: 1000;
+  padding: 10px;
+}
+
+/* Show Dropdown When Hovered (or Clicked, Based on JS) */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Specific Styling for Academics Dropdown */
+.academics-dropdown .dropdown-content {
+  display:none;
+  grid-template-columns:auto(2, 1fr); /* Two columns */
+  grid-template-rows: auto auto; /* Two rows */
+  width: 450px; /* Adjust width */
+  gap: 10px; /* Spacing between grid items */
+  padding: 15px;
+}
+
+/* Each Column in the Academics Dropdown */
+.academics-dropdown .dropdown-content a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  color: black;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.academics-dropdown .dropdown-content a:hover {
+  background: #f0f0f0;
+}
+

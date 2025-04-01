@@ -1,0 +1,70 @@
+/* Sub-menu styling */
+.sub-menu {
+  padding-left: 10px;
+}
+
+.sub-menu li {
+  background: #007bff;
+  padding: 8px;
+  margin: 3px 0;
+  border-radius: 5px;
+}
+
+.sub-menu li:hover {
+  background: #0056b3;
+}
+
+/* Main content styling */
+.vision-container {
+  display: flex;
+}
+
+.vision-content {
+  flex-grow: 2;
+  padding: 20px;
+  background: white;
+  box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.vision-content h2 {
+  font-size: 2rem;
+  color: #003d80;
+  text-align: left;
+  margin-bottom: 20px;
+  border-left: 5px solid #ffc107;
+  padding-left: 15px;
+}
+
+/* Section styles */
+.vision-section,
+.mission-section,
+.values-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #ff5733;
+  border-bottom: 2px solid #ff5733;
+  padding-bottom: 5px;
+}
+
+p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* List styling */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  font-size: 1rem;
+  margin: 8px 0;
+}
