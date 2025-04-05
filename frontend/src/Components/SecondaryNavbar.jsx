@@ -23,8 +23,7 @@ const SecondaryNavbar = () => {
         <img src={logo} alt="Logo" />
       </Link>
       <div className="secondary-nav-links">
-
-        <Link to="/">
+         <Link to="/">
           <FaHome /> Home
         </Link>
 
@@ -98,8 +97,8 @@ const SecondaryNavbar = () => {
             <FaGlobe /> International
           </Link>
           <div className="dropdown-content">
-            <Link to="/international/admission"><FaUserGraduate /> Admissions</Link>
-            <Link to="/international/exchange-program"><FaExchangeAlt /> Exchange Programs</Link>
+            <Link to="/international/admissions"><FaUserGraduate /> Admissions</Link>
+            <Link to="/international/exchange-program"><FaExchangeAlt /> Exchange Program</Link>
             <Link to="/international/higher-studies"><FaUserFriends /> Higher Studies</Link>
             <Link to="/international/other-activities"><FaUsers /> Other Activities</Link>
             <Link to="/international/events"><FaFlag /> Events</Link>

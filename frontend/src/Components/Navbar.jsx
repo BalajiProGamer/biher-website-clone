@@ -23,7 +23,7 @@ const Navbar = () => {
         &#9776;
       </span>
       <div className={menuOpen ? "nav-links show" : "nav-links"}>
-        <Link to="/certification-verification">
+        <Link to="/certificate-verification">
           <FaCertificate /> Certification Verification
         </Link>
         <Link to="/mou">
@@ -42,20 +42,31 @@ const Navbar = () => {
           <FaBriefcase /> Career 
         </Link>
 
-        {/* NAD Dropdown */}
         <Dropdown 
   label="NAD" 
   options={[
-    { label: "NAD Portal", icon: <FaUser />, link: "https://www.digilocker.gov.in/dashboard" }, // External Link
-    { label: "E-Sand Verification", icon: <FaCheckCircle />, link: "https://www.bharathuniv.ac.in/esanad/" } // Internal Link
+    {
+      label: "NAD Portal",
+      icon: <FaUser />,
+      link: "https://www.digilocker.gov.in/dashboard",
+      newTab: true
+    },
+    {
+      label: "E-Sand Verification",
+      icon: <FaCheckCircle />,
+      link: "https://www.bharathuniv.ac.in/esanad/",
+      newTab: true
+    }
   ]}
   icon={<FaUser />} 
   isOpen={activeDropdown === "NAD"}
   onToggle={() => handleDropdownToggle("NAD")}
 />
 
-        {/* Achievement Dropdown */}
-        <Dropdown 
+      
+       
+ {/* Achievement Dropdown */}
+ <Dropdown 
           label="Achievement" 
           options={[
             { label: "Student BiAward", icon: <FaTrophy /> },
@@ -65,18 +76,29 @@ const Navbar = () => {
           isOpen={activeDropdown === "Achievement"}
           onToggle={() => handleDropdownToggle("Achievement")}
         />
-
-        {/* Login Dropdown */}
+        
         <Dropdown 
-          label="Login" 
-          options={[
-            { label: "User Login", icon: <FaUser /> },
-            { label: "Admin Login", icon: <FaUserTie /> }
-          ]}
-          icon={<FaUserTie />} 
-          isOpen={activeDropdown === "Login"}
-          onToggle={() => handleDropdownToggle("Login")}
-        />
+  label="Login" 
+  options={[
+    {
+      label: "User Login",
+      icon: <FaUser />,
+      link: "https://example.com/user-login", // replace with real login URL
+      newTab: true
+    },
+    {
+      label: "Admin Login",
+      icon: <FaUserTie />,
+      link: "https://example.com/admin-login", // replace with real login URL
+      newTab: true
+    }
+  ]}
+  icon={<FaUserTie />} 
+  isOpen={activeDropdown === "Login"}
+  onToggle={() => handleDropdownToggle("Login")}
+/>
+
+ 
 
         <span className="search-icon" onClick={() => setSearchOpen(!searchOpen)}>
           <FaSearch />

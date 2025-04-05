@@ -43,19 +43,29 @@ import NCC from "./Components/Campuslife/Ncc";
 import NSS from "./Components/Campuslife/NSS";
 import RRC from "./Components/Campuslife/RRC";
 import Library from "./Components/Campuslife/Library";
+import Scholarship from "./Components/Campuslife/Scholarship";
+import UBA from "./Components/Campuslife/UBA";
 
-
+import Home from "./Components/ui/Home"; // Import the Home component
+import ImageSlide from "./Components/ImageSlider";
+import Admissions from "./Components/International/Admissions";
+import StudyAbroad from "./Components/Pages/StudyAbroad";
+import Collaboration from "./Components/International/Collaboration"; 
+import HigherStudies from "./Components/International/HigherStudies";
+import ResearchDevelopment from "./Components/Research/ResearchDevelopment";
 
 function App() {
   return (
     <>
-    <Navbar/>
+    
       <SecondaryNavbar />
+      <Navbar />
       
       <Marquee />
       
       <Routes>
-        <Route path="/" element={<CertificationVerification />} />
+      <Route path="/" element={<Home />} /> {/* Home route */}
+        <Route path="/certificate-verification" element={<CertificationVerification />} />
         <Route path="/mou" element={<MOU />} />
         <Route path="/lms" element={<LMS />} />
         <Route path="/iqac" element={<IQAC />} />
@@ -91,6 +101,12 @@ function App() {
        <Route path="/campuslife/NSS" element={<NSS/>}/>
        <Route path="/campuslife/RRC" element={<RRC/>}/>
        <Route path="/campuslife/Library" element={<Library/>}/>
+       <Route path="/campuslife/Scholarship" element={<Scholarship/>}/>
+        <Route path="/campuslife/UBA" element={<UBA/>}/>
+       <Route path="/international/admissions" element={<Admissions/>}/>
+       <Route path="/international/Collaboration" element={<Collaboration/>}/>
+       <Route path="/international/Higher-Studies" element={<HigherStudies/>}/>
+
 
 
 
