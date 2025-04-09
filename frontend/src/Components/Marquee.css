@@ -1,45 +1,53 @@
-/* Marquee Container */
 .marquee-container {
-  background-color: white;
-  padding: 0 auto;
-  width: 75%;
-  margin: 0 auto;
-  box-sizing: border-box;
   display: flex;
   align-items: center;
-  justify-content: center;
+  background-color: #f9f9f9;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
 }
 
-/* Marquee Text */
-.marquee-text {
-  font-size: 16px;
-  color: #000;
-  margin-left: 10px;
-}
-
-/* Bell Icon */
 .bell-icon {
-  font-size: 24px;
-  color: yellow;
-  animation: bell-ring 1s infinite;
+  color: #f39c12;
+  margin-right: 6px;
+  animation: shake 1.5s infinite;
+  transform-origin: center;
 }
 
-/* Bell Ring Animation */
-@keyframes bell-ring {
-  0% { transform: rotate(0); }
-  25% { transform: rotate(15deg); }
-  50% { transform: rotate(0); }
-  75% { transform: rotate(-15deg); }
-  100% { transform: rotate(0); }
+@keyframes shake {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+  75% { transform: rotate(-10deg); }
 }
 
-/* Media Query for Mobile Devices */
-@media (max-width: 600px) {
-  .marquee-container {
-      width: 100%;
-  }
+.notif-label {
+  margin: 0 10px 0 0;
+  font-size: 14px;
+  color: #333;
+}
 
-  .marquee-text {
-      font-size: 14px;
-  }
+.marquee-text {
+  font-size: 15px;
+  color: #000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.announcement {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.gif-icon {
+  height: 20px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.separator {
+  margin: 0 12px;
+  color: #999;
+  font-weight: bold;
 }

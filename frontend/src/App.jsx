@@ -57,13 +57,14 @@ import ResearchDevelopment from "./Components/Research/ResearchDevelopment";
 function App() {
   return (
     <>
+    <Navbar/>
+    <SecondaryNavbar/>
     
-      <SecondaryNavbar />
-      <Navbar />
-      
+
       <Marquee />
+    
       
-      <Routes>
+    <Routes>
       <Route path="/" element={<Home />} /> {/* Home route */}
         <Route path="/certificate-verification" element={<CertificationVerification />} />
         <Route path="/mou" element={<MOU />} />

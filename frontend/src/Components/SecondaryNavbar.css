@@ -1,134 +1,169 @@
+/* Overall navbar layout */
 .secondary-navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: #006599;
-  padding: 10px 20px;
-  /* position:fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0; */
-}
-
-.logo img {
+  justify-content: space-between;
+  background: linear-gradient(to right, #007dbb, #00a9e0);
+  padding: 0 20px;
   height: 80px;
+  position: relative;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
 }
 
+/* Logo alignment (left) */
+.secondary-navbar .logo {
+  display: flex;
+  align-items: center;
+  justify-self: flex-start;
+  flex: 0 0 auto;
+  margin-right: 30px;
+}
+
+.secondary-navbar .logo img {
+  height: 95px;
+  width: auto;
+  margin-left: 80px;
+}
+
+/* Central nav container */
 .secondary-nav-links {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 25px;
+  flex: 1;
 }
 
-.secondary-nav-links a {
+/* Nav item base style */
+.secondary-nav-links a,
+.dropdown .dropdown-label {
   color: white;
   text-decoration: none;
-  padding: 10px 15px;
+  font-weight: 500;
   display: flex;
   align-items: center;
+  gap: 6px;
+  padding: 10px;
+  font-size: 14.5px;
+  transition: all 0.3s ease;
 }
 
-.secondary-nav-links a svg {
-  margin-right: 8px;
+.secondary-nav-links a:hover,
+.dropdown .dropdown-label:hover {
+  color: #ffcc00;
+  cursor: pointer;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-label {
+/* Home icon styling with yellow underline */
+.secondary-nav-links .home-icon-box {
+  background-color: #5f90a5;
+  height: 48px;
+  width: 48px;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  margin-right: 10px;
 }
 
-.dropdown-content {
-  display: none;
+.secondary-nav-links .home-icon-box::after {
+  content: '';
   position: absolute;
-  background-color:white;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: #ffcc00;
 }
 
-.dropdown-content a {
-  color: black;
-  padding: 10px;
-  display: block;
-  text-align: left;
+/* Dropdown basics */
+.dropdown {
+  position: relative;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.about-content {
-  padding: 20px;
-  background-color: #f9f9f9;
-}
-
-.about-content img {
-  max-width: 100%;
-  height: auto;
-}
-
-@media (max-width: 768px) {
-  .secondary-navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .secondary-nav-links {
-    flex-direction: column;
-    width: 100%;
-  }
-  .secondary-nav-links a {
-    width: 100%;
-    text-align: center;
-    border-bottom: 1px solid white; /* Add grid line */
-  }
-  .secondary-nav-links a:last-child {
-    border-bottom: none; /* Remove grid line from the last item */
-  }
-}
-/* Default Dropdown Styling */
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: white;
-  border: 1px solid #ddd;
-  min-width: 200px;
-  z-index: 1000;
-  padding: 10px;
+  top: 100%;
+  left: 0;
+  min-width: 240px;
+  z-index: 999;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 10px 0;
 }
 
-/* Show Dropdown When Hovered (or Clicked, Based on JS) */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Specific Styling for Academics Dropdown */
-.academics-dropdown .dropdown-content {
-  display:none;
-  grid-template-columns:auto(2, 1fr); /* Two columns */
-  grid-template-rows: auto auto; /* Two rows */
-  width: 450px; /* Adjust width */
-  gap: 10px; /* Spacing between grid items */
-  padding: 15px;
-}
-
-/* Each Column in the Academics Dropdown */
-.academics-dropdown .dropdown-content a {
+.dropdown-content a {
+  color: #333;
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 5px 10px;
-  color: black;
   text-decoration: none;
-  transition: background 0.3s ease;
 }
 
-.academics-dropdown .dropdown-content a:hover {
-  background: #f0f0f0;
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
 }
 
+/* Dropdown caret icon */
+.dropdown-label::after {
+  content: " ▾";
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+/* Two-column layout for Academics */
+.dropdown-content.two-column {
+  display: flex;
+  gap: 20px;
+  min-width: 480px;
+}
+
+/* Hamburger menu hidden by default */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 992px) {
+  .secondary-nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #007dbb;
+    padding: 20px 0;
+    z-index: 999;
+  }
+
+  .secondary-navbar.active .secondary-nav-links {
+    display: flex;
+  }
+
+  .dropdown-content {
+    position: relative;
+    box-shadow: none;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

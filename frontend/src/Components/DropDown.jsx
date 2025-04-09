@@ -1,48 +1,24 @@
-// DropDown.js
 import React from "react";
-import "./Dropdown.css";
-import { FaAngleDown } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import "./Navbar.css";
 
-const Dropdown = ({ label, options, icon, isOpen, onToggle }) => {
+const Dropdown = ({ label, icon, options, isOpen, onToggle }) => {
   return (
-    <div className="dropdown">
-      <button className="dropdown-toggle" onClick={onToggle}>
-        {icon} {label} <FaAngleDown className="angle-icon" />
-      </button>
-
+    <div className="dropdown" onMouseEnter={onToggle} onMouseLeave={onToggle}>
+      <div className="dropdown-label">
+        {icon} {label}
+      </div>
       {isOpen && (
-        <div className="dropdown-menu">
-          {options.map((option, index) => {
-            if (option.link) {
-              return option.newTab ? (
-                // Open in new tab
-                <a
-                  key={index}
-                  href={option.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="dropdown-item"
-                >
-                  {option.icon && <span className="dropdown-icon">{option.icon}</span>}
-                  {option.label}
-                </a>
-              ) : (
-                // Internal navigation using Link
-                <Link key={index} to={option.link} className="dropdown-item">
-                  {option.icon && <span className="dropdown-icon">{option.icon}</span>}
-                  {option.label}
-                </Link>
-              );
-            } else {
-              return (
-                <div key={index} className="dropdown-item">
-                  {option.icon && <span className="dropdown-icon">{option.icon}</span>}
-                  {option.label}
-                </div>
-              );
-            }
-          })}
+        <div className="dropdown-content">
+          {options.map((option, index) => (
+            <a
+              key={index}
+              href={option.link}
+              target={option.newTab ? "_blank" : "_self"}
+              rel="noopener noreferrer"
+            >
+              {option.icon} {option.label}
+            </a>
+          ))}
         </div>
       )}
     </div>
