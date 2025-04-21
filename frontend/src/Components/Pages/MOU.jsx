@@ -7,7 +7,7 @@ import './MOU.css';
 const MOU = () => {
   return (
     <div>
-      <h1>MOU</h1>
+      
       <img src="assets/MOU.jpg" alt="MOU" width="100%" height="100%" />
       <p>Content for MOU page.</p>
       <div className="header">

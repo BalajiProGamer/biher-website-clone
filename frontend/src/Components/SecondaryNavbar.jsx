@@ -1,4 +1,4 @@
- import React, { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./SecondaryNavbar.css";
 import logo from "../assets/bharath-logo.png"; // Update path if needed
@@ -11,6 +11,7 @@ import {
   FaPlane, FaSeedling, FaPencilRuler, FaHospital, FaPalette,
   FaAtom, FaRobot, FaCode, FaHardHat, FaTooth, FaBolt,
   FaGavel, FaStethoscope, FaCogs, FaChartLine, FaCapsules,
+  FaChevronDown
 } from "react-icons/fa";
 
 const SecondaryNavbar = () => {
@@ -27,16 +28,15 @@ const SecondaryNavbar = () => {
       </div>
 
       <div className="secondary-nav-links">
-      <Link to="/" className="home-icon-box">
-  <FaHome size={24} color="white" />
-</Link>
-
+        <Link to="/" className="home-icon-box">
+          <FaHome size={24} color="white" />
+        </Link>
 
         {/* About Dropdown */}
         <div className="dropdown">
-          <Link to="/about" className="dropdown-label">
-          About
-          </Link>
+          <span className="dropdown-label">
+            About <FaChevronDown className="dropdown-icon" />
+          </span>
           <div className="dropdown-content">
             <Link to="/about/overview"><FaUsers /> Overview</Link>
             <Link to="/about/leadership"><FaUserTie /> Leadership Team</Link>
@@ -44,15 +44,20 @@ const SecondaryNavbar = () => {
           </div>
         </div>
 
-        <Link to="/admission">
-           Admission
-        </Link>
+        {/* External Admission Link (target blank) */}
+        <a
+          href="https://bharathuniv.ac.in/admission"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Admission
+        </a>
 
         {/* Academics Dropdown */}
-        <div className="dropdown academics-dropdown">
-          <Link to="/academics" className="dropdown-label">
-             Academics
-          </Link>
+        <div className="dropdown">
+          <span className="dropdown-label">
+            Academics <FaChevronDown className="dropdown-icon" />
+          </span>
           <div className="dropdown-content two-column">
             <div>
               <Link to="/academics/aeronautical-engineering"><FaPlane /> Aeronautical Engineering</Link>
@@ -79,9 +84,9 @@ const SecondaryNavbar = () => {
 
         {/* Research Dropdown */}
         <div className="dropdown">
-          <Link to="/research" className="dropdown-label">
-           Research
-          </Link>
+          <span className="dropdown-label">
+            Research <FaChevronDown className="dropdown-icon" />
+          </span>
           <div className="dropdown-content">
             <Link to="/research/academics-research"><FaMicroscope /> Academics Research</Link>
             <Link to="/research/publication"><FaClipboardList /> Publication</Link>
@@ -93,9 +98,9 @@ const SecondaryNavbar = () => {
 
         {/* International Dropdown */}
         <div className="dropdown">
-          <Link to="/international" className="dropdown-label">
-         International
-          </Link>
+          <span className="dropdown-label">
+            International <FaChevronDown className="dropdown-icon" />
+          </span>
           <div className="dropdown-content">
             <Link to="/international/admissions"><FaUserGraduate /> Admissions</Link>
             <Link to="/international/exchange-program"><FaExchangeAlt /> Exchange Program</Link>
@@ -108,9 +113,9 @@ const SecondaryNavbar = () => {
 
         {/* Campus Life Dropdown */}
         <div className="dropdown">
-          <Link to="/campuslife" className="dropdown-label">
-             Campus Life
-          </Link>
+          <span className="dropdown-label">
+            Campus Life <FaChevronDown className="dropdown-icon" />
+          </span>
           <div className="dropdown-content">
             <Link to="/campuslife/NCC"><FaUsers /> NCC</Link>
             <Link to="/campuslife/NSS"><FaUsers /> NSS</Link>

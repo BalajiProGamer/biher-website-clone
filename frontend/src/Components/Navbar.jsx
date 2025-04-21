@@ -11,7 +11,8 @@ import {
   FaTrophy,
   FaUser,
   FaUserTie,
-  FaCheckCircle
+  FaCheckCircle,
+  FaCaretDown
 } from "react-icons/fa";
 
 const Navbar = () => {
@@ -61,7 +62,7 @@ const Navbar = () => {
         {/* NAD Dropdown */}
         <div className="dropdown-container">
           <span onClick={() => handleDropdownToggle("NAD")}>
-            <FaUser /> NAD
+            <FaUser /> NAD<FaCaretDown />
           </span>
           {activeDropdown === "NAD" && (
             <div className="dropdown-menu">
@@ -84,26 +85,35 @@ const Navbar = () => {
         </div>
 
         {/* Achievement Dropdown */}
-        <div className="dropdown-container">
-          <span onClick={() => handleDropdownToggle("Achievement")}>
-            <FaTrophy /> Achievement
-          </span>
-          {activeDropdown === "Achievement" && (
-            <div className="dropdown-menu">
-              <span>
-                <FaTrophy /> Student BiAward
-              </span>
-              <span>
-                <FaUserTie /> Staff Award
-              </span>
-            </div>
-          )}
-        </div>
+<div className="dropdown-container">
+  <span onClick={() => handleDropdownToggle("Achievement")}>
+    <FaTrophy /> Achievement <FaCaretDown />
+  </span>
+  {activeDropdown === "Achievement" && (
+    <div className="dropdown-menu">
+      <a
+        href="https://www.bharathuniv.ac.in/student-achiv.php"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaTrophy /> Student Award
+      </a>
+      <a
+        href="https://www.bharathuniv.ac.in/Staff-Awards.php"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaUserTie /> Staff Award
+      </a>
+    </div>
+  )}
+</div>
+
 
         {/* Login Dropdown */}
         <div className="dropdown-container">
           <span onClick={() => handleDropdownToggle("Login")}>
-            <FaUserTie /> Login
+            <FaUserTie /> Login<FaCaretDown/>
           </span>
           {activeDropdown === "Login" && (
             <div className="dropdown-menu">

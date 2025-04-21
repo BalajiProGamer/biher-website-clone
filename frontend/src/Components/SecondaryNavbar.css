@@ -1,9 +1,9 @@
-/* Overall navbar layout */
+ /* Overall navbar layout */
 .secondary-navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to right, #007dbb, #00a9e0);
+  background: linear-gradient(to right, #004a80, #00b4e0); /* Updated gradient */
   padding: 0 20px;
   height: 80px;
   position: relative;
@@ -58,8 +58,8 @@
 /* Home icon styling with yellow underline */
 .secondary-nav-links .home-icon-box {
   background-color: #5f90a5;
-  height: 48px;
-  width: 48px;
+  height: 38px;
+  width: 38px;
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -81,18 +81,19 @@
 /* Dropdown basics */
 .dropdown {
   position: relative;
+  display: inline-block;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: white;
+  background-color:white;
   top: 100%;
   left: 0;
   min-width: 240px;
   z-index: 999;
   border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 10px 0;
 }
 
@@ -115,7 +116,6 @@
 
 /* Dropdown caret icon */
 .dropdown-label::after {
-  content: " ▾";
   font-size: 12px;
   margin-left: 4px;
 }
@@ -124,7 +124,21 @@
 .dropdown-content.two-column {
   display: flex;
   gap: 20px;
-  min-width: 480px;
+  min-width: 600px;
+  white-space: normal;
+  overflow: hidden;
+}
+
+.dropdown-content.two-column div {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dropdown-content.two-column a {
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 /* Hamburger menu hidden by default */
@@ -145,7 +159,7 @@
     top: 80px;
     left: 0;
     width: 100%;
-    background-color: #007dbb;
+    background-color: #004a80; /* Match left side of gradient for mobile menu */
     padding: 20px 0;
     z-index: 999;
   }
@@ -166,4 +180,11 @@
   .hamburger {
     display: block;
   }
+}
+
+.dropdown-label {
+  cursor: pointer;
+  padding: 10px;
+  color: white;
+  display: block;
 }

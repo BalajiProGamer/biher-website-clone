@@ -15,6 +15,7 @@ const Dropdown = ({ label, icon, options, isOpen, onToggle }) => {
               href={option.link}
               target={option.newTab ? "_blank" : "_self"}
               rel="noopener noreferrer"
+              title={option.label} // Show full label on hover
             >
               {option.icon} {option.label}
             </a>

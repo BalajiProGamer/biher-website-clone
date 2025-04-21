@@ -1,72 +1,72 @@
 .alumni-container {
-    text-align: center;
-  }
-  
-  .image-container {
-    position: relative;
-    width: auto;
-    max-width: 100%; /* Adjust as needed */
-    margin: 0 auto;
-  }
-  
-  .background-image {
-    width: 100%;
-    height: auto;
-    display:flex;
-  }
-  
-  .overlay-image {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30%; /* Adjust size as needed */
-    height: auto;
-    opacity: 1; /* Optional for transparency */
-  }
-  .overlay-text {
-    position: absolute;
-    top: 50%;
-    padding-left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: left;
-    color: white;
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    word-spacing: 30px;
-    ;
-  }
-  .highlight {
-    color: orange; /* Adjust to match your BIHER branding */
-    letter-spacing:3px
-  }
-  
-  .subheading {
-    font-size: 1.5rem;
-    color: #6be2e9; /* Adjust the color */
-    letter-spacing:10px;
-  }
-  .header {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .header-icon {
-    font-size: 24px;
-    margin-right: 10px;
-  }
-  
-  .header-text {
-    font-size: 18px;
-  }
-  
-  .home-link {
-    color: inherit;
-    text-decoration: none;
-  }
+  text-align: center;
+}
+
+.image-container {
+  position: relative;
+  width: auto;
+  max-width: 100%; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+.background-image {
+  width: 100%;
+  height: auto;
+  display:flex;
+}
+
+.overlay-image {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%; /* Adjust size as needed */
+  height: auto;
+  opacity: 1; /* Optional for transparency */
+}
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  padding-left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  word-spacing: 30px;
+  ;
+}
+.highlight {
+  color: orange; /* Adjust to match your BIHER branding */
+  letter-spacing:3px
+}
+
+.subheading {
+  font-size: 1.5rem;
+  color: #6be2e9; /* Adjust the color */
+  letter-spacing:10px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.header-text {
+  font-size: 18px;
+}
+
+.home-link {
+  color: inherit;
+  text-decoration: none;
+}
