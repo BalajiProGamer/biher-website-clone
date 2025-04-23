@@ -32,7 +32,7 @@ const ApprovalSection = () => {
     approvals: {
       display: "flex",
       alignItems: "center",
-      gap: "30px",
+      gap: "150px",
     },
     verticalText: {
       writingMode: "vertical-rl",
@@ -45,7 +45,7 @@ const ApprovalSection = () => {
     logos: {
       display: "flex",
       alignItems: "center",
-      gap: "40px",
+      gap: "99px",
     },
     logoImage: {
       height: "99px",

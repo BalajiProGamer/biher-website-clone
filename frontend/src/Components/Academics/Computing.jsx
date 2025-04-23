@@ -7,7 +7,7 @@ import VisionMission from "../Pages/VisionMission";
 const Computing= () => {
   return (
     <div>
-      <img src={computingimg} alt="Computing" />
+      <img src={computingimg} alt="Computing"  width="100%" />
 
       <div className="header">
         <Link to="/" className="home-link">
