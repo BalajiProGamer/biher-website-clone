@@ -59,6 +59,7 @@ import PageLayout from "./Components/Pages/PageLayout";
 import UniversityPage from "./Components/ui/UniversityPage";
 import CampusDashboard from "./Components/ui/CampusDashboard";
 import FeaturedMedia from "./Components/ui/FeaturedMedia";
+import FixedLandingSection from "./Components/ui/FixedLandingSection";
 
 
  

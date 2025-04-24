@@ -4,6 +4,7 @@ import { FaBell } from "react-icons/fa";
 import newGif from "../assets/newIcon.gif"; // ✅ Make sure this gif is in src/assets
 
 export default function Marquee() {
+  
   return (
     <div className="marquee-container">
       <FaBell className="bell-icon" />

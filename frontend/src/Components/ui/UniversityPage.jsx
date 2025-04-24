@@ -1,228 +1,195 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 
-// 🔽 Importing local images
-import classroomImg from '../../assets/classroom.jpg';
-import fundingImg from '../../assets/funding.jpg';
-import internationalImg from '../../assets/international.jpg';
-import orientationImg from '../../assets/orientation.jpg';
-import careerImg from '../../assets/career.jpg';
-import assessmentImg from '../../assets/assessment.jpg';
+// Import images
+import classroomImg from "../../assets/classroom.jpg";
+import fundingImg from "../../assets/funding.jpg";
+import internationalImg from "../../assets/international.jpg";
+import orientationImg from "../../assets/orientation.jpg";
+import careerImg from "../../assets/career.jpg";
+import assessmentImg from "../../assets/assessment.jpg";
+
+// Import icons
+import { FaChalkboardTeacher, FaFutbol, FaMusic } from "react-icons/fa";
 
 const styles = {
   container: {
-    display: 'flex',
-    fontFamily: 'sans-serif',
+    display: "flex",
+    maxWidth: "1200px",
+    margin: "0 auto",
+    padding: "40px 20px",
+    fontFamily: "Arial, sans-serif",
   },
   sidebar: {
-    width: '25%',
-    backgroundColor: '#f9fafb',
-    borderRight: '1px solid #e5e7eb',
-    padding: '24px',
-    marginLeft: '40px',
-  },
-  sidebarHidden: {
-    transform: 'translateX(-100px)',
-    opacity: 0,
-    transition: 'transform 1s ease, opacity 1s ease',
-  },
-  sidebarVisible: {
-    transform: 'translateX(0)',
-    opacity: 1,
+    width: "30%",
+    backgroundColor: "#f9fafb",
+    padding: "24px",
+    border: "1px solid #e5e7eb",
+    boxShadow: "0 4px 10px rgba(0, 0, 0, 0.05)",
+    marginRight: "24px",
   },
   sidebarTitle: {
-    fontSize: '20px',
-    fontWeight: 'bold',
-    marginBottom: '24px',
-    borderBottom: '1px solid #ccc',
-    paddingBottom: '8px',
-    textTransform: 'uppercase',
+    fontSize: "18px",
+    fontWeight: "700",
+    marginBottom: "24px",
+    color: "#0f172a",
+    borderBottom: "2px solid #ccc",
+    paddingBottom: "8px",
+    textTransform: "uppercase",
   },
   section: {
-    marginBottom: '24px',
+    marginBottom: "24px",
+    borderBottom: "1px solid #ccc",
+    paddingBottom: "16px",
   },
   sectionTitle: {
-    fontSize: '18px',
-    fontWeight: '600',
-    marginBottom: '6px',
+    display: "flex",
+    alignItems: "center",
+    fontSize: "16px",
+    fontWeight: "600",
+    color: "#0f172a",
+    marginBottom: "8px",
+    textTransform: "uppercase",
+  },
+  sectionIcon: {
+    marginRight: "8px",
+    fontSize: "18px",
   },
   sectionText: {
-    fontSize: '14px',
-    color: '#4b5563',
-    marginBottom: '4px',
+    fontSize: "14px",
+    color: "#334155",
+    lineHeight: "1.5",
+    marginBottom: "8px",
   },
   viewMore: {
-    fontSize: '14px',
-    color: '#dc2626',
-    fontWeight: '600',
-    textDecoration: 'none',
+    fontSize: "14px",
+    color: "#b91c1c",
+    textDecoration: "none",
+    fontWeight: "600",
+    float: "right",
   },
   main: {
-    width: '75%',
-    padding: '24px',
-    transition: 'transform 1s ease, opacity 1s ease',
-    transform: 'translateX(100px)',
-    opacity: 0,
-  },
-  mainVisible: {
-    transform: 'translateX(0)',
-    opacity: 1,
+    width: "70%",
   },
   mainTitle: {
-    fontSize: '22px',
-    fontWeight: 'bold',
-    textTransform: 'uppercase',
-    marginBottom: '24px',
-    borderBottom: '1px solid #ccc',
-    paddingBottom: '8px',
+    fontSize: "20px",
+    fontWeight: "800",
+    color: "#1e293b",
+    textTransform: "uppercase",
+    marginBottom: "24px",
+    borderBottom: "2px solid #ccc",
+    paddingBottom: "8px",
   },
   grid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-    gap: '20px',
+    display: "grid",
+    gridTemplateColumns: "repeat(3, 1fr)",
+    gap: "20px",
   },
   card: {
-    display: 'flex',
-    flexDirection: 'column',
-    boxShadow: '0 1px 5px rgba(0,0,0,0.1)',
-    borderRadius: '8px',
-    overflow: 'hidden',
-    backgroundColor: '#fff',
-    position: 'relative',
-    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-    cursor: 'pointer',
-  },
-  cardHover: {
-    transform: 'translateY(-6px)',
-    boxShadow: '0 10px 25px rgba(0, 0, 0, 0.2)',
+    borderRadius: "6px",
+    overflow: "hidden",
+    backgroundColor: "#fff",
+    transition: "all 0.3s ease-in-out",
   },
   cardImage: {
-    width: '100%',
-    height: '130px',
-    objectFit: 'cover',
+    width: "100%",
+    height: "160px",
+    objectFit: "cover",
   },
   cardFooter: {
-    textAlign: 'center',
-    padding: '12px',
-    color: 'white',
-    fontWeight: '600',
+    padding: "12px",
+    textAlign: "center",
+    fontWeight: "700",
+    color: "#fff",
+    fontSize: "14px",
+    textTransform: "uppercase",
+    position: "relative",
   },
   triangle: {
     width: 0,
     height: 0,
-    margin: '0 auto',
-    borderLeft: '10px solid transparent',
-    borderRight: '10px solid transparent',
-    position: 'relative',
-    top: '-1px',
+    borderLeft: "8px solid transparent",
+    borderRight: "8px solid transparent",
+    borderTop: "10px solid",
+    margin: "0 auto",
   },
 };
 
+const SidebarSection = ({ icon, title, text }) => (
+  <div style={styles.section}>
+    <div style={styles.sectionTitle}>
+      <span style={styles.sectionIcon}>{icon}</span>
+      {title}
+    </div>
+    <p style={styles.sectionText}>{text}</p>
+    <a href="#" style={styles.viewMore}>
+      VIEW MORE →
+    </a>
+  </div>
+);
+
+const tiles = [
+  { title: "New Classroom Technology", color: "#f97316", image: classroomImg },
+  { title: "Get Support Funding & Resources", color: "#a21caf", image: fundingImg },
+  { title: "International Students", color: "#6d28d9", image: internationalImg },
+  { title: "New Student Orientation", color: "#1d4ed8", image: orientationImg },
+  { title: "Career Opportunities", color: "#f59e0b", image: careerImg },
+  { title: "Prior Learning Assessment", color: "#16a34a", image: assessmentImg },
+];
+
 const UniversityPage = () => {
-  const [hoverIndex, setHoverIndex] = useState(null);
-  const [mainVisible, setMainVisible] = useState(false);
-  const [sidebarVisible, setSidebarVisible] = useState(false);
-
-  const mainRef = useRef();
-  const sidebarRef = useRef();
-
-  const tiles = [
-    { title: "NEW CLASSROOM TECHNOLOGY", color: "#f97316", image: classroomImg },
-    { title: "GET SUPPORT FUNDING & RESOURCES", color: "#a21caf", image: fundingImg },
-    { title: "INTERNATIONAL STUDENTS", color: "#6d28d9", image: internationalImg },
-    { title: "NEW STUDENT ORIENTATION", color: "#1d4ed8", image: orientationImg },
-    { title: "CAREER OPPORTUNITIES", color: "#fb923c", image: careerImg },
-    { title: "PRIOR LEARNING ASSESSMENT", color: "#16a34a", image: assessmentImg },
-  ];
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const mainTop = mainRef.current?.getBoundingClientRect().top;
-      const sidebarTop = sidebarRef.current?.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-
-      if (mainTop < windowHeight - 100) setMainVisible(true);
-      if (sidebarTop < windowHeight - 100) setSidebarVisible(true);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Trigger once on load
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
     <div style={styles.container}>
-      {/* Sidebar with scroll animation */}
-      <aside
-        ref={sidebarRef}
-        style={{
-          ...styles.sidebar,
-          ...styles.sidebarHidden,
-          ...(sidebarVisible ? styles.sidebarVisible : {}),
-        }}
-      >
-        <h2 style={styles.sidebarTitle}>Campus Life</h2>
-
-        <div style={styles.section}>
-          <h3 style={styles.sectionTitle}>📘 Classroom / Seminar Halls</h3>
-          <p style={styles.sectionText}>
-            BIHER University is renowned for encouraging academic excellence & celebrating high achievement.
-          </p>
-          <a href="#" style={styles.viewMore}>VIEW MORE →</a>
-        </div>
-
-        <div style={styles.section}>
-          <h3 style={styles.sectionTitle}>⚽ Sport</h3>
-          <p style={styles.sectionText}>
-            Sport is enthusiastically celebrated throughout BIHER. Students compete in intercollegiate sports.
-          </p>
-          <a href="#" style={styles.viewMore}>VIEW MORE →</a>
-        </div>
-
-        <div style={styles.section}>
-          <h3 style={styles.sectionTitle}>🎶 Culture</h3>
-          <p style={styles.sectionText}>
-            Musicians, Vocalists, Performers, Debaters, and Dancers can all shine at BIHER University.
-          </p>
-          <a href="#" style={styles.viewMore}>VIEW MORE →</a>
-        </div>
+      {/* Sidebar */}
+      <aside style={styles.sidebar}>
+        <div style={styles.sidebarTitle}>Campus Life</div>
+        <SidebarSection
+          icon={<FaChalkboardTeacher />}
+          title="Classroom / Seminar Halls"
+          text="BIHER University is renowned for encouraging academic excellence & celebrating high achievement."
+        />
+        <SidebarSection
+          icon={<FaFutbol />}
+          title="Sport"
+          text="Sport is enthusiastically celebrated throughout BIHER. Students compete in intercollegiate sports."
+        />
+        <SidebarSection
+          icon={<FaMusic />}
+          title="Culture"
+          text="Musicians, Vocalists, Performers, Debaters and Dancers can all shine at BIHER University."
+        />
       </aside>
 
-      {/* Main Content with scroll animation */}
-      <main
-        ref={mainRef}
-        style={{
-          ...styles.main,
-          ...(mainVisible ? styles.mainVisible : {}),
-        }}
-      >
+      {/* Main Content */}
+      <main style={styles.main}>
         <h1 style={styles.mainTitle}>
           Modern Technologies Demand the Highest Level of Education
         </h1>
-
         <div style={styles.grid}>
-          {tiles.map((tile, index) => (
-            <div
-              key={index}
-              style={{
-                ...styles.card,
-                ...(hoverIndex === index ? styles.cardHover : {}),
-              }}
-              onMouseEnter={() => setHoverIndex(index)}
-              onMouseLeave={() => setHoverIndex(null)}
-            >
-              <img src={tile.image} alt={tile.title} style={styles.cardImage} />
-              <div style={{ ...styles.cardFooter, backgroundColor: tile.color }}>
-                {tile.title}
-              </div>
+          {tiles.map((tile, i) => {
+            const isHovered = hoveredIndex === i;
+            return (
               <div
+                key={i}
                 style={{
-                  ...styles.triangle,
-                  borderTop: `10px solid ${tile.color}`,
+                  ...styles.card,
+                  transform: isHovered ? "scale(1.03)" : "scale(1)",
+                  boxShadow: isHovered
+                    ? "0 8px 16px rgba(0,0,0,0.15)"
+                    : "0 4px 8px rgba(0,0,0,0.05)",
                 }}
-              />
-            </div>
-          ))}
+                onMouseEnter={() => setHoveredIndex(i)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                <img src={tile.image} alt={tile.title} style={styles.cardImage} />
+                <div style={{ ...styles.cardFooter, backgroundColor: tile.color }}>
+                  {tile.title}
+                </div>
+                <div style={{ ...styles.triangle, borderTopColor: tile.color }} />
+              </div>
+            );
+          })}
         </div>
       </main>
     </div>
