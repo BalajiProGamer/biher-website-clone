@@ -1,4 +1,4 @@
- /* Overall navbar layout */
+  /* Overall navbar layout */
 .secondary-navbar {
   display: flex;
   align-items: center;
@@ -18,13 +18,14 @@
   justify-self: flex-start;
   flex: 0 0 auto;
   margin-left: 10px;
-  margin-right: -350px;
+  margin-right: -150px
 }
 
 .secondary-navbar .logo img {
   height: 95px;
   width: auto;
-  margin-left:200px;
+  margin-left:10px;
+  margin-right: 10px;
 }
 
 /* Central nav container */
@@ -66,8 +67,9 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-right: -10px;
+  margin-right: 10px;
   margin-left: 10px;
+  
   
 }
 
@@ -79,7 +81,6 @@
   height: 4px;
   width: 100%;
   background-color: #ffcc00;
-  ;
 }
 
 /* Dropdown basics */
@@ -88,10 +89,12 @@
   display: inline-block;
 }
 
-.dropdown-content {
+/* Default dropdown (single column) */
+.dropdown-content:not(.two-column) {
   display: none;
+  flex-direction: column;
   position: absolute;
-  background-color:white;
+  background-color: white;
   top: 100%;
   left: 0;
   min-width: 240px;
@@ -101,10 +104,34 @@
   padding: 10px 0;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+/* Two-column dropdown (only for Academics) */
+.dropdown-content.two-column {
+  display: none;
+  flex-wrap: wrap;
+  width: 450px; /* Wider for two columns */
+  background-color: white;
+  top: 100%;
+  left: 0;
+  position: absolute;
+  z-index: 999;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  gap: 20px;
 }
 
+.dropdown-content.two-column div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Dropdown link styles */
 .dropdown-content a {
   color: #333;
   padding: 10px 20px;
@@ -123,8 +150,6 @@
   font-size: 12px;
   margin-left: 4px;
 }
-
-
 
 /* Hamburger menu hidden by default */
 .hamburger {
@@ -167,6 +192,7 @@
   }
 }
 
+/* Dropdown label */
 .dropdown-label {
   cursor: pointer;
   padding: 10px;
