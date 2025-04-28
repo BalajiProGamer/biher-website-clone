@@ -17,15 +17,15 @@
   align-items: center;
   justify-self: flex-start;
   flex: 0 0 auto;
-  margin-left: 10px;
-  margin-right: -150px
+  margin-left: 180px;
+  margin-right: -300px
 }
 
 .secondary-navbar .logo img {
   height: 95px;
   width: auto;
-  margin-left:10px;
-  margin-right: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 /* Central nav container */

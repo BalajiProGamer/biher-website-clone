@@ -16,8 +16,6 @@ import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import LmsForm from "./Components/Pages/Form";
 import Admission from "./Components/Pages/Admission";
-import AdmissionContent from "./Components/Pages/Admissioncontent";
-import AdmissionPage from "./Components/Pages/AdmissionPage";
 import AeronauticalEngineering from "./Components/Academics/AeronauticalEngineering";  
 import Agriculture from "./Components/Academics/Agriculture";
 import Architecture from "./Components/Academics/Architecture";
