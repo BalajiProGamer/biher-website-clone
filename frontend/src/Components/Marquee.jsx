@@ -24,6 +24,10 @@ export default function Marquee() {
           <img src={newGif} alt="New" className="gif-icon" />
           Final Year Project Viva Schedule – Engineering Dept (12th April 2025)
         </span>
+        <span className="announcement">
+          <img src={newGif} alt="New" className="gif-icon" />
+          Academic Schedule – U22 & P23 Batch Arts Academic Year 2024–25 Even Term
+        </span>
       </marquee>
     </div>
   );

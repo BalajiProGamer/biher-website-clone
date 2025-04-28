@@ -1,53 +1,48 @@
 .marquee-container {
   display: flex;
-  align-items: center;
-  background-color: #f9f9f9;
-  padding: 8px;
-  border-bottom: 1px solid #ccc;
+  align-items: center;        /* Vertical centering */
+  justify-content: center;    /* Horizontal centering */
+  padding: 10px ;
+  background-color: #f7f7f7;  /* Optional */
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Optional visual polish */
+  gap: 10px;
 }
 
 .bell-icon {
-  color: #f39c12;
-  margin-right: 6px;
-  animation: shake 1.5s infinite;
-  transform-origin: center;
-}
-
-@keyframes shake {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(-10deg); }
-  50% { transform: rotate(10deg); }
-  75% { transform: rotate(-10deg); }
+  color: #f0ad4e;
+  font-size: 18px;
 }
 
 .notif-label {
-  margin: 0 10px 0 0;
+  font-weight: 600;
   font-size: 14px;
-  color: #333;
+  margin: 0;
+  white-space: nowrap;
+  color: #003366;
 }
 
 .marquee-text {
-  font-size: 15px;
+  flex: 1;
+  font-size: 14px;
   color: #000;
-  width: 100%;
-  display: flex;
-  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .announcement {
+  margin: 0 10px;
   display: inline-flex;
   align-items: center;
-  margin-right: 30px;
-}
-
-.gif-icon {
-  height: 20px;
-  margin-right: 6px;
-  vertical-align: middle;
+  gap: 5px;
 }
 
 .separator {
-  margin: 0 12px;
+  margin: 0 15px;
   color: #999;
-  font-weight: bold;
+}
+
+.gif-icon {
+  width: 20px;
+  height: auto;
 }
