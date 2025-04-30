@@ -1,4 +1,4 @@
- import React, { useState } from 'react';
+import React, { useState } from 'react';
 
 const AboutAlumni = () => {
   const [expandedItem, setExpandedItem] = useState(null);
@@ -34,7 +34,7 @@ const AboutAlumni = () => {
       backgroundImage: 'url("../../assets/pattern.jpg")',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      padding: '50px 20px',
+      padding: '40px 20px',
       minHeight: '100vh',
     },
     layout: {
@@ -83,7 +83,7 @@ const AboutAlumni = () => {
       margin: 0,
     },
     sidebarItem: {
-      padding: '12px 16px',
+      padding: '2px 6px',
       borderBottom: '1px solid #eee',
       cursor: 'pointer',
       color: '#003b8e',
@@ -91,6 +91,11 @@ const AboutAlumni = () => {
       justifyContent: 'space-between',
       alignItems: 'center',
       fontSize: '14px',
+      transition: 'background-color 0.3s ease',
+      textDecoration: 'none', // Ensure links are styled properly
+    },
+    sidebarItemHover: {
+      backgroundColor: '#f0f8ff',
     },
     sidebarChild: {
       padding: '10px 24px',
@@ -156,7 +161,9 @@ const AboutAlumni = () => {
               if (typeof item === 'string') {
                 return (
                   <li key={index} style={styles.sidebarItem}>
-                    <span><span style={styles.bullet}>●</span>{item}</span>
+                    <a href={`/${item.replace(/\s+/g, '-').toLowerCase()}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                      <span><span style={styles.bullet}>●</span>{item}</span>
+                    </a>
                   </li>
                 );
               } else {
@@ -170,7 +177,9 @@ const AboutAlumni = () => {
                     {isOpen &&
                       item.children.map((child, childIndex) => (
                         <li key={childIndex} style={styles.sidebarChild}>
-                          {child}
+                          <a href={`/${child.replace(/\s+/g, '-').toLowerCase()}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                            {child}
+                          </a>
                         </li>
                       ))}
                   </React.Fragment>
@@ -199,4 +208,4 @@ const AboutAlumni = () => {
   );
 };
 
-export default AboutAlumni; 
+export default AboutAlumni;
