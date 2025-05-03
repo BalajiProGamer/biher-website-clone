@@ -1,6 +1,7 @@
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
-import 'swiper/css'; 
+import 'swiper/css';
 
 import img from "../../assets/img.jpg";
 import img1 from '../../assets/img1.jpg';
@@ -19,6 +20,12 @@ import FeaturedMedia from './FeaturedMedia';
 import FixedLandingSection from './FixedLandingSection';
 
 export default function AutoSlide() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
   const images = [img1, img2, img3, img4, img5, img6, img7];
 
   const containerStyle = {
@@ -35,15 +42,16 @@ export default function AutoSlide() {
   };
 
   const bannersContainerStyle = {
-    position: 'fixed',           // Keep it fixed
-    top: '50%',                  // Center vertically
-    right: '0',               // Stick to the right side
-    transform: 'translateY(-50%)', // Adjust for perfect centering
-    zIndex: 20,                  // Keep on top
+    position: 'fixed',
+    top: '50%',
+    right: '0',
+    transform: 'translateY(-50%)',
+    zIndex: 20,
     display: 'flex',
     flexDirection: 'column',
     gap: '30px',
   };
+
   const bannerButtonStyle = {
     display: 'flex',
     alignItems: 'center',
@@ -71,9 +79,9 @@ export default function AutoSlide() {
 
   const queryButtonStyle = {
     position: 'fixed',
-    top: '50%',                  // Center vertically
-    left: '0',                   // Stick to the left edge
-    transform: 'translateY(-50%)', // Adjust for perfect centering
+    top: '50%',
+    left: '0',
+    transform: 'translateY(-50%)',
     backgroundColor: '#003566',
     color: 'white',
     padding: '10px 5px',
@@ -86,6 +94,32 @@ export default function AutoSlide() {
     zIndex: 20,
     boxShadow: '2px 2px 8px rgba(0,0,0,0.4)',
     textDecoration: 'none',
+  };
+
+  const modalStyle = {
+    display: isModalOpen ? 'block' : 'none',
+    position: 'fixed',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    zIndex: 1000,
+    backgroundColor: 'white',
+    padding: '20px',
+    borderRadius: '8px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+    width: '90%',
+    maxWidth: '500px',
+  };
+
+  const overlayStyle = {
+    display: isModalOpen ? 'block' : 'none',
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    zIndex: 999,
   };
 
   return (
@@ -114,15 +148,39 @@ export default function AutoSlide() {
         }
       `}</style>
 
+      {/* Overlay */}
+      <div style={overlayStyle} onClick={toggleModal}></div>
+
+      {/* Modal */}
+      <div style={modalStyle}>
+        <button onClick={toggleModal} style={{ float: 'right', cursor: 'pointer' }}>✖</button>
+        <h3>Admission Enquiry</h3>
+        <form>
+          <input type="text" placeholder="Enter Name" required style={{ width: '100%', marginBottom: '10px', padding: '8px' }} />
+          <input type="email" placeholder="Enter Email Address" required style={{ width: '100%', marginBottom: '10px', padding: '8px' }} />
+          <input type="tel" placeholder="Enter Mobile Number" required style={{ width: '100%', marginBottom: '10px', padding: '8px' }} />
+          <select required style={{ width: '100%', marginBottom: '10px', padding: '8px' }}>
+            <option value="">Select State</option>
+            <option value="state1">State 1</option>
+            <option value="state2">State 2</option>
+          </select>
+          <select required style={{ width: '100%', marginBottom: '10px', padding: '8px' }}>
+            <option value="">Select Course</option>
+            <option value="course1">Course 1</option>
+            <option value="course2">Course 2</option>
+          </select>
+          <button type="submit" style={{ width: '100%', padding: '10px', backgroundColor: '#003566', color: 'white', border: 'none', borderRadius: '4px' }}>
+            Submit
+          </button>
+        </form>
+      </div>
+
       {/* Swiper for Auto Sliding */}
       <div style={containerStyle}>
-
-        {/* Online Query Button (fixed left) */}
-        <a 
-          href="https://your-query-form-link.com" 
-          style={queryButtonStyle} 
-          target="_blank" 
-          rel="noopener noreferrer"
+        {/* Online Query Button */}
+        <a
+          onClick={toggleModal}
+          style={queryButtonStyle}
         >
           ONLINE QUERY
         </a>
@@ -130,7 +188,7 @@ export default function AutoSlide() {
         {/*C) */}
         <div style={bannersContainerStyle}>
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfzaEBGmJv5c3Y-73VOkxYr9aaGqgh3L8d9VtOwjFnG0kS2cQ/viewform" 
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfzaEBGmJv5c3Y-73VOkxYr9aaGqgh3L8d9VtOwjFnG0kS2cQ/viewform"
             style={redButtonStyle}
             target="_blank"
             rel="noopener noreferrer"
@@ -138,7 +196,7 @@ export default function AutoSlide() {
             🎓 2025 Admission Open for UG/PG
           </a>
           <a
-            href="https://admissions.bharathuniv.ac.in/" 
+            href="https://admissions.bharathuniv.ac.in/"
             style={blueButtonStyle}
             target="_blank"
             rel="noopener noreferrer"
@@ -161,9 +219,9 @@ export default function AutoSlide() {
         >
           {images.map((img, index) => (
             <SwiperSlide key={index}>
-              <img 
-                src={img} 
-                alt={`Slide ${index + 1}`} 
+              <img
+                src={img}
+                alt={`Slide ${index + 1}`}
                 style={imageStyle}
                 className="slide-image"
               />

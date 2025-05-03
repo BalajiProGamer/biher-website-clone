@@ -1,4 +1,4 @@
-  /* Overall navbar layout */
+ /* Overall navbar layout */
 .secondary-navbar {
   display: flex;
   align-items: center;
@@ -17,23 +17,21 @@
   align-items: center;
   justify-self: flex-start;
   flex: 0 0 auto;
-  margin-left: 180px;
-  margin-right: -300px
+  margin-left: 150px; /* Removed extra margin */
 }
 
 .secondary-navbar .logo img {
-  height: 95px;
+  height: 90px; /* Adjusted height */
   width: auto;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-right: 10px; /* Reduced margin to remove gap */
 }
 
 /* Central nav container */
 .secondary-nav-links {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 45px;
+  justify-content: flex-start; /* Align items to the left */
+  gap: 20px; /* Adjusted gap for spacing */
   flex: 1;
 }
 
@@ -47,7 +45,7 @@
   align-items: center;
   gap: 6px;
   padding: 10px;
-  font-size: 14.5px;
+  font-size: 14px; /* Adjusted font size */
   transition: all 0.3s ease;
 }
 
@@ -67,10 +65,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-right: 10px;
-  margin-left: 10px;
-  
-  
+  margin-right: 15px; /* Reduced margin to remove gap */
 }
 
 .secondary-nav-links .home-icon-box::after {
@@ -81,6 +76,7 @@
   height: 4px;
   width: 100%;
   background-color: #ffcc00;
+  margin-right: 20px;
 }
 
 /* Dropdown basics */
