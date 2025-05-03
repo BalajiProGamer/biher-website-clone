@@ -1,4 +1,4 @@
- import React from 'react';
+import React from 'react';
 import Footer from '../Footer';
 import { FaHome, FaGraduationCap } from "react-icons/fa";
 import { Link } from 'react-router-dom';
@@ -72,7 +72,7 @@ const Alumni = () => {
     },
     banner: {
       position: 'absolute',
-      bottom: '5%',
+  
       right: '5%',
       backgroundColor: '#2ca8df',
       color: 'white',
@@ -128,7 +128,7 @@ const Alumni = () => {
         />
 
         {/* Banner */}
-        <div style={styles.banner}>
+        <div style={{ ...styles.banner, position: 'fixed' }}>
           <FaGraduationCap />
           2025 Admission Open for UG/PG
         </div>
