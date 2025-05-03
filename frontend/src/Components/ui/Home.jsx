@@ -35,12 +35,6 @@ export default function AutoSlide() {
     position: 'relative',
   };
 
-  const imageStyle = {
-    width: '100%',
-    height: '100%',
-    objectFit: 'cover',
-  };
-
   const bannersContainerStyle = {
     position: 'fixed',
     top: '50%',
@@ -124,26 +118,16 @@ export default function AutoSlide() {
 
   return (
     <div style={{ width: '100%' }}>
-      {/* Add Media Query Styles */}
       <style>{`
-        .slide-image {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-
         @media (max-width: 768px) {
-          .slide-image {
+          .slide-container {
             height: 70vh;
-            object-fit: contain;
-            background: #000;
           }
         }
 
         @media (max-width: 480px) {
-          .slide-image {
+          .slide-container {
             height: 60vh;
-            object-fit: contain;
           }
         }
       `}</style>
@@ -176,16 +160,13 @@ export default function AutoSlide() {
       </div>
 
       {/* Swiper for Auto Sliding */}
-      <div style={containerStyle}>
+      <div style={containerStyle} className="slide-container">
         {/* Online Query Button */}
-        <a
-          onClick={toggleModal}
-          style={queryButtonStyle}
-        >
+        <a onClick={toggleModal} style={queryButtonStyle}>
           ONLINE QUERY
         </a>
 
-        {/*C) */}
+        {/* Fixed Banner Buttons */}
         <div style={bannersContainerStyle}>
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSfzaEBGmJv5c3Y-73VOkxYr9aaGqgh3L8d9VtOwjFnG0kS2cQ/viewform"
@@ -219,12 +200,26 @@ export default function AutoSlide() {
         >
           {images.map((img, index) => (
             <SwiperSlide key={index}>
-              <img
-                src={img}
-                alt={`Slide ${index + 1}`}
-                style={imageStyle}
-                className="slide-image"
-              />
+              <div
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  backgroundColor: '#000',
+                }}
+              >
+                <img
+                  src={img}
+                  alt={`Slide ${index + 1}`}
+                  style={{
+                    maxWidth: '100%',
+                    maxHeight: '100%',
+                    objectFit: 'contain',
+                  }}
+                />
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

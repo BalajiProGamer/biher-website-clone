@@ -1,14 +1,28 @@
  /* Overall navbar layout */
+/* Overall navbar layout */
 .secondary-navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: linear-gradient(to right, #004a80, #00b4e0); /* Updated gradient */
   padding: 0 20px;
-  height: 80px;
-  position: relative;
+  height: 90px;
+  position: fixed; /* Fixed position */
+  top: 40px; /* Align directly below the Navbar (match Navbar height) */
+  left: 0;
+  width: 100%;
+  z-index: 999; /* Ensure it stays below the Navbar but above other elements */
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   font-family: 'Arial', sans-serif;
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */ 
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+.secondary-navbar.scrolled {
+  background: #b71c1c; /* Red color when scrolled */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Logo alignment (left) */

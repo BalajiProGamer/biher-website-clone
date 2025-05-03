@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import {
@@ -12,13 +12,14 @@ import {
   FaUser,
   FaUserTie,
   FaCheckCircle,
-  FaCaretDown
+  FaCaretDown,
 } from "react-icons/fa";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [scrolled, setScrolled] = useState(false);
 
   const handleDropdownToggle = (dropdownName) => {
     setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
@@ -26,10 +27,23 @@ const Navbar = () => {
 
   useEffect(() => {
     document.body.style.overflow = searchOpen ? "hidden" : "";
+
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, [searchOpen]);
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <span className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
         &#9776;
       </span>
@@ -85,35 +99,34 @@ const Navbar = () => {
         </div>
 
         {/* Achievement Dropdown */}
-<div className="dropdown-container">
-  <span onClick={() => handleDropdownToggle("Achievement")}>
-    <FaTrophy /> Achievement <FaCaretDown />
-  </span>
-  {activeDropdown === "Achievement" && (
-    <div className="dropdown-menu">
-      <a
-        href="https://www.bharathuniv.ac.in/student-achiv.php"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaTrophy /> Student Award
-      </a>
-      <a
-        href="https://www.bharathuniv.ac.in/Staff-Awards.php"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaUserTie /> Staff Award
-      </a>
-    </div>
-  )}
-</div>
-
+        <div className="dropdown-container">
+          <span onClick={() => handleDropdownToggle("Achievement")}>
+            <FaTrophy /> Achievement <FaCaretDown />
+          </span>
+          {activeDropdown === "Achievement" && (
+            <div className="dropdown-menu">
+              <a
+                href="https://www.bharathuniv.ac.in/student-achiv.php"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaTrophy /> Student Award
+              </a>
+              <a
+                href="https://www.bharathuniv.ac.in/Staff-Awards.php"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaUserTie /> Staff Award
+              </a>
+            </div>
+          )}
+        </div>
 
         {/* Login Dropdown */}
         <div className="dropdown-container">
           <span onClick={() => handleDropdownToggle("Login")}>
-            <FaUserTie /> Login<FaCaretDown/>
+            <FaUserTie /> Login<FaCaretDown />
           </span>
           {activeDropdown === "Login" && (
             <div className="dropdown-menu">

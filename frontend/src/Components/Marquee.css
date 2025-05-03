@@ -1,16 +1,20 @@
-.marquee-container {
+ .marquee-container {
   display: flex;
   align-items: center;        /* Vertical centering */
   justify-content: center;    /* Horizontal centering */
-  padding: 10px ;
-  background-color: #f7f7f7;  /* Optional */
+  padding: 10px;
+  background-color: #f7f7f7;  /* Light background color */
   width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Optional visual polish */
   gap: 10px;
+  position: fixed;            /* Fixed position */
+  top: 120px;                 /* Below Navbar and SecondaryNavbar */
+  left: 0;
+  z-index: 998;               /* Below SecondaryNavbar but above content */
 }
 
 .bell-icon {
-  color: #f0ad4e;
+  color: #f0ad4e; 
   font-size: 18px;
 }
 

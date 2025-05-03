@@ -1,15 +1,27 @@
  /* Navbar container */
 .navbar {
-  background: linear-gradient(to right, #004a80, #00b4e0); /* Exact extracted gradient */
+  background: linear-gradient(to right, #004a80, #00b4e0); /* Default gradient */
   color: #ccc;
-  padding:auto;
+  padding: auto;
   display: flex;
   justify-content: center;
-  position: relative;
+  position: fixed; /* Fixed position */
+  top: 0;
+  left: 0;
+  width: 100%;
   font-family: 'Segoe UI', sans-serif;
   box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.3); /* white shadow */
   overflow: visible;
-  z-index: 1000;
+  z-index: 1000; /* Ensure it stays above other elements */
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+  height: 40px; /* Set a fixed height */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: #b71c1c; /* Red color when scrolled */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* White dotted bottom line */
@@ -51,7 +63,7 @@
   transition: background-color 0.3s ease;
   text-decoration: none;
   gap: 6px;
-  height: 50px;
+  height: 100%;
 }
 
 .nav-links a:last-child,
@@ -85,21 +97,31 @@
   min-width: 200px;
   border-radius: 0 0 6px 6px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box; /* Ensure borders are included in width/height */
+  overflow: hidden; /* Prevent overflow of borders or content */
 }
 
 /* Dropdown links */
 .dropdown-menu a,
 .dropdown-menu span {
   display: block;
-  padding: 8px 16px;
+  padding: 8px 16px; /* Adjust padding for proper alignment */
   color: white;
   text-decoration: none;
   cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Add subtle divider */
+  box-sizing: border-box; /* Include padding and border in size */
+}
+
+.dropdown-menu a:last-child,
+.dropdown-menu span:last-child {
+  border-bottom: none; /* Remove border from the last item */
 }
 
 .dropdown-menu a:hover,
 .dropdown-menu span:hover {
-  background-color:#ffcc00;
+  background-color: #ffcc00; /* Highlight on hover */
+  color: #000; /* Optional: Change text color on hover */
 }
 
 /* Search input box */
@@ -187,8 +209,8 @@ body.search-open {
 .grid-nav > div:last-child {
   border-right: none;
 }
+
 .dropdown-container span svg {
   margin-left: 5px;
   vertical-align: middle;
 }
-
