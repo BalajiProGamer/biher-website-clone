@@ -20,16 +20,27 @@ const Navbar = () => {
   const [searchOpen, setSearchOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [scrolled, setScrolled] = useState(false);
+  const [scrollDirection, setScrollDirection] = useState("up");
 
   const handleDropdownToggle = (dropdownName) => {
     setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
   };
 
   useEffect(() => {
-    document.body.style.overflow = searchOpen ? "hidden" : "";
+    let lastScrollY = window.scrollY;
 
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        setScrollDirection("down");
+      } else {
+        setScrollDirection("up");
+      }
+
+      lastScrollY = currentScrollY;
+
+      if (currentScrollY > 50) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -40,10 +51,14 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [searchOpen]);
+  }, []);
 
   return (
-    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+    <nav
+      className={`navbar ${scrolled ? "scrolled" : ""} ${
+        scrollDirection === "down" ? "hidden" : ""
+      }`}
+    >
       <span className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
         &#9776;
       </span>
@@ -76,7 +91,7 @@ const Navbar = () => {
         {/* NAD Dropdown */}
         <div className="dropdown-container">
           <span onClick={() => handleDropdownToggle("NAD")}>
-            <FaUser /> NAD<FaCaretDown />
+            <FaUser /> NAD <FaCaretDown />
           </span>
           {activeDropdown === "NAD" && (
             <div className="dropdown-menu">
@@ -93,56 +108,6 @@ const Navbar = () => {
                 rel="noopener noreferrer"
               >
                 <FaCheckCircle /> E-Sand Verification
-              </a>
-            </div>
-          )}
-        </div>
-
-        {/* Achievement Dropdown */}
-        <div className="dropdown-container">
-          <span onClick={() => handleDropdownToggle("Achievement")}>
-            <FaTrophy /> Achievement <FaCaretDown />
-          </span>
-          {activeDropdown === "Achievement" && (
-            <div className="dropdown-menu">
-              <a
-                href="https://www.bharathuniv.ac.in/student-achiv.php"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaTrophy /> Student Award
-              </a>
-              <a
-                href="https://www.bharathuniv.ac.in/Staff-Awards.php"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaUserTie /> Staff Award
-              </a>
-            </div>
-          )}
-        </div>
-
-        {/* Login Dropdown */}
-        <div className="dropdown-container">
-          <span onClick={() => handleDropdownToggle("Login")}>
-            <FaUserTie /> Login<FaCaretDown />
-          </span>
-          {activeDropdown === "Login" && (
-            <div className="dropdown-menu">
-              <a
-                href="https://camu.in/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaUser /> User Login
-              </a>
-              <a
-                href="https://alumni.bharathuniv.ac.in/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaUserTie /> Admin Login
               </a>
             </div>
           )}

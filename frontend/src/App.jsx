@@ -1,5 +1,6 @@
  import React from "react";
 import { Routes, Route } from "react-router-dom";
+
 import Navbar from "./Components/Navbar";
 import SecondaryNavbar from "./Components/SecondaryNavbar";
 import CertificationVerification from "./Components/Pages/CertificationVerification";
@@ -15,7 +16,6 @@ import Marquee from "./Components/Marquee";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import LmsForm from "./Components/Pages/Form";
-import Admission from "./Components/Pages/Admission";
 import AeronauticalEngineering from "./Components/Academics/AeronauticalEngineering";  
 import Agriculture from "./Components/Academics/Agriculture";
 import Architecture from "./Components/Academics/Architecture";
@@ -59,6 +59,7 @@ import CampusDashboard from "./Components/ui/CampusDashboard";
 import FeaturedMedia from "./Components/ui/FeaturedMedia";
 import FixedLandingSection from "./Components/ui/FixedLandingSection";
 import AboutAlumni from "./Components/Pages/AboutAlumni";
+import SidebarMenu from "./Components/Pages/SidebarMenu";
 
  
 function App() {
@@ -83,7 +84,7 @@ function App() {
         <Route path="/about/leadership" element={<Leadership />} />
         <Route path="/about/governance" element={<Goverence />} />
         <Route path="/form" element={<LmsForm />} />
-        <Route path="/admission" element={<Admission />} /> 
+        
         <Route path="/academics/aeronautical-engineering" element={<AeronauticalEngineering />} />
         <Route path="/academics/agriculture" element={<Agriculture />} />
         <Route path="/academics/architecture" element={<Architecture />} />
