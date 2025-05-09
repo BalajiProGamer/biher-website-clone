@@ -1,16 +1,22 @@
- .marquee-container {
+.marquee-container {
   display: flex;
-  align-items: center;        /* Vertical centering */
-  justify-content: center;    /* Horizontal centering */
+  align-items: center;
+  justify-content: center;
   padding: 5px;
-  background-color: #f7f7f7;  /* Light background color */
+  background-color: #f7f7f7;
   width: 100%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Optional visual polish */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   gap: 10px;
-  position: fixed;            /* Fixed position */
-  top: 120px;                 /* Below Navbar and SecondaryNavbar */
+  position: fixed;
+  top: 130px; /* Below Navbar and SecondaryNavbar */
   left: 0;
-  z-index: 998;               /* Below SecondaryNavbar but above content */
+  z-index: 998; /* Below SecondaryNavbar but above content */
+  height: 40px; /* Set a fixed height for the Marquee */
+}
+
+/* Add spacing below the Marquee */
+body {
+  margin-top: 170px; /* Navbar (50px) + SecondaryNavbar (80px) + Marquee (40px) */
 }
 
 .bell-icon {

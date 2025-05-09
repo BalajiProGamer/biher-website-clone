@@ -8,7 +8,7 @@
   padding: 0 20px;
   height: 80px;
   position: fixed; /* Fixed position */
-  top: 40px; /* Align directly below the Navbar (match Navbar height) */
+  top: 50px; /* Align directly below the Navbar (match Navbar height) */
   left: 0;
   width: 100%;
   z-index: 999; /* Ensure it stays below the Navbar but above other elements */

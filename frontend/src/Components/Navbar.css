@@ -12,7 +12,7 @@
 
   box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.3); /* white shadow */
   z-index: 1000; /* Ensure it stays above other elements */
-  height: 40px; /* Set a fixed height */
+  height: 50px; /* Set a fixed height */
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
