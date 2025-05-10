@@ -31,59 +31,35 @@ const Navbar = () => {
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY) {
-        setScrollDirection("down");
-      } else {
-        setScrollDirection("up");
-      }
-
+      setScrollDirection(currentScrollY > lastScrollY ? "down" : "up");
       lastScrollY = currentScrollY;
-
-      if (currentScrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(currentScrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <nav
-      className={`navbar ${scrolled ? "scrolled" : ""} ${
-        scrollDirection === "down" ? "hidden" : ""
-      }`}
-    >
-      <span className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
-        &#9776;
-      </span>
+    <nav className={`navbar ${scrolled ? "scrolled" : ""} ${scrollDirection === "down" ? "hidden" : ""}`}>
+      <span className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>&#9776;</span>
 
       <div className={menuOpen ? "nav-links show" : "nav-links"}>
         <Link to="/certificate-verification">
           <FaCertificate /> Certification Verification
         </Link>
-
         <Link to="/mou">
           <FaFileContract /> MOU
         </Link>
-
         <Link to="/lms">
           <FaGraduationCap /> LMS
         </Link>
-
         <Link to="/IQAC">
           <FaUsers /> IQAC
         </Link>
-
         <Link to="/alumni">
           <FaUsers /> Alumni
         </Link>
-
         <Link to="/career">
           <FaBriefcase /> Career
         </Link>
@@ -95,19 +71,48 @@ const Navbar = () => {
           </span>
           {activeDropdown === "NAD" && (
             <div className="dropdown-menu">
-              <a
-                href="https://www.digilocker.gov.in/dashboard"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://www.digilocker.gov.in/dashboard" target="_blank" rel="noopener noreferrer">
                 <FaUser /> NAD Portal
               </a>
-              <a
-                href="https://www.bharathuniv.ac.in/esanad/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://www.bharathuniv.ac.in/esanad/" target="_blank" rel="noopener noreferrer">
                 <FaCheckCircle /> E-Sand Verification
+              </a>
+            </div>
+          )}
+        </div>
+
+        {/* Achievements Dropdown */}
+        <div className="dropdown-container">
+          <span onClick={() => handleDropdownToggle("Achievements")}>
+            <FaTrophy /> Achievements <FaCaretDown />
+          </span>
+          {activeDropdown === "Achievements" && (
+            <div className="dropdown-menu">
+              <a href="https://www.bharathuniv.ac.in/Staff-Awards.php" target="_blank" rel="noopener noreferrer">
+                <FaTrophy /> Staff Award
+              </a>
+              <a href="https://www.bharathuniv.ac.in/student-achiv.php" target="_blank" rel="noopener noreferrer">
+                <FaTrophy /> Student Award
+              </a>
+            </div>
+          )}
+        </div>
+
+        {/* Login Dropdown */}
+        <div className="dropdown-container">
+          <span onClick={() => handleDropdownToggle("Login")}>
+            <FaUserTie /> Login <FaCaretDown />
+          </span>
+          {activeDropdown === "Login" && (
+            <div className="dropdown-menu">
+              <a href="https://camu.in/" target="_blank" rel="noopener noreferrer">
+                <FaUser /> Camu Portal
+              </a>
+              <a href="https://alumni.bharathuniv.ac.in/user/login.dz" target="_blank" rel="noopener noreferrer">
+                <FaUserTie /> Alumni Login
+              </a>
+              <a href="https://ebharath.bharathuniv.ac.in/" target="_blank" rel="noopener noreferrer">
+                <FaUserTie /> Staff Portal
               </a>
             </div>
           )}

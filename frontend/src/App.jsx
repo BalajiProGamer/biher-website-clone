@@ -1,5 +1,5 @@
- import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 import Navbar from "./Components/Navbar";
 import SecondaryNavbar from "./Components/SecondaryNavbar";
@@ -60,20 +60,20 @@ import FeaturedMedia from "./Components/ui/FeaturedMedia";
 import FixedLandingSection from "./Components/ui/FixedLandingSection";
 import AboutAlumni from "./Components/Pages/AboutAlumni";
 import SidebarMenu from "./Components/Pages/SidebarMenu";
+import Banner from './Components/Banner';
 
- 
 function App() {
-  return (
-    <>
-    <Navbar/>
-    <SecondaryNavbar/>
-    
+  const location = useLocation();
 
+  return (
+    <div className="App">
+      {/* Conditionally render Banner only on specific routes */}
+      {location.pathname === '/specific-page' && <Banner />}
+      <Navbar/>
+      <SecondaryNavbar/>
       <Marquee />
-    
-      
-    <Routes>
-      <Route path="/" element={<Home />} /> {/* Home route */}
+      <Routes>
+        <Route path="/" element={<Home />} /> {/* Home route */}
         <Route path="/certificate-verification" element={<CertificationVerification />} />
         <Route path="/mou" element={<MOU />} />
         <Route path="/lms" element={<LMS />} />
@@ -84,7 +84,6 @@ function App() {
         <Route path="/about/leadership" element={<Leadership />} />
         <Route path="/about/governance" element={<Goverence />} />
         <Route path="/form" element={<LmsForm />} />
-        
         <Route path="/academics/aeronautical-engineering" element={<AeronauticalEngineering />} />
         <Route path="/academics/agriculture" element={<Agriculture />} />
         <Route path="/academics/architecture" element={<Architecture />} />
@@ -105,23 +104,18 @@ function App() {
         <Route path="/research/academics-research" element={<AcademicsResearch />} /> {/* Added route */}
         <Route path="/research/Innovation" element={<Innovation />} />
         <Route path="/research/funded-research" element={<FundedResearch/>}/>
-       <Route path="/research/publication" element={<Publication/>} />
-       <Route path="/campuslife/Ncc" element={<NCC/>}/>
-       <Route path="/campuslife/NSS" element={<NSS/>}/>
-       <Route path="/campuslife/RRC" element={<RRC/>}/>
-       <Route path="/campuslife/Library" element={<Library/>}/>
-       <Route path="/campuslife/Scholarship" element={<Scholarship/>}/>
+        <Route path="/research/publication" element={<Publication/>} />
+        <Route path="/campuslife/Ncc" element={<NCC/>}/>
+        <Route path="/campuslife/NSS" element={<NSS/>}/>
+        <Route path="/campuslife/RRC" element={<RRC/>}/>
+        <Route path="/campuslife/Library" element={<Library/>}/>
+        <Route path="/campuslife/Scholarship" element={<Scholarship/>}/>
         <Route path="/campuslife/UBA" element={<UBA/>}/>
-       <Route path="/international/admissions" element={<Admissions/>}/>
-       <Route path="/international/Collaboration" element={<Collaboration/>}/>
-       <Route path="/international/Higher-Studies" element={<HigherStudies/>}/>
-
-
-
-
-        
+        <Route path="/international/admissions" element={<Admissions/>}/>
+        <Route path="/international/Collaboration" element={<Collaboration/>}/>
+        <Route path="/international/Higher-Studies" element={<HigherStudies/>}/>
       </Routes>
-    </>
+    </div>
   );
 }
 

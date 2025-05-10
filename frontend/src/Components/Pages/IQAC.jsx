@@ -4,6 +4,7 @@ import Footer from '../Footer';
 import { FaHome } from "react-icons/fa";
 import './IQAC.css';
 import VisionMission from './VisionMission';
+import Banner from '../Banner'; // Import the Banner component
 
 const IQAC = () => {
   return (
@@ -16,7 +17,7 @@ const IQAC = () => {
         <span className="header-text">BIHER - (IQAC)</span>
       </div> 
       <div>
-        
+        <Banner />
         
         <VisionMission/>
         <Footer />

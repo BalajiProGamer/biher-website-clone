@@ -64,7 +64,7 @@ const LMSForm = () => {
           </div>
         </form>
 
-        <div className="admission-banner">🎓 2025 Admission Open for UG/PG</div>
+        <div className="admission-banner"> </div>
       </div>
 
       <table className="lms-table">

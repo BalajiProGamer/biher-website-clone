@@ -3,6 +3,7 @@ import Footer from '../Footer';
 import CareerPage from './CareerPage';
 import { Link } from 'react-router-dom';
 import { FaHome } from 'react-icons/fa';
+import Banner from '../Banner';
 
 const Career = () => {
   return (
@@ -15,7 +16,7 @@ const Career = () => {
         </Link>
         <span className="header-text">BIHER - (Alumni)</span>
       </div>
-      
+      <Banner />
       <CareerPage />
       <Footer />  
     </div>

@@ -70,24 +70,7 @@ const Alumni = () => {
       fontWeight: '500',
       letterSpacing: '0.05em',
     },
-    banner: {
-      position: 'absolute',
-  
-      right: '5%',
-      backgroundColor: '#2ca8df',
-      color: 'white',
-      padding: '10px 20px',
-      borderRadius: '12px',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      gap: '8px',
-      fontSize: '1rem',
-      fontWeight: '500',
-      whiteSpace: 'nowrap',
-      zIndex: 4,
-      boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)',
-    },
+   
     header: {
       display: 'flex',
       alignItems: 'center',
@@ -127,11 +110,6 @@ const Alumni = () => {
           style={styles.overlayImage}
         />
 
-        {/* Banner */}
-        <div style={{ ...styles.banner, position: 'fixed' }}>
-          <FaGraduationCap />
-          2025 Admission Open for UG/PG
-        </div>
 
         {/* Center Text */}
         <div style={styles.overlayText}>

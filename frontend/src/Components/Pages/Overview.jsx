@@ -1,16 +1,21 @@
-import React from 'react';
+ import React from 'react';
 import bharathIcon from '../../assets/bharathicon1.png';
+import backgroundImage from '../../assets/pattern.jpg'; // ✅ Import background image
 import Footer from '../Footer';
 import SidebarMenu from './SidebarMenu';
+import Header from '../Header';
+import Banner from '../Banner';
 
 const Overview = () => {
   const layoutStyle = {
     display: 'flex',
-    padding: '30px',
-    backgroundColor: '#f9f9f9',
-    backgroundImage: 'url("/path-to-pattern.png")',
+    padding: '99px',
+    backgroundImage: `url(${backgroundImage})`, // ✅ Use imported background image
     backgroundRepeat: 'repeat',
+    backgroundAttachment: 'fixed',
     fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+    minHeight: '100vh',
+    boxSizing: 'border-box',
   };
 
   const sidebarStyle = {
@@ -74,10 +79,15 @@ const Overview = () => {
 
   return (
     <>
+    <Header />
+    
       <div style={layoutStyle}>
         <div style={sidebarStyle}>
           <SidebarMenu />
         </div>
+        <>
+        <Banner />
+        </>
 
         <div style={contentStyle}>
           <div style={headingStyle}>About Us</div>
