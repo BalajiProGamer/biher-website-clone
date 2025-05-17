@@ -1,4 +1,4 @@
- import React, { useState, useEffect } from "react";
+  import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import {
@@ -45,9 +45,11 @@ const Navbar = () => {
       <span className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>&#9776;</span>
 
       <div className={menuOpen ? "nav-links show" : "nav-links"}>
-        <Link to="/certificate-verification">
+        {/* Open in new tab using <a> instead of <Link> */}
+        <a href="https://bharathuniv.directverify.in/student/#/app/request" target="_blank" rel="noopener noreferrer">
           <FaCertificate /> Certification Verification
-        </Link>
+        </a>
+
         <Link to="/mou">
           <FaFileContract /> MOU
         </Link>

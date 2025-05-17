@@ -3,7 +3,6 @@ import { Routes, Route, useLocation } from "react-router-dom";
 
 import Navbar from "./Components/Navbar";
 import SecondaryNavbar from "./Components/SecondaryNavbar";
-import CertificationVerification from "./Components/Pages/CertificationVerification";
 import MOU from "./Components/Pages/MOU";
 import LMS from "./Components/Pages/LMS";
 import IQAC from "./Components/Pages/IQAC";
@@ -40,7 +39,6 @@ import Publication from "./Components/Research/publication";
 import NCC from "./Components/Campuslife/Ncc";
 import NSS from "./Components/Campuslife/NSS";
 import RRC from "./Components/Campuslife/RRC";
-import Library from "./Components/Campuslife/Library";
 import Scholarship from "./Components/Campuslife/Scholarship";
 import UBA from "./Components/Campuslife/UBA";
 
@@ -71,10 +69,10 @@ function App() {
       {location.pathname === '/specific-page' && <Banner />}
       <Navbar/>
       <SecondaryNavbar/>
-      <Marquee />
+     <Marquee/>
+    
       <Routes>
         <Route path="/" element={<Home />} /> {/* Home route */}
-        <Route path="/certificate-verification" element={<CertificationVerification />} />
         <Route path="/mou" element={<MOU />} />
         <Route path="/lms" element={<LMS />} />
         <Route path="/iqac" element={<IQAC />} />
@@ -108,7 +106,6 @@ function App() {
         <Route path="/campuslife/Ncc" element={<NCC/>}/>
         <Route path="/campuslife/NSS" element={<NSS/>}/>
         <Route path="/campuslife/RRC" element={<RRC/>}/>
-        <Route path="/campuslife/Library" element={<Library/>}/>
         <Route path="/campuslife/Scholarship" element={<Scholarship/>}/>
         <Route path="/campuslife/UBA" element={<UBA/>}/>
         <Route path="/international/admissions" element={<Admissions/>}/>

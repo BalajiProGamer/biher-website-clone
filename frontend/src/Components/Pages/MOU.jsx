@@ -2,6 +2,7 @@
 import { Link } from 'react-router-dom';
 import { FaHome, FaList, FaBook } from 'react-icons/fa';
 import Footer from '../Footer';
+import mouBanner from '../../assets/mou.jpg'; // ✅ Correct image path
 
 const MOU = () => {
   return (
@@ -13,9 +14,10 @@ const MOU = () => {
           background: #fff;
         }
 
-        .banner {
+        .mou-banner {
           width: 100%;
-          height: auto;
+          max-height: 300px;
+          object-fit: cover;
         }
 
         .page-wrapper {
@@ -121,8 +123,8 @@ const MOU = () => {
         }
       `}</style>
 
-      {/* Banner Image */}
-      <img className="banner" src="assets/MOU.jpg" alt="MOU Banner" />
+      {/* ✅ Banner Image */}
+      <img src={mouBanner} alt="MOU Banner" className="mou-banner" />
 
       {/* Header */}
       <div className="header">
@@ -132,7 +134,7 @@ const MOU = () => {
         <span className="header-text">BIHER - (MOU)</span>
       </div>
 
-      {/* Main Layout */}
+      {/* Main Content Layout */}
       <div className="page-wrapper">
         {/* Sidebar */}
         <div className="sidebar">
@@ -150,7 +152,7 @@ const MOU = () => {
           </div>
         </div>
 
-        {/* Content */}
+        {/* Main Content */}
         <div className="main-content">
           <div className="content-title">Training & Placement :</div>
           <table className="mou-table">
