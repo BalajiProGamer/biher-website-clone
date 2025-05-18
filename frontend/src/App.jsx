@@ -40,7 +40,12 @@ import NCC from "./Components/Campuslife/Ncc";
 import NSS from "./Components/Campuslife/NSS";
 import RRC from "./Components/Campuslife/RRC";
 import Scholarship from "./Components/Campuslife/Scholarship";
-import UBA from "./Components/Campuslife/UBA";
+import Hostel from "./Components/Campuslife/Hostel"; /* Import Hostel page */ 
+import Library from "./Components/Campuslife/Library";
+
+
+ 
+
 
 import Home from "./Components/ui/Home"; // Import the Home component
 import ImageSlide from "./Components/ImageSlider";
@@ -106,8 +111,9 @@ function App() {
         <Route path="/campuslife/Ncc" element={<NCC/>}/>
         <Route path="/campuslife/NSS" element={<NSS/>}/>
         <Route path="/campuslife/RRC" element={<RRC/>}/>
+        <Route path="/campuslife/Hostel" element={<Hostel/>}/>
+        <Route path="/campuslife/Library" element={<Library/>}/>
         <Route path="/campuslife/Scholarship" element={<Scholarship/>}/>
-        <Route path="/campuslife/UBA" element={<UBA/>}/>
         <Route path="/international/admissions" element={<Admissions/>}/>
         <Route path="/international/Collaboration" element={<Collaboration/>}/>
         <Route path="/international/Higher-Studies" element={<HigherStudies/>}/>

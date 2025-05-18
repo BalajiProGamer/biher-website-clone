@@ -4,12 +4,14 @@ import BgImg from "../../assets/pattern.jpg";
 import Footer from '../Footer';
 import { Link } from "react-router-dom";
 import { FaHome, FaBookOpen, FaThLarge } from "react-icons/fa";
+import Banner from '../Banner';
 
 const NSS = () => {
   return (
     <div>
       {/* Top Banner */}
       <img src={NssImg} alt="NSS Banner" style={{ width: "100%", height: "auto" }} />
+      <Banner/>
 
       {/* Breadcrumb */}
       <div style={{

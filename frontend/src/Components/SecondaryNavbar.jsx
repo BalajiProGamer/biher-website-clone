@@ -144,8 +144,8 @@ const SecondaryNavbar = () => {
 
             <Link to="/campuslife/NCC"><FaUsers /> NCC</Link>
             <Link to="/campuslife/NSS"><FaUsers /> NSS</Link>
-            <Link to="/campuslife/RRC"><FaUsers /> RRC</Link>
-            <Link to="/campuslife/UBA"><FaUsers /> UBA</Link>
+            <Link to="/campuslife/RRC"><FaUsers /> RRC </Link>
+            <Link to="/campuslife/hostel"><FaBuilding /> Hostel</Link>
             <Link to="/campuslife/library"><FaBook /> Library</Link>
             <Link to="/campuslife/scholarship"><FaClipboardList /> Scholarship</Link>
             

@@ -27,20 +27,7 @@ const ResearchDevelopment = () => {
             margin: 0 auto;
           }
 
-          .side-query {
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            background: #003147;
-            color: white;
-            padding: 10px 20px;
-            writing-mode: vertical-rl;
-            text-orientation: upright;
-            font-weight: bold;
-            border-radius: 5px;
-          }
-
+          
           .badge-container {
             position: absolute;
             top: 20px;
@@ -57,13 +44,7 @@ const ResearchDevelopment = () => {
             font-weight: bold;
           }
 
-          .admission-badge {
-            background-color: #3b82f6; /* Blue badge */
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            font-weight: bold;
-          }
+          
 
           @media (max-width: 768px) {
             .research-title {
@@ -84,12 +65,7 @@ const ResearchDevelopment = () => {
       </style>
 
       <div className="research-container">
-        <div className="badge-container">
-          <div className="badge">🎓 AICTE - LOA - EOA</div>
-          <div className="admission-badge">🎓 2025 Admission Open for UG/PG</div>
-        </div>
-
-        <div className="side-query">ONLINE QUERY</div>
+        
 
         <h1 className="research-title">RESEARCH AND DEVELOPMENT CELL</h1>
         <p className="research-text">
