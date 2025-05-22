@@ -2,7 +2,7 @@ import React from "react";
 import pharmacyImg from "../../assets/Pharmacy.jpg"; // Ensure the image path is correct
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
-import VisionMission from "../Pages/VisionMission";
+
 
 const Pharamacy = () => {
   return (
@@ -14,7 +14,7 @@ const Pharamacy = () => {
         </Link>
         <span className="header-text">BIHER - (Pharmacy)</span>
       </div>
-      <VisionMission />
+      
     </div>
   );
 };

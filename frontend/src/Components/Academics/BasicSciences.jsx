@@ -2,7 +2,7 @@ import React from "react";
 import basicsciImg from "../../assets/basicsci.jpg"; // Adjust path if needed
 import { Link } from 'react-router-dom';
 import { FaHome } from 'react-icons/fa';
-import VisionMission from "../Pages/VisionMission";
+
 
 const BasicSciences= () => {
   return (
@@ -14,7 +14,7 @@ const BasicSciences= () => {
         </Link>
         <span className="header-text">BIHER - (Basicscience)</span>
       </div>
-     <VisionMission/>
+     
      
     
     </div>

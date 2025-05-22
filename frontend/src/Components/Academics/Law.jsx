@@ -2,7 +2,7 @@ import React from "react";
 import dentiImg from "../../assets/law.jpg"; // Ensure the image path is correct
 import { Link } from 'react-router-dom';
 import { FaHome } from 'react-icons/fa';
-import VisionMission from "../Pages/VisionMission";
+
 
 const Law = () => {
   return (
@@ -14,7 +14,7 @@ const Law = () => {
         </Link>
         <span className="header-text">BIHER - (Law)</span>
       </div>
-      <VisionMission />
+      
     </div>
   );
 };

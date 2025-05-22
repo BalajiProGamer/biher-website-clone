@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import Footer from '../Footer';
 import { FaHome } from "react-icons/fa";
 import './IQAC.css';
-import VisionMission from './VisionMission';
 import Banner from '../Banner'; // Import the Banner component
 
 const IQAC = () => {
@@ -19,7 +18,7 @@ const IQAC = () => {
       <div>
         <Banner />
         
-        <VisionMission/>
+      
         <Footer />
         
       </div>

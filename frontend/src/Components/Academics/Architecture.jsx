@@ -2,7 +2,7 @@ import React from "react";
 import architectureImg from "../../assets/Architecture.jpg"; // Adjust path if needed
 import { Link } from 'react-router-dom';
 import { FaHome } from 'react-icons/fa';
-import VisionMission from "../Pages/VisionMission";
+
 
 const Architecture= () => {
   return (
@@ -14,7 +14,7 @@ const Architecture= () => {
         </Link>
         <span className="header-text">BIHER - (Architecture)</span>
       </div>
-     <VisionMission/>
+     
      
     
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 import bioImg from "../../assets/bio-eng.jpg"; // Adjust path if needed
 import { Link } from 'react-router-dom';
 import { FaHome } from 'react-icons/fa';
-import VisionMission from "../Pages/VisionMission";
+
 
 const BioEngineering= () => {
   return (
@@ -14,7 +14,7 @@ const BioEngineering= () => {
         </Link>
         <span className="header-text">BIHER - (BioEngineering)</span>
       </div>
-     <VisionMission/>
+     
      
     
     </div>

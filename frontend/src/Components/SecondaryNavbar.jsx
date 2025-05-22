@@ -109,6 +109,8 @@ const SecondaryNavbar = () => {
             <Link to="/research/FIST"><FaLightbulb /> FIST</Link>
             <Link to="/research/innovation"><FaLightbulb /> Innovation</Link>
             <Link to="/research/funded-research"><FaBriefcase /> Funded Research</Link>
+            <Link to="/research/Patent"><FaClipboardList /> Patent</Link>
+
           </div>
         </div>
 
@@ -156,4 +158,4 @@ const SecondaryNavbar = () => {
   );
 };
 
-export default SecondaryNavbar;
+export default SecondaryNavbar; 

@@ -8,9 +8,9 @@ import LMS from "./Components/Pages/LMS";
 import IQAC from "./Components/Pages/IQAC";
 import Alumni from "./Components/Pages/Alumni";
 import Career from "./Components/Pages/Career";
-import Overview from "./Components/Pages/Overview";
-import Leadership from "./Components/Pages/Leadership";
-import Goverence from "./Components/Pages/Goverence";
+import Overview from "./Components/About/Overview";
+import Leadership from "./Components/About/Leadership";
+import Goverence from "./Components/About/Goverence";
 import Marquee from "./Components/Marquee";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
@@ -31,16 +31,19 @@ import Medicine from "./Components/Academics/Medicine"; /* Import Medicine page 
 import Pharamacy from "./Components/Academics/Pharmacy"; /* Import Pharamacy page */
 import MechanicalEngineering from "./Components/Academics/MechanicalEngineering"; /* Import MechanicalEngineering page */
 import ManagementCommerce from "./Components/Academics/ManagementCommerce"; /* Import ManagementCommerce page */
+/* Import Research pages */
 import FIST from "./Components/Research/FIST";
 import AcademicsResearch from "./Components/Research/AcademicsResearch"; /* Import AcademicsResearch page */
 import Innovation from "./Components/Research/Innovation";
 import FundedResearch from "./Components/Research/FundedResearch";
 import Publication from "./Components/Research/publication";
+import Patent from "./Components/Research/Patent";
+/* Import campuslife pages*/
 import NCC from "./Components/Campuslife/Ncc";
 import NSS from "./Components/Campuslife/NSS";
 import RRC from "./Components/Campuslife/RRC";
 import Scholarship from "./Components/Campuslife/Scholarship";
-import Hostel from "./Components/Campuslife/Hostel"; /* Import Hostel page */ 
+import Hostel from "./Components/Campuslife/Hostel"; 
 import Library from "./Components/Campuslife/Library";
 
 
@@ -108,6 +111,7 @@ function App() {
         <Route path="/research/Innovation" element={<Innovation />} />
         <Route path="/research/funded-research" element={<FundedResearch/>}/>
         <Route path="/research/publication" element={<Publication/>} />
+        <Route path="/research/" element={<Patent/>} />
         <Route path="/campuslife/Ncc" element={<NCC/>}/>
         <Route path="/campuslife/NSS" element={<NSS/>}/>
         <Route path="/campuslife/RRC" element={<RRC/>}/>

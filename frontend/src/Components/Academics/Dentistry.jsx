@@ -2,7 +2,7 @@ import React from "react";
 import dentiImg from "../../assets/Dentistry1.jpg"; // Ensure the image path is correct
 import { Link } from 'react-router-dom';
 import { FaHome } from 'react-icons/fa';
-import VisionMission from "../Pages/VisionMission";
+
 
 const Dentistry = () => {
   return (
@@ -14,7 +14,7 @@ const Dentistry = () => {
         </Link>
         <span className="header-text">BIHER - (Densitry)</span>
       </div>
-      <VisionMission />
+      
     </div>
   );
 };

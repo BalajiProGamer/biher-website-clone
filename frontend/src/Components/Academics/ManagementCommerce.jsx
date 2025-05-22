@@ -2,7 +2,7 @@
 import mechImg from "../../assets/management commer.jpg"; // Ensure the image path is correct
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
-import VisionMission from "../Pages/VisionMission";
+
 
 const ManagementCommerce = () => {
   return (
@@ -14,7 +14,7 @@ const ManagementCommerce = () => {
         </Link>
         <span className="header-text">BIHER - (Management Commerce)</span>
       </div>
-      <VisionMission />
+      
     </div>
   );
 };
