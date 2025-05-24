@@ -10,7 +10,10 @@ import Alumni from "./Components/Pages/Alumni";
 import Career from "./Components/Pages/Career";
 import Overview from "./Components/About/Overview";
 import Leadership from "./Components/About/Leadership";
-import Goverence from "./Components/About/Goverence";
+import ExecutiveCouncilMembers from "./Components/About/Goverence/ExecutiveCouncilMembers"; // Import the Executive Council Members component
+import AcademicCouncil from "./Components/About/Goverence/AcademicCouncil"; // Import the Academic Council component
+import FinanceCommittee from "./Components/About/Goverence/FinanceCommittee";
+import Planningmonitoring from "./Components/About/Goverence/Planningmonitoring";
 import Marquee from "./Components/Marquee";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
@@ -86,9 +89,15 @@ function App() {
         <Route path="/iqac" element={<IQAC />} />
         <Route path="/alumni" element={<Alumni />} />
         <Route path="/career" element={<Career />} />
+        /* About pages*/
         <Route path="/about/overview" element={<Overview />} />
         <Route path="/about/leadership" element={<Leadership />} />
-        <Route path="/about/governance" element={<Goverence />} />
+        <Route path="/about/governance/statutory/ExecutiveCouncilMember" element={< ExecutiveCouncilMembers/>} />
+        <Route path="/about/governance/statutory/academiccouncil" element={< AcademicCouncil/>} />
+        <Route path="/about/governance/statutory/financecommittee" element={< FinanceCommittee/>} />
+        <Route path="/about/governance/statutory/ExecutiveCouncilMember" element={< ExecutiveCouncilMembers/>} />
+         <Route path="/about/governance/statutory/planningmonitoring" element={< Planningmonitoring/>} />
+
         <Route path="/form" element={<LmsForm />} />
         <Route path="/academics/aeronautical-engineering" element={<AeronauticalEngineering />} />
         <Route path="/academics/agriculture" element={<Agriculture />} />

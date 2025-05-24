@@ -48,17 +48,52 @@ const SecondaryNavbar = () => {
           <FaHome size={24} color="white" />
         </Link>
 
-        {/* About Dropdown */}
-        <div className="dropdown">
-          <span className="dropdown-label">
-            About <FaChevronDown className="dropdown-icon" />
+         {/* About Dropdown */}
+<div className="dropdown">
+  <span className="dropdown-label">
+    About <FaChevronDown className="dropdown-icon" />
+  </span>
+  <div className="dropdown-content">
+    <Link to="/about/overview"><FaUsers /> Overview</Link>
+    <Link to="/about/leadership"><FaUserTie /> Leadership Team</Link>
+
+    {/* Governance Submenu */}
+    <div className="submenu">
+      <span className="submenu-label">
+        <FaBuilding /> Governance <span className="submenu-icon">{'\u00BB'}</span>
+      </span>
+      <div className="submenu-content">
+        {/* Statutory Bodies Submenu */}
+        <div className="submenu">
+          <span className="submenu-label">
+            Statutory Bodies <span className="submenu-icon">{'\u00BB'}</span>
           </span>
-          <div className="dropdown-content">
-            <Link to="/about/overview"><FaUsers /> Overview</Link>
-            <Link to="/about/leadership"><FaUserTie /> Leadership Team</Link>
-            <Link to="/about/governance"><FaBuilding /> Governance</Link>
+          <div className="submenu-content">
+            <Link to="/about/governance/statutory/ExecutiveCouncilMember">Executive Council Members</Link>
+            <Link to="/about/governance/statutory/academiccouncil">Academic Council</Link>
+            <Link to="/about/governance/statutory/financecommittee">Finance Committee</Link>
+            <Link to="/about/governance/statutory/planningmonitoring">Planning and Monitoring Committee</Link>
           </div>
         </div>
+
+        {/* Non-Statutory */}
+        <div className="submenu">
+          <span className="submenu-label">
+           Non- Statutory Bodies <span className="submenu-icon">{'\u00BB'}</span>
+          </span>
+          <div className="submenu-content">
+            <Link to="/about/governance/statutory/Commmittee">Committee</Link>
+            <Link to="/about/governance/statutory/studentcouncil">Student Council</Link>
+            <Link to="/about/governance/statutory/studentCouncelling">Student Councelling</Link>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <Link to=""><FaUniversity /> Administration</Link>
+  </div>
+</div>
+
 
         {/* External Admission Link (target blank) */}
         <a
@@ -114,20 +149,38 @@ const SecondaryNavbar = () => {
           </div>
         </div>
 
-        {/* International Dropdown */}
-        <div className="dropdown">
-          <span className="dropdown-label">
-            International <FaChevronDown className="dropdown-icon" />
-          </span>
-          <div className="dropdown-content">
-            <Link to="/international/admissions"><FaUserGraduate /> Admissions</Link>
-            <Link to="/international/exchange-program"><FaExchangeAlt /> Exchange Program</Link>
-            <Link to="/international/higher-studies"><FaUserFriends /> Higher Studies</Link>
-            <Link to="/international/other-activities"><FaUsers /> Other Activities</Link>
-            <Link to="/international/events"><FaFlag /> Events</Link>
-            <Link to="/international/collaboration"><FaHandshake /> Collaboration</Link>
-          </div>
-        </div>
+         {/* International Dropdown */}
+<div className="dropdown">
+  <span className="dropdown-label">
+    International <FaChevronDown className="dropdown-icon" />
+  </span>
+  <div className="dropdown-content">
+    {/* Admission with Sub-dropdown */}
+    <div className="submenu">
+      <span className="submenu-label">
+        <FaUserGraduate /> Admissions <span className="submenu-icon">{'\u00BB'}</span>
+      </span>
+      <div className="submenu-content">
+        <Link to="/international/admissions/overview">Overview</Link>
+        <Link to="/international/admissions/eligibility">Eligibility</Link>
+        <Link to="/international/admissions/fees">Programmes and Fees</Link>
+        <Link to="/international/admissions/bank-details">Bank Details for International Students</Link>
+        <Link to="/international/admissions/scholarship">BIHER Scholarship</Link>
+        <Link to="/international/admissions/visa">Student Visa for International Students</Link>
+        <Link to="/international/admissions/offices">Our International Offices</Link>
+        <Link to="/international/admissions/apply">Apply Now</Link>
+      </div>
+    </div>
+
+    {/* Other international links */}
+    <Link to="/international/exchange-program"><FaExchangeAlt /> Exchange Program</Link>
+    <Link to="/international/higher-studies"><FaUserFriends /> Higher Studies</Link>
+    <Link to="/international/other-activities"><FaUsers /> Other Activities</Link>
+    <Link to="/international/events"><FaFlag /> Events</Link>
+    <Link to="/international/collaboration"><FaHandshake /> Collaboration</Link>
+  </div>
+</div>
+
 
         {/* Campus Life Dropdown */}
         <div className="dropdown">
