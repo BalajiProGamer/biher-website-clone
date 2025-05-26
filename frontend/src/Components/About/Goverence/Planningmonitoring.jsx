@@ -1,5 +1,6 @@
 import React from 'react'
 import patternImage from '../../../assets/pattern.jpg'; // Adjust path if needed
+import Footer from '../../Footer'; // Adjust path if needed
 
 const Planningmonitoring = () => {
      const sectionStyle = {
@@ -14,6 +15,7 @@ const Planningmonitoring = () => {
   return (
     <div>
       <div style={sectionStyle}></div>
+      <Footer/>
     </div>
   )
 }
