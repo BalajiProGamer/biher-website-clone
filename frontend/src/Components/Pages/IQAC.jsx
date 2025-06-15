@@ -103,7 +103,30 @@ const IQAC = () => {
 ],
 
     "Maintenance": ["Lab Maintenance", "Infrastructure"],
-    "DVV – Clarification": Array.from({ length: 18 }, (_, i) => `Annexure - ${i + 1}`),
+    
+  "DVV – Clarification": [
+    { title: "Annexure - I", url: "https://www.bharathuniv.ac.in/nirf/DVV%20Clarification/1.3.3%20BOS%20and%20ACM.pdf" },
+    { title: "Annexure - II", url: "https://www.bharathuniv.ac.in/nirf/DVV%20Clarification/1.4.1%20feedback.pdf" },
+    { title: "Annexure - III", url: "https://www.bharathuniv.ac.in/nirf/DVV%20Clarification/2.1.2-quota.pdf" },
+    { title: "Annexure - IV", url: "https://www.bharathuniv.ac.in/nirf/DVV%20Clarification/exp%20certificate.pdf" },
+    { title: "Annexure - V", url: "https://www.bharathuniv.ac.in/nirf/DVV%20Clarification/Phd%20details.pdf" },
+    { title: "Annexure - VI", url: "https://www.bharathuniv.ac.in/nirf/DVV%20Clarification/2.5.3-CAMU%20Exam.pdf" },
+    { title: "Annexure - VII", url: "https://www.bharathuniv.ac.in/nirf/DVV%20Clarification/2.6.2-Final%20yr%20pass.pdf" },
+    { title: "Annexure - VIII", url: "https://www.bharathuniv.ac.in/nirf/DVV%20Clarification/3.1.2.docx" },
+    { title: "Annexure - IX", url: "https://www.bharathuniv.ac.in/nirf/DVV%20Clarification/3.2.2.research%20projects.pdf" },
+    { title: "Annexure - X", url: "https://www.bharathuniv.ac.in/nirf/DVV%20Clarification/3.4.2_Patents.pdf" },
+    { title: "Annexure - XI", url: "https://www.bharathuniv.ac.in/nirf/DVV%20Clarification/3.4.3.xlsx" },
+    { title: "Annexure - XII", url: "https://www.bharathuniv.ac.in/nirf/DVV%20Clarification/3.1.2.docx" },
+    { title: "Annexure - XIII", url: "https://www.bharathuniv.ac.in/nirf/DVV%20Clarification/3.4.6_LMS(2022-23).pdf" },
+    { title: "Annexure - XIV", url: "https://www.bharathuniv.ac.in/nirf/DVV%20Clarification/4.1.2_5Yrs-Infra.pdf" },
+    { title: "Annexure - XV", url: "https://www.bharathuniv.ac.in/nirf/DVV%20Clarification/4.4.1_5Yrs-Maintanence.pdf" },
+    { title: "Annexure - XVI", url: "https://www.bharathuniv.ac.in/nirf/DVV%20Clarification/5.1.4%20Staff%20&%20Students%20Grievances.pdf" },
+    { title: "Annexure - XVII", url: "https://www.bharathuniv.ac.in/nirf/DVV%20Clarification/6.3.2_Audit%20statement_merged_2022-2018_final.pdff" },
+    { title: "Annexure - XVIII", url: "https://www.bharathuniv.ac.in/nirf/DVV%20Clarification/7.1.6-environ.pdf" },
+  ],
+  // ... other categories
+
+
     "Academic Schedule": [
   { label: "Academic Schedule (2023–2024)", pdfUrl: "https://www.bharathuniv.ac.in/AQAR/AQAR-%20academic%20schedule.pdf" }
 ],
@@ -214,8 +237,28 @@ const IQAC = () => {
       </li>
     ))}
   </ul>
+  
+  
+  ):selectedCategory === "DVV – Clarification" ? (
+  <div className="dvv-grid">
+    {contentMap["DVV – Clarification"].map((item, index) => (
+      <a
+        key={index}
+        href={item.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="dvv-item"
+      >
+        <span className="aqar-icon">»</span>
+        <span>{item.title}</span>
+      </a>
+    ))}
+  </div>
 
-) : selectedCategory === "Academic Schedule" ? (
+
+
+
+   ): selectedCategory === "Academic Schedule" ? (
    <ul className="aqar-list">
     {contentMap["Academic Schedule"].map((entry, index) => (
       <li key={index}>
@@ -241,7 +284,7 @@ const IQAC = () => {
 
       <Banner />
     <>
-    <Footer />
+    <Footer />  
     </>
     </div>
   );
