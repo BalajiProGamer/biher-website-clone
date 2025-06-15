@@ -2,22 +2,48 @@
 import { Link } from 'react-router-dom';
 import { FaHome, FaList, FaBook } from 'react-icons/fa';
 import Footer from '../Footer';
-import mouBanner from '../../assets/mou.jpg'; // ✅ Correct image path
+import mouBanner from '../../assets/mou.jpg';
 
 const MOU = () => {
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <style>{`
         body {
           margin: 0;
           font-family: Arial, sans-serif;
           background: #fff;
+          overflow-y: auto;
         }
 
         .mou-banner {
           width: 100%;
           max-height: 300px;
           object-fit: cover;
+          display: block;
+        }
+
+        .header {
+          display: flex;
+          align-items: center;
+          background-color: #f5f5f5;
+          padding: 10px 20px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .home-link {
+          margin-right: 10px;
+          color: #333;
+          text-decoration: none;
+        }
+
+        .header-icon {
+          font-size: 24px;
+        }
+
+        .header-text {
+          font-size: 20px;
+          font-weight: bold;
+          color: #a92a24;
         }
 
         .page-wrapper {
@@ -26,6 +52,7 @@ const MOU = () => {
           display: flex;
           padding: 40px 20px;
           gap: 40px;
+          flex: 1;
         }
 
         .sidebar {
@@ -33,6 +60,7 @@ const MOU = () => {
           box-shadow: 0 8px 16px rgba(0,0,0,0.2);
           border-radius: 12px;
           overflow: hidden;
+          height: fit-content;
         }
 
         .sidebar-header {
@@ -59,6 +87,7 @@ const MOU = () => {
 
         .main-content {
           flex: 1;
+          min-height: 600px;
         }
 
         .content-title {
@@ -97,33 +126,17 @@ const MOU = () => {
           font-weight: 500;
         }
 
-        .header {
-          display: flex;
-          align-items: center;
-          background-color: #f5f5f5;
-          padding: 10px 20px;
-          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-          margin-top: 20px;
-        }
-
-        .home-link {
-          margin-right: 10px;
-          color: #333;
-          text-decoration: none;
-        }
-
-        .header-icon {
-          font-size: 24px;
-        }
-
-        .header-text {
-          font-size: 20px;
-          font-weight: bold;
-          color: #a92a24;
+        .footer-wrapper {
+          margin-top: auto;
         }
       `}</style>
 
-      {/* ✅ Banner Image */}
+      {/* Marquee Section (optional if you need it) */}
+      <marquee style={{ backgroundColor: "#ffe", padding: "10px", color: "#a92a24", fontWeight: "bold" }}>
+        Notification & Latest Exam Result: Academic Schedule – U22 & P23 Batch Arts Academic Year 2024–25 Even Term
+      </marquee>
+
+      {/* Banner Image */}
       <img src={mouBanner} alt="MOU Banner" className="mou-banner" />
 
       {/* Header */}
@@ -134,7 +147,7 @@ const MOU = () => {
         <span className="header-text">BIHER - (MOU)</span>
       </div>
 
-      {/* Main Content Layout */}
+      {/* Main Layout */}
       <div className="page-wrapper">
         {/* Sidebar */}
         <div className="sidebar">
@@ -152,7 +165,7 @@ const MOU = () => {
           </div>
         </div>
 
-        {/* Main Content */}
+        {/* Content */}
         <div className="main-content">
           <div className="content-title">Training & Placement :</div>
           <table className="mou-table">
@@ -221,7 +234,9 @@ const MOU = () => {
       </div>
 
       {/* Footer */}
-      <Footer />
+      <div className="footer-wrapper">
+        <Footer />
+      </div>
     </div>
   );
 };

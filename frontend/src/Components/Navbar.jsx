@@ -1,6 +1,6 @@
   import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
+import "../styles/global.css";
 import {
   FaCertificate,
   FaFileContract,
@@ -72,15 +72,16 @@ const Navbar = () => {
             <FaUser /> NAD <FaCaretDown />
           </span>
           {activeDropdown === "NAD" && (
-            <div className="dropdown-menu">
-              <a href="https://www.digilocker.gov.in/dashboard" target="_blank" rel="noopener noreferrer">
-                <FaUser /> NAD Portal
-              </a>
-              <a href="https://www.bharathuniv.ac.in/esanad/" target="_blank" rel="noopener noreferrer">
-                <FaCheckCircle /> E-Sand Verification
-              </a>
-            </div>
-          )}
+          <div className="dropdown-menu show"> {/* <--- ADD 'show' here */}
+        <a href="https://www.digilocker.gov.in/dashboard" target="_blank" rel="noopener noreferrer">
+        <FaUser /> NAD Portal
+        </a>
+        <a href="https://www.bharathuniv.ac.in/esanad/" target="_blank" rel="noopener noreferrer">
+        <FaCheckCircle /> E-Sand Verification
+       </a>
+       </div>
+    )}
+
         </div>
 
         {/* Achievements Dropdown */}

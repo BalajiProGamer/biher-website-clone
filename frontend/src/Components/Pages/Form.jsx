@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Form.css"; // Import CSS for styling
+import "../../styles/global.css"; // Import CSS for styling
 
 const courseOptions = {
   "CSE": ["AI & ML", "Cybersecurity", "Data Science","Computer Vision","Cloud Computing","Web Technology","Software Engineering","Networks security","web security"],

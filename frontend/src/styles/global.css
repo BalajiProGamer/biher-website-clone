@@ -1,0 +1,644 @@
+ /* Navbar container */
+.navbar {
+  background: linear-gradient(to right, #004a80, #00b4e0);
+  color: #ccc;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.3);
+  z-index: 1000;
+  height: 38px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.navbar.scrolled {
+  background: #b71c1c;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Dotted line inside navbar */
+.navbar::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px dotted #ccc;
+  opacity: 0.6;
+  z-index: 10;
+}
+
+/* Nav links container */
+.nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 100%;
+  overflow-x: visible;
+}
+
+/* Each nav item */
+.nav-links a,
+.dropdown-container > span,
+.search-icon {
+  border-left: 1px solid #ccc;
+  padding: 0px 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  gap: 6px;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+/* Last nav item right border removed */
+.nav-links a:last-child,
+.dropdown-container:last-child > span,
+.search-icon:last-child {
+  border-right: none;
+}
+
+/* Hover effect */
+.nav-links a:hover,
+.dropdown-container > span:hover,
+.search-icon:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dropdown container aligned to navbar */
+.dropdown-container {
+  position: relative;
+  height: 38px;
+  display: flex;
+  align-items: center;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid black;
+  padding: 0;
+  z-index: 999;
+  min-width: 240px;
+  border-radius: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.dropdown-menu.show::before,
+.dropdown-menu.show::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dropdown-menu.show::before {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white; /* Dropdown background color */
+  z-index: 2;
+}
+
+.dropdown-menu.show::after {
+  top: -11px;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-bottom: 11px solid ; /* Shadow or border */
+  z-index: 1;
+}
+.dropdown-container {
+  position: relative;
+}
+
+
+/* Dropdown items */
+.dropdown-menu a,
+.dropdown-menu span {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+  background-color: #004a80;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-menu a:last-child,
+.dropdown-menu span:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu span:hover {
+  background-color: #fbc02d;
+  color: white;
+}
+
+/* Icon spacing */
+.dropdown-menu svg {
+  flex-shrink: 0;
+  font-size: 16px;
+}
+
+/* Scrolled navbar override styles */
+.navbar.scrolled .dropdown-menu {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.navbar.scrolled .dropdown-menu a,
+.navbar.scrolled .dropdown-menu span {
+  color: black;
+  background-color: white;
+  font-weight: 500;
+}
+
+.navbar.scrolled .dropdown-menu a:hover,
+.navbar.scrolled .dropdown-menu span:hover {
+  background-color: #b71c1c;
+  color: #000;
+}
+
+/* Search input */
+.search-box {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  background-color: white;
+  padding: 4px 8px; 
+  border-radius: 6px;
+  z-index: 999;
+}
+
+.search-box input {
+  padding: 6px 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Icon in dropdown label */
+.dropdown-container span svg {
+  margin-left: 2px;
+  vertical-align: middle;
+}
+
+/* lms PAGE CSS*/                                                                                /* LMS Header Bar */
+.lms-header-bar {
+  background: linear-gradient(to right,#a6281f, #ed1b2e);
+  color: white;
+  padding: 10px 20px 10px 80px; /* top right bottom left */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-family: 'Segoe UI', sans-serif;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.lms-header-bar .icon {
+  font-size: 20px;
+}
+
+.lms-header-bar .label {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.lms-container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 5px;
+  background: white;
+  text-align: left;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: normal;
+}
+
+.highlight {
+  color: red;
+  font-weight: bold;
+}
+
+.form-section {
+  display: flex;
+  align-items: center;
+  gap: 200px;
+  background: #f8f8f8;
+  padding: 15px;
+  position: relative;
+}
+
+.lms-logo {
+  background: black;
+  color: white;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  width: 150px;
+  text-align: center;
+}
+
+.lms-form {
+  display: flex;
+  align-items: center;
+  gap: 200px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+select {
+  width: 180px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+select:disabled {
+  background: #e0e0e0;
+}
+
+
+
+.lms-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.lms-table th,
+.lms-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.lms-table th {
+  background: #f0f0f0;
+}
+
+.lms-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: gray;
+}
+
+
+/* IQAC page css */                                                                                                   /*IQAC css page*/
+/* Header container */
+.iqac-header {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #a6281f, #ed1b2e);
+  color: #fff;
+  padding: 10px 20px   10px 80px; /* top right bottom left */
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+.iqac-hero {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Home icon link */
+.iqac-home-link {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+/* Icon styling */
+.iqac-header-icon {
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+/* Header text */
+.iqac-header-text {
+  font-weight: 600;
+}
+
+.iqac-container {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  align-items: flex-start;
+}
+
+.iqac-sidebar {
+  width: 250px;
+  background-color: #003B5C;
+  color: white;
+  border-radius: 20px 0 10px 10px; /* Rounded top-left */
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+.iqac-sidebar-title {
+  background-color: #FFC107;
+  color: #003B5C;
+  font-weight: bold;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* Remove border-radius here */
+}
+
+
+.iqac-sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.iqac-sidebar-item {
+  padding: 0.6rem 0.8rem; /* Reduced padding */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem; /* Smaller text */
+  gap: 0.4rem;
+  transition: background-color 0.2s ease;
+}
+
+.iqac-sidebar-item:hover {
+  background-color: #014970;
+}
+
+.iqac-sidebar-item.active {
+  color: #00b4e0;
+  font-weight: bold;
+}
+
+.iqac-content {
+  flex: 1;
+  background-color: #ffffffcc;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.iqac-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: #003B5C;
+  font-weight: bold;
+}
+
+.iqac-home-link {
+  margin-right: 10px;
+  color: #003B5C;
+}
+
+.iqac-header-icon {
+  font-size: 1.5rem;
+}
+  
+/* General Section Titles */
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #004a80;
+  margin-bottom: 1rem;
+  border-left: 3px solid #ffc107;
+  padding-left: 10px;
+}
+
+/* AQAR Section */
+
+.aqar-wrapper .sub-heading {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #222;
+}
+
+.aqar-wrapper hr {
+  border: none;
+  border-top: 1px solid #d9bebe;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.aqar-list {
+  list-style: none;
+  padding: 0;
+  
+}
+
+.aqar-list li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+  color: #004a80;
+  transition: background 0.2s;
+}
+
+.aqar-list li:hover {
+  background-color: #f5f9ff;
+  cursor: pointer;
+}
+
+.aqar-icon {
+  color: #007bff;
+  margin-right: 8px;
+}
+
+/* Vision & Mission Styles */
+
+
+.vision-mission-block {
+  
+  padding: 1.5rem;
+  border-radius: 8px;
+  
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.vm-heading {
+  color: #8A0707;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.vm-quote {
+  font-style: italic;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.vm-list {
+  list-style: circle;
+  padding-left: 1.5rem;
+}
+
+
+/* IQAC compostion*/
+.iqac-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #fff;
+}
+.iqac-table th, .iqac-table td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: left;
+}
+.iqac-table th {
+  background-color: #f4f4f4;
+}
+
+
+.dvv-two-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.dvv-column {
+  flex: 1;
+  min-width: 220px;
+}
+
+.aqar-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.aqar-icon {
+  margin-right: 5px;
+}
+  
+
+/* IQAC page css of dropdown */
+.iqac-sidebar-list-item {
+  list-style: none;
+}
+
+.iqac-sidebar-link {
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  color: #fff;
+  background-color: #003b5c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1a4d6e;
+}
+
+.iqac-active-link {
+  background-color: #005580;
+  font-weight: bold;
+}
+
+.iqac-dropdown-arrow {
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+}
+
+.iqac-submenu {
+  padding-left: 1.5rem;
+  background-color: #004b6a;
+}
+
+.iqac-submenu-item {
+  color: #d4eaff;
+  padding: 0.4rem 0;
+  cursor: pointer;
+}
+
+.iqac-submenu-item:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.energy-audit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.audit-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f4f5f7;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #111;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+.audit-item:hover {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+}
+
+.audit-icon {
+  background: #4a4a4a;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0 6px 6px 0;
+  font-weight: bold;
+}

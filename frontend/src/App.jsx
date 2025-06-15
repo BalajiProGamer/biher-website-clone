@@ -16,7 +16,6 @@ import FinanceCommittee from "./Components/About/Goverence/FinanceCommittee";
 import Planningmonitoring from "./Components/About/Goverence/Planningmonitoring";
 import Marquee from "./Components/Marquee";
 import Footer from "./Components/Footer";
-import Header from "./Components/Header";
 import LmsForm from "./Components/Pages/Form";
 import AeronauticalEngineering from "./Components/Academics/AeronauticalEngineering";  
 import Agriculture from "./Components/Academics/Agriculture";
@@ -51,8 +50,6 @@ import Library from "./Components/Campuslife/Library";
 
 
  
-
-
 import Home from "./Components/ui/Home"; // Import the Home component
 import ImageSlide from "./Components/ImageSlider";
 import Admissions from "./Components/International/Admissions";
@@ -78,9 +75,12 @@ function App() {
     <div className="App">
       {/* Conditionally render Banner only on specific routes */}
       {location.pathname === '/specific-page' && <Banner />}
-      <Navbar/>
-      <SecondaryNavbar/>
+      
+     
+     <Navbar/>
+     <SecondaryNavbar/>
      <Marquee/>
+     
     
       <Routes>
         <Route path="/" element={<Home />} /> {/* Home route */}
