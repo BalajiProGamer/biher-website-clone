@@ -4,7 +4,7 @@ import Footer from '../Footer';
 import Banner from '../Banner';
 import { FaHome } from "react-icons/fa";
 import bgImage from '../../assets/pattern.jpg';
-import '../../styles/global.css';
+
 
 const IQAC = () => {
   const [selectedCategory, setSelectedCategory] = useState('AQAR');

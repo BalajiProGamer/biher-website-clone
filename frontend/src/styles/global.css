@@ -661,3 +661,413 @@ select:disabled {
   align-items: center;
   gap: 0.5rem;
 }
+
+
+/* === Alumni Page Styles === */
+
+/* global.css */
+
+.alumni-container {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.alumni-image-container {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  overflow: hidden;
+  background-color: #003b8e;
+}
+
+.alumni-background-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.alumni-overlay-image {
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  height: 90%;
+  z-index: 2;
+  object-fit: contain;
+}
+
+.alumni-overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  text-align: center;
+  width: 100%;
+}
+
+.alumni-main-heading {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 0.4em;
+  color: white;
+}
+
+.alumni-welcome {
+  color: white;
+}
+
+.alumni-highlight {
+  color: #f89c1c;
+  border-bottom: 2px solid white;
+  padding-bottom: 4px;
+}
+
+.alumni-subheading {
+  margin-top: 10px;
+  color: #48d1cc;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.alumni-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #a82323, #f21c3c);
+  color: white;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.1rem;
+  gap: 28px;
+}
+
+.alumni-home-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.alumni-header-text {
+  color: white;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+
+
+/* About  Alumni css */                                                                                                    /* About Alumni css */
+.alumni-wrapper {
+  background-image: url("../assets/pattern.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.alumni-layout {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.alumni-sidebar {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.sidebar-header {
+  background-color: #f4f4f4;
+  padding: 16px;
+  font-weight: bold;
+  color: #003b8e;
+  letter-spacing: 0.05em;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+}
+
+.ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #cb2d6f 0%, #9546c4 100%);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-item {
+  padding: 2px 6px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  color: #003b8e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-item:hover {
+  background-color: #f0f8ff;
+}
+
+.sidebar-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar-child {
+  padding: 10px 24px;
+  background-color: #f9f9f9;
+  font-size: 13px;
+  color: #555;
+}
+
+.bullet {
+  margin-right: 8px;
+  color: #003b8e;
+  font-size: 10px;
+}
+
+.alumni-content {
+  flex: 1;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+  line-height: 1.8;
+}
+
+.title-section {
+  margin-bottom: 10px;
+}
+
+.subheading {
+  color: #003b8e;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-left: 4px solid #f7b731;
+  padding-left: 10px;
+}
+
+.heading {
+  color: #d12c2c;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.horizontal-rule {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 10px 0 20px;
+}
+
+.paragraph {
+  text-align: justify;
+  font-size: 16px;
+  color: #333;
+}
+
+
+
+/* ─────────────────────────────────────────────
+   Breadcrumb / header bar (Career page)
+   ───────────────────────────────────────────── */
+.breadcrumb-bar {
+  /* full‑width red gradient */
+  background: linear-gradient(to right, #7c0d0d, #c22028);
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;            /* space between items */
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+/* clickable home icon */
+.breadcrumb-link,
+.breadcrumb-link:visited {
+  color: inherit;       /* keep icon white */
+  display: flex;
+  align-items: center;
+}
+
+/* home icon size & vertical centering tweak */
+.breadcrumb-icon {
+  font-size: 1.05rem;   /* a touch larger than text */
+  margin-top: -1px;     /* optic alignment */
+}
+
+/* the “»” arrow */
+.breadcrumb-separator {
+  font-weight: bold;
+  font-size: 1rem;
+  user-select: none;
+}
+
+/* current page text */
+.breadcrumb-current {
+  font-style: italic;
+  white-space: nowrap;
+}
+
+/* optional: change cursor on hover over the bar (purely visual) */
+.breadcrumb-bar a:hover {
+  opacity: 0.85;
+}
+
+
+
+/* carrerepage css*/                                                                                          /* Career Page Styles */      
+/* ────────── Careers Page Styles ────────── */
+.career-page-wrapper {
+  background: #fff;
+  max-width: 1000px;
+  width: 100%;
+  padding: 20px 20px 80px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", sans-serif;
+
+  /* ✅ Center the content */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.career-main-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0071bc;
+  padding-left: 20px;
+  border-left: 4px solid orange;
+  margin-bottom: 30px;
+}
+
+.career-flex-container {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.career-column {
+  flex: 1 1 45%;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.career-heading {
+  font-size: 18px;
+  font-weight: bold;
+  color: #8d0000;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+}
+
+.career-icon {
+  margin-right: 8px;
+}
+
+.career-list {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 15px;
+  color: #1e1e1e;
+}
+
+.career-list li {
+  padding: 4px 0;
+  color: #003c7c;
+  font-weight: 500;
+}
+
+.career-tech-section {
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.career-tech-heading {
+  font-size: 18px;
+  font-weight: bold;
+  color: #8d0000;
+  margin-bottom: 12px;
+}
+
+/* ─── Apply Button ─── */
+.career-button-wrapper {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.career-apply-button {
+  display: inline-block;
+  background: linear-gradient(to right, #0066d9);
+  color: white;
+  padding: 12px 40px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.career-apply-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+.career-apply-button:active {
+  transform: scale(0.98);
+}
+
+.career-background-wrapper {
+  background-image: url('../assets/pattern.jpg'); /* Adjust path */
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  padding: 20px 0;
+}
+                                            
+

@@ -1,13 +1,13 @@
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 
-import Navbar from "./Components/Navbar";
+import Navbar from "./Components/navbar/Navbar";
 import SecondaryNavbar from "./Components/SecondaryNavbar";
-import MOU from "./Components/Pages/MOU";
-import LMS from "./Components/Pages/LMS";
-import IQAC from "./Components/Pages/IQAC";
-import Alumni from "./Components/Pages/Alumni";
-import Career from "./Components/Pages/Career";
+import MOU from "./Components/Navbaroption/MOU"; // Import the MOU component
+import LMS from "./Components/Navbaroption/LMS";
+import IQAC from "./Components/Navbaroption/IQAC";
+import Alumni from "./Components/Navbaroption/Alumni";
+import Career from "./Components/Navbaroption/Carrer";
 import Overview from "./Components/About/Overview";
 import Leadership from "./Components/About/Leadership";
 import ExecutiveCouncilMembers from "./Components/About/Goverence/ExecutiveCouncilMembers"; // Import the Executive Council Members component
@@ -16,7 +16,7 @@ import FinanceCommittee from "./Components/About/Goverence/FinanceCommittee";
 import Planningmonitoring from "./Components/About/Goverence/Planningmonitoring";
 import Marquee from "./Components/Marquee";
 import Footer from "./Components/Footer";
-import LmsForm from "./Components/Pages/Form";
+import LmsForm from "./Components/Navbaroption/Form";
 import AeronauticalEngineering from "./Components/Academics/AeronauticalEngineering";  
 import Agriculture from "./Components/Academics/Agriculture";
 import Architecture from "./Components/Academics/Architecture";
@@ -64,7 +64,7 @@ import UniversityPage from "./Components/ui/UniversityPage";
 import CampusDashboard from "./Components/ui/CampusDashboard";
 import FeaturedMedia from "./Components/ui/FeaturedMedia";
 import FixedLandingSection from "./Components/ui/FixedLandingSection";
-import AboutAlumni from "./Components/Pages/AboutAlumni";
+import AboutAlumni from "./Components/Navbaroption/AboutAlumni";
 import SidebarMenu from "./Components/Pages/SidebarMenu";
 import Banner from './Components/Banner';
 
