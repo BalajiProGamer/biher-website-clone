@@ -57,7 +57,7 @@ import StudyAbroad from "./Components/Pages/StudyAbroad";
 import Collaboration from "./Components/International/Collaboration"; 
 import HigherStudies from "./Components/International/HigherStudies";
 import ResearchDevelopment from "./Components/Research/ResearchDevelopment";
-import ApprovalSection from './Components/ui/ApprovalSection';
+import Section from './Components/ui/Section';
 import InfoLayout from "./Components/ui/InfoLayout";
 import PageLayout from "./Components/Pages/PageLayout";
 import UniversityPage from "./Components/ui/UniversityPage";

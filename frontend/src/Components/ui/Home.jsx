@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
-import img from "../../assets/img.jpg";
-import img1 from '../../assets/img1.jpg';
-import img2 from '../../assets/img2.jpg';
+import img1 from '../../assets/img.jpg';
+import img2 from '../../assets/img1.jpg';
 import img3 from '../../assets/img3.jpg';
 import img4 from '../../assets/ini1.jpg';
 import img5 from '../../assets/ini2.jpg';
@@ -19,221 +18,106 @@ import CampusDashboard from './CampusDashboard';
 import FeaturedMedia from './FeaturedMedia';
 import FixedLandingSection from './FixedLandingSection';
 
+import '../../styles/global.css';
+
+/* ---------- simple helpers ---------- */
+const randomText = () => Math.random().toString(36).substring(2, 8);
+
+const drawCaptcha = (canvas, text) => {
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const { width, height } = canvas;
+
+  ctx.fillStyle = '#f4f4f4';
+  ctx.fillRect(0, 0, width, height);
+
+  for (let i = 0; i < 4; i++) {
+    ctx.strokeStyle = `rgba(0,0,0,${0.2 + Math.random() * 0.4})`;
+    ctx.beginPath();
+    ctx.moveTo(Math.random() * width, Math.random() * height);
+    ctx.lineTo(Math.random() * width, Math.random() * height);
+    ctx.stroke();
+  }
+
+  ctx.font = '24px sans-serif';
+  ctx.fillStyle = '#003566';
+  ctx.setTransform(1, 0.15 - Math.random() * 0.3, 0, 1, 10, 28);
+  ctx.fillText(text, 0, 0);
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+};
+
 export default function AutoSlide() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [captcha, setCaptcha] = useState(randomText());
+  const canvasRef = useRef(null);
 
-  const toggleModal = () => {
-    setIsModalOpen(!isModalOpen);
-  };
+  const refreshCaptcha = () => setCaptcha(randomText());
+  const toggleModal = () => setIsModalOpen(!isModalOpen);
+
+  useEffect(() => drawCaptcha(canvasRef.current, captcha), [captcha]);
 
   const images = [img1, img2, img3, img4, img5, img6, img7];
 
-  const containerStyle = {
-    width: '100%',
-    height: '100vh',
-    overflow: 'hidden',
-    position: 'relative',
-  };
-
-  const bannersContainerStyle = {
-    position: 'fixed',
-    top: '50%',
-    right: '0',
-    transform: 'translateY(-50%)',
-    zIndex: 20,
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '30px',
-  };
-
-  const bannerButtonStyle = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '20px 15px',
-    borderRadius: '8px',
-    color: 'white',
-    fontWeight: 'bold',
-    textDecoration: 'none',
-    fontSize: '16px',
-    cursor: 'pointer',
-    boxShadow: '2px 2px 8px rgba(0,0,0,0.3)',
-    whiteSpace: 'nowrap',
-  };
-
-  const redButtonStyle = {
-    ...bannerButtonStyle,
-    backgroundColor: '#d90429',
-  };
-
-  const blueButtonStyle = {
-    ...bannerButtonStyle,
-    backgroundColor: '#003566',
-  };
-
-  const queryButtonStyle = {
-    position: 'fixed',
-    top: '50%',
-    left: '0',
-    transform: 'translateY(-50%)',
-    backgroundColor: '#003566',
-    color: 'white',
-    padding: '10px 5px',
-    writingMode: 'vertical-rl',
-    textOrientation: 'mixed',
-    fontWeight: 'bold',
-    fontSize: '14px',
-    borderRadius: '0 8px 8px 0',
-    cursor: 'pointer',
-    zIndex: 20,
-    boxShadow: '2px 2px 8px rgba(0,0,0,0.4)',
-    textDecoration: 'none',
-  };
-
-  const modalStyle = {
-    display: isModalOpen ? 'block' : 'none',
-    position: 'fixed',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    zIndex: 1000,
-    backgroundColor: 'white',
-    padding: '20px',
-    borderRadius: '8px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-    width: '90%',
-    maxWidth: '500px',
-  };
-
-  const overlayStyle = {
-    display: isModalOpen ? 'block' : 'none',
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    zIndex: 999,
-  };
-
   return (
-    <div style={{ width: '100%' }}>
-      <style>{`
-        @media (max-width: 768px) {
-          .slide-container {
-            height: 70vh;
-          }
-        }
+    <div className="auto-slide-container">
+      <div className={isModalOpen ? 'overlay open' : 'overlay'} onClick={toggleModal} />
 
-        @media (max-width: 480px) {
-          .slide-container {
-            height: 60vh;
-          }
-        }
-      `}</style>
-
-      {/* Overlay */}
-      <div style={overlayStyle} onClick={toggleModal}></div>
-
-      {/* Modal */}
-      <div style={modalStyle}>
-        <button onClick={toggleModal} style={{ float: 'right', cursor: 'pointer' }}>✖</button>
-        <h3>Admission Enquiry</h3>
-        <form>
-          <input type="text" placeholder="Enter Name" required style={{ width: '100%', marginBottom: '10px', padding: '8px' }} />
-          <input type="email" placeholder="Enter Email Address" required style={{ width: '100%', marginBottom: '10px', padding: '8px' }} />
-          <input type="tel" placeholder="Enter Mobile Number" required style={{ width: '100%', marginBottom: '10px', padding: '8px' }} />
-          <select required style={{ width: '100%', marginBottom: '10px', padding: '8px' }}>
-            <option value="">Select State</option>
-            <option value="state1">State 1</option>
-            <option value="state2">State 2</option>
-          </select>
-          <select required style={{ width: '100%', marginBottom: '10px', padding: '8px' }}>
-            <option value="">Select Course</option>
-            <option value="course1">Course 1</option>
-            <option value="course2">Course 2</option>
-          </select>
-          <button type="submit" style={{ width: '100%', padding: '10px', backgroundColor: '#003566', color: 'white', border: 'none', borderRadius: '4px' }}>
-            Submit
-          </button>
-        </form>
+      {/* Right‑side banners */}
+      <div className="banners-container">
+        <a className="banner-button red" href="#" target="_blank">
+          🎓 2025 Admission Open for UG/PG
+        </a>
+        <a className="banner-button blue" href="#" target="_blank">
+          🎓 Ph.D Admission Application Form
+        </a>
       </div>
 
-      {/* Swiper for Auto Sliding */}
-      <div style={containerStyle} className="slide-container">
-        {/* Online Query Button */}
-        <a onClick={toggleModal} style={queryButtonStyle}>
-          ONLINE QUERY
-        </a>
-
-        {/* Fixed Banner Buttons */}
-        <div style={bannersContainerStyle}>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfzaEBGmJv5c3Y-73VOkxYr9aaGqgh3L8d9VtOwjFnG0kS2cQ/viewform"
-            style={redButtonStyle}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            🎓 2025 Admission Open for UG/PG
-          </a>
-          <a
-            href="https://admissions.bharathuniv.ac.in/"
-            style={blueButtonStyle}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            🎓 Ph.D Admission Application Form
-          </a>
-        </div>
-
-        {/* Image Slider */}
+      {/* Swiper slideshow */}
+      <div className="slide-container">
         <Swiper
           modules={[Autoplay]}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-          loop={true}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          loop
           spaceBetween={0}
           slidesPerView={1}
-          style={{ width: '100%', height: '100%' }}
         >
-          {images.map((img, index) => (
-            <SwiperSlide key={index}>
-              <div
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  backgroundColor: '#000',
-                }}
-              >
-                <img
-                  src={img}
-                  alt={`Slide ${index + 1}`}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                  }}
-                />
+          {images.map((src, i) => (
+            <SwiperSlide key={i}>
+              <div className="slide-inner">
+                <img src={src} alt={`Slide ${i + 1}`} className="slide-img" />
+
+                {/* Show animated content for image 2 (index 1) */}
+                {i === 1 && (
+                  <div className="slide-caption left-in">
+                    <h2>BON VOYAGE TO RUSSIA 2024</h2>
+                    <p>
+                      Summer Internship Training Program for the Students of Bharath Institute of Higher
+                      Education and Research at Ural Federal University
+                    </p>
+                  </div>
+                )}
+                {/* Animated content for banner19 (index 5) */}
+      {i === 5 && (
+        <div className="slide-caption bottom-in">
+          <h2>39th Convocation – 2023</h2>
+          <p>
+            Honoring academic excellence and celebrating the achievements of our graduates at Bharath Institute of Higher Education and Research.
+          </p>
+        </div>
+      )}
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
 
-      {/* Other Page Sections */}
-      <div>
-        <PageLayout />
-        <FixedLandingSection />
-        <UniversityPage />
-        <CampusDashboard />
-        <FeaturedMedia />
-        <Footer />
-      </div>
+      {/* Page content */}
+      <PageLayout />
+      <FixedLandingSection />
+      <UniversityPage />
+      <CampusDashboard />
+      <FeaturedMedia />
+      <Footer />
     </div>
   );
 }

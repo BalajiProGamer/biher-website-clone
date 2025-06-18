@@ -1,6 +1,6 @@
 import React from "react";
 import InfoLayout from "../ui/InfoLayout"; // Ensure this is imported correctly
-import ApprovalSection from "../ui/ApprovalSection"; // Optional if you're using it
+import ApprovalSection from "../ui/Section"; // Optional if you're using it
 
 const PageLayout = () => {
   return (
