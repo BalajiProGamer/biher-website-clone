@@ -1,14 +1,14 @@
 import React from "react";
-import InfoLayout from "../ui/InfoLayout"; // Ensure this is imported correctly
-import ApprovalSection from "../ui/Section"; // Optional if you're using it
+import InfoLayout from "../ui/InfoLayout";
+import ApprovalSection from "../ui/Section";
 
 const PageLayout = () => {
   return (
-    <div style={{ position: "relative", width: "100%", overflow: "hidden" }}>
+    <div style={{ position: "relative", width: "100%", minHeight: "100vh", overflow: "hidden" }}>
       {/* Background Image */}
       <img
         src="assets/bg124.png"
-        alt="LMS"
+        alt="LMS Background"
         style={{
           position: "absolute",
           top: 0,
@@ -20,14 +20,22 @@ const PageLayout = () => {
         }}
       />
 
-      {/* Content Above Image */}
-      <div style={{ position: "relative", zIndex: 10 }}>
-        {/* Optional Approval Section */}
-        <div>
-          <ApprovalSection />
-        </div>
+      {/* Optional: Overlay for contrast */}
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          backgroundColor: "rgba(255, 255, 255, 0.85)", // Adjust opacity as needed
+          zIndex: 1,
+        }}
+      />
 
-        {/* InfoLayout Appears on Top */}
+      {/* Foreground Content */}
+      <div style={{ position: "relative", zIndex: 2 }}>
+        <ApprovalSection />
         <InfoLayout />
       </div>
     </div>

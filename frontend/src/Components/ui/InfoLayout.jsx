@@ -1,240 +1,93 @@
 import React, { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
-
-// Styles for layout
-const styles = {
-  container: {
-    backgroundColor: "#fff",
-    minHeight: "100vh",
-    padding: "4rem 1rem",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  grid: {
-    display: "grid",
-    gridTemplateColumns: "repeat(1, 1fr)",
-    gap: "2rem",
-    width: "100%",
-    maxWidth: "1280px",
-  },
-  mdGrid: {
-    gridTemplateColumns: "repeat(3, 1fr)",
-  },
-  column: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    gap: "2rem",
-    height: "100%",
-  },
-  box: {
-    backgroundColor: "#f3f4f6",
-    padding: "1rem",
-    borderRadius: "0.5rem",
-    boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
-  },
-  leftBorder: {
-    borderLeft: "4px solid #b91c1c",
-  },
-  textTitle: {
-    display: "flex",
-    alignItems: "center",
-    fontWeight: "bold",
-    fontSize: "1.125rem",
-    marginBottom: "0.5rem",
-    color: "#b91c1c",
-  },
-  titleIcon: {
-    marginRight: "0.5rem",
-  },
-  paragraph: {
-    color: "#374151",
-    fontSize: "0.875rem",
-    lineHeight: "1.5rem",
-  },
-  yellowTitle: {
-    color: "#f59e0b",
-    fontWeight: "800",
-    textTransform: "uppercase",
-  },
-  yellowLine: {
-    borderTop: "2px solid #facc15",
-    width: "4rem",
-    marginBottom: "0.5rem",
-  },
-  centerImage: {
-    width: "20rem",
-    height: "auto",
-  },
-  textRightBox: {
-    backgroundColor: "#f3f4f6",
-    padding: "1rem",
-    borderRadius: "0.5rem",
-    boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
-    textAlign: "right",
-  },
-  greenText: {
-    color: "#15803d",
-  },
-  cyanText: {
-    color: "#0e7490",
-  },
-};
-
-// Motion variants for scroll-triggered animations
-const fadeLeftVariant = {
-  hidden: { opacity: 0, x: -50 },
-  visible: { opacity: 1, x: 0 },
-};
-
-const fadeRightVariant = {
-  hidden: { opacity: 0, x: 50 },
-  visible: { opacity: 1, x: 0 },
-};
-
-const fadeUpVariant = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0 },
-};
+import "../../styles/global.css"; // Ensure path is correct
 
 const InfoLayout = () => {
-  const bulbRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [animate, setAnimate] = useState(false);
+  const containerRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
+          setAnimate(true);
         }
       },
-      {
-        threshold: 0.3,
-      }
+      { threshold: 0.2 }
     );
 
-    if (bulbRef.current) {
-      observer.observe(bulbRef.current);
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
     }
 
     return () => {
-      if (bulbRef.current) {
-        observer.unobserve(bulbRef.current);
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
       }
     };
   }, []);
 
   return (
-    <div style={styles.container}>
-      <motion.div
-        style={{ ...styles.grid, ...styles.mdGrid }}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={{
-          hidden: {},
-          visible: {
-            transition: { staggerChildren: 0.3 },
-          },
-        }}
-      >
-        {/* LEFT SIDE */}
-        <motion.div style={styles.column}>
-          <motion.div
-            variants={fadeLeftVariant}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6 }}
-            style={{ ...styles.box, ...styles.leftBorder }}
-          >
-            <h3 style={styles.textTitle}>
-              <span style={styles.titleIcon}>📌</span>
-              <span style={{ textTransform: "uppercase" }}>Admissions</span>
+    <div className="info-container" ref={containerRef}>
+      <div className={`info-grid ${animate ? "animate-section" : ""}`}>
+        {/* LEFT COLUMN */}
+        <div className="info-column">
+          <div className="info-box info-left-border">
+            <h3 className="info-title red-title">
+              <span className="title-icon">📌</span>
+              <span className="uppercase">Admissions</span>
             </h3>
-            <p style={styles.paragraph}>
-              Admissions for an aggregate of 30 plus courses have begun and preparation for our new batch
-              of young intellectuals at Bharath are underway. The sky is a neighborhood for every individual
-              with high dreams and goals; no ceiling holding you down at our halls of knowledge.
+            <div className="red-line"></div>
+            <p className="info-text">
+             Admissions for an aggregate of 30 plus courses have begun and preparation for our new batch of young intellectuals at Bharath are underway. The Sky is a neighborhood for every individual with high dreams and goals; no ceiling holding you down at our halls of knowledge
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            variants={fadeLeftVariant}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6 }}
-            style={styles.box}
-          >
-            <h3 style={{ ...styles.textTitle, ...styles.yellowTitle }}>
-              <span style={styles.titleIcon}>🏅</span> Ranking and Accreditation
+          <div className="info-box info-left-border1">
+          
+            <h3 className="info-title yellow-title">
+              <span className="title-icon">🏅</span> Ranking and Accreditation
             </h3>
-            <div style={styles.yellowLine}></div>
-            <p style={styles.paragraph}>
-              Bharath Institute of Higher Education and Research is the 1st Private University in India to get
-              the coveted international accreditation from ABET, USA in 2018. Having other accreditations such
-              as NAAC, NBA, NABL, ISO and Rankings from NIRF, QS-World ranking, MHW, Global Impact Ranking.
-            </p>
-          </motion.div>
-        </motion.div>
+            <div className="yellow-line"></div>
+            <p className="info-text">
+              Bharath Institute of Higher Education and Research is the 1st Private University in India to get the coveted international accreditation from ABET, USA in the year 2018.Having other accreditations such as NAAC, NBA, NABL,ISO and Rankings from NIRF, QS-World ranking, MHW, Global Impact Ranking .
 
-        {/* CENTER BULB IMAGE */}
-        <motion.div
-          ref={bulbRef}
-          style={{ display: "flex", justifyContent: "center", alignItems: "center" }}
-          variants={fadeUpVariant}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8 }}
-        >
+
+            </p>
+          </div>
+        </div>
+
+        {/* CENTER IMAGE */}
+        <div className="info-center">
           <img
             src="/assets/bulb.png"
             alt="Infographic Bulb"
-            style={styles.centerImage}
-            className={isVisible ? "animate-fadeInUp" : ""}
+            className="bulb-image"
           />
-        </motion.div>
+        </div>
 
-        {/* RIGHT SIDE */}
-        <motion.div style={styles.column}>
-          <motion.div
-            variants={fadeRightVariant}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6 }}
-            style={styles.textRightBox}
-          >
-            <h3 style={{ ...styles.textTitle, ...styles.greenText, justifyContent: "flex-end" }}>
-              <span style={{ marginRight: "0.5rem", textTransform: "uppercase" }}>International Relations</span> 🌍
+        {/* RIGHT COLUMN */}
+        <div className="info-column">
+          <div className="info-box info-left-border2">
+            <h3 className="info-title green-title flex-start">
+              <span className="uppercase mr-2">🌍</span> International Relations
             </h3>
-            <p style={styles.paragraph}>
-              The Initiatives & Collaborations segment leads the university in forging partnerships
-              relating to academic development and global understanding to promote new forms of academic initiatives.
+             <div className="green-line"></div>
+            <p className="info-text">
+              The Initiatives & Collaborations segment leads the university in forging partnerships with foreign institutions in matter relating to academic exchanges, such as signing memoranda of understanding to facilitate faculty and student exchanges.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            variants={fadeRightVariant}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6 }}
-            style={styles.textRightBox}
-          >
-            <h3 style={{ ...styles.textTitle, ...styles.cyanText, justifyContent: "flex-end" }}>
-              <span style={{ marginRight: "0.5rem", textTransform: "uppercase" }}>Placements</span> 💼
+          <div className="info-box info-left-border3">
+            <h3 className="info-title cyan-title flex-start">
+              <span className="uppercase mr-2">💼</span> Placement
             </h3>
-            <p style={styles.paragraph}>
-              With expanding global business, BIHER is the place that comes to the minds of recruiters every placement season.
-              We focus not only on career-oriented growth but also versatility. There has been a consistent growth in our placement record.
+             <div className="blue-line"></div>
+            <p className="info-text">
+             With expanding the role of business globally, BIHER is the place which comes to the minds of the recruiters once the placement season starts. We focus not only on the career-oriented growth but offers versatility.There has been a consistent growth in our placements record.
             </p>
-          </motion.div>
-        </motion.div>
-      </motion.div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

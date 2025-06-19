@@ -1277,7 +1277,7 @@ select:disabled {
 }
 
 .approval-logo {
-  height: 92px;
+  height: 98px;
   width: auto;
   flex-shrink: 0;
 }
@@ -1287,5 +1287,177 @@ select:disabled {
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+ /* Container */
+.info-container {
+  background: #fff;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Grid layout - 3 columns */
+.info-grid {
+  max-width: 1280px;
+  width: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Column base */
+.info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Box card */
+.info-box {
+  background-color: #eef2f6;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Red left border for Admissions */
+.info-left-border {
+  border-left: 4px solid #b91c1c;
+}
+.info-left-border1 {
+  border-left: 4px solid #f59e0b;
+}
+.info-left-border2 {
+  border-left: 4px solid #15803d;
+}
+.info-left-border3 {
+  border-left: 4px solid #0e7490;
+}
+
+
+
+/* Text styling */
+.info-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.info-text {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.title-icon {
+  margin-right: 0.5rem;
+}
+
+/* Special title colors */
+.red-title {
+  color: #b91c1c;
+}
+.yellow-title {
+  color: #f59e0b;
+}
+.green-title {
+  color: #15803d;
+}
+.cyan-title {
+  color: #0e7490;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.text-right {
+  text-align: right;
+}
+.red-line{
+   width: 22rem;
+  height: 2px;
+  background-color:#b91c1c;
+  margin-bottom: 0.5rem;
+
+}
+.green-line{
+  width: 22rem;
+  height: 2px;
+  background-color:#15803d;
+  margin-bottom: 0.5rem;
+}
+.blue-line{
+  width: 22rem;
+  height: 2px;
+  background-color:#0e7490;
+  margin-bottom: 0.5rem;
+
+}
+
+/* Yellow separator line */
+.yellow-line {
+  width: 22rem;
+  height: 2px;
+  background-color: #facc15;
+  margin-bottom: 0.5rem;
+}
+
+/* Center image */
+.info-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bulb-image {
+  width: 96rem;
+  height: auto;
+  animation: fadeUp 0.9s ease-out forwards;
+  opacity: 0;
+}
+
+/* Animation Section trigger */
+.animate-section .info-box,
+.animate-section .bulb-image {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+.animate-section .info-column:nth-child(1) .info-box:nth-child(1) {
+  animation-delay: 1.05s;
+}
+.animate-section .info-column:nth-child(1) .info-box:nth-child(2) {
+  animation-delay: 1.12s;
+}
+.animate-section .info-center .bulb-image {
+  animation-delay: 1.25s;
+}
+.animate-section .info-column:nth-child(3) .info-box:nth-child(1) {
+  animation-delay: 1.07s;
+}
+.animate-section .info-column:nth-child(3) .info-box:nth-child(2) {
+  animation-delay: 1.10s;
+}
+
+
+/* Fade/slide up animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
