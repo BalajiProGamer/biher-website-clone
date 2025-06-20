@@ -64,6 +64,7 @@ import UniversityPage from "./Components/ui/UniversityPage";
 import CampusDashboard from "./Components/ui/CampusDashboard";
 import FeaturedMedia from "./Components/ui/FeaturedMedia";
 import FixedLandingSection from "./Components/ui/FixedLandingSection";
+
 import AboutAlumni from "./Components/Navbaroption/AboutAlumni";
 import SidebarMenu from "./Components/Pages/SidebarMenu";
 import Banner from './Components/Banner';
