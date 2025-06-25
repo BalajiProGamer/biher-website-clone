@@ -1,36 +1,28 @@
-import React, { useState ,useEffect} from "react";
+// SecondaryNavbar.jsx
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./SecondaryNavbar.css";
-import logo from "../assets/bharath-logo.png"; // Update path if needed
-
+import "../styles/global.css";
+import logo from "../assets/bharath-logo.png";
 import {
-  FaHome, FaInfoCircle, FaUserGraduate, FaBook, FaFlask,
-  FaGlobe, FaUniversity, FaUsers, FaUserTie, FaBuilding,
-  FaGraduationCap, FaLightbulb, FaBriefcase, FaMicroscope,
-  FaHandshake, FaExchangeAlt, FaUserFriends, FaFlag, FaClipboardList,
-  FaPlane, FaSeedling, FaPencilRuler, FaHospital, FaPalette,
-  FaAtom, FaRobot, FaCode, FaHardHat, FaTooth, FaBolt,
+  FaHome, FaUsers, FaUniversity, FaBuilding, FaUserTie, FaBook,
+  FaUserGraduate, FaPlane, FaSeedling, FaPencilRuler, FaHospital,
+  FaPalette, FaAtom, FaRobot, FaCode, FaHardHat, FaTooth, FaBolt,
   FaGavel, FaStethoscope, FaCogs, FaChartLine, FaCapsules,
-  FaChevronDown
+  FaClipboardList, FaLightbulb, FaBriefcase, FaMicroscope, FaHandshake,
+  FaExchangeAlt, FaUserFriends, FaFlag, FaChevronDown,FaUserSecret,
+
+  FaUserNurse, FaWalking            // ⬅ NEW icons
 } from "react-icons/fa";
+
 
 const SecondaryNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -39,171 +31,137 @@ const SecondaryNavbar = () => {
         <img src={logo} alt="Logo" />
       </Link>
 
-      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-        &#9776;
-      </div>
+      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>&#9776;</div>
 
       <div className="secondary-nav-links">
-        <Link to="/" className="home-icon-box">
-          <FaHome size={24} color="white" />
-        </Link>
+        <Link to="/" className="home-icon-box"><FaHome size={24} color="white" /></Link>
 
-         {/* About Dropdown */}
-<div className="dropdown">
-  <span className="dropdown-label">
-    About <FaChevronDown className="dropdown-icon" />
-  </span>
-  <div className="dropdown-content">
-    <Link to="/about/overview"><FaUsers /> Overview</Link>
-    <Link to="/about/leadership"><FaUserTie /> Leadership Team</Link>
+        {/* About */}
+        <div className="dropdown dropdown-about">
+          <span className="dropdown-label">About BIHER <FaChevronDown /></span>
+          <div className="dropdown-content dropdown-content-about">
+            <Link to="/about/overview"><FaUsers /> Overview</Link>
+            <Link to="/about/leadership"><FaUserTie /> Leadership Team</Link>
+            <div className="submenu">
+              <span className="submenu-label"> <FaUserSecret/> Governance <span className="submenu-icon">»</span></span>
+              <div className="submenu-content">
+                <div className="submenu">
+                  <span className="submenu-label">Statutory Bodies <span className="submenu-icon">»</span></span>
+                  <div className="submenu-content">
+                    <Link to="/about/governance/statutory/ExecutiveCouncilMember">Executive Council</Link>
+                    <Link to="/about/governance/statutory/academiccouncil">Academic Council</Link>
+                    <Link to="/about/governance/statutory/financecommittee">Finance Committee</Link>
+                    <Link to="/about/governance/statutory/planningmonitoring">Planning & Monitoring</Link>
+                  </div>
+                </div>
+                <div className="submenu">
+                  <span className="submenu-label">Non-Statutory Bodies <span className="submenu-icon">»</span></span>
+                  <div className="submenu-content">
+                    <Link to="/about/governance/statutory/Commmittee">Committee</Link>
+                    <Link to="/about/governance/statutory/studentcouncil">Student Council</Link>
+                    <Link to="/about/governance/statutory/studentCouncelling">Student Counselling</Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <Link to=""><FaUniversity /> Administration</Link>
+          </div>
+        </div>
+          
+        {/* ——— Academics (UPDATED) ——— */}
+        <div className="dropdown dropdown-academics">
+          <span className="dropdown-label">Academics <FaChevronDown /></span>
 
-    {/* Governance Submenu */}
-    <div className="submenu">
-      <span className="submenu-label">
-        <FaBuilding /> Governance <span className="submenu-icon">{'\u00BB'}</span>
-      </span>
-      <div className="submenu-content">
-        {/* Statutory Bodies Submenu */}
-        <div className="submenu">
-          <span className="submenu-label">
-            Statutory Bodies <span className="submenu-icon">{'\u00BB'}</span>
-          </span>
-          <div className="submenu-content">
-            <Link to="/about/governance/statutory/ExecutiveCouncilMember">Executive Council Members</Link>
-            <Link to="/about/governance/statutory/academiccouncil">Academic Council</Link>
-            <Link to="/about/governance/statutory/financecommittee">Finance Committee</Link>
-            <Link to="/about/governance/statutory/planningmonitoring">Planning and Monitoring Committee</Link>
+          {/* Two-column grid that mirrors your screenshot */}
+          <div className="dropdown-content dropdown-content-academics">
+            {/* Column 1 */}
+            <div>
+              <Link to="/academics/aeronautical-engineering"><FaPlane /> School of Aeronautical Engineering</Link>
+              <Link to="/academics/agriculture"><FaSeedling /> School of Agriculture</Link>
+              <Link to="/academics/architecture"><FaPencilRuler /> School of Architecture</Link>
+              <Link to="/academics/arts"><FaPalette /> School of Arts</Link>
+              <Link to="/academics/basic-sciences"><FaAtom /> School of Basic Sciences</Link>
+              <Link to="/academics/bio-engineering"><FaRobot /> School of Bio-Engineering</Link>
+              <Link to="/academics/computing"><FaCode /> School of Computing</Link>
+              <Link to="/academics/civil-infrastructure"><FaHardHat /> School of Civil &amp; Infrastructure Engg</Link>
+            </div>
+
+            {/* Column 2 */}
+            <div>
+              <Link to="/academics/dentistry"><FaTooth /> School of Dentistry</Link>
+              <Link to="/academics/electrical-engineering"><FaBolt /> School of Electrical Engineering</Link>
+              <Link to="/academics/law"><FaGavel /> School of Law</Link>
+              <Link to="/academics/medicine"><FaStethoscope /> School of Medicine</Link>
+              <Link to="/academics/mechanical-engineering"><FaCogs /> School of Mechanical Engineering</Link>
+              <Link to="/academics/management-commerce"><FaChartLine /> School of Management &amp; Commerce</Link>
+              <Link to="/academics/nursing"><FaUserNurse /> School of Nursing</Link>
+              <Link to="/academics/pharmacy"><FaCapsules /> School of Pharmacy</Link>
+              
+            </div>
           </div>
         </div>
 
-        {/* Non-Statutory */}
-        <div className="submenu">
-          <span className="submenu-label">
-           Non- Statutory Bodies <span className="submenu-icon">{'\u00BB'}</span>
-          </span>
-          <div className="submenu-content">
-            <Link to="/about/governance/statutory/Commmittee">Committee</Link>
-            <Link to="/about/governance/statutory/studentcouncil">Student Council</Link>
-            <Link to="/about/governance/statutory/studentCouncelling">Student Councelling</Link>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <Link to=""><FaUniversity /> Administration</Link>
-  </div>
-</div>
-
-
-        {/* External Admission Link (target blank) */}
         <a
-          href="https://bharathuniv.ac.in/admission"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Admission
-        </a>
+  href="https://bharathuniv.ac.in/admission"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="nav-link white-text" // <-- added class
+>
+  Admission
+</a>
 
-        {/* Academics Dropdown */}
-        <div className="dropdown">
-          <span className="dropdown-label">
-            Academics <FaChevronDown className="dropdown-icon" />
-          </span>
-          <div className="dropdown-content two-column">
-            <div>
-              <Link to="/academics/aeronautical-engineering"><FaPlane /> Aeronautical Engineering</Link>
-              <Link to="/academics/agriculture"><FaSeedling /> Agriculture</Link>
-              <Link to="/academics/architecture"><FaPencilRuler /> Architecture</Link>
-              <Link to="/academics/allied-health"><FaHospital /> Allied Health Sciences</Link>
-              <Link to="/academics/arts"><FaPalette /> Arts</Link>
-              <Link to="/academics/basic-sciences"><FaAtom /> Basic Sciences</Link>
-              <Link to="/academics/bio-engineering"><FaRobot /> BioEngineering</Link>
-              <Link to="/academics/computing"><FaCode /> Computing</Link>
-            </div>
-            <div>
-              <Link to="/academics/civil-infrastructure"><FaHardHat /> Civil & Infrastructure</Link>
-              <Link to="/academics/dentistry"><FaTooth /> Dentistry</Link>
-              <Link to="/academics/electrical-engineering"><FaBolt /> Electrical Engineering</Link>
-              <Link to="/academics/law"><FaGavel /> Law</Link>
-              <Link to="/academics/medicine"><FaStethoscope /> Medicine</Link>
-              <Link to="/academics/mechanical-engineering"><FaCogs /> Mechanical Engineering</Link>
-              <Link to="/academics/management-commerce"><FaChartLine /> Management & Commerce</Link>
-              <Link to="/academics/pharmacy"><FaCapsules /> Pharmacy</Link>
-            </div>
-          </div>
-        </div>
 
-        {/* Research Dropdown */}
-        <div className="dropdown">
-          <span className="dropdown-label">
-            Research <FaChevronDown className="dropdown-icon" />
-          </span>
-          <div className="dropdown-content">
+        {/* Research */}
+        <div className="dropdown dropdown-research">
+          <span className="dropdown-label">Research <FaChevronDown /></span>
+          <div className="dropdown-content dropdown-content-research">
             <Link to="/research/academics-research"><FaMicroscope /> Academics Research</Link>
             <Link to="/research/publication"><FaClipboardList /> Publication</Link>
             <Link to="/research/FIST"><FaLightbulb /> FIST</Link>
             <Link to="/research/innovation"><FaLightbulb /> Innovation</Link>
             <Link to="/research/funded-research"><FaBriefcase /> Funded Research</Link>
             <Link to="/research/Patent"><FaClipboardList /> Patent</Link>
-
           </div>
         </div>
 
-         {/* International Dropdown */}
-<div className="dropdown">
-  <span className="dropdown-label">
-    International <FaChevronDown className="dropdown-icon" />
-  </span>
-  <div className="dropdown-content">
-    {/* Admission with Sub-dropdown */}
-    <div className="submenu">
-      <span className="submenu-label">
-        <FaUserGraduate /> Admissions <span className="submenu-icon">{'\u00BB'}</span>
-      </span>
-      <div className="submenu-content">
-        <Link to="/international/admissions/overview">Overview</Link>
-        <Link to="/international/admissions/eligibility">Eligibility</Link>
-        <Link to="/international/admissions/fees">Programmes and Fees</Link>
-        <Link to="/international/admissions/bank-details">Bank Details for International Students</Link>
-        <Link to="/international/admissions/scholarship">BIHER Scholarship</Link>
-        <Link to="/international/admissions/visa">Student Visa for International Students</Link>
-        <Link to="/international/admissions/offices">Our International Offices</Link>
-        <Link to="/international/admissions/apply">Apply Now</Link>
-      </div>
-    </div>
+        {/* International */}
+        <div className="dropdown dropdown-international">
+          <span className="dropdown-label">International <FaChevronDown /></span>
+          <div className="dropdown-content dropdown-content-international">
+            <div className="submenu">
+              <span className="submenu-label"><FaUserGraduate /> Admissions <span className="submenu-icon">»</span></span>
+              <div className="submenu-content">
+                <Link to="/international/admissions/overview">Overview</Link>
+                <Link to="/international/admissions/eligibility">Eligibility</Link>
+                <Link to="/international/admissions/fees">Fees</Link>
+                <Link to="/international/admissions/bank-details">Bank Details</Link>
+                <Link to="/international/admissions/scholarship">Scholarship</Link>
+                <Link to="/international/admissions/visa">Visa</Link>
+                <Link to="/international/admissions/offices">Offices</Link>
+                <Link to="/international/admissions/apply">Apply Now</Link>
+              </div>
+            </div>
+            <Link to="/international/collaboration"><FaHandshake /> Collaboration</Link>
+            <Link to="/international/exchange-program"><FaExchangeAlt /> Exchange Program</Link>
+            <Link to="/international/higher-studies"><FaUserFriends /> Higher Studies</Link>
+            <Link to="/international/other-activities"><FaUsers /> Other Activities</Link>
+            <Link to="/international/events"><FaFlag /> Events</Link>
+            
+          </div>
+        </div>
 
-    {/* Other international links */}
-    <Link to="/international/exchange-program"><FaExchangeAlt /> Exchange Program</Link>
-    <Link to="/international/higher-studies"><FaUserFriends /> Higher Studies</Link>
-    <Link to="/international/other-activities"><FaUsers /> Other Activities</Link>
-    <Link to="/international/events"><FaFlag /> Events</Link>
-    <Link to="/international/collaboration"><FaHandshake /> Collaboration</Link>
-  </div>
-</div>
-
-
-        {/* Campus Life Dropdown */}
-        <div className="dropdown">
-          <span className="dropdown-label">
-            Campus Life <FaChevronDown className="dropdown-icon" />
-          </span>
-          <div className="dropdown-content">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfK_3gLJn5euBfGqIMY_MpoQE79s4VchF6vRS2jc2eyIrNNBA/viewform" target="_blank" rel="noopener noreferrer">
-                <FaBook /> Leave
-             </a>
-
-           <a href="https://www.bharathuniv.ac.in/nba/I.10_Rules_Policy_Service%20book_BIST.pdf" target="_blank" rel="noopener noreferrer">
-  <FaBook /> Leave Policy
-</a>
-
-
+        {/* Campus Life */}
+        <div className="dropdown dropdown-campus">
+          <span className="dropdown-label">Campus Life <FaChevronDown /></span>
+          <div className="dropdown-content dropdown-content-campus">
+            <a href="https://docs.google.com/forms/..." target="_blank" rel="noopener noreferrer"><FaBook /> Leave</a>
+            <a href="https://www.bharathuniv.ac.in/nba/..." target="_blank" rel="noopener noreferrer"><FaBook /> Leave Policy</a>
             <Link to="/campuslife/NCC"><FaUsers /> NCC</Link>
             <Link to="/campuslife/NSS"><FaUsers /> NSS</Link>
-            <Link to="/campuslife/RRC"><FaUsers /> RRC </Link>
+            <Link to="/campuslife/RRC"><FaUsers /> RRC</Link>
             <Link to="/campuslife/hostel"><FaBuilding /> Hostel</Link>
             <Link to="/campuslife/library"><FaBook /> Library</Link>
             <Link to="/campuslife/scholarship"><FaClipboardList /> Scholarship</Link>
-            
           </div>
         </div>
       </div>
@@ -211,4 +169,4 @@ const SecondaryNavbar = () => {
   );
 };
 
-export default SecondaryNavbar; 
+export default SecondaryNavbar;
