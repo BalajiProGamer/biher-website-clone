@@ -1,9 +1,10 @@
- import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { FaHome, FaBook, FaBars, FaChevronDown } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import headerImage from '../../assets/pattern.jpg';
 import excellenceBadge from '../../assets/41 logo.png';
 import Footer from '../Footer';
+import '../../styles/global.css';
 
 const categoryData = {
   'About Us': `
@@ -41,8 +42,8 @@ const categoryData = {
       on its cadre of distinguished faculty, who are dedicated to delivering excellence across undergraduate and postgraduate programs, 
       while also driving forward innovative research and development initiatives.</p>
     </div>
-  `,
-  'Vision & Mission': `
+  `,// KEEP AS IS (HTML remains inline)
+    'Vision & Mission': `
     <div style="font-size: 20px; line-height: 1.8; color: #333;">
       <h3 style="color: #000; font-weight: bold;">Our <span style="color: #c00;">Vision</span> :</h3>
       <p style="margin-top: 10px;">
@@ -65,7 +66,7 @@ const categoryData = {
       </ul>
     </div>
   `,
-     'Vision Plan': `
+    'Vision Plan': `
   <div style="font-size: 15px; line-height: 1.8; color: #333;">
     <h4 style="color: #c00;">Disciplines & Departments :</h4>
     <ul style="padding-left: 20px; list-style-type: disc;">
@@ -178,9 +179,81 @@ const categoryData = {
     <li>Increase Research Revenues from the present Rs 20.75 Crores at a growth rate of 15% - 20% per year.</li>
   </ul>
   </div>
+`,'Vision Implementation Plan': `
+  <div style="font-size: 15px; line-height: 1.8; color: #333;">
+    <h2 style="color: #003366; letter-spacing: 1px; border-left: 4px solid #f8b500; padding-left: 10px;">Vision Implementation Plan</h2>
+
+    <h3 style="color: #000; margin-top: 20px;">Academics :</h3>
+    <ul style="list-style-type: circle; padding-left: 20px;">
+      <li>Launch new programs with innovative curriculum design – Provide exposure to multiple subjects to get multifaceted exposure.</li>
+      <li>Flexibility to students – options / add-ons to core subjects, develop Device Agnostic Technology to access online content.</li>
+      <li>Funding / Incubation entrepreneurial ideas, Flipped class Room – Integrated Courses & Need based learning.</li>
+    </ul>
+
+    <h3 style="color: #000; margin-top: 20px;">Research :</h3>
+    <ul style="list-style-type: circle; padding-left: 20px;">
+      <li>To promote interest in industry-relevant topics for applied research, and stimulate industry-academia collaboration through platforms such as research forums and seminars.</li>
+      <li>To allocate funding for development of research-oriented infrastructure according to national priorities and needs.</li>
+      <li>To attract top notch researchers to lead collaborative research between multiple stake holders.</li>
+      <li>To increase expenditure on R&D to 35% in 2023, 40% in 2028 & 45% in 2033 by providing funding for research focusing on community development.</li>
+    </ul>
+
+    <h3 style="color: #000; margin-top: 20px;">Faculty :</h3>
+    <ul style="list-style-type: circle; padding-left: 20px;">
+      <li>To grant autonomy to well performing Departments / Research Centres / Centre of Excellence to devise their own mechanisms to recruit faculty members and supporting staffs.</li>
+      <li>To encourage active participation of professionals with industry experiences in teaching and offer sabbaticals, incentives & promotions for all Faculties members.</li>
+      <li>To develop tenure-based system and performance-based remuneration system to reward performing Faculty members.</li>
+      <li>To encourage Faculty members to take up consultancy projects and provide incentives for the same.</li>
+      <li>To provide financial support opportunity to enrich knowledge for Faculty members and students by providing Exchange Programmes and establishing research collaboration between Faculty members with global leading research institutes.</li>
+      <li>To provide State of the Art teaching / pedagogy / learning / research / sports / infrastructure & amenities to Faculty members and students.</li>
+    </ul>
+
+    <h3 style="margin-top: 40px; color: #8B0000;">Basic Assumptions for <span style="color: #b30000;">Financial Projections</span> :</h3>
+    <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px;">
+      <thead style="background-color: #eaeaea; color: #000;">
+        <tr>
+          <th style="padding: 8px; border: 1px solid #ccc;">S.No</th>
+          <th style="padding: 8px; border: 1px solid #ccc;">Particulars</th>
+          <th style="padding: 8px; border: 1px solid #ccc;">Year - (2018 - 2023)</th>
+          <th style="padding: 8px; border: 1px solid #ccc;">Year - (2023 - 2028)</th>
+          <th style="padding: 8px; border: 1px solid #ccc;">Year - (2028 - 2033)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 8px; border: 1px solid #ccc;">1</td>
+          <td style="padding: 8px; border: 1px solid #ccc;">Students in Nos.</td>
+          <td style="padding: 8px; border: 1px solid #ccc;">15000</td>
+          <td style="padding: 8px; border: 1px solid #ccc;">25000</td>
+          <td style="padding: 8px; border: 1px solid #ccc;">50000</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px; border: 1px solid #ccc;">2</td>
+          <td style="padding: 8px; border: 1px solid #ccc;">Staff Ratio</td>
+          <td style="padding: 8px; border: 1px solid #ccc;">1:7</td>
+          <td style="padding: 8px; border: 1px solid #ccc;">1:5</td>
+          <td style="padding: 8px; border: 1px solid #ccc;">1:3</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px; border: 1px solid #ccc;">3</td>
+          <td style="padding: 8px; border: 1px solid #ccc;">Foreign Students as % of total Student Strength</td>
+          <td style="padding: 8px; border: 1px solid #ccc;">5%</td>
+          <td style="padding: 8px; border: 1px solid #ccc;">10%</td>
+          <td style="padding: 8px; border: 1px solid #ccc;">15%</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px; border: 1px solid #ccc;">4</td>
+          <td style="padding: 8px; border: 1px solid #ccc;">Resident Scholars as % of Total Student Strength</td>
+          <td style="padding: 8px; border: 1px solid #ccc;">65%</td>
+          <td style="padding: 8px; border: 1px solid #ccc;">70%</td>
+          <td style="padding: 8px; border: 1px solid #ccc;">75%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 `,
 
-  'Vision Implementation Plan': 'Describes the execution strategy for the vision plan.',
+
   'Strength Of The Institution': 'Highlights our academic, infrastructural and faculty strengths.',
   'Inception & Brief History': 'Provides the historical evolution of the institution.',
   'Professional Society': 'Details the professional bodies and student chapters present.',
@@ -194,107 +267,46 @@ const Overview = () => {
 
   return (
     <>
-      {/* Header */}
-      <div style={{
-        background: 'linear-gradient(to right, #8e2c2c, #e61b23)',
-        color: '#fff',
-        padding: '12px 30px',
-        display: 'flex',
-        justifyContent: 'space-between',
-      }}>
-        <div style={{ display: 'flex', alignItems: 'center', fontWeight: 'bold', fontSize: '16px' }}>
-          <FaHome style={{ marginRight: '8px', cursor: 'pointer' }} onClick={() => navigate('/')} title="Go to Home" />
-          <span style={{ marginRight: '5px' }}>»</span>
-          <span style={{ marginRight: '5px' }}>About Us</span>
-          <span style={{ margin: '0 5px' }}>»</span>
-          <span style={{ fontStyle: 'italic' }}>Overview</span>
+      <div className="overview-header">
+        <div className="overview-breadcrumb">
+          <FaHome className="overview-home-icon" onClick={() => navigate('/')} title="Go to Home" />
+          <span className="breadcrumb-arrow">»</span>
+          <span>About Us</span>
+          <span className="breadcrumb-arrow">»</span>
+          <span className="breadcrumb-overview">Overview</span>
         </div>
       </div>
 
-      {/* Main Content */}
-      <div style={{
-        backgroundImage: `url(${headerImage})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'repeat',
-        minHeight: '100vh',
-        padding: '40px',
-        paddingLeft: '80px',
-        paddingRight: '40px',
-        display: 'flex',
-        gap: '30px',
-      }}>
-        {/* Sidebar */}
-        <div style={{
-          width: '220px',
-          background: '#032539',
-          color: '#fff',
-          borderRadius: '10px',
-          boxShadow: '0 4px 10px rgba(0,0,0,0.2)',
-          fontFamily: 'sans-serif',
-          height: 'fit-content',
-        }}>
-          <div style={{
-            backgroundColor: '#ffc107',
-            color: '#000',
-            padding: '10px 12px',
-            fontWeight: 'bold',
-            fontSize: '15px',
-            borderTopLeftRadius: '10px',
-            borderTopRightRadius: '10px',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '8px',
-          }}>
+      <div
+        className="overview-main"
+        style={{ backgroundImage: `url(${headerImage})` }}
+      >
+        <div className="overview-sidebar">
+          <div className="overview-sidebar-header">
             <FaBars />
             Categories
           </div>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+          <ul className="overview-category-list">
             {Object.keys(categoryData).map((item, index) => (
               <li
                 key={index}
                 onClick={() => setSelectedCategory(item)}
-                style={{
-                  padding: '9px 19px',
-                  borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  cursor: 'pointer',
-                  background: selectedCategory === item ? '#043d5d' : 'transparent',
-                  fontSize: '13px',
-                }}
+                className={`overview-category-item ${selectedCategory === item ? 'active' : ''}`}
               >
                 <FaBook />
-                <span style={{ flex: '1 1 auto' }}>{item}</span>
-                {(item === 'Approvals' || item === 'Ranking & Accreditation') && (
-                  <FaChevronDown style={{ marginLeft: 'auto' }} />
-                )}
+                <span>{item}</span>
+                {(item === 'Approvals' || item === 'Ranking & Accreditation') && <FaChevronDown />}
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Content Area */}
-        <div style={{
-          flex: 1,
-          background: '#fff',
-          borderRadius: '10px',
-          padding: '24px',
-          boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
-          minHeight: '300px',
-        }}>
-          <h2 style={{
-            borderBottom: '2px solid #ccc',
-            paddingBottom: '10px',
-            marginBottom: '20px'
-          }}>
-            {selectedCategory}
-          </h2>
+        <div className="overview-content">
+          <h2 className="overview-title">{selectedCategory}</h2>
           <div dangerouslySetInnerHTML={{ __html: categoryData[selectedCategory] }} />
         </div>
       </div>
 
-      {/* Footer */}
       <Footer />
     </>
   );

@@ -6,6 +6,7 @@ import proViceChancellorImg from '../../assets/provicechancellor.png';
 import registrarImg from '../../assets/registrar.png';
 import additionalRegistrarImg from '../../assets/additionalregistrar.png';
 import '../../styles/global.css';
+import Footer from '../Footer';
 
 
 const Leadership = () => {
@@ -24,7 +25,11 @@ const Leadership = () => {
   const handleProOpen = () => setShowProModal(true);
   const handleProClose = () => setShowProModal(false);
 
+
+  
+
   return (
+    <>
     <div className="leadership-section">
       {/* Welcome Section */}
       <div className="leadership-wrapper">
@@ -40,8 +45,7 @@ const Leadership = () => {
       {/* Founder Section */}
       <div className="leadership-wrapper content-section">
         <div className="leader-left">
-          <p>I am happy that you are joining our Institute for pursuing the course of study of your choice...</p>
-          <p>I am quite confident that you will address yourself to the tasks of learning with a tremendous sense...</p>
+          <p>I am happy that you are joining our Institute for pursuing the course of study of your choice. This introduction to our Institution speaks of those features that reaffirm our faith in, and commitment to, the essential task of helping you transform yourself into a careerist in dental, medical, engineering and technology I am sure you will make the best use of the programmes offered, facilities provided and opportunities created here in your interest. I am quite confident that you will address yourself to the tasks of learning with a tremendous sense of involvement and come out successful with flying colours in your cherished endeavour. Let me greet you at the beginning of an academic journey towards the goal of a rewardingly prosperous career.</p>
         </div>
         <div className="leader-right">
           <div className="image-wrapper">
@@ -63,9 +67,12 @@ const Leadership = () => {
           <div className="chancellor-right">
             <h3 className="chancellor-name">Prof. Mohamed Rela</h3>
             <p className="chancellor-title"><em>Chancellor</em></p>
-            <p>Multi-Stream University campus with the latest technology, the best of CBCS Curriculum...</p>
-            <p>Now, the BIHER has a proud record of evolving efficient, confident and Highly Knowledgeable Technocrats...</p>
+            <p>Multi-Stream University campus with the latest technology, the best of CBCS Curriculum and the expertise of academic stalwarts and industry doyens define the contours of BIHER Deemed to be University. You would certainly find it rewarding as you journey along with us into the realms of higher education.</p>
+            <br></br>
+            <p>Now, the BIHER has a proud record of evolving efficient, confident and Highly Knowledgeable Technocrats, Doctors, Engineers, Managers, Pharmacists and Entrepreneurs with global thinking and futuristic mind-set that will contribute to Nation Building with a strong adherence to Educational Ethics.</p>
+            <br></br>
             <p>I hope the student community & parents will utilize this new academic venture of BIHER...</p>
+
             <button className="arrow-button" onClick={handleOpen}>
               <span className="arrow-icon">→</span>
             </button>
@@ -210,10 +217,13 @@ const Leadership = () => {
           </div>
         </div>
       </div>
-
-      {/* Footer at the bottom */}
+     </div>
       
+       <div className="footer-wrapper">
+      <Footer />
     </div>
+  </>
+    
   );
 };
 
