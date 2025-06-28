@@ -8,7 +8,7 @@ import '../../styles/global.css';
 
 const categoryData = {
   'About Us': `
-    <div style="font-size: 15px; line-height: 1.8; color: #333;">
+    <div style="font-size: 18px; line-height: 1.8; color: #333;">
       <h3 style="color: #000; font-weight: bold;">Welcome to - <span style="color: #c00;">BIHER</span> :</h3>
       <p>Sri Lakshmi Ammal Educational Trust was established with a visionary mission to revolutionize higher education in Tamil Nadu. 
       In 1984, under the dynamic leadership of Dr. S. Jagathrakshakan, the Trust founded the Bharath Institute of Science and Technology (BIST), 
@@ -254,11 +254,54 @@ const categoryData = {
 `,
 
 
-  'Strength Of The Institution': 'Highlights our academic, infrastructural and faculty strengths.',
-  'Inception & Brief History': 'Provides the historical evolution of the institution.',
-  'Professional Society': 'Details the professional bodies and student chapters present.',
-  'Approvals': 'Contains information about AICTE, UGC and other relevant approvals.',
-  'Ranking & Accreditation': 'Shows our NAAC, NBA and other rankings/accreditations.',
+  'Strength Of The Institution': `
+  <div style="font-size: 20px; line-height: 1.8; color: #333;">
+    <h3 style="color: #000;">Strength Of <span style="color: #c00;">the Institution :</span></h3>
+    <br>
+    <ul style="padding-left: 20px; list-style-type: circle;">
+      <li>6 Campuses - 305 acres — 1.3 crore sq.ft buildings — 3000 Bedded Hospital — 6000 OPS / day (Free - Treatment, Medicine & Food).</li>
+      
+      <li>Cutting edge Research — 5 lakh sq.ft Research Park, 56 Research Labs, 12 Centres of Excellence.</li>
+      <li>World class library with 5 lakh Books, Online journal access to more than 20 lakh e-Resources.</li>
+      <li>Virtual class rooms, ICTI EDIJSAT, NPTEL, MOOCs, etc., modules to provide access to courses from top institutions.</li>
+      <li>State of Art Student amenities — Hostel Health Centre, Cosmopolitan Cafeteria, Sports, Gym, Recreation facilities, etc.</li>
+      <li>Last 5 years — more than 1000 Medical camps, 500 Villages, Planted 25,000 Saplings. Swachh Bharath, Swachhta Pakhwada, Unnat Bharath Abhiyan NCC, NSS, YRC, RRC etc., for holistic development.</li>
+      <li>Nearly - 55% Girl students, 75% Other state students, 85% Economically & Socially challenged students, 43% Women faculty.</li>
+      <li>Stipends / Scholarships worth - Rs. 35.7 Crores (2016-17), Rs. 38.5 Crores (2017-18).</li>
+    </ul>
+  </div>
+`,
+
+  'Inception & Brief History': `
+  <div style="font-size: 29px; line-height: 1.8; color: #333;">
+    <h3 style="color: #000; font-weight: bold;">
+      Inception &nbsp;<span style="color: #c00;">Brief History :</span>
+    </h3>
+    <br>
+
+    <p>
+      Bharath Institute of Higher Education and Research (BIHER) is one of India’s leading institutes,
+      with more than 10,000 students and 900 faculty members. The areas of excellence range from engineering and medicine
+      to management and humanities. We live in an increasingly interconnected world that faces challenges and complex
+      problems on a global scale. Since the start of the 21st century, BIHER is uniquely prepared among the other
+      universities by its breadth of scholarship, entrepreneurial heritage and pioneering faculty – To provide research
+      and real-world approaches to address many of the current issues.
+    </p>
+    <br>
+    <p>
+      The era of globalization means many things to Bharath: research on issues relating to science and technology,
+      exchanges with foreign universities, overseas opportunities for undergraduates, and collaboration. BIHER embarked
+      upon ambitious strategic initiatives to ensure that Bharath continues to educate future leaders and to find
+      solutions to the most pressing global challenges through its International Advisory Board with eminent scholars
+      from 40 top universities/organizations across the world, Corporate Advisory Board with eminent executives from
+      215 leading companies, Faculty Abroad Program, Student Semester Abroad Program, Research Institute, Innovation
+      in Teaching and Learning Pedagogy, and Diversity of students from 52 countries and from across India.
+    </p>
+  </div>
+`,
+
+  
+  
 };
 
 const Overview = () => {

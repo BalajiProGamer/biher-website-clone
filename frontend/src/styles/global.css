@@ -2842,3 +2842,285 @@ p {
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
+
+/* ======= NCC Component Styles ======= */
+
+.ncc-top-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ncc-header {
+  background: linear-gradient(180deg, #cc1c1f, #9e1920);
+  padding: 10px 20px;
+  color: #fff;
+  font-family: 'Times New Roman', serif;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ncc-home-link {
+  color: #fff;
+  display: flex;
+}
+
+.ncc-breadcrumb-link {
+  color: #fff;
+  text-decoration: none;
+  font-style: italic;
+}
+
+/* Main container */
+.ncc-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Sidebar */
+.ncc-sidebar {
+  width: 250px;
+  background-color: rgba(0, 51, 68, 0.85);
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  font-family: Georgia, serif;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  align-items: flex-end;
+}
+
+.ncc-sidebar-header {
+  background-color: #f7b801;
+  padding: 7px 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+}
+
+.ncc-sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 16px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.ncc-sidebar-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.ncc-sidebar-icon {
+  margin-right: 10px;
+}
+
+.gallery-item {
+  padding: 6px 16px;
+}
+
+/* Content area */
+.ncc-content {
+  flex: 1;
+  font-family: Georgia, serif;
+  line-height: 1.8;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 20px;
+  gap: 20px;
+}
+
+.ncc-title {
+  color: #9e1920;
+}
+
+.ncc-highlight {
+  font-weight: bold;
+  font-style: italic;
+  color: #004080;
+}
+
+/* ========== NSS Component ========== */
+
+.nss-main-section {
+  background-repeat: repeat;
+  padding: 20px;
+}
+
+.nss-layout-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nss-sidebar {
+  width: 250px;
+  background-color: #002B3D;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.nss-sidebar-header {
+  background-color: #FFC107;
+  color: #333;
+  font-weight: bold;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.nss-sidebar-icon {
+  margin-right: 10px;
+}
+
+.nss-sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: #fff;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.nss-sidebar-item:hover {
+  background-color: #0a3b52;
+}
+
+.nss-sidebar-item-icon {
+  margin-right: 10px;
+}
+
+/* Content Section Styling */
+.nss-content {
+  flex: 1;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.7;
+  font-size: 16px;
+  max-width: 800px;
+}
+
+/* Title Section */
+.nss-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #0056a3;
+  border-left: 3px solid #f4c200;
+  padding-left: 10px;
+  text-transform: uppercase;
+}
+
+.nss-subtitle {
+  font-size: 24px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.nss-title-highlight {
+  color: #c8102e;
+}
+
+/* Breadcrumb */
+.nss-breadcrumb-bar {
+  background: linear-gradient(to right, #a72c2c, #e81e38); /* red gradient */
+  padding: 12px 0;
+  color: white;
+}
+
+.nss-breadcrumb-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.nss-home-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.nss-breadcrumb-text {
+  color: white;
+  font-weight: 500;
+}
+
+
+/* Banner */
+.nss-top-banner {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+
+/*RRC  css*/
+/* RRC Breadcrumb Header */
+.rrc-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #a52a2a, #ee1c25);
+  color: white;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.rrc-home-link {
+  color: white;
+  text-decoration: none;
+  margin-right: 8px;
+}
+
+.rrc-home-icon {
+  font-size: 18px;
+}
+
+.rrc-separator {
+  margin: 0 8px;
+}
+
+.rrc-breadcrumb-text {
+  font-size: 16px;
+}
+
+/* Background Image Section */
+.rrc-background-section {
+  height: 300px;
+  background-image: url('../assets/pattern.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 20%;
+}
