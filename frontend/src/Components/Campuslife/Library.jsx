@@ -1,10 +1,11 @@
- import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import libraryImage from '../../assets/lib.jpg';
 import qrCodeImage from '../../assets/qr.png';
 import { FaHome } from 'react-icons/fa';
 import Footer from '../Footer';
 import Banner from '../Banner';
+import '../../styles/global.css'; // Make sure this path is correct
 
 const categories = [
   'WEB-OPAC (Online Book Search)',
@@ -76,112 +77,78 @@ const Library = () => {
 
   return (
     <div>
-      {/* Banner Image */}
-      <img
-        src={libraryImage}
-        alt="Library"
-        style={{ width: '100%', height: 'auto', display: 'block' }}
-      />
+      <img src={libraryImage} alt="Library" className="library-banner" />
 
-      {/* Header Navigation */}
-      <div style={{
-        backgroundColor: '#b71c1c',
-        color: 'white',
-        padding: '10px 20px',
-        display: 'flex',
-        alignItems: 'center',
-        fontSize: '18px'
-      }}>
-        <Link to="/" style={{ color: 'white', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-          <FaHome style={{ marginRight: '8px' }} />
-          <span style={{ fontStyle: 'italic' }}> » Library</span>
+      <div className="library-header">
+        <Link to="/" className="library-home-link">
+          <FaHome className="library-home-icon" />
+          <span className="library-home-text"> » Library</span>
         </Link>
       </div>
 
-      {/* Main Content */}
-      <div style={{ display: 'flex', padding: '50px 70px', fontFamily: 'sans-serif' }}>
-        {/* Left Section */}
-        <div style={{ flex: 2, paddingRight: '40px' }}>
-          <h2 style={{ borderBottom: '1px solid #ccc', paddingBottom: '10px' }}>
-            <span style={{ color: '#b71c1c' }}>About</span> the <strong>Library</strong>
+      <div className="library-container">
+        <div className="library-left">
+          <h2 className="library-title">
+            <span className="highlight-red">About</span> the <strong>Library</strong>
           </h2>
-          <p style={{ lineHeight: '1.8', color: '#444' }}>
+
+          <p className="library-description">
             The BIHER Library was established in the year 1984 with three main branches of Engineering such as Civil, Mechanical and Computer Science Engineering. Gradually it has grown up in all dimensions in terms of collections and services. The library caters to the needs of the faculty, Students and Research Scholars. Books related to these disciplines were added to this library initially. Bharath University Library has a seating capacity of Six Hundred.
           </p>
 
-          {/* Resources Section */}
-          <div style={{ marginTop: '30px' }}>
-            <div style={{
-              backgroundColor: '#1f2b3a',
-              color: 'white',
-              padding: '10px 15px',
-              borderRadius: '8px',
-              display: 'inline-block',
-              fontWeight: 'bold'
-            }}>
-              📚 Resources For <span style={{ color: '#ffc107' }}>All Campus</span>
+          <div className="library-resources">
+            <div className="resource-label">
+              📚 Resources For <span className="highlight-yellow">All Campus</span>
             </div>
 
-            {/* Campus Selector Buttons */}
-            <div style={{ display: 'flex', marginTop: '20px', flexWrap: 'wrap', gap: '10px' }}>
+            <div className="campus-buttons">
               {Object.keys(campusData).map((campus) => (
                 <button
                   key={campus}
                   onClick={() => setSelectedCampus(campus)}
-                  style={{
-                    padding: '10px 15px',
-                    backgroundColor: selectedCampus === campus ? '#0288d1' : '#f0f0f0',
-                    color: selectedCampus === campus ? 'white' : '#333',
-                    border: 'none',
-                    borderRadius: '4px',
-                    boxShadow: selectedCampus === campus ? '2px 2px 6px rgba(0,0,0,0.2)' : 'none',
-                    cursor: 'pointer',
-                    fontWeight: 'bold'
-                  }}
+                  className={`campus-button ${selectedCampus === campus ? 'active' : ''}`}
                 >
                   {campus}
                 </button>
               ))}
             </div>
 
-            {/* Campus Resource Table */}
-            <table style={{ width: '100%', marginTop: '50px', borderCollapse: 'collapse' }}>
+            <table className="campus-table">
               <tbody>
                 <tr>
-                  <td style={tdStyle}>No. of Volumes</td>
-                  <td style={tdStyle}>{campusData[selectedCampus].volumes}</td>
+                  <td className="table-cell">No. of Volumes</td>
+                  <td className="table-cell">{campusData[selectedCampus].volumes}</td>
                 </tr>
                 <tr>
-                  <td style={tdStyle}>No. of Titles</td>
-                  <td style={tdStyle}>{campusData[selectedCampus].titles}</td>
+                  <td className="table-cell">No. of Titles</td>
+                  <td className="table-cell">{campusData[selectedCampus].titles}</td>
                 </tr>
                 <tr>
-                  <td style={tdStyle}>No. of National Journals</td>
-                  <td style={tdStyle}>{campusData[selectedCampus].nationalJournals}</td>
+                  <td className="table-cell">No. of National Journals</td>
+                  <td className="table-cell">{campusData[selectedCampus].nationalJournals}</td>
                 </tr>
                 <tr>
-                  <td style={tdStyle}>No. of International Journals</td>
-                  <td style={tdStyle}>{campusData[selectedCampus].internationalJournals}</td>
+                  <td className="table-cell">No. of International Journals</td>
+                  <td className="table-cell">{campusData[selectedCampus].internationalJournals}</td>
                 </tr>
                 <tr>
-                  <td style={tdStyle}>E-Resources</td>
-                  <td style={tdStyle}>{campusData[selectedCampus].eResources}</td>
+                  <td className="table-cell">E-Resources</td>
+                  <td className="table-cell">{campusData[selectedCampus].eResources}</td>
                 </tr>
                 <tr>
-                  <td style={tdStyle}>Library Automation</td>
-                  <td style={tdStyle}>{campusData[selectedCampus].automation}</td>
+                  <td className="table-cell">Library Automation</td>
+                  <td className="table-cell">{campusData[selectedCampus].automation}</td>
                 </tr>
                 <tr>
-                  <td style={tdStyle}>No. of CDs</td>
-                  <td style={tdStyle}>{campusData[selectedCampus].cds}</td>
+                  <td className="table-cell">No. of CDs</td>
+                  <td className="table-cell">{campusData[selectedCampus].cds}</td>
                 </tr>
               </tbody>
             </table>
 
-            {/* Central Library & Services */}
-            <div style={{ marginTop: '50px' }}>
-              <h3 style={{ color: '#1f2b3a' }}>📘 Central Library <span style={{ color: '#ff9800' }}>& Services</span></h3>
-              <ul style={{ paddingLeft: '20px', lineHeight: '1.8', color: '#333' }}>
+            <div className="library-services">
+              <h3>📘 Central Library <span className="highlight-yellow">& Services</span></h3>
+              <ul className="library-service-list">
                 <li><i>Circulation Service</i></li>
                 <li><i>Reference Service</i></li>
                 <li><i>Reprographic Service</i></li>
@@ -202,91 +169,28 @@ const Library = () => {
           </div>
         </div>
 
-        {/* Right Sidebar */}
-        <div style={{
-          width: '280px',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '20px',
-          height: 'fit-content',
-          position: 'sticky',
-          top: '100px'
-        }}>
-          {/* Categories Box */}
-          <div style={{
-            backgroundColor: '#fff',
-            padding: '15px',
-            border: '1px solid #ddd',
-            borderRadius: '8px',
-            boxShadow: '0 2px 6px rgba(0,0,0,0.1)'
-          }}>
-            <div style={{
-              position: 'relative',
-              backgroundColor: '#b71c1c',
-              color: '#fff',
-              padding: '10px',
-              borderTopLeftRadius: '8px',
-              borderTopRightRadius: '8px',
-              fontWeight: 'bold',
-              fontSize: '16px'
-            }}>
-              📂 Categories :
-              <div style={{
-                position: 'absolute',
-                top: 0,
-                right: 0,
-                width: 0,
-                height: 0,
-                borderLeft: '40px solid transparent',
-                borderBottom: '40px solid #e91e63',
-                borderTopRightRadius: '8px'
-              }}></div>
-            </div>
-
-            <ul style={{ listStyleType: 'none', padding: 0, marginTop: '20px' }}>
+        <div className="library-right">
+          <div className="library-categories">
+            <div className="category-header">📂 Categories :</div>
+            <ul className="category-list">
               {categories.map((item, index) => (
-                <li key={index} style={{
-                  padding: '8px 10px',
-                  borderBottom: '1px solid #eee',
-                  fontSize: '14px',
-                  color: '#333',
-                  display: 'flex',
-                  alignItems: 'center'
-                }}>
-                  <span style={{ color: '#007bff', marginRight: '6px' }}>•</span> {item}
+                <li key={index} className="category-item">
+                  <span className="bullet">•</span> {item}
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* QR Code Box */}
-          <div style={{
-            backgroundColor: '#fff',
-        
-            textAlign: 'center'
-          }}>
-            <img
-              src={qrCodeImage}
-              alt="QR Code for 2025 Admission"
-              style={{ width: '250px', height: '350px', objectFit: 'contain', marginBottom: '10px' }}
-            />
-            <Banner/>
-            
+          <div className="library-qr">
+            <img src={qrCodeImage} alt="QR Code" className="qr-image" />
+            <Banner />
           </div>
-          
         </div>
       </div>
+
       <Footer />
     </div>
   );
-};
-
-const tdStyle = {
-  border: '1px solid #ddd',
-  padding: '12px',
-  backgroundColor: '#f9f9f9',
-  fontSize: '16px',
-  verticalAlign: 'top'
 };
 
 export default Library;
