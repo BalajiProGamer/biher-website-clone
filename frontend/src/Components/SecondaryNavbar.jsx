@@ -154,14 +154,14 @@ const SecondaryNavbar = () => {
         <div className="dropdown dropdown-campus">
           <span className="dropdown-label">Campus Life <FaChevronDown /></span>
           <div className="dropdown-content dropdown-content-campus">
-            <a href="https://docs.google.com/forms/..." target="_blank" rel="noopener noreferrer"><FaBook /> Leave</a>
-            <a href="https://www.bharathuniv.ac.in/nba/..." target="_blank" rel="noopener noreferrer"><FaBook /> Leave Policy</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfK_3gLJn5euBfGqIMY_MpoQE79s4VchF6vRS2jc2eyIrNNBA/viewform" target="_blank" rel="noopener noreferrer"><FaBook /> Leave</a>
+            <a href="https://www.bharathuniv.ac.in/nba/I.10_Rules_Policy_Service%20book_BIST.pdf" target="_blank" rel="noopener noreferrer"><FaBook /> Leave Policy</a>
             <Link to="/campuslife/NCC"><FaUsers /> NCC</Link>
             <Link to="/campuslife/NSS"><FaUsers /> NSS</Link>
             <Link to="/campuslife/RRC"><FaUsers /> RRC</Link>
             <Link to="/campuslife/hostel"><FaBuilding /> Hostel</Link>
             <Link to="/campuslife/library"><FaBook /> Library</Link>
-            <Link to="/campuslife/scholarship"><FaClipboardList /> Scholarship</Link>
+            <Link to="/campuslife/transport"><FaClipboardList /> Transport</Link>
           </div>
         </div>
       </div>

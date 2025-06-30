@@ -44,7 +44,7 @@ import Patent from "./Components/Research/Patent";
 import NCC from "./Components/Campuslife/Ncc";
 import NSS from "./Components/Campuslife/NSS";
 import RRC from "./Components/Campuslife/RRC";
-import Scholarship from "./Components/Campuslife/Scholarship";
+import Transport from "./Components/Campuslife/Transport";
 import Hostel from "./Components/Campuslife/Hostel"; 
 import Library from "./Components/Campuslife/Library";
 
@@ -127,7 +127,7 @@ function App() {
         <Route path="/campuslife/RRC" element={<RRC/>}/>
         <Route path="/campuslife/Hostel" element={<Hostel/>}/>
         <Route path="/campuslife/Library" element={<Library/>}/>
-        <Route path="/campuslife/Scholarship" element={<Scholarship/>}/>
+        <Route path="/campuslife/Transport" element={<Transport/>}/>
         <Route path="/international/admissions" element={<Admissions/>}/>
         <Route path="/international/Collaboration" element={<Collaboration/>}/>
         <Route path="/international/Higher-Studies" element={<HigherStudies/>}/>
