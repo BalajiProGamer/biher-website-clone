@@ -4171,6 +4171,68 @@ p {
   text-align: left;
   padding: 12px 15px;
 }
+.agri-dean-profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+.agri-dean-image {
+  width: 120px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.agri-dean-details {
+  flex: 1;
+}
+
+.agri-dean-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #800000; /* Maroon */
+  margin-bottom: 6px;
+}
+
+.agri-dean-qual {
+  font-size: 14px;
+  color: #0077cc;
+  text-decoration: underline;
+  margin-left: 5px;
+}
+
+.agri-dean-title {
+  font-size: 14px;
+  color: #333;
+  margin-top: 4px;
+  line-height: 1.6;
+}
+
+.agri-dean-message {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.9;
+  padding: 10px 0 20px 0;
+}
+details summary {
+  outline: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 6px 0;
+}
+
+details p {
+  margin-bottom: 12px;
+  text-align: justify;
+}
 
 
 /* architecture css component */
@@ -4376,6 +4438,17 @@ p {
   text-align: left;
   padding: 12px 15px;
 }
+.arch-dean-image {
+  border: 1px solid #ccc;
+  padding: 2px;
+}
+.arch-content-heading {
+  font-size: 22px;
+}
+.arch-highlight {
+  color: #b30000;
+  font-weight: bold;
+}
 
 
 /*Arts component css */
@@ -4388,34 +4461,46 @@ p {
 
 /* Breadcrumb */
 .arts-breadcrumb-header {
-  background-color: #b30000;
-  padding: 10px 20px;
-  font-size: 14px;
+  background: linear-gradient(to right, #a52828, #e52b2b);
+  padding: 10px 20px; /* Enough vertical padding */
+  color: #fff;
+  font-family: 'Georgia', ;
 }
 
 .arts-breadcrumb-container {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 600;
+  color: white;
 }
 
 .arts-breadcrumb-link {
+  display: flex;
+  align-items: center;
   color: white;
   text-decoration: none;
 }
 
 .arts-breadcrumb-icon {
-  margin-right: 5px;
+  font-size: 20px;
+  margin-right: 2px;
 }
 
 .arts-breadcrumb-separator {
-  margin: 0 8px;
-  color: white;
+  margin: 0 6px;
+  font-weight: bold;
+  font-style: normal;
 }
 
+.arts-breadcrumb-text,
 .arts-breadcrumb-current {
-  font-weight: bold;
+  margin: 0;
+  padding: 0;
 }
+
 
 /* Background Section */
 .arts-background-section {
@@ -4566,6 +4651,56 @@ p {
   padding: 12px 15px;
 }
 
+.arts-dean-profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  background-color: #fdfdfd;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.arts-dean-image {
+  width: 130px;
+  height: auto;
+  border: 1px solid #999;
+  padding: 4px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.arts-dean-details {
+  flex: 1;
+  min-width: 250px;
+}
+
+.arts-dean-name {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #800000;
+}
+
+.arts-dean-qual {
+  font-size: 14px;
+  color: #444;
+}
+
+.arts-dean-title {
+  font-size: 15px;
+  color: #333;
+  font-style: italic;
+}
+
+.arts-dean-message {
+  font-size: 15px;
+  line-height: 1.8;
+  text-align: justify;
+  color: #444;
+  padding: 10px;
+}
 
 /*Basic sciences   css components*/
 /* Top Banner */
