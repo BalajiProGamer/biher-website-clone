@@ -4712,34 +4712,46 @@ details p {
 
 /* Breadcrumb */
 .basicsci-breadcrumb-header {
-  background-color: #b30000;
+  background: linear-gradient(to right, #9e1c1f, #ea2c3c); /* red gradient */
   padding: 10px 20px;
-  font-size: 14px;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .basicsci-breadcrumb-container {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .basicsci-breadcrumb-link {
   color: white;
   text-decoration: none;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
 }
 
 .basicsci-breadcrumb-icon {
-  margin-right: 5px;
+  font-size: 20px;
+  margin-right: 8px;
 }
 
 .basicsci-breadcrumb-separator {
   margin: 0 8px;
-  color: white;
+  font-weight: bold;
+}
+
+.basicsci-breadcrumb-text {
+  font-style: italic;
 }
 
 .basicsci-breadcrumb-current {
-  font-weight: bold;
+  font-style: italic;
+  font-weight: 600;
 }
+
 
 /* Background Section */
 .basicsci-background-section {
@@ -4888,6 +4900,49 @@ details p {
   font-weight: bold;
   text-align: left;
   padding: 12px 15px;
+}
+.basicsci-dean-profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.basicsci-dean-image {
+  width: 140px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.basicsci-dean-details {
+  flex: 1;
+}
+
+.basicsci-dean-name {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.basicsci-dean-qual {
+  font-weight: normal;
+  color: #555;
+}
+
+.basicsci-dean-title {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+.basicsci-dean-message p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+  text-align: justify;
+  margin-bottom: 15px;
 }
 
 
@@ -5078,6 +5133,70 @@ details p {
   text-align: left;
   padding: 12px 15px;
 }
+
+.bioeng-content-heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #222;
+}
+
+.bioeng-highlight {
+  color: #c32020;
+}
+
+.bioeng-divider {
+  border: none;
+  height: 1px;
+  background-color: #d0d0d0;
+  margin-top: 5px;
+}
+
+.bioeng-dean-profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+}
+
+.bioeng-dean-image {
+  width: 120px;
+  height: auto;
+  border: 3px solid #ddd;
+  border-radius: 4px;
+}
+
+.bioeng-dean-details {
+  flex: 1;
+}
+
+.bioeng-dean-name {
+  font-size: 18px;
+  color: #8b0000;
+}
+
+.bioeng-dean-qual {
+  font-size: 14px;
+  color: #333;
+}
+
+.bioeng-dean-title {
+  margin-top: 5px;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.bioeng-dean-message {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.7;
+  text-align: justify;
+}
+
 /* Computing css components */
 
 .computing-banner {
@@ -5088,34 +5207,44 @@ details p {
 
 /* Breadcrumb */
 .computing-breadcrumb-header {
-  background-color: #b30000;
-  padding: 10px 20px;
-  font-size: 14px;
+  background: linear-gradient(to right, #a4291b, #e92236);
+  padding: 10px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .computing-breadcrumb-container {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
 }
 
 .computing-breadcrumb-link {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
 
 .computing-breadcrumb-icon {
-  margin-right: 5px;
+  font-size: 18px;
+  vertical-align: middle;
 }
 
 .computing-breadcrumb-separator {
-  margin: 0 8px;
-  color: white;
+  margin: 0 5px;
 }
 
+.computing-breadcrumb-text,
 .computing-breadcrumb-current {
-  font-weight: bold;
+  font-style: italic;
+  font-weight: 600;
 }
+
 
 /* Background Section */
 .computing-background-section {
@@ -5265,6 +5394,69 @@ details p {
   text-align: left;
   padding: 12px 15px;
 }
+.computing-content-heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #222;
+}
+
+.computing-highlight {
+  color: #c32020;
+}
+
+.computing-divider {
+  border: none;
+  height: 1px;
+  background-color: #d0d0d0;
+  margin-top: 5px;
+}
+
+.computing-dean-profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+}
+
+.computing-dean-image {
+  width: 120px;
+  height: auto;
+  border: 3px solid #ddd;
+  border-radius: 4px;
+}
+
+.computing-dean-details {
+  flex: 1;
+}
+
+.computing-dean-name {
+  font-size: 18px;
+  color: #8b0000;
+}
+
+.computing-dean-qual {
+  font-size: 14px;
+  color: #333;
+}
+
+.computing-dean-title {
+  margin-top: 5px;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.computing-dean-message {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.8;
+  text-align: justify;
+}
+
 
 /* CivilEngineering css components */
 .civilinfra-banner {
@@ -5275,15 +5467,18 @@ details p {
 
 /* Breadcrumb */
 .civilinfra-breadcrumb-header {
-  background-color: #b30000;
+  background: linear-gradient(to right, #a8291d, #f32b3f); /* Deep red to bright red gradient */
   padding: 10px 20px;
-  font-size: 14px;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .civilinfra-breadcrumb-container {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .civilinfra-breadcrumb-link {
@@ -5292,17 +5487,21 @@ details p {
 }
 
 .civilinfra-breadcrumb-icon {
-  margin-right: 5px;
+  font-size: 18px;
+  vertical-align: middle;
 }
 
 .civilinfra-breadcrumb-separator {
-  margin: 0 8px;
+  margin: 0 4px;
   color: white;
 }
 
+.civilinfra-breadcrumb-text,
 .civilinfra-breadcrumb-current {
-  font-weight: bold;
+  color: white;
+  font-style: italic;
 }
+
 
 /* Background Section */
 .civilinfra-background-section {
@@ -5452,6 +5651,46 @@ details p {
   text-align: left;
   padding: 12px 15px;
 }
+.civilinfra-dean-profile {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.civilinfra-dean-image {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.civilinfra-dean-details {
+  font-size: 16px;
+}
+
+.civilinfra-dean-name {
+  margin: 0;
+  font-size: 18px;
+  color: #b00020;
+}
+
+.civilinfra-dean-qual {
+  font-size: 14px;
+  color: #555;
+  text-decoration: underline;
+}
+
+.civilinfra-dean-title em {
+  font-style: italic;
+}
+
+.civilinfra-dean-message p {
+  text-align: justify;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
 
 
 /* Dentistry css components*/
@@ -5463,24 +5702,29 @@ details p {
 
 /* Breadcrumb */
 .dentistry-breadcrumb-header {
-  background-color: #b30000;
-  padding: 10px 20px;
+  background: linear-gradient(to right, #a52a2a, #e91e29); /* Matching the red gradient */
+  padding: 12px 20px;
   font-size: 14px;
+  color: white;
 }
 
 .dentistry-breadcrumb-container {
   display: flex;
-  align-items: center;
+  align-items: center;  /* Vertically center content */
   flex-wrap: wrap;
 }
 
 .dentistry-breadcrumb-link {
   color: white;
+  display: flex;
+  align-items: center;
   text-decoration: none;
+  margin-right: 8px;
 }
 
 .dentistry-breadcrumb-icon {
-  margin-right: 5px;
+  font-size: 18px;
+  margin-right: 4px;
 }
 
 .dentistry-breadcrumb-separator {
@@ -5488,9 +5732,13 @@ details p {
   color: white;
 }
 
+.dentistry-breadcrumb-text,
 .dentistry-breadcrumb-current {
-  font-weight: bold;
+  font-style: italic;
+  font-weight: 600;
+  color: white;
 }
+
 
 /* Background Section */
 .dentistry-background-section {
@@ -5640,6 +5888,43 @@ details p {
   text-align: left;
   padding: 12px 15px;
 }
+.dentistry-dean-profile {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.dentistry-dean-image {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.dentistry-dean-name {
+  font-size: 18px;
+  color: #b00020;
+  margin-bottom: 0;
+}
+
+.dentistry-dean-qual {
+  font-size: 14px;
+  color: #555;
+  text-decoration: underline;
+}
+
+.dentistry-dean-title {
+  font-style: italic;
+  font-size: 15px;
+}
+
+.dentistry-dean-message p {
+  font-size: 15px;
+  text-align: justify;
+  line-height: 1.6;
+}
+  
 
 /* Law css components */
 .law-banner {

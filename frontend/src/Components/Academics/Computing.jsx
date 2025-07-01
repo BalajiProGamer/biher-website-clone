@@ -4,8 +4,9 @@ import backgroundImg from "../../assets/pattern.jpg";
 import { Link } from 'react-router-dom';
 import { FaHome, FaBook } from 'react-icons/fa';
 import Footer from '../Footer';
+import Banner from '../Banner';
 import '../../styles/global.css';
-import deanImg from "../../assets/dean desk.png";
+import deanImg from "../../assets/cse-dean.png";
 
 const Computing = () => {
   const [selectedTab, setSelectedTab] = useState("About");
@@ -15,57 +16,83 @@ const Computing = () => {
     "About": (
       <>
         <h5 className="computing-content-welcome">Welcome to School of Computing</h5>
+        <br></br>
         <h3 className="computing-content-heading">About <span className="computing-highlight">The School :</span></h3>
         <hr />
-        <p className="computing-content-paragraph">The School of Computing empowers students with core knowledge in software development, data science, cybersecurity, and emerging computing technologies.</p>
-        <p className="computing-content-paragraph">We focus on practical problem-solving, computational thinking, and real-world application through projects, research, and innovation.</p>
-        <p className="computing-content-paragraph">Our graduates are prepared to excel in industries such as IT, AI, FinTech, and research-driven enterprises.</p>
+        <p className="computing-content-paragraph">The School of Computing, Bharath Institute of Higher Education and Research covers of Department of Computer Science and Engineering and Department of Information Technology. The Department of Computer Science and Engineering offeres B.Tech. Computer Science and Engineering with NBA accreditation, B.Tech. Computer Science and Engineering (Artificial Intelligence), B.Tech. Computer Science and Engineering (Cyber Security), M.Tech. Computer Science and Engineering. The Department of Information Technology provides B.Tech Information Technology and M.Tech Information Technology. The school also offers Ph.D. in Computer Science and Engineering and Ph.D Information Technology.</p>
+        <p className="computing-content-paragraph">The School has MoU with top-notch industries like IBM, Oracle, VMWare, RedHat and Cisco to share knowledge and experience to our students. The school also has Centre of Excellence in digital forensics and Artificial Intelligence in order to bridge the gap between industry and academia. Our placements are consistently above 90% for the past three years. Our students are placed with highest salary of 24 lakhs per annum and an average salary of 3.5 lakhs per annum. Students are guided for placements right from the first year. The students and faculty of the school of computing to their credit have 50 patents. We cater to various needs of our students. Students are encouraged to be part of various Student Development Clubs to horn skills of their passion.</p>
+        <p className="computing-content-paragraph">Our Institute has achieved a prestigious position as one of the Top Computer science engineering colleges in Tamil Nadu. Aspiring students must be aware about the importance of Computer science engineering in ever changing world. Exploring the Benefits of a Computer Science Engineering Course B.Tech Computer Science engineering course which is an exciting, ever-evolving field of study that has the potential to revolutionize the way we interact with technology. With the advent of new technologies such as artificial intelligence, virtual reality, and the Internet of Things, the opportunities for those who choose to pursue a B.Tech in Computer Science Engineering are endless. By pursuing this course, you can gain an understanding of the fundamentals of computer science and then use this knowledge to develop and create projects that can be applied to many aspects of life. With a Computer Science Engineering course, you can gain a deeper understanding of how computing systems work and develop the skills to help you build the next generation of computing systems. This can open up a world of possibilities to help you make a real difference in the world</p>
+      <h3 className="computing-content-heading">The Advantages of Pursuing a B.Tech <span className="computing-highlight">Computer Science Engineering Course</span></h3>
+      <hr />
+      <p className="computing-content-paragraph">A Computer Science Engineering course provides the skills necessary to develop and manage computer systems, analyze data, and create algorithms that can be used to solve complex problems. With this knowledge, you can pursue a range of career opportunities in software engineering, network engineering, and database technology. You can also pursue careers in artificial intelligence, machine learning, and robotics. A Computer Science Engineering course also provides the opportunity to develop projects that have real-world applications, such as systems for controlling robots, self-driving cars, or virtual reality applications.</p>
+
       </>
     ),
 
-    "Vision & Mission": (
-      <>
-        <h3 className="computing-content-heading">Vision & <span className="computing-highlight">Mission</span></h3>
-        <hr />
-        <h3 className="computing-content-heading">Our <span className="computing-highlight">Vision :</span></h3>
-        <p className="computing-content-paragraph">To be a center of excellence in computing education, research, and innovation.</p>
-        <h3 className="computing-content-heading">Our <span className="computing-highlight">Mission :</span></h3>
-        <hr />
-        <br />
-        <ul>
-          <li><i>To deliver high-quality computing education with real-world relevance.</i></li>
-          <br />
-          <li>To nurture innovation, analytical thinking, and ethical technology usage.</li>
-          <br />
-          <li>To contribute to societal advancement through cutting-edge research in computing.</li>
-        </ul>
-      </>
-    ),
+   "Vision & Mission": (
+  <>
+    <h5 className="computing-content-welcome">Vision & Mission</h5>
 
-    "Deans Desk": (
-      <>
-        <h3 className="computing-content-heading">Dean's <span className="computing-highlight">Desk</span></h3>
-        <hr />
-        <br />
-        <div className="computing-dean-profile">
-          <img src={deanImg} alt="Dean" className="computing-dean-image" />
-          <div className="computing-dean-details">
-            <h4 className="computing-dean-name">
-              <b>Dr. S. Elangovan</b>, <span className="computing-dean-qual">M.Tech., PhD</span>
-            </h4>
-            <p className="computing-dean-title">👨‍💻 Professor and Dean,<br />🏛 School of Computing, BIHER</p>
-          </div>
-        </div>
+    <h3 className="computing-content-heading">Our <span className="computing-highlight">Vision :</span></h3>
+    <hr className="computing-divider" />
+    <p className="computing-content-paragraph">
+      To be a globally recognized, skilled, research oriented and communally responsible software and hardware engineers
+      team catering to the various industrial needs.
+    </p>
 
-        <div className="computing-dean-message">
-          <p>In a digital-first world, computing is the engine of transformation. Our school fosters a learning ecosystem grounded in technical depth and creative innovation.</p>
-          <br />
-          <p>We mentor students to lead with knowledge in AI, cloud computing, cybersecurity, and software engineering.</p>
-          <br />
-          <p>We aim to shape computing professionals who drive innovation and solve real-world challenges globally.</p>
-        </div>
-      </>
-    ),
+    <h3 className="computing-content-heading">Our <span className="computing-highlight">Mission :</span></h3>
+    <hr className="computing-divider" />
+    <p className="computing-content-paragraph">
+      Mission of the department is to achieve International Recognition by:
+    </p>
+    <ul className="computing-mission-list">
+      <li>
+        <i><b>MD 1</b></i> Impart knowledge on fundamentals and emerging thrust areas of IT and ITES.
+      </li>
+      <li>
+        <i><b>MD 2</b></i> Collaborate with International and National institutions/organizations in Software Development,
+        Consultancy, Research & Development.
+      </li>
+      <li>
+        <i><b>MD 3</b></i> Train the spirit of leadership and entrepreneurial knowledge and skills.
+      </li>
+      <li>
+        <i><b>MD 4</b></i> Inculcate values and responsibilities in rendering technological services for the sustainable
+        growth of the society.
+      </li>
+    </ul>
+  </>
+),
+
+   "Deans Desk": (
+  <>
+    <h3 className="computing-content-heading">Deans <span className="computing-highlight">Desk :</span></h3>
+    <hr className="computing-divider" />
+    <br />
+    <div className="computing-dean-profile">
+      <img src={deanImg} alt="Prof. Dr. S. Neduncheliyan" className="computing-dean-image" />
+      <div className="computing-dean-details">
+        <h4 className="computing-dean-name">
+          <b>Prof. Dr. S. Neduncheliyan</b>, <span className="computing-dean-qual">B.E, M.S (Engg)(M’Sia), Ph.D, FIETE, MIET.</span>
+        </h4>
+        <p className="computing-dean-title">
+          🎓 Professor and Dean,<br />🏛 <em>School of Computing, BIHER</em>
+        </p>
+      </div>
+    </div>
+
+    <div className="computing-dean-message">
+      <p>
+        A place to be, a place to grow, and a place to begin your life’s work. Welcome! The School of Computing is a place to be at home. I know because I have been a part of the School of Computing since I was a graduate student in the late 1980s. I returned in 2018 to join the faculty because this is the place I want to be. And now I have the distinct privilege and honour to serve my school, our school, as interim Dean. My goal is to foster an environment where we all feel welcome and a part of the rich history and community that is the School of Computing.
+      </p>
+      <br />
+      <p>
+        We are a student-focused university and a lot of emphasis is given to learning. Our student-centered approach to teaching and learning is geared towards ensuring that our students should emerge not only with high level of communication and problem solving skills, flexibility to adapt to new situations, and the ability to become future leaders in their chosen fields, but with sensitivity to societal issues and working on the principles of ‘Giving Back to Society’ and ‘Building for Nation’. The main goal is to provide education to students so that they not only become skilled and employable but also successful entrepreneurs and creating jobs for others. Education does not mean just delivering lectures, taking exams and awarding degrees. Real education goes way beyond the classroom teaching and learning. We provide skills, exposure and an environment for holistic development to our students. We are putting emphasis on producing graduates with hands-on approach in a multidisciplinary environment and industry-based learning experience. Our goal is to keep raising the bar of the right education in a personalized manner.
+      </p>
+      <p>The dynamic team of faculty members who are “Collaborator”, “Contributor”, “Committed”, “Creative” and “Congruent” - possessing ‘5C’ qualities facilitates in imparting the knowledge by implementing the course curriculum designed based on ‘5C’ i.e. Compact, Contemporary, Cutting-Edge, Customised and Collaborative to match up the Management’s strong vision of being the boutique University</p>
+    </div>
+  </>
+),
 
     "Board of Studies": (
       <>
@@ -190,7 +217,7 @@ const Computing = () => {
           </div>
         </div>
       </div>
-
+      <Banner/>
       <Footer />
     </div>
   );

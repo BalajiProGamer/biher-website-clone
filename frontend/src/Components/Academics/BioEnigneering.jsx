@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { FaHome, FaBook } from 'react-icons/fa';
 import Footer from '../Footer';
 import '../../styles/global.css';
-import deanImg from "../../assets/dean desk.png";
+import deanImg from "../../assets/bioengdean.png";
 
 const BioEngineering = () => {
   const [selectedTab, setSelectedTab] = useState("About");
@@ -13,59 +13,112 @@ const BioEngineering = () => {
 
   const content = {
     "About": (
-      <>
-        <h5 className="bioeng-content-welcome">Welcome to School of Bioengineering</h5>
-        <h3 className="bioeng-content-heading">About <span className="bioeng-highlight">The School :</span></h3>
-        <hr />
-        <p className="bioeng-content-paragraph">The School of Bioengineering bridges life sciences and engineering to solve complex biological and medical challenges.</p>
-        <p className="bioeng-content-paragraph">We foster innovation in biomedical devices, tissue engineering, and molecular diagnostics through interdisciplinary learning and research.</p>
-        <p className="bioeng-content-paragraph">Our programs prepare students for impactful careers in healthcare, pharmaceuticals, biotechnology, and research institutions.</p>
-      </>
-    ),
+  <>
+    <h5 className="bioeng-content-welcome">Welcome to School of Bio-Engineering</h5>
+    <br></br>
+    <h3 className="bioeng-content-heading">
+      About <span className="bioeng-highlight">The School :</span>
+    </h3>
+    <hr className="bioeng-divider" />
+    
+    <p className="bioeng-content-paragraph">
+      The School of Bioengineering was started in the year 2003. The School has teaching and research programmes which encompass various basic and applied aspects of modern biotechnology. The main objective of the School of Bioengineering is to impart academic training and conduct research in the interdisciplinary areas of Biotechnology and Biomedical engineering with a particular emphasis on extending the knowledge generated from these studies towards the development of technologies of commercial significance. The school has ever since demonstrated an unfailing commitment towards research and development in frontier areas of integrative biology. This school since its inception emphasizes on appointing and inculcating meritorious faculty in various specialized branches in Bioengineering.
+    </p>
+
+    <p className="bioeng-content-paragraph">
+      As technology continues to evolve, so does the field of medicine. Biomedical engineering has become an increasingly popular field of study for those interested in combining their passion for science and technology. B.Tech Biomedical Engineering is a degree program that focuses on the application of engineering principles to the design and development of medical equipment and devices. With advances in medical technology, there has been a growing demand for professionals who can bridge the gap between medicine and engineering. B.Tech Biomedical Engineering is an exciting and challenging field that offers a wide range of career opportunities. The best engineering college in Chennai that offers B.Tech Biomedical Engineering college in Tamilnadu, its scope, and the various career paths available to those who pursue this degree. So, whether you are a student or a professional looking to switch careers, keep reading to learn more about this dynamic field.
+    </p>
+
+    <p className="bioeng-content-paragraph">
+      The school offers UG and PG programmes in Biotechnology and Biomedical Engineering. The curriculum is designed in such a manner that the students can be placed in various giant industrial establishments like Biocon, Shantha Biotech, Reddy’s Lab, Life Cell, Siemens healthcare, Wipro biomedical etc. Fortunately, the IT companies like Accenture, Infosys, Wipro, HCL, Cognizant also hire our students with attractive salary packages.
+    </p>
+  </>
+),
+
 
     "Vision & Mission": (
-      <>
-        <h3 className="bioeng-content-heading">Vision & <span className="bioeng-highlight">Mission</span></h3>
-        <hr />
-        <h3 className="bioeng-content-heading">Our <span className="bioeng-highlight">Vision :</span></h3>
-        <p className="bioeng-content-paragraph">To be a pioneering institution in bioengineering education, research, and innovation for human well-being.</p>
-        <h3 className="bioeng-content-heading">Our <span className="bioeng-highlight">Mission :</span></h3>
-        <hr />
-        <br />
-        <ul>
-          <li><i>To blend biological science with engineering principles for real-world applications.</i></li>
-          <br />
-          <li>To promote excellence in biomedical research and healthcare solutions.</li>
-          <br />
-          <li>To develop ethical professionals capable of addressing global biomedical challenges.</li>
-        </ul>
-      </>
-    ),
+  <>
+  <br></br>
+    <h5 className="bioeng-content-welcome">Vision & Mission</h5>
+    <br></br>
+    <h3 className="bioeng-content-heading">Our <span className="bioeng-highlight">Vision :</span></h3>
+    <hr className="bioeng-divider" />
+    <p className="bioeng-content-paragraph">
+      To provide an excellent academic environment for the benefit of diverse learners of divergent background and
+      faculty to acquire technological competence on par with global heads in bioengineering research by adopting
+      ethical and sustainable growth.
+    </p>
+
+    <h3 className="bioeng-content-heading">Our <span className="bioeng-highlight">Mission :</span></h3>
+    <hr className="bioeng-divider" />
+    <ul className="bioeng-mission-list">
+      <li>
+        <i><b>SM 1</b></i> To attain quality education in pursuit of fundamental knowledge involving creativity and
+        logical reasoning in the rapidly advancing field of bioengineering.
+      </li>
+      <li>
+        <i><b>SM 2</b></i> To acquire specialised knowledge in research par excellence with global standards.
+      </li>
+      <li>
+        <i><b>SM 3</b></i> To provide exposure to cutting edge technologies by integrating experiential and skill-based
+        teaching methodologies adopting ethical environment.
+      </li>
+      <li>
+        <i><b>SM 4</b></i> To impart education to the bioengineers by ensuing activities for the welfare of society and
+        sustainable environment.
+      </li>
+    </ul>
+  </>
+),
+
 
     "Deans Desk": (
-      <>
-        <h3 className="bioeng-content-heading">Dean's <span className="bioeng-highlight">Desk</span></h3>
-        <hr />
-        <br />
-        <div className="bioeng-dean-profile">
-          <img src={deanImg} alt="Dean" className="bioeng-dean-image" />
-          <div className="bioeng-dean-details">
-            <h4 className="bioeng-dean-name">
-              <b>Dr. S. Elangovan</b>, <span className="bioeng-dean-qual">M.Tech., PhD</span>
-            </h4>
-            <p className="bioeng-dean-title">👨‍🔬 Professor and Dean,<br />🏛 School of Bioengineering, BIHER</p>
-          </div>
-        </div>
+  <>
+    <h3 className="bioeng-content-heading">
+      Dean's <span className="bioeng-highlight">Desk :</span>
+    </h3>
+    <hr className="bioeng-divider" />
+    <br />
+    <div className="bioeng-dean-profile">
+      <img src={deanImg} alt="Dr. L. Jeyanthi Rebecca" className="bioeng-dean-image" />
+      <div className="bioeng-dean-details">
+        <h4 className="bioeng-dean-name">
+          <b>Dr. L. Jeyanthi Rebecca</b>,
+          <span className="bioeng-dean-qual">
+            &nbsp;B.Sc. (For), M.Sc. (Ag), D.Sc.
+          </span>
+        </h4>
+        <p className="bioeng-dean-title">
+          🎓 Professor and Dean,<br />
+          🏛 <em>School of Bio - Engineering, BIHER</em>
+        </p>
+      </div>
+    </div>
 
-        <div className="bioeng-dean-message">
-          <p>Bioengineering is at the heart of modern healthcare innovation. Our school focuses on nurturing engineers who understand biology and apply it meaningfully.</p>
-          <br />
-          <p>We train students in a variety of interdisciplinary domains including biomaterials, biomechanics, and regenerative medicine.</p>
-          <br />
-          <p>We aim to produce leaders who drive healthcare transformation with compassion and scientific rigor.</p>
-        </div>
-      </>
-    ),
+    <div className="bioeng-dean-message">
+      <p>
+        Greetings! On behalf of the faculty members and students of the Department of Agricultural Biotechnology at
+        Bharath Institute of Higher Education and Research (BIHER), I welcome you all to the creative world of
+        Biotechnology. I believe the Biotechnology has been widely recognized as an essential source and technique for
+        the advancements in all spheres of human endeavour now and in future.
+      </p>
+      <br />
+      <p>
+        In BIHER all the students get the opportunity to excel in their academic activities. This is the department
+        where students are nurtured to publish papers in international and national journals, present papers in
+        conferences and symposium apart from helping them to achieve some recognition in extra-curricular and
+        co-curricular activities.
+      </p>
+      <br />
+      <p>
+        Among the reasons why our BIHER graduates are such favourites of industries is the consistent hands-on
+        experience-based approach of our curriculum, our excellent laboratories, the long-time connections between
+        Department and the industry. We hope you will also have the opportunity to visit us to see our
+        state-of-the-art facilities.
+      </p>
+    </div>
+  </>
+),
 
     "Board of Studies": (
       <>

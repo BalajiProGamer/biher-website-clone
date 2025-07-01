@@ -5,67 +5,96 @@ import { Link } from 'react-router-dom';
 import { FaHome, FaBook } from 'react-icons/fa';
 import Footer from '../Footer';
 import '../../styles/global.css';
-import deanImg from "../../assets/dean desk.png";
+import deanImg from "../../assets/denti-dean.png";
 
 const Dentistry = () => {
   const [selectedTab, setSelectedTab] = useState("About");
   const [isBoardOpen, setIsBoardOpen] = useState(false);
 
   const content = {
-    "About": (
-      <>
-        <h5 className="dentistry-content-welcome">Welcome to School of Dentistry</h5>
-        <h3 className="dentistry-content-heading">About <span className="dentistry-highlight">The School :</span></h3>
-        <hr />
-        <p className="dentistry-content-paragraph">The School of Dentistry prepares students in clinical expertise, oral health sciences, dental surgery, and patient-centered care.</p>
-        <p className="dentistry-content-paragraph">We emphasize hands-on learning, ethical practice, and community service through clinical rotations, labs, and research.</p>
-        <p className="dentistry-content-paragraph">Graduates are ready to lead in dental clinics, hospitals, public health, and academic settings worldwide.</p>
-      </>
-    ),
-
+   "About": (
+  <>
+    <h5 className="dentistry-content-welcome">Welcome to School of Dentistry</h5>
+    <br></br>
+    <h3 className="dentistry-content-heading">About <span className="dentistry-highlight">the School :</span></h3>
+    <hr />
+    <p className="dentistry-content-paragraph">
+      Sree Balaji Dental College & Hospital, Bharath Institute of Higher Education and Research functions with objectives of providing accessible, affordable and quality Dental Education and Oral Health Care to the society.
+    </p>
+    <p className="dentistry-content-paragraph">
+      The Dental College and Hospital was established in the year 1989 with an annual intake of 40 students and currently the annual intake is 100 students.
+    </p>
+    <p className="dentistry-content-paragraph">
+      Sree Balaji Dental College & Hospital is one of the premier educational institutions offering quality and affordable Dental care in India. The Dental College has excellent infrastructure with over 1,75,000 sft. of built up area and is the largest of its kind in Tamil Nadu. It has well equipped state-of-the-art library, modern clinical departments and pre-clinical and clinical laboratories. There is free transport facility for the patients and the treatment is also provided free of cost for the deserving poor.
+    </p>
+    <p className="dentistry-content-paragraph">
+      The Dental College has been given the highest score among all dental colleges in the state by the High Level Committee appointed by Government of Tamil Nadu. Our college has gained the students prestigious position of being recognized internationally. The college was made to provide education to poor people who can't afford to pay much money for education in high standard schools. The college was established in the year 1989. Its main motive was to spread knowledge to people of all sections and for excellent education of the candidates, library and hostels was established along with the college. The college started achieving success gradually and excellent result of students in that time gave wings to success.
+    </p>
+    <p className="dentistry-content-paragraph">
+      Sree Balaji Dental College offers one of the most forward-looking educational environments in dental medicine in the country. Located in the capital of Tamilnadu, Chennai, the college is dedicated to training doctors of dental medicine as expert clinicians with strong biomedical backgrounds.
+    </p>
+    <p className="dentistry-content-paragraph">
+      At Sree Balaji Dental College, research and teaching are complementary, producing professionals who possess the analytical...
+    </p>
+  </>
+)
+,
     "Vision & Mission": (
-      <>
-        <h3 className="dentistry-content-heading">Vision & <span className="dentistry-highlight">Mission</span></h3>
-        <hr />
-        <h3 className="dentistry-content-heading">Our <span className="dentistry-highlight">Vision :</span></h3>
-        <p className="dentistry-content-paragraph">To be a global leader in dental education, clinical research, and oral healthcare excellence.</p>
-        <h3 className="dentistry-content-heading">Our <span className="dentistry-highlight">Mission :</span></h3>
-        <hr />
-        <br />
-        <ul>
-          <li><i>To deliver high-quality dental education with a strong foundation in science and clinical skills.</i></li>
-          <br />
-          <li>To foster innovation, empathy, and ethical responsibility in dental practice.</li>
-          <br />
-          <li>To improve community oral health through research and outreach initiatives.</li>
-        </ul>
-      </>
-    ),
+  <>
+    <h3 className="dentistry-content-heading">Vision & <span className="dentistry-highlight">Mission</span></h3>
+    <hr />
+    <h3 className="dentistry-content-heading">Our <span className="dentistry-highlight">Vision :</span></h3>
+    <p className="dentistry-content-paragraph">
+      We at Bharath Institute of Higher Education and Research (BIHER) envision and constantly strive to provide an academic and research ambience for students and members of the faculties to inherit professional competence along with human dignity and values to serve the society at large.!
+    </p>
+
+    <h3 className="dentistry-content-heading">Our <span className="dentistry-highlight">Mission :</span></h3>
+    <hr />
+  
+    <p><b><u>Mission of the department is to achieve International Recognition by:</u></b></p>
+    <br></br>
+    <ul className="dentistry-content-list">
+      <li><i><b>MD 1</b></i> To develop as a premier University for teaching, learning, research and innovation on par with leading global universities.</li>
+      <li><i><b>MD 2</b></i> To establish professional practice standards in the fields of research, innovation and emerging areas in Engineering, Medicine, Dentistry, Nursing, Physiotherapy and Allied Sciences.</li>
+      <li><i><b>MD 3</b></i> To imbibe human dignities and values to our graduates through personality development and social service activities.</li>
+      <li><i><b>MD 4</b></i> To impart education and training to students for a better society with morals & ethics.</li>
+      <li><i><b>MD 4</b></i> To nurture the patronage and development of Alumni so as to contribute the services at national and international levels.</li>
+    </ul>
+  </>
+)
+,
 
     "Deans Desk": (
-      <>
-        <h3 className="dentistry-content-heading">Dean's <span className="dentistry-highlight">Desk</span></h3>
-        <hr />
-        <br />
-        <div className="dentistry-dean-profile">
-          <img src={deanImg} alt="Dean" className="dentistry-dean-image" />
-          <div className="dentistry-dean-details">
-            <h4 className="dentistry-dean-name">
-              <b>Dr. S. Elangovan</b>, <span className="dentistry-dean-qual">MDS., PhD</span>
-            </h4>
-            <p className="dentistry-dean-title">🦷 Professor and Dean,<br />🏛 School of Dentistry, BIHER</p>
-          </div>
-        </div>
+  <>
+    <h3 className="dentistry-content-heading">Dean's <span className="dentistry-highlight">Desk</span></h3>
+    <hr />
+    <br />
+    <div className="dentistry-dean-profile">
+      <img src={deanImg} alt="Dr. S. Jimson" className="dentistry-dean-image" />
+      <div className="dentistry-dean-details">
+        <h4 className="dentistry-dean-name">
+          <b>Dr. S. Jimson</b>, <a href="#" className="dentistry-dean-qual">MDS, FDS RCPS (Glasg)</a>
+        </h4>
+        <p className="dentistry-dean-title">🎓 Professor and Dean,<br />🏛 School of Dentistry, BIHER</p>
+      </div>
+    </div>
 
-        <div className="dentistry-dean-message">
-          <p>Oral health is vital to overall wellness. Our school instills technical skill and compassionate care in every dental student.</p>
-          <br />
-          <p>We train future dentists to lead in oral diagnostics, surgery, preventive care, and research.</p>
-          <br />
-          <p>We strive to create professionals who serve with integrity and make a lasting impact on community oral health.</p>
-        </div>
-      </>
-    ),
+    <div className="dentistry-dean-message">
+      <p>
+        Welcome to Sree Balaji Dental College & Hospital, BIHER University. We are a teaching, research, and patient care facility that have reinvented itself in recent years. While our facility is great, it is the people that make our College what it is. Our College has great students, postgraduates, staff, faculty, and alumni.
+      </p>
+      <br />
+      <p>
+        We are the flagship oral health College in the nation. We have a strong, innovative, nationally recognized BDS & MDS program strongly abiding to regulations and curriculum of Dental Council of India with our own extensions, driven by students through integrated small group learning sessions, early entry to patient care, complete digital workflow in patient care, advanced imaging and digital diagnostic and care planning coupled with valuable experiences in our clinics. In the fourth year there is also the opportunity for students to participate in special tracks devoted to public health, early specialization, comprehensive general practice, and research.
+      </p>
+      <br />
+      <p>
+        Research success today requires large collaborations crossing what is known as trans disciplinary science. We are reinventing the College’s research enterprise along those lines, creating bridges and connections and breaking down silos, constructing linkages across campus and with the various communities of the country.
+      </p>
+    </div>
+  </>
+)
+,
 
     "Board of Studies": (
       <>
