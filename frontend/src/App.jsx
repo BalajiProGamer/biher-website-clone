@@ -20,7 +20,6 @@ import LmsForm from "./Components/Navbaroption/Form";
 import AeronauticalEngineering from "./Components/Academics/AeronauticalEngineering";  
 import Agriculture from "./Components/Academics/Agriculture";
 import Architecture from "./Components/Academics/Architecture";
-import AlliedHealthSciences from "./Components/Academics/AlliedHealthSciences";
 import Arts from "./Components/Academics/Arts";
 import BasicSciences from "./Components/Academics/BasicSciences";
 import Computing from "./Components/Academics/Computing";
@@ -33,6 +32,7 @@ import Medicine from "./Components/Academics/Medicine"; /* Import Medicine page 
 import Pharamacy from "./Components/Academics/Pharmacy"; /* Import Pharamacy page */
 import MechanicalEngineering from "./Components/Academics/MechanicalEngineering"; /* Import MechanicalEngineering page */
 import ManagementCommerce from "./Components/Academics/ManagementCommerce"; /* Import ManagementCommerce page */
+import Nursing from "./Components/Academics/Nursing"; /* Import Nursing page */
 /* Import Research pages */
 import FIST from "./Components/Research/FIST";
 import AcademicsResearch from "./Components/Research/AcademicsResearch"; /* Import AcademicsResearch page */
@@ -103,7 +103,6 @@ function App() {
         <Route path="/academics/aeronautical-engineering" element={<AeronauticalEngineering />} />
         <Route path="/academics/agriculture" element={<Agriculture />} />
         <Route path="/academics/architecture" element={<Architecture />} />
-        <Route path="/academics/alliedhealthsciences" element={<AlliedHealthSciences />} />
         <Route path="/academics/arts" element={<Arts />} /> 
         <Route path="/academics/Basic-Sciences" element={<BasicSciences />} /> 
         <Route path="/academics/computing" element={<Computing />} />
@@ -116,6 +115,7 @@ function App() {
         <Route path="/academics/pharmacy" element={<Pharamacy />} />
         <Route path="/academics/mechanical-engineering" element={<MechanicalEngineering />} />
         <Route path="/academics/management-commerce" element={<ManagementCommerce />} />
+        <Route path="/academics/nursing" element={<Nursing />} />
         <Route path="/research/fist" element={<FIST />} />
         <Route path="/research/academics-research" element={<AcademicsResearch />} /> {/* Added route */}
         <Route path="/research/Innovation" element={<Innovation />} />
