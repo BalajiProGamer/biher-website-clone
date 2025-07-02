@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { FaHome, FaBook } from 'react-icons/fa';
 import Footer from '../Footer';
 import '../../styles/global.css';
-import deanImg from "../../assets/dean desk.png";
+import deanImg from "../../assets/medicinedean.png";
 
 const Medicine = () => {
   const [selectedTab, setSelectedTab] = useState("About");
@@ -15,57 +15,73 @@ const Medicine = () => {
     "About": (
       <>
         <h5 className="medicine-content-welcome">Welcome to School of Medicine</h5>
+        <br></br>
         <h3 className="medicine-content-heading">About <span className="medicine-highlight">The School :</span></h3>
         <hr />
-        <p className="medicine-content-paragraph">The School of Medicine trains future doctors with strong fundamentals in biomedical sciences, clinical skills, and patient care.</p>
-        <p className="medicine-content-paragraph">Our focus is on holistic learning, hands-on experience, and evidence-based practice through labs, hospitals, and research.</p>
+        <p className="medicine-content-paragraph">School of Medicine was established in the year 2003 with the aim of providing excellent medical education run by Sri Lakshmi Ammal Educational Trust established in 1984 and it has come under the ambit of BHARATH INSTITUTE OF HIGHER EDUCATION & RESEARCH. The School of Medicine has UG and PG courses in 19 specialities. School of Medicine is spread over three campuses. It is provided with state of art infrastructure in term of its blocks of buildings, which include cozy, comfortable and well-furnished departments, laboratories, classrooms for students, separate quarters for staff and nurses besides equipment of world class technological quality. The school is backed by highly qualified and experienced staff, well equipped laboratories, library, and modern teaching aids. The Hospital services are fully computerized as per the requirement of the NMC.</p>
+       <br></br>
+        <p className="medicine-content-paragraph">Free medical service is given to the poor and needy people. Separate rural and urban health training centres have also been established so as to impart field practice training to medical students and helping the needy people nearby .Family adoption scheme for each graduate student enables them to understand the social fabric setup for treating rural India. The school has a separate sophisticated and well equipped Research &Development Wing with adequate faculty to carry out sponsored projects.</p>
+       <br></br>
         <p className="medicine-content-paragraph">Graduates thrive in healthcare, research, education, and public health systems globally.</p>
       </>
     ),
 
-    "Vision & Mission": (
-      <>
-        <h3 className="medicine-content-heading">Vision & <span className="medicine-highlight">Mission</span></h3>
-        <hr />
-        <h3 className="medicine-content-heading">Our <span className="medicine-highlight">Vision :</span></h3>
-        <p className="medicine-content-paragraph">To be a globally recognized medical school fostering excellence in health sciences and compassionate care.</p>
-        <h3 className="medicine-content-heading">Our <span className="medicine-highlight">Mission :</span></h3>
-        <hr />
-        <br />
-        <ul>
-          <li><i>To deliver world-class medical education and research opportunities.</i></li>
-          <br />
-          <li>To instill ethical and compassionate values in healthcare practice.</li>
-          <br />
-          <li>To improve health outcomes through innovation and community service.</li>
-        </ul>
-      </>
-    ),
+   "Vision & Mission": (
+  <>
+    <h3 className="medicine-content-heading">Vision & <span className="medicine-highlight">Mission</span></h3>
+    <hr />
+    
+    <h3 className="medicine-content-heading">Our <span className="medicine-highlight">Vision :</span></h3>
+    <ul className="medicine-content-list">
+      <li>To provide excellent Medical Education with the Aid of latest and modern equipments.</li>
+     <br></br>
+      <li>To provide an excellent environment for the Medical Students to learn medicine and practice the same.</li>
+     <br></br>
+      <li>To provide facilities for the medical students to learn skills under the guidance of the expert teachers.</li>
+      <br></br>
+      <li>To provide research facilities and to motivate students and faculty members to take up research projects.</li>
+      <br></br>
+      <li>And finally to create an atmosphere of continuous learning keeping abreast with fast changing theories and techniques in Medicine and its allied specialities.</li>
+    </ul>
+ <br></br>
+    <h3 className="medicine-content-heading">Our <span className="medicine-highlight">Mission :</span></h3>
+    <hr />
+    <p className="medicine-content-paragraph">
+      Is to send into the society, well educated, well mannered, with fully equipped, socially committed Doctors who would be useful to the society at large and who would willingly commit themselves to create an atmosphere free of disease and sufferings.
+    </p>
+  </>
+),
 
-    "Deans Desk": (
-      <>
-        <h3 className="medicine-content-heading">Dean's <span className="medicine-highlight">Desk</span></h3>
-        <hr />
-        <br />
-        <div className="medicine-dean-profile">
-          <img src={deanImg} alt="Dean" className="medicine-dean-image" />
-          <div className="medicine-dean-details">
-            <h4 className="medicine-dean-name">
-              <b>Dr. S. Elangovan</b>, <span className="medicine-dean-qual">MBBS, MD</span>
-            </h4>
-            <p className="medicine-dean-title">🩺 Professor and Dean,<br />🏛 School of Medicine, BIHER</p>
-          </div>
-        </div>
 
-        <div className="medicine-dean-message">
-          <p>Medicine is a calling rooted in compassion, precision, and resilience. We cultivate doctors who heal and innovate with responsibility.</p>
-          <br />
-          <p>Our students learn through simulations, clinical rotations, and research-driven practice.</p>
-          <br />
-          <p>We aim to produce leaders who transform health systems and touch lives with dignity and care.</p>
-        </div>
-      </>
-    ),
+"Deans Desk": (
+  <>
+    <h3 className="medicine-content-heading">Dean's <span className="medicine-highlight">Desk</span></h3>
+    <hr />
+    <br />
+    <div className="medicine-dean-profile">
+      <img src={deanImg} alt="Dean" className="medicine-dean-image" />
+      <div className="medicine-dean-details">
+        <h4 className="medicine-dean-name">
+          <b>Dr. W.M.S Johnson</b>, <span className="medicine-dean-qual">M.D., Ph D</span>
+        </h4>
+        <p className="medicine-dean-title">🩺 Professor and Dean,<br />🏛 School of Medicine, BIHER</p>
+      </div>
+    </div>
+
+    <div className="medicine-dean-message">
+      <p>The School of Medicine, offers a patient-centered collaborative learning experience, driven by the primary value, <i>"The needs of the patient comes first."</i></p>
+      <br />
+      <p>Our vision in a rapidly changing era of health care reform is to educate physician leaders in patient-centered, science-driven, team-based, high-value health care. A highly selective admissions process, inter professional team learning and a student centered, flexible, innovative curriculum make our graduates highly sought after by residency directors.</p>
+      <br />
+      <p>Our medical school curriculum leverages innovative scientific capabilities, expertise and resources to provide medical education focused on preparing physicians for the medicine of tomorrow.</p>
+      <br />
+      <p>The school provides diverse learning opportunities in a variety of clinical settings across the country. Our students have access to exceptional experiential learning facilities, including a state-of-the-art Central Research.</p>
+      <br />
+      <p>Facility. We leverage the rich scientific and clinical resources to offer students a deep range of educational opportunities, including the Program in Professionalism and Ethics, Center for Innovation, and specialized centers that combine resources of research and practice. The faculty-to-student ratio is much higher than the ratio proposed by Medical Council of India.</p>
+    </div>
+  </>
+)
+,
 
     "Board of Studies": (
       <>

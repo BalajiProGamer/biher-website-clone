@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { FaHome, FaBook } from 'react-icons/fa';
 import Footer from '../Footer';
 import '../../styles/global.css';
-import deanImg from "../../assets/dean desk.png";
+import deanImg from "../../assets/mechdean.png";
 
 const MechanicalEngineering = () => {
   const [selectedTab, setSelectedTab] = useState("About");
@@ -41,32 +41,35 @@ const MechanicalEngineering = () => {
         </ul>
       </>
     ),
+"Deans Desk": (
+  <>
+    <h3 className="mechanical-content-heading">Dean's <span className="mechanical-highlight">Desk</span></h3>
+    <hr />
+    <br />
+    <div className="mechanical-dean-profile">
+      <img src={deanImg} alt="Dean" className="mechanical-dean-image" />
+      <div className="mechanical-dean-details">
+        <h4 className="mechanical-dean-name">
+          <b>Dr. W.M.S Johnson</b>, <span className="mechanical-dean-qual">M.D., Ph D</span>
+        </h4>
+        <p className="mechanical-dean-title">🩺 Professor and Dean,<br />🏛 School of Medicine, BIHER</p>
+      </div>
+    </div>
 
-    "Deans Desk": (
-      <>
-        <h3 className="mechanical-content-heading">Dean's <span className="mechanical-highlight">Desk</span></h3>
-        <hr />
-        <br />
-        <div className="mechanical-dean-profile">
-          <img src={deanImg} alt="Dean" className="mechanical-dean-image" />
-          <div className="mechanical-dean-details">
-            <h4 className="mechanical-dean-name">
-              <b>Dr. S. Elangovan</b>, <span className="mechanical-dean-qual">M.E., PhD</span>
-            </h4>
-            <p className="mechanical-dean-title">🛠️ Professor and Dean,<br />🏛 School of Mechanical Engineering, BIHER</p>
-          </div>
-        </div>
-
-        <div className="mechanical-dean-message">
-          <p>Mechanical engineers build the backbone of industries. Our curriculum integrates fundamentals with modern technologies and innovation.</p>
-          <br />
-          <p>Through labs, projects, and industry tie-ups, we offer an immersive and applied learning experience.</p>
-          <br />
-          <p>We aim to nurture problem-solvers and technology leaders for a better tomorrow.</p>
-        </div>
-      </>
-    ),
-
+    <div className="mechanical-dean-message">
+      <p>The School of Medicine, offers a patient-centered collaborative learning experience, driven by the primary value, <i>"The needs of the patient comes first."</i></p>
+      <br />
+      <p>Our vision in a rapidly changing era of health care reform is to educate physician leaders in patient-centered, science-driven, team-based, high-value health care. A highly selective admissions process, inter professional team learning and a student centered, flexible, innovative curriculum make our graduates highly sought after by residency directors.</p>
+      <br />
+      <p>Our medical school curriculum leverages innovative scientific capabilities, expertise and resources to provide medical education focused on preparing physicians for the medicine of tomorrow.</p>
+      <br />
+      <p>The school provides diverse learning opportunities in a variety of clinical settings across the country. Our students have access to exceptional experiential learning facilities, including a state-of-the-art Central Research.</p>
+      <br />
+      <p>Facility. We leverage the rich scientific and clinical resources to offer students a deep range of educational opportunities, including the Program in Professionalism and Ethics, Center for Innovation, and specialized centers that combine resources of research and practice. The faculty-to-student ratio is much higher than the ratio proposed by Medical Council of India.</p>
+    </div>
+  </>
+)
+,
     "Board of Studies": (
       <>
         <h3 className="mechanical-content-heading">Board of <span className="mechanical-highlight">Studies</span></h3>

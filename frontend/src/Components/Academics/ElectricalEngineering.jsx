@@ -5,67 +5,98 @@ import { Link } from 'react-router-dom';
 import { FaHome, FaBook } from 'react-icons/fa';
 import Footer from '../Footer';
 import '../../styles/global.css';
-import deanImg from "../../assets/dean desk.png";
+import deanImg from "../../assets/EEdean.png";
 
 const ElectricalEngineering = () => {
   const [selectedTab, setSelectedTab] = useState("About");
   const [isBoardOpen, setIsBoardOpen] = useState(false);
 
   const content = {
-    "About": (
-      <>
-        <h5 className="electrical-content-welcome">Welcome to School of Electrical Engineering</h5>
-        <h3 className="electrical-content-heading">About <span className="electrical-highlight">The School :</span></h3>
-        <hr />
-        <p className="electrical-content-paragraph">The School of Electrical Engineering equips students with a strong foundation in power systems, control systems, electronics, and electrical machines.</p>
-        <p className="electrical-content-paragraph">We focus on innovation, sustainability, and industry-aligned training through labs, workshops, and internships.</p>
-        <p className="electrical-content-paragraph">Graduates are well-prepared for careers in power utilities, automation, renewable energy, and research.</p>
-      </>
-    ),
+  "About": (
+  <>
+    <h5 className="electrical-content-welcome">Welcome to School of Electrical Engineering</h5>
+    <br></br>
+    <h3 className="electrical-content-heading">About <span className="electrical-highlight">the School :</span></h3>
+    <hr />
 
-    "Vision & Mission": (
-      <>
-        <h3 className="electrical-content-heading">Vision & <span className="electrical-highlight">Mission</span></h3>
-        <hr />
-        <h3 className="electrical-content-heading">Our <span className="electrical-highlight">Vision :</span></h3>
-        <p className="electrical-content-paragraph">To be a center of excellence in electrical engineering education and research.</p>
-        <h3 className="electrical-content-heading">Our <span className="electrical-highlight">Mission :</span></h3>
-        <hr />
-        <br />
-        <ul>
-          <li><i>To provide high-quality education and develop skilled electrical engineers.</i></li>
-          <br />
-          <li>To promote research, innovation, and collaboration with industry.</li>
-          <br />
-          <li>To foster ethical values and environmental responsibility in engineering practice.</li>
-        </ul>
-      </>
-    ),
+    <h4 className="electrical-content-subtitle">The School Consists of two Departments:</h4>
+    <br></br>
+    <ul className="electrical-department-list">
+      <li><strong><em>Electrical and Electronics Engineering (EEE)</em></strong></li>
+      <li><strong><em>Electronics and Communication Engineering (ECE)</em></strong></li>
+    </ul>
+    <br></br>
 
-    "Deans Desk": (
-      <>
-        <h3 className="electrical-content-heading">Dean's <span className="electrical-highlight">Desk</span></h3>
-        <hr />
-        <br />
-        <div className="electrical-dean-profile">
-          <img src={deanImg} alt="Dean" className="electrical-dean-image" />
-          <div className="electrical-dean-details">
-            <h4 className="electrical-dean-name">
-              <b>Dr. S. Elangovan</b>, <span className="electrical-dean-qual">M.E., PhD</span>
-            </h4>
-            <p className="electrical-dean-title">⚡ Professor and Dean,<br />🏛 School of Electrical Engineering, BIHER</p>
-          </div>
-        </div>
+    <div className="electrical-about-paragraphs">
+      <p>It started in 1992 with two undergraduate programs and in 2003 six post-graduate programs were added (M.Tech in Power Systems and Power Electronics & Drives offered by EEE, M.Tech in Digital Communication and Networking, Embedded System Design, VLSI Design and Applied Electronics offered by ECE). The school also offers research programs (Ph.D.) in various fields related to Electrical & Electronics Engineering and Electronics & Communication Engineering to cater to the ever-challenging needs of technical excellence in all areas of both departments such as Communication systems, Wireless networks, Signal and Image Processing, RF MEMS and MIC, Microwave antennas, Optical Communication and Photonics, VLSI technologies, IoT and Embedded Systems, Power System, HVDC transmission, Modern Electric Drives, Electric Mobility and Renewable Energy. Both B.Tech (EEE) & B.Tech (ECE) programs are accredited by the Accreditation Board for Engineering and Technology (ABET), USA.</p>
+      <br></br>
+      <p>The department is equipped with state-of-the-art facilities to carry out research work at all levels. The research focus of the department is in the area of power electronics, renewable energy systems, control systems, etc. The department also actively involves in multi-disciplinary research activities. The department has dedicated faculty, support staff, state-of-the-art teaching and research laboratories and is recognized for its excellence in research, teaching and service to the Nation.</p>
+      <br></br>
+      <p>The department provides healthy & competitive environment for all-round development of students leading to several remarkable achievements in GATE, CAT, GRE, TOEFL, PSUs etc. The faculties and students of EEE & ECE.</p>
+   
+   <br></br> 
+   <p>The School has MoU with Blue Hora University, Ethiopia, East Africa to share knowledge and experience to our students. The school also has Centre of Excellence in Electric mobility, VLSI Design and RF & Microwave Engineering in order to enhance the skills of faculty and students. Our placements are consistently above 90% for the past three years. Our students are placed in both core industries and software industries. Students are guided for placements right from the first year. We cater to various needs of our students. Students are encouraged to be part of various Student Development Clubs and are encouraged to participate in social activities through NSS.</p>
+   <br></br>
+   <p>It is an engineering discipline that deals with transfer of information using electrical and electronic means, enabling the development of a wide range of products and services. This field has grown exponentially, with the development of new technologies such as radio, television, and computer. With the advent of internet, the field has seen a huge surge in growth, with the development of new communication technologies such as mobile phones and satellite communication.</p>
+   </div>
+  </>
+),
 
-        <div className="electrical-dean-message">
-          <p>Electrical engineering powers modern technology and infrastructure. Our school prepares engineers to lead with innovation and integrity.</p>
-          <br />
-          <p>We provide hands-on training in power systems, electronics, and automation through advanced labs and projects.</p>
-          <br />
-          <p>We are committed to producing engineers who drive sustainable and impactful change.</p>
-        </div>
-      </>
-    ),
+
+   "Vision & Mission": (
+  <>
+    <h3 className="electrical-content-heading">Vision & <span className="electrical-highlight">Mission</span></h3>
+    <hr />
+
+    <h3 className="electrical-content-heading">Our <span className="electrical-highlight">Vision :</span></h3>
+    <p className="electrical-content-paragraph">
+      Department of Electronics and Communication Engineering envisions with innovation in academics to inherit the professional competence along with cognitive skills and research ability to meet industrial standards and to cater the societal needs by embedding in teaching and learning.
+    </p>
+
+    <h3 className="electrical-content-heading">Our <span className="electrical-highlight">Mission :</span></h3>
+    <hr />
+
+    <p className="electrical-content-bold">
+      <strong><u>Mission of the department is to achieve International Recognition by:</u></strong>
+    </p>
+    <br />
+
+    <ul className="electrical-content-list">
+      <li><em><strong>MD 1</strong></em> – To inherit the professional competence among the Electronics and Communication Engineering students.</li>
+    <br></br> 
+     <li><em><strong>MD 2</strong></em> – To enable the students to develop cognitive skills to meet the multidimensional technological problems of current environment.</li>
+    <br></br> 
+      <li><em><strong>MD 3</strong></em> – To establish the learning environment to enable the students to meet the industrial standards.</li>
+     <br></br>
+      <li><em><strong>MD 4</strong></em> – To inculcate the faculty and students to enrich research in societal needs.</li>
+    </ul>
+  </>
+),
+
+"Deans Desk": (
+  <>
+    <h3 className="electrical-content-heading">Dean's <span className="electrical-highlight">Desk</span></h3>
+    <hr />
+    <br />
+    <div className="electrical-dean-profile">
+      <img src={deanImg} alt="Dean" className="electrical-dean-image" />
+      <div className="electrical-dean-details">
+        <h4 className="electrical-dean-name">
+          <b>Dr. Ilampooranan</b>, <span className="electrical-dean-qual">B.E, M.E, Ph.D.</span>
+        </h4>
+        <p className="electrical-dean-title">🎓 Professor and Dean,<br />🏛 School of Electrical Engineering, BIHER</p>
+      </div>
+    </div>
+
+    <div className="electrical-dean-message">
+      <p>Welcome to the School of Electrical Engineering at Bharath Institute of Higher Education and Research, BIHER. The School works with the objective of addressing critical issues faced by the industry, society and the academia. Perhaps we give utmost importance to academic and skill development with unceasing commitment to our students. We are helping them to enhance learning and also guiding them to achieve their goals to excel in professional career.</p>
+      <br />
+      <p>School of Electrical Engineering is one of the oldest School in Bharath Institute of Higher Education and Research with ABET and NAAC accreditation started in the Year of 1992. The School’s graduate programs continue to draw from a very strong application pool. The School was established in the year 1992 and since its inception the School has evolved from offering only undergraduate courses to offer post graduate in Power Electronics and Power System Engineering offered by Electrical and Electronics Engineering Department, similarly Digital Communication and Networking, Embedded System Design, VLSI Design and Applied Electronics offered by Electronics and Communication Engineering Department. The Doctoral programme in key areas of electrical engineering has produced high quality researchers with significant contribution to our nation.</p>
+      <br />
+      <p>During every semester, the calendar of events is prepared, which implicitly incorporates all the curricular and extra-curricular activities of the School and is followed meticulously without any deviation. Special care is taken about the students whose attendance is poor and those who have any kind of academic deficiency. We are constantly evolving to stay ahead of the rapidly changing engineering landscape.</p>
+    </div>
+  </>
+),
 
     "Board of Studies": (
       <>
