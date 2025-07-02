@@ -4,6 +4,7 @@ import backgroundImg from "../../assets/pattern.jpg";
 import { Link } from 'react-router-dom';
 import { FaHome, FaBook } from 'react-icons/fa';
 import Footer from '../Footer';
+import Banner from "../Banner";
 import '../../styles/global.css';
 import deanImg from "../../assets/medicinedean.png";
 
@@ -206,7 +207,7 @@ const Medicine = () => {
           </div>
         </div>
       </div>
-
+        <Banner/>
       <Footer />
     </div>
   );

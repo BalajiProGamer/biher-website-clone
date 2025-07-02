@@ -6,6 +6,7 @@ import { FaHome, FaBook } from 'react-icons/fa';
 import Footer from '../Footer';
 import '../../styles/global.css';
 import deanImg from "../../assets/EEdean.png";
+import Banner from "../Banner";
 
 const ElectricalEngineering = () => {
   const [selectedTab, setSelectedTab] = useState("About");
@@ -221,7 +222,7 @@ const ElectricalEngineering = () => {
           </div>
         </div>
       </div>
-
+    <Banner />
       <Footer />
     </div>
   );

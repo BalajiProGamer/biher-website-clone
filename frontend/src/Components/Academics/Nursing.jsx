@@ -4,8 +4,9 @@ import backgroundImg from "../../assets/pattern.jpg";
 import { Link } from 'react-router-dom';
 import { FaHome, FaBook } from 'react-icons/fa';
 import Footer from '../Footer';
+import Banner from "../Banner";
 import '../../styles/global.css';
-import deanImg from "../../assets/dean desk.png";
+import deanImg from "../../assets/nursingdean.png";
 
 const Nursing = () => {
   const [selectedTab, setSelectedTab] = useState("About");
@@ -15,57 +16,98 @@ const Nursing = () => {
     "About": (
       <>
         <h5 className="nursing-content-welcome">Welcome to School of Nursing</h5>
+        <br></br>
         <h3 className="nursing-content-heading">About <span className="nursing-highlight">The School :</span></h3>
         <hr />
-        <p className="nursing-content-paragraph">The School of Nursing offers an integrated education in healthcare practices, clinical nursing, and patient care excellence.</p>
+        <p className="nursing-content-paragraph">Nursing is a Challenging and unique profession, whose primary focus is caring the sick as well as managing the Preventive, Promotive and Rehabilitative Health Needs of the clients. In the past, the nurse was simply a person trained to perform specific task. Later, nursing was recognized as a profession; demanded quality care.</p>
         <p className="nursing-content-paragraph">We provide practical exposure through hospital training, community outreach, and research, focusing on compassionate care and professionalism.</p>
-        <p className="nursing-content-paragraph">Our graduates serve in top hospitals, clinics, and global health organizations.</p>
+        <p className="nursing-content-paragraph">Scientific advancements in healthcare system and research made today’s nursing to focus on evidence-based nursing practice. Patient care is the main focus of this modern world and Nurses play a vital role in health care system. The turbulent swirl of change within this country’s health care industry has provided challenges and opportunities for Nursing. Competent nurses are in demand all over the world. Sree Balaji college of Nursing started with B.Sc. Nursing course in the year 1992 with 4 years of Duration, In the year 2005 started M.Sc. Nursing programme with 10 intake and seat was increased to 25 in the year 2008 and P.B.Sc.Nursing in the year 2012 with 15 intake and Nurse Practitioner course in Critical care (NPCC) in the year 2019 with 10 intakes .All the Nursing courses are affiliated to Indian Nursing council, The Tamil Nādu nurses and Midwives council also Affiliated to Bharath Institute of Higher education and Research. As a Miles stone in our profession, we are started the Doctoral degree in the year 2013.</p>
+        <p className="nursing-content-paragraph">Hostel is the Safe Nest for students who are away from home.Hostel is situated out of the college campus, at a walkable distance which give the fresh homely feel; with good infrastructure and basic amenities like, adequately furnished rooms, 24 hours Water Facility, Generator back up for electricity, spacious dining hall, provision of Sick room in case any student get sick. Round the clock Residential Warden & Security service which makes .student feel safe and comfortable. During the stay in hostel, the student will strictly adhere to the hostel rules and regulations to maintain the discipline in the hostel. Our students are privileged to develop the skills of nursing care at our own hospital which is Multispecialty all the facility . We also have a tie-up with various specialty hospitals for Clinical Postings of the students. Our students will be given Community Nursing Field experience during which they will be taken to the realistic situation where people live and students will learn skills of assessing preventing various health problems.</p>
+      <p className="nursing-content-paragraph">The students will also participate in celebrating the international health days and programs. We aim at holistic development of the students; for which we have Student Nurses’ Association to conduct and participate various literary and cultural competitions. The students will be encouraged to participate in intercollegiate as well as state and National Level Competitions. Regular awareness camps were conducted to motivate the students in extension activities.</p>
       </>
     ),
 
     "Vision & Mission": (
-      <>
-        <h3 className="nursing-content-heading">Vision & <span className="nursing-highlight">Mission</span></h3>
-        <hr />
-        <h3 className="nursing-content-heading">Our <span className="nursing-highlight">Vision :</span></h3>
-        <p className="nursing-content-paragraph">To be a premier institution in nursing education and healthcare innovation.</p>
-        <h3 className="nursing-content-heading">Our <span className="nursing-highlight">Mission :</span></h3>
-        <hr />
-        <br />
-        <ul>
-          <li><i>To produce competent and ethical nursing professionals.</i></li>
-          <br />
-          <li>To integrate clinical research and patient care into education.</li>
-          <br />
-          <li>To promote health equity through service and leadership.</li>
-        </ul>
-      </>
-    ),
+  <>
+    <h3 className="nursing-content-heading">Vision & <span className="nursing-highlight">Mission</span></h3>
+    <hr />
+
+    <h3 className="nursing-content-heading">Our <span className="nursing-highlight">Vision :</span></h3>
+    <p className="nursing-content-paragraph">
+      The Institution Information aims to be the premier research and education program for 21st century information professionals, 
+      who will apply the theoretical and practical knowledge necessary to preserve the past, manage the present, and design the future.
+    </p>
+
+    <br />
+
+    <p className="nursing-content-subheading"><b><u>Mission of the department is to achieve International Recognition by:</u></b></p>
+   <br></br>
+    <ul className="nursing-content-list">
+      <li><i>Our mission is to shape the field of information studies for human and social benefit by.</i></li>
+      <br></br>
+      <li><i>Discovering new and vital knowledge about information.</i></li>
+      <br></br>
+      <li><i>Educating the next generation of leaders in the information professions.</i></li>
+      <br></br>
+      <li><i>Developing new scholars who will advance knowledge.</i></li>
+      <br></br>
+      <li><i>Improving society through service and collaboration.</i></li>
+      <br></br>
+      <li><i>Applying human-centered values to all our work.</i></li>
+      <br></br>
+    </ul>
+  </>
+)
+,
 
     "Deans Desk": (
-      <>
-        <h3 className="nursing-content-heading">Dean's <span className="nursing-highlight">Desk</span></h3>
-        <hr />
-        <br />
-        <div className="nursing-dean-profile">
-          <img src={deanImg} alt="Dean" className="nursing-dean-image" />
-          <div className="nursing-dean-details">
-            <h4 className="nursing-dean-name">
-              <b>Dr. S. Elangovan</b>, <span className="nursing-dean-qual">M.Sc (Nursing), PhD</span>
-            </h4>
-            <p className="nursing-dean-title">👩‍⚕️ Professor and Dean,<br />🏥 School of Nursing, BIHER</p>
-          </div>
-        </div>
+  <>
+    <h3 className="nursing-content-heading">Deans <span className="nursing-highlight">Desk :</span></h3>
+    <hr />
+    <br />
 
-        <div className="nursing-dean-message">
-          <p>Nurses are the backbone of healthcare. Our programs are designed to instill compassion, skill, and clinical excellence.</p>
-          <br />
-          <p>We provide hands-on experience through clinical rotations, simulation labs, and interdisciplinary collaboration.</p>
-          <br />
-          <p>We aim to nurture future nurse leaders who advance health and care for humanity.</p>
-        </div>
-      </>
-    ),
+    <div className="nursing-dean-profile-card">
+      <img src={deanImg} alt="Dr. V. Hemavathy" className="nursing-dean-image" />
+      <div className="nursing-dean-details">
+        <h4 className="nursing-dean-name">
+          <b>Dr.V.Hemavathy</b><span className="nursing-dean-qual">,, <u>B.Sc, M.Sc, Ph.D</u></span>
+        </h4>
+        <p className="nursing-dean-title">👩‍⚕️ Professor and Dean,</p>
+        <p className="nursing-dean-title">🏥 Department of Nursing, BIHER</p>
+      </div>
+    </div>
+
+    <div className="nursing-dean-message">
+      <p>
+        Sree Balaji College of Nursing was established in the year 1992, under Sri Lakshmi Ammal Educational Trust. Government
+        of Tamil Nadu sanctioned permission to start B.Sc. Nursing degree programme for intake of 100 students per year. 
+        (Govt. of Tamil Nadu G.O.M.S.No.772/Health, Dt. 03.07.1992). College is recognized by Indian Nursing Council, New Delhi 
+        and Tamil Nadu Nurses and Midwives Council and it is affiliated to Bharath University. College has collaborative 
+        arrangements with various other tie-up Hospitals and Community Health Centre to cater to the needs of the students. 
+        College is offering Bachelor of Science in Nursing and also offers Master of Science of Nursing course with 
+        specialization in Medical Surgical Nursing, Child Health Nursing, Maternity Nursing, Community Health Nursing and 
+        Mental Health Nursing. The college of nursing crossed many milestones in history. Started post graduate residential 
+        course like NPCC in the year 2019.
+      </p>
+
+      <br />
+
+      <p>
+        The college of nursing having parent and affiliated hospital facilities for the clinical exposure. Placement also 
+        done every year with corporate hospital as well as training given for OET and other foreign eligibility tests. 
+        Students makes their placement in state, central and foreign countries.
+      </p>
+
+      <br />
+
+      <p>
+        The College is situated in beautiful surroundings in a spacious ground with all infrastructural facilities. 
+        It has spacious...
+      </p>
+    </div>
+  </>
+)
+,
 
     "Board of Studies": (
       <>
@@ -190,7 +232,7 @@ const Nursing = () => {
           </div>
         </div>
       </div>
-
+    <Banner/>
       <Footer />
     </div>
   );

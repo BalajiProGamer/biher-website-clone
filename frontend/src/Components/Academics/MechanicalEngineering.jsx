@@ -6,6 +6,7 @@ import { FaHome, FaBook } from 'react-icons/fa';
 import Footer from '../Footer';
 import '../../styles/global.css';
 import deanImg from "../../assets/mechdean.png";
+import Banner from "../Banner";
 
 const MechanicalEngineering = () => {
   const [selectedTab, setSelectedTab] = useState("About");
@@ -13,34 +14,69 @@ const MechanicalEngineering = () => {
 
   const content = {
     "About": (
-      <>
-        <h5 className="mechanical-content-welcome">Welcome to School of Mechanical Engineering</h5>
-        <h3 className="mechanical-content-heading">About <span className="mechanical-highlight">The School :</span></h3>
-        <hr />
-        <p className="mechanical-content-paragraph">The School of Mechanical Engineering provides rigorous training in design, thermal, and manufacturing engineering fundamentals.</p>
-        <p className="mechanical-content-paragraph">We emphasize innovation, hands-on learning, and research in robotics, CAD/CAM, materials, and sustainable technologies.</p>
-        <p className="mechanical-content-paragraph">Our graduates are equipped for careers in automotive, aerospace, energy, manufacturing, and research sectors.</p>
-      </>
-    ),
+  <>
+    <h5 className="mechanical-content-welcome">Welcome to School of Mechanical Engineering</h5>
+    <br></br>
+    <h3 className="mechanical-content-heading">About <span className="mechanical-highlight">the School :</span></h3>
+    <hr />
 
-    "Vision & Mission": (
-      <>
-        <h3 className="mechanical-content-heading">Vision & <span className="mechanical-highlight">Mission</span></h3>
-        <hr />
-        <h3 className="mechanical-content-heading">Our <span className="mechanical-highlight">Vision :</span></h3>
-        <p className="mechanical-content-paragraph">To be a leader in mechanical engineering education, innovation, and industrial collaboration.</p>
-        <h3 className="mechanical-content-heading">Our <span className="mechanical-highlight">Mission :</span></h3>
-        <hr />
-        <br />
-        <ul>
-          <li><i>To develop engineers with strong technical and ethical foundations.</i></li>
-          <br />
-          <li>To integrate research, entrepreneurship, and industrial exposure into the learning process.</li>
-          <br />
-          <li>To contribute to sustainable development through mechanical engineering solutions.</li>
-        </ul>
-      </>
-    ),
+    <p className="mechanical-content-paragraph">
+      The School of Mechanical Engineering is one of the pioneering departments of BIHER. More than 1000+ research papers have been published in international or national journals and conferences.
+    </p>
+
+    <ul className="mechanical-content-list">
+      <li><em><strong>Mechanical Engineering.</strong></em></li><br></br>
+      <li><em><strong>Mechatronics Engineering.</strong></em></li><br></br>
+      <li><em><strong>Automobile Engineering.</strong></em></li><br></br>
+    </ul>
+
+    <p className="mechanical-content-paragraph">
+       The National Board of Accreditation had accredited the Automobile Engineering program, and other 2 departments are going for accreditation in this academic year. The school also offers Doctoral programs in these three areas of specializations.The department has qualified and experienced faculty members; most of them are with Ph.D. degree. The faculty members actively engage in research and constantly publish papers in International and National Journals. The department regularly organizes technical workshops for the faculty members to expose them to emerging areas. The department has state-of-the art facilities for various laboratories, department library and classrooms to support e-learning. The department has a well-equipped centralized workshop facility which caters to the needs of various departments. Guest lectures and industrial visits are periodically arranged for the students to supplement their curriculum. We strive for all round excellence in students, encouraging them in all extracurricular activities..
+    </p>
+    <p className="mechanical-content-paragraph">
+      The department has qualified and experienced faculty members; most of them are with Ph.D. degree. The faculty members actively engage in research and constantly publish papers in International and National Journals.
+    </p>
+    <p className="mechanical-content-paragraph">
+      The department regularly organizes technical workshops for the faculty members to expose them to emerging areas. The department has state-of-the-art facilities for various laboratories, department library and classrooms to support e-learning.
+    </p>
+    <p className="mechanical-content-paragraph">
+      The department has a well-equipped centralized workshop facility which caters to the needs of various departments. Guest lectures and industrial visits are organized regularly to bridge the gap between industry and academics.
+    </p>
+  </>
+)
+,
+
+  
+   "Vision & Mission": (
+  <>
+    <h3 className="electrical-content-heading">Vision & <span className="electrical-highlight">Mission</span></h3>
+    <hr />
+
+    <h3 className="electrical-content-heading">Our <span className="electrical-highlight">Vision :</span></h3>
+    <p className="electrical-content-paragraph">
+      Department of Mechanical  Engineering envisions with innovation in academics to inherit the professional competence along with cognitive skills and research ability to meet industrial standards and to cater the societal needs by embedding in teaching and learning.
+    </p>
+
+    <h3 className="electrical-content-heading">Our <span className="electrical-highlight">Mission :</span></h3>
+    <hr />
+
+    <p className="electrical-content-bold">
+      <strong><u>Mission of the department is to achieve International Recognition by:</u></strong>
+    </p>
+    <br />
+
+    <ul className="electrical-content-list">
+      <li><em><strong>MD 1</strong></em> – To inherit the professional competence among the Electronics and Communication Engineering students.</li>
+    <br></br> 
+     <li><em><strong>MD 2</strong></em> – To enable the students to develop cognitive skills to meet the multidimensional technological problems of current environment.</li>
+    <br></br> 
+      <li><em><strong>MD 3</strong></em> – To establish the learning environment to enable the students to meet the industrial standards.</li>
+     <br></br>
+      <li><em><strong>MD 4</strong></em> – To inculcate the faculty and students to enrich research in societal needs.</li>
+    </ul>
+  </>
+),
+
 "Deans Desk": (
   <>
     <h3 className="mechanical-content-heading">Dean's <span className="mechanical-highlight">Desk</span></h3>
@@ -50,9 +86,9 @@ const MechanicalEngineering = () => {
       <img src={deanImg} alt="Dean" className="mechanical-dean-image" />
       <div className="mechanical-dean-details">
         <h4 className="mechanical-dean-name">
-          <b>Dr. W.M.S Johnson</b>, <span className="mechanical-dean-qual">M.D., Ph D</span>
+          <b>Dr.M.Senthil Kumar, M.E, Ph.D,</b>, <span className="mechanical-dean-qual">, M.E, Ph.D</span>
         </h4>
-        <p className="mechanical-dean-title">🩺 Professor and Dean,<br />🏛 School of Medicine, BIHER</p>
+        <p className="mechanical-dean-title">🩺 Professor and Dean,<br />🏛Department of Mechanical Engineering, BIHER</p>
       </div>
     </div>
 
@@ -193,7 +229,7 @@ const MechanicalEngineering = () => {
           </div>
         </div>
       </div>
-
+     <Banner />
       <Footer />
     </div>
   );
