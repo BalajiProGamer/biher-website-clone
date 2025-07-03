@@ -7,6 +7,8 @@ import registrarImg from '../../assets/registrar.png';
 import additionalRegistrarImg from '../../assets/additionalregistrar.png';
 import '../../styles/global.css';
 import Footer from '../Footer';
+import Query from '../Pages/Query';
+import Banner from '../Banner';
 
 
 const Leadership = () => {
@@ -221,6 +223,8 @@ const Leadership = () => {
       
        <div className="footer-wrapper">
       <Footer />
+    <Query />
+    <Banner/>
     </div>
   </>
     

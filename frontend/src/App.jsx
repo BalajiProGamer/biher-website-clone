@@ -66,8 +66,8 @@ import FeaturedMedia from "./Components/ui/FeaturedMedia";
 import FixedLandingSection from "./Components/ui/FixedLandingSection";
 
 import AboutAlumni from "./Components/Navbaroption/AboutAlumni";
-import SidebarMenu from "./Components/Pages/SidebarMenu";
 import Banner from './Components/Banner';
+import Query from "./Components/Pages/Query";
 
 function App() {
   const location = useLocation();
