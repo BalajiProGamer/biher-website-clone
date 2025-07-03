@@ -1171,6 +1171,17 @@ select:disabled {
 .mou-table th {
   background-color: #f2f2f2;
 }
+.mou-table a {
+  color: #007bff; /* Bootstrap Blue */
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.mou-table a:hover {
+  color: #0056b3; /* Darker Blue on Hover */
+  text-decoration: none;
+}
+
 
 /*Home page css*/
 /* === Auto Slide Styles === */
@@ -7777,5 +7788,866 @@ details p {
 }
 
 
+/*University page css components*/
+.universitypage-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 50px;
+  background: #fff;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.universitypage-sidebar {
+  width: 30%;
+  min-width: 280px;
+  padding-right: 20px;
+}
+
+.universitypage-main-content {
+  width: 70%;
+}
+
+.universitypage-main-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: #1e1e1e;
+  font-family: 'Georgia', serif;
+}
+
+.universitypage-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 32px;
+}
+
+.universitypage-grid-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  background: #fff;
+}
+
+.universitypage-grid-card:hover {
+  transform: translateY(-5px);
+}
+
+.universitypage-card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.universitypage-card-footer {
+  padding: 15px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.universitypage-triangle {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid;
+  margin: 0 auto;
+  margin-top: -1px;
+}
+
+/* Sidebar content */
+.universitypage-sidebar-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  color: #1e293b;
+}
+
+.universitypage-sidebar-section {
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.universitypage-section-title {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #1e1e1e;
+}
+
+.universitypage-section-icon {
+  margin-right: 8px;
+  font-size: 18px;
+  color: #0f172a;
+}
+
+.universitypage-section-text {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.universitypage-view-more {
+  font-size: 13px;
+  color: #b91c1c;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Animation */
+.pre-hide {
+  opacity: 0;
+}
+
+.animate-slide-in-left {
+  animation: slideLeft 0.9s ease forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideRight 0.9s ease 0.4s forwards;
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
 /* Research  components*/
 /*Academics css components*/
+/* === AcademicsResearch Styles === */
+.academics-banner {
+  width: 100%;
+  height: auto;
+}
+
+.academics-breadcrumb {
+  background: linear-gradient(to right, #8B1A1A, #F44336);
+  color: white;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.academics-home-link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.academics-home-icon {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.academics-breadcrumb-text {
+  font-style: italic;
+}
+
+.academics-background {
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+}
+
+.academics-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+/* === Sidebar === */
+.academics-sidebar {
+  min-width: 250px;
+  background-color: #003049;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.academics-sidebar-header {
+  background-color: #FFC107;
+  padding: 12px 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.academics-sidebar-item {
+  padding: 10px 14px;
+  border-bottom: 1px solid #084c61;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.academics-sidebar-item.active {
+  background-color: #012a4a;
+}
+
+.academics-icon {
+  margin-right: 14px;
+}
+
+/* === Content Area === */
+.academics-content {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  flex-grow: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.academics-section-heading {
+  color: #003366;
+  border-left: 4px solid #f4a261;
+  padding-left: 10px;
+}
+
+.academics-subheading {
+  color: #b30000;
+  margin-top: 20px;
+}
+
+.academics-paragraph {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.academics-hr {
+  margin: 10px 0 20px;
+  border: 0;
+  border-top: 1px solid #d9a7a7;
+}
+
+.academics-dean-profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.academics-dean-image {
+  width: 120px;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.academics-dean-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.academics-dean-name {
+  margin: 0;
+  color: #800000;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.academics-dean-link {
+  color: #800000;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.academics-dean-qual {
+  font-weight: normal;
+}
+
+.academics-dean-role,
+.academics-dean-email {
+  margin: 4px 0;
+  font-style: italic;
+  color: #333;
+}
+.download-block {
+  margin-top: 30px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.download-header {
+  background-color: #0b4d6e;
+  color: white;
+  padding: 14px 20px;
+  font-weight: 600;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.download-header::before {
+  content: "👥";
+  font-size: 18px;
+}
+
+.download-list {
+  padding: 15px 20px;
+  list-style: none;
+  margin: 0;
+}
+
+.download-list li {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 15px;
+}
+
+.download-list li:last-child {
+  border-bottom: none;
+}
+
+.download-list a {
+  text-decoration: none;
+  color: #222;
+  transition: color 0.3s ease;
+}
+
+.download-list a:hover {
+  color: #b30000;
+  text-decoration: underline;
+}
+
+.download-list li::before {
+  content: "✅";
+  margin-right: 10px;
+  font-size: 14px;
+}
+.faculty-card {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 16px;
+  margin-top: 20px;
+}
+
+.faculty-image {
+  width: 110px;
+  height: auto;
+  border-radius: 4px;
+  margin-right: 20px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+.faculty-details {
+  flex: 1;
+}
+
+.faculty-name {
+  color: #800000;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.faculty-qual {
+  font-weight: normal;
+  color: #333;
+}
+
+.faculty-email,
+.faculty-phone {
+  font-size: 15px;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+
+/* FIST CSS Components */
+.fist-container { }
+
+.fist-banner {
+  width: 100%;
+  height: auto;
+}
+
+.fist-breadcrumb {
+  background: linear-gradient(to right, #a62820, #ec1c24);
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+}
+
+.fist-breadcrumb-icon {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.fist-breadcrumb-highlight {
+  font-style: italic;
+}
+
+.fist-wrapper {
+  display: flex;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.fist-sidebar {
+  width: 260px;
+  background-color: #fbc02d;
+  border-radius: 12px 12px 0 0;
+  margin-right: 24px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: inline-block;
+}
+
+.fist-sidebar-header {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+.fist-sidebar-category {
+  padding: 10px 16px;
+  background-color: #003049;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.fist-sidebar-agency {
+  padding: 10px 24px;
+  background-color: #ffffff;
+  color: #000;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.fist-sidebar-agency.selected {
+  background-color: #014f86;
+  color: #fff;
+}
+
+.fist-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.fist-title {
+  margin-bottom: 16px;
+  color: #c62828;
+}
+
+.fist-project-card {
+  color: white !important; /* Force white text even if overwritten */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+
+.fist-placeholder {
+  color: #555;
+}
+
+/*Innovation css components*/
+/* Innovation Page Styles */
+
+.innovation-container {
+  font-family: Arial, sans-serif;
+}
+
+.innovation-header-img {
+  width: 100%;
+  height: auto;
+}
+
+.innovation-breadcrumb {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #bf0000;
+  color: white;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+  gap: 10px;
+}
+
+.innovation-home-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.innovation-home-icon {
+  margin-right: 8px;
+}
+
+.innovation-main {
+  display: flex;
+  background-image: url("../assets/pattern.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 60px;
+  padding: 40px;
+  gap: 20px;
+}
+
+.innovation-sidebar {
+  background-color: rgba(0, 38, 61, 0.9);
+  width: 300px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.innovation-sidebar-header {
+  background-color: #ffc107;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  color: #00324d;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.innovation-category-list {
+  list-style: none;
+  padding: 0 10px 10px 10px;
+  margin: 0;
+}
+
+.innovation-category-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #005577;
+}
+
+.innovation-category-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.innovation-icon {
+  margin-right: 8px;
+}
+
+.innovation-content {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #3a0000;
+  padding: 20px;
+  border-radius: 8px;
+  flex-grow: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  overflow-x: auto;
+  word-wrap: break-word;
+}
+
+.innovation-subheading {
+  color: #ffa500;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.highlight-red {
+  color: darkred;
+}
+
+.innovation-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.innovation-table th,
+.innovation-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.innovation-table thead {
+  background-color: #eee;
+}
+
+.innovation-table tbody tr:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+
+/*FundedResearch  css components */
+/* --- Funded Research Styles --- */
+
+.funded-img {
+  width: 100%;
+  height: 100%;
+}
+
+.funded-container {
+  display: flex;
+  padding: 20px;
+}
+
+/* Sidebar */
+.funded-sidebar {
+  width: 260px;
+  background-color: #fbc02d;
+  border-radius: 12px 12px 0 0;
+  margin-right: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+.funded-sidebar-header {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+.funded-category {
+  padding: 10px 16px;
+  background-color: #003049;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.funded-agency {
+  padding: 10px 24px;
+  background-color: #ffffff;
+  color: #000;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.funded-agency.active {
+  background-color: #014f86;
+  color: #fff;
+}
+
+/* Content */
+.funded-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.funded-title {
+  margin-bottom: 16px;
+  color: #c62828;
+}
+
+.funded-project {
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.funded-researcher {
+  margin-top: 16px;
+}
+
+.funded-empty {
+  color: #555;
+}
+.funded-breadcrumb-header {
+  background: linear-gradient(to right, #a31c1c, #de1f2e);
+  padding: 10px 30px;
+  font-size: 16px;
+  color: white;
+  font-style: italic;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.funded-breadcrumb-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.funded-breadcrumb-icon {
+  font-size: 18px;
+}
+
+.funded-breadcrumb-separator {
+  margin: 0 6px;
+}
+
+.funded-breadcrumb-text {
+  font-style: italic;
+  color: white;
+}
+
+.funded-breadcrumb-text-bold {
+  font-style: italic;
+  font-weight: bold;
+  color: white;
+}
+.funded-breadcrumb-icon-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/*Publication css components*/
+/* Publication Banner */
+.publication-banner {
+  width: 100%;
+  height: auto;
+}
+
+/* Flex container for layout */
+.publication-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Sidebar container */
+.publication-sidebar {
+  width: 250px;
+  background-color: #f4a900;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+/* Sidebar header */
+.publication-sidebar-header {
+  background-color: #f4a900;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+  border-bottom: 2px solid #f4a900;
+}
+
+/* Sidebar item */
+.publication-sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  color: #fff;
+  background-color: #003049;
+  border-bottom: 1px solid #012a3d;
+  cursor: pointer;
+}
+
+/* Right-side collapsible list section */
+.publication-collapsible {
+  flex: 1;
+  padding: 0 20px;
+}
+
+/* Collapsible title (e.g., SCOPUS) */
+.publication-collapsible-title {
+  color: #B22222;
+  margin-bottom: 30px;
+}
+
+/* Year box */
+.publication-year-box {
+  border: 1px solid #005b96;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Year header */
+.publication-year-header {
+  background-color: #006ba6;
+  color: #fff;
+  padding: 12px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Year header title & icon */
+.publication-year-title {
+  display: flex;
+  align-items: center;
+}
+
+/* Year collapsible body */
+.publication-year-body {
+  background-color: #e6f2f8;
+  padding: 16px;
+  color: #003049;
+}

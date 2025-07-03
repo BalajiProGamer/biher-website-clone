@@ -1,9 +1,10 @@
- import React, { useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaHome, FaBars } from "react-icons/fa";
 import FistImg from "../../assets/FIST.png";
 import Footer from "../Footer";
 import Banner from "../Banner";
+import "../../styles/global.css";
 
 const fundedResearchList = {
   Government: {
@@ -129,57 +130,25 @@ const FIST = () => {
   };
 
   return (
-    <div>
-      {/* Banner */}
-      <img src={FistImg} alt="FIST" width="100%" height="auto" />
+    <div className="fist-container">
+      <img src={FistImg} alt="FIST" className="fist-banner" />
       <Banner />
 
-      {/* Breadcrumb */}
-      <div
-        style={{
-          background: "linear-gradient(to right, #a62820, #ec1c24)",
-          color: "white",
-          padding: "12px 20px",
-          fontSize: "16px",
-          display: "flex",
-          alignItems: "center",
-          gap: "8px",
-          fontWeight: "bold",
-        }}
-      >
+      <div className="fist-breadcrumb">
         <FaHome
           onClick={() => navigate("/")}
-          style={{ cursor: "pointer", fontSize: "18px" }}
+          className="fist-breadcrumb-icon"
           title="Go to Home"
         />
         <span>»</span>
         <span>Research</span>
         <span>»</span>
-        <span style={{ fontStyle: "italic" }}>Funded Research</span>
+        <span className="fist-breadcrumb-highlight">Funded Research</span>
       </div>
 
-      {/* Layout */}
-      <div style={{ display: "flex", padding: "20px" }}>
-        {/* Sidebar */}
-        <div
-          style={{
-            width: "260px",
-            backgroundColor: "#fbc02d",
-            borderRadius: "12px 12px 0 0",
-            marginRight: "24px",
-            boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
-            display: "inline-block",
-          }}
-        >
-          <div
-            style={{
-              padding: "12px 16px",
-              display: "flex",
-              alignItems: "center",
-              fontWeight: "bold",
-              borderBottom: "1px solid #ddd",
-            }}
-          >
+      <div className="fist-wrapper">
+        <div className="fist-sidebar">
+          <div className="fist-sidebar-header">
             <FaBars style={{ marginRight: "10px" }} />
             Categories
           </div>
@@ -187,13 +156,7 @@ const FIST = () => {
           {Object.entries(fundedResearchList).map(([category, agencies]) => (
             <div key={category}>
               <div
-                style={{
-                  padding: "10px 16px",
-                  backgroundColor: "#003049",
-                  color: "white",
-                  fontWeight: "bold",
-                  cursor: "pointer",
-                }}
+                className="fist-sidebar-category"
                 onClick={() => toggleCategory(category)}
               >
                 » {category}
@@ -203,15 +166,9 @@ const FIST = () => {
                   <div
                     key={idx}
                     onClick={() => handleAgencySelect(agency)}
-                    style={{
-                      padding: "10px 24px",
-                      backgroundColor:
-                        selectedAgency === agency ? "#014f86" : "#ffffff",
-                      color: selectedAgency === agency ? "#fff" : "#000",
-                      borderBottom: "1px solid #e0e0e0",
-                      cursor: "pointer",
-                      fontSize: "14px",
-                    }}
+                    className={`fist-sidebar-agency${
+                      selectedAgency === agency ? " selected" : ""
+                    }`}
                   >
                     ▪ {agency}
                   </div>
@@ -220,9 +177,8 @@ const FIST = () => {
           ))}
         </div>
 
-        {/* Right Content */}
-        <div style={{ flex: 1, padding: "20px" }}>
-          <h2 style={{ marginBottom: "16px", color: "#c62828" }}>
+        <div className="fist-content">
+          <h2 className="fist-title">
             {selectedAgency || "Select a Funding Agency"}
           </h2>
 
@@ -230,13 +186,8 @@ const FIST = () => {
             getProjects().map((project, index) => (
               <div
                 key={index}
-                style={{
-                  background: project.color,
-                  color: "white",
-                  padding: "20px",
-                  borderRadius: "8px",
-                  marginBottom: "20px",
-                }}
+                className="fist-project-card"
+                style={{ background: project.color }}
               >
                 <h4>{project.title}</h4>
                 {project.researcher && (
@@ -253,7 +204,7 @@ const FIST = () => {
               </div>
             ))
           ) : (
-            <p style={{ color: "#555" }}>
+            <p className="fist-placeholder">
               {selectedAgency
                 ? "No project data available for this agency."
                 : "Please select a funding agency to view details."}
@@ -262,7 +213,6 @@ const FIST = () => {
         </div>
       </div>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

@@ -1,10 +1,13 @@
- import React, { useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaHome, FaBars } from "react-icons/fa"
-import FoundedImg from "../../assets/FER.jpg"; // Adjust path if needed
-import Footer from '../Footer';
-import ResearchDevelopment from './ResearchDevelopment';
+import { FaBars } from "react-icons/fa";
+import FoundedImg from "../../assets/FER.jpg";
+import Footer from "../Footer";
 import Banner from "../Banner";
+import {  FaHome } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
+
 
 const fundedResearchList = {
   Government: {
@@ -42,8 +45,7 @@ const fundedResearchList = {
     ],
     "Science and Engineering Research Board - (SERB)": [
       {
-        title:
-          "Advanced Research on Nano Composites for Aerospace Applications",
+        title: "Advanced Research on Nano Composites for Aerospace Applications",
         researcher: "Dr. R. Elango",
         position: "Professor, Dept. of Nanotechnology",
         institution:
@@ -107,142 +109,119 @@ const fundedResearchList = {
 };
 
 const FundedResearch = () => {
-  
-    const navigate = useNavigate();
-    const [expandedCategory, setExpandedCategory] = useState(null);
-    const [selectedAgency, setSelectedAgency] = useState(null);
-  
-    const toggleCategory = (category) => {
-      setExpandedCategory((prev) => (prev === category ? null : category));
-    };
-  
-    const handleAgencySelect = (agency) => {
-      setSelectedAgency(agency);
-    };
-  
-    const getProjects = () => {
-      if (!selectedAgency) return [];
-      for (const group of Object.values(fundedResearchList)) {
-        if (selectedAgency in group) {
-          return group[selectedAgency];
-        }
+  const navigate = useNavigate();
+  const [expandedCategory, setExpandedCategory] = useState(null);
+  const [selectedAgency, setSelectedAgency] = useState(null);
+
+  const toggleCategory = (category) => {
+    setExpandedCategory((prev) => (prev === category ? null : category));
+  };
+
+  const handleAgencySelect = (agency) => {
+    setSelectedAgency(agency);
+  };
+
+  const getProjects = () => {
+    if (!selectedAgency) return [];
+    for (const group of Object.values(fundedResearchList)) {
+      if (selectedAgency in group) {
+        return group[selectedAgency];
       }
-      return [];
-    };
+    }
+    return [];
+  };
+
   return (
     <div>
-           <img src={FoundedImg} alt="Founded" width="100%" height="100%" />
-           <Banner />
-            {/* Layout */}
-                 <div style={{ display: "flex", padding: "20px" }}>
-                   {/* Sidebar */}
-                   <div
-                     style={{
-                       width: "260px",
-                       backgroundColor: "#fbc02d",
-                       borderRadius: "12px 12px 0 0",
-                       marginRight: "24px",
-                       boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
-                       display: "inline-block",
-                     }}
-                   >
-                     <div
-                       style={{
-                         padding: "12px 16px",
-                         display: "flex",
-                         alignItems: "center",
-                         fontWeight: "bold",
-                         borderBottom: "1px solid #ddd",
-                       }}
-                     >
-                       <FaBars style={{ marginRight: "10px" }} />
-                       Categories
-                     </div>
-           
-                     {Object.entries(fundedResearchList).map(([category, agencies]) => (
-                       <div key={category}>
-                         <div
-                           style={{
-                             padding: "10px 16px",
-                             backgroundColor: "#003049",
-                             color: "white",
-                             fontWeight: "bold",
-                             cursor: "pointer",
-                           }}
-                           onClick={() => toggleCategory(category)}
-                         >
-                           » {category}
-                         </div>
-                         {expandedCategory === category &&
-                           Object.keys(agencies).map((agency, idx) => (
-                             <div
-                               key={idx}
-                               onClick={() => handleAgencySelect(agency)}
-                               style={{
-                                 padding: "10px 24px",
-                                 backgroundColor:
-                                   selectedAgency === agency ? "#014f86" : "#ffffff",
-                                 color: selectedAgency === agency ? "#fff" : "#000",
-                                 borderBottom: "1px solid #e0e0e0",
-                                 cursor: "pointer",
-                                 fontSize: "14px",
-                               }}
-                             >
-                               ▪ {agency}
-                             </div>
-                           ))}
-                       </div>
-                     ))}
-                   </div>
-           
-                   {/* Right Content */}
-                   <div style={{ flex: 1, padding: "20px" }}>
-                     <h2 style={{ marginBottom: "16px", color: "#c62828" }}>
-                       {selectedAgency || "Select a Funding Agency"}
-                     </h2>
-           
-                     {getProjects().length > 0 ? (
-                       getProjects().map((project, index) => (
-                         <div
-                           key={index}
-                           style={{
-                             background: project.color,
-                             color: "white",
-                             padding: "20px",
-                             borderRadius: "8px",
-                             marginBottom: "20px",
-                           }}
-                         >
-                           <h4>{project.title}</h4>
-                           {project.researcher && (
-                             <>
-                               <p style={{ marginTop: "16px" }}>
-                                 <strong>👤 {project.researcher}</strong>
-                               </p>
-                               <p>📌 {project.position}</p>
-                               <p>🏛️ {project.institution}</p>
-                               {project.email1 && <p>📧 {project.email1}</p>}
-                               {project.email2 && <p>📧 {project.email2}</p>}
-                             </>
-                           )}
-                         </div>
-                       ))
-                     ) : (
-                       <p style={{ color: "#555" }}>
-                         {selectedAgency
-                           ? "No project data available for this agency."
-                           : "Please select a funding agency to view details."}
-                       </p>
-                     )}
-                   </div>
-                 </div>
-           +
-        <>
-        <Footer/> 
-        </>
-      
-    </div>
-  )
-}
+      <img src={FoundedImg} alt="Funded Research" className="funded-img" />
+      <Banner />
+ {/* Breadcrumb Header */}
+<div className="funded-breadcrumb-header">
+  <div className="funded-breadcrumb-container">
+    <Link to="/" className="funded-breadcrumb-icon-link">
+      <FaHome className="funded-breadcrumb-icon" title="Go to Home" />
+    </Link>
+    <span className="funded-breadcrumb-separator">»</span>
+    <span className="funded-breadcrumb-text">Research</span>
+    <span className="funded-breadcrumb-separator">»</span>
+    <span className="funded-breadcrumb-text-bold">Funded Research</span>
+  </div>
+</div>
 
-export default FundedResearch
+
+
+      <div className="funded-container">
+        {/* Sidebar */}
+        <div className="funded-sidebar">
+          <div className="funded-sidebar-header">
+            <FaBars style={{ marginRight: "10px" }} />
+            Categories
+          </div>
+
+          {Object.entries(fundedResearchList).map(([category, agencies]) => (
+            <div key={category}>
+              <div
+                className="funded-category"
+                onClick={() => toggleCategory(category)}
+              >
+                » {category}
+              </div>
+              {expandedCategory === category &&
+                Object.keys(agencies).map((agency, idx) => (
+                  <div
+                    key={idx}
+                    onClick={() => handleAgencySelect(agency)}
+                    className={`funded-agency ${
+                      selectedAgency === agency ? "active" : ""
+                    }`}
+                  >
+                    ▪ {agency}
+                  </div>
+                ))}
+            </div>
+          ))}
+        </div>
+
+        {/* Main Content */}
+        <div className="funded-content">
+          <h2 className="funded-title">
+            {selectedAgency || "Select a Funding Agency"}
+          </h2>
+
+          {getProjects().length > 0 ? (
+            getProjects().map((project, index) => (
+              <div
+                key={index}
+                className="funded-project"
+                style={{ background: project.color }}
+              >
+                <h4>{project.title}</h4>
+                {project.researcher && (
+                  <>
+                    <p className="funded-researcher">
+                      <strong>👤 {project.researcher}</strong>
+                    </p>
+                    <p>📌 {project.position}</p>
+                    <p>🏛️ {project.institution}</p>
+                    {project.email1 && <p>📧 {project.email1}</p>}
+                    {project.email2 && <p>📧 {project.email2}</p>}
+                  </>
+                )}
+              </div>
+            ))
+          ) : (
+            <p className="funded-empty">
+              {selectedAgency
+                ? "No project data available for this agency."
+                : "Please select a funding agency to view details."}
+            </p>
+          )}
+        </div>
+      </div>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default FundedResearch;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Footer from '../Footer';
 import { Link } from 'react-router-dom';
 import { FaHome, FaBook, FaThList } from 'react-icons/fa';
-import NssImg from "../../assets/transport.png";
+import NssImg from "../../assets/mou.jpg";
 import "../../styles/global.css";
 
 const MOU = () => {
@@ -18,7 +18,7 @@ const MOU = () => {
         <Link to="/" className="home-link">
           <FaHome className="header-icon" />
         </Link>
-        <span className="header-text">BIHER - (Transport)</span>
+        <span className="header-text">BIHER - (MOU)</span>
       </div>
 
       <div className="mou-wrapper">
@@ -131,10 +131,161 @@ const MOU = () => {
               </tbody>
             </table>
           )}
+           {selectedCategory === "Academics" && (
+  <table className="mou-table">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Name of the Company and Location</th>
+        <th>MoU Category</th>
+        <th>MoU Date</th>
+        <th>Event Detail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>01</td>
+        <td>India Diabetes Research foundation , Chennai</td>
+        <td>Academic and Research Activities</td>
+        <td>31/03/2015</td>
+        <td><a href="https://www.bharathuniv.ac.in/nirf/Academic/India%20Diabetes.pdf">Click Here</a></td>
+      </tr>
+      <tr>
+        <td>02</td>
+        <td>India Diabetes Research foundation , Chennai</td>
+        <td>Research and Academic</td>
+        <td>01/04/2015</td>
+        <td><a href="https://www.bharathuniv.ac.in/nirf/Academic/India%20Diabetic%20Research%20Foundation.pdf">Click Here</a></td>
+      </tr>
+      <tr>
+        <td>03</td>
+        <td>MASTHAN DENTAL HOSPITAL, Chennai-78</td>
+        <td>Academic & Research</td>
+        <td>02/04/2015</td>
+        <td><a href="https://www.bharathuniv.ac.in/nirf/Academic/MASTHANDENTAL%20HOSPITAL.pdf">Click Here</a></td>
+      </tr>
+      <tr>
+        <td>04</td>
+        <td>DR GANESANS HITECH DIAGNOSTIC CENTRE PVT LTD. CHENNAI</td>
+        <td>Academic & Funding for Research Projects</td>
+        <td>02/05/2015</td>
+        <td><a href="https://www.bharathuniv.ac.in/nirf/Academic/DR%20Ganesans%20Hitech%20Diagnostic.pdf">Click Here</a></td>
+      </tr>
+      <tr>
+        <td>05</td>
+        <td>WEILL CORNELL MEDICAL COLLEGE OF CORNELL UNIVERSITY, USA</td>
+        <td>Research and Academic</td>
+        <td>11/05/2015</td>
+        <td><a href="https://www.bharathuniv.ac.in/nirf/Academic/Weill%20Cornell%20Med%20College.pdf">Click Here</a></td>
+      </tr>
+      <tr>
+        <td>06</td>
+        <td>Omega Rural Medical Educational Trust , Nellore</td>
+        <td>Academic and Research Activities</td>
+        <td>29/05/2015</td>
+        <td><a href="https://www.bharathuniv.ac.in/nirf/Academic/Omega%20Rural.pdf">Click Here</a></td>
+      </tr>
+      <tr>
+        <td>07</td>
+        <td>UNITED BIOTECH (P) LIMITED NEW DELHI</td>
+        <td>The Scope of Funding on Academic and Projects</td>
+        <td>15/06/2015</td>
+        <td><a href="https://www.bharathuniv.ac.in/nirf/Academic/United%20Biotech.pdf">Click Here</a></td>
+      </tr>
+      <tr>
+        <td>08</td>
+        <td>M/s.Armats Biotek private Limited , Chennai</td>
+        <td>Academic and Research Activities</td>
+        <td>24/06/2015</td>
+        <td><a href="https://www.bharathuniv.ac.in/nirf/Academic/Ms.Armats.pdf">Click Here</a></td>
+      </tr>
+      <tr>
+        <td>09</td>
+        <td>Dowling College Manhattan, New York</td>
+        <td>Academic and Training Activities</td>
+        <td>06/10/2015</td>
+        <td><a href="https://www.bharathuniv.ac.in/nirf/Academic/Dowling.pdf">Click Here</a></td>
+      </tr>
+    </tbody>
+  </table>
+)}
+  
+
+  {selectedCategory === "Research" && (
+  <table className="mou-table">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Name of the Company and Location</th>
+        <th>MoU Category</th>
+        <th>MoU Date</th>
+        <th>Event Detail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>01</td>
+        <td>RAJAN EYE CARE HOSPITAL</td>
+        <td>Research and Development</td>
+        <td>09/04/2015</td>
+        <td><a href="https://www.bharathuniv.ac.in/nirf/research/Rajan%20Eye%20Care%20Hospital,%2009.04.14.pdf">Click Here</a></td>
+      </tr>
+      <tr>
+        <td>02</td>
+        <td>DR Ganesans Hitech Diagnostic center Pv Ltd. Chennai</td>
+        <td>Funding for Research Project</td>
+        <td>02/05/2015</td>
+        <td><a href="https://www.bharathuniv.ac.in/nirf/research/DR%20Ganesans.pdf">Click Here</a></td>
+      </tr>
+      <tr>
+        <td>03</td>
+        <td>METROPOLIS HEALTHCARE LIMITED MUMBAI</td>
+        <td>Research Projects</td>
+        <td>19/03/2015</td>
+        <td><a href="https://www.bharathuniv.ac.in/nirf/research/Metropolies%20Healthcare.pdf">Click Here</a></td>
+      </tr>
+      <tr>
+        <td>04</td>
+        <td>CENTRE FOR MEDICAL GENETICS (CMG), CHENNAI</td>
+        <td>Research and Development & Training</td>
+        <td>25/03/2015</td>
+        <td><a href="https://www.bharathuniv.ac.in/nirf/research/Center%20of%20Medical%20Genetics.pdf">Click Here</a></td>
+      </tr>
+      <tr>
+        <td>05</td>
+        <td>India Diabetes Research foundation , Chennai</td>
+        <td>Research and Academic</td>
+        <td>31/03/2015</td>
+        <td><a href="https://www.bharathuniv.ac.in/nirf/research/India%20Diabetic%20Research%20Foundation.pdf">Click Here</a></td>
+      </tr>
+      <tr>
+        <td>06</td>
+        <td>MASTHAN DENTAL HOSPITAL, Chennai-78</td>
+        <td>Academic & Research</td>
+        <td>02/04/2015</td>
+        <td><a href="https://www.bharathuniv.ac.in/nirf/research/MASTHANDENTAL%20HOSPITAL.pdf">Click Here</a></td>
+      </tr>
+      <tr>
+        <td>07</td>
+        <td>Cologenesis Health care Ltd. Salem</td>
+        <td>Research and Development</td>
+        <td>28/04/2015</td>
+        <td><a href="https://www.bharathuniv.ac.in/nirf/research/Cologenesis.pdf">Click Here</a></td>
+      </tr>
+      <tr>
+        <td>08</td>
+        <td>DR GANESANS HITECH DIAGNOSTIC CENTRE PVT LTD. CHENNAI</td>
+        <td>Academic & Funding for Research Projects</td>
+        <td>02/05/2015</td>
+        <td><a href="https://www.bharathuniv.ac.in/nirf/research/DR%20Ganesans%20Hitech%20Diagnostic.pdf">Click Here</a></td>
+      </tr>
+    </tbody>
+  </table>
+)}
 
           {selectedCategory !== "Training & Placement" && (
             <p style={{ marginTop: "20px" }}>
-              Content for <strong>{selectedCategory}</strong> will be added soon.
+               <strong>{selectedCategory}</strong> 
             </p>
           )}
         </div>

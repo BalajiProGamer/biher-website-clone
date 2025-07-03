@@ -39,7 +39,7 @@ import AcademicsResearch from "./Components/Research/AcademicsResearch"; /* Impo
 import Innovation from "./Components/Research/Innovation";
 import FundedResearch from "./Components/Research/FundedResearch";
 import Publication from "./Components/Research/publication";
-import Patent from "./Components/Research/Patent";
+
 /* Import campuslife pages*/
 import NCC from "./Components/Campuslife/Ncc";
 import NSS from "./Components/Campuslife/NSS";
@@ -121,7 +121,7 @@ function App() {
         <Route path="/research/Innovation" element={<Innovation />} />
         <Route path="/research/funded-research" element={<FundedResearch/>}/>
         <Route path="/research/publication" element={<Publication/>} />
-        <Route path="/research/" element={<Patent/>} />
+
         <Route path="/campuslife/Ncc" element={<NCC/>}/>
         <Route path="/campuslife/NSS" element={<NSS/>}/>
         <Route path="/campuslife/RRC" element={<RRC/>}/>

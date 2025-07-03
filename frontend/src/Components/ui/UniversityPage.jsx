@@ -14,23 +14,21 @@ import careerImg from "../../assets/career.jpg";
 import assessmentImg from "../../assets/assessment.jpg";
 
 // Styles
-import "../../styles/global.css"; // Make sure this contains animation classes
+import "../../styles/global.css";
 
-// === Sidebar Section Component ===
 const SidebarSection = ({ icon, title, text, link }) => (
-  <div className="sidebar-section">
-    <div className="section-title">
-      <span className="section-icon">{icon}</span>
+  <div className="universitypage-sidebar-section">
+    <div className="universitypage-section-title">
+      <span className="universitypage-section-icon">{icon}</span>
       {title}
     </div>
-    <p className="section-text">{text}</p>
-    <a href={link} target="_blank" rel="noopener noreferrer" className="view-more">
+    <p className="universitypage-section-text">{text}</p>
+    <a href={link} target="_blank" rel="noopener noreferrer" className="universitypage-view-more">
       VIEW MORE →
     </a>
   </div>
 );
 
-// === Tiles for Main Grid ===
 const tiles = [
   { title: "New Classroom Technology", color: "#f97316", image: classroomImg },
   { title: "Get Support Funding & Resources", color: "#a21caf", image: fundingImg },
@@ -40,7 +38,6 @@ const tiles = [
   { title: "Prior Learning Assessment", color: "#16a34a", image: assessmentImg },
 ];
 
-// === Main Page Component ===
 const UniversityPage = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [leftVisible, setLeftVisible] = useState(false);
@@ -74,13 +71,13 @@ const UniversityPage = () => {
   }, []);
 
   return (
-    <div className="university-container">
+    <div className="universitypage-container">
       {/* Sidebar Section */}
       <aside
         ref={leftRef}
-        className={`sidebar ${leftVisible ? "animate-slide-in-left" : "pre-hide"}`}
+        className={`universitypage-sidebar ${leftVisible ? "animate-slide-in-left" : "pre-hide"}`}
       >
-        <div className="sidebar-title">Campus Life</div>
+        <div className="universitypage-sidebar-title">Campus Life</div>
         <SidebarSection
           icon={<FaChalkboardTeacher />}
           title="Classroom / Seminar Halls"
@@ -104,28 +101,28 @@ const UniversityPage = () => {
       {/* Main Content Grid */}
       <main
         ref={rightRef}
-        className={`main-content ${rightVisible ? "animate-slide-in-right" : "pre-hide"}`}
+        className={`universitypage-main-content ${rightVisible ? "animate-slide-in-right" : "pre-hide"}`}
       >
-        <h1 className="main-title">
+        <h1 className="universitypage-main-title">
           Modern Technologies Demand the Highest Level of Education
         </h1>
-        <div className="grid-container">
+        <div className="universitypage-grid-container">
           {tiles.map((tile, i) => (
             <div
               key={i}
-              className={`grid-card ${hoveredIndex === i ? "hovered" : ""}`}
+              className={`universitypage-grid-card ${hoveredIndex === i ? "hovered" : ""}`}
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <img src={tile.image} alt={tile.title} className="card-image" />
+              <img src={tile.image} alt={tile.title} className="universitypage-card-image" />
               <div
-                className="card-footer"
+                className="universitypage-card-footer"
                 style={{ backgroundColor: tile.color }}
               >
                 {tile.title}
               </div>
               <div
-                className="triangle"
+                className="universitypage-triangle"
                 style={{ borderTopColor: tile.color }}
               />
             </div>
