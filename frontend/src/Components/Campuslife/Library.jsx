@@ -5,6 +5,8 @@ import qrCodeImage from '../../assets/qr.png';
 import { FaHome } from 'react-icons/fa';
 import Footer from '../Footer';
 import Banner from '../Banner';
+
+import Query from '../Pages/Query'; 
 import '../../styles/global.css'; // Make sure this path is correct
 
 const categories = [
@@ -184,6 +186,7 @@ const Library = () => {
           <div className="library-qr">
             <img src={qrCodeImage} alt="QR Code" className="qr-image" />
             <Banner />
+            <Query/>
           </div>
         </div>
       </div>

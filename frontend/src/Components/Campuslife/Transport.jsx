@@ -1,10 +1,12 @@
 import React from 'react';
 import Footer from '../Footer';
+import Query from '../Pages/Query';
 import { Link } from 'react-router-dom';
 import { FaHome } from 'react-icons/fa';
 import NssImg from "../../assets/transport.png";
 import backgroundImage from "../../assets/pattern.jpg"; // Background image
 import '../../styles/global.css'; // Global styles
+import Banner from '../Banner';
 
 const Scholarship = () => {
   return (
@@ -64,7 +66,8 @@ const Scholarship = () => {
           </ul>
         </div>
       </div>
-
+      <Banner/>
+    <Query/>
       <Footer />
     </div>
   );

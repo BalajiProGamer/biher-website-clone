@@ -135,10 +135,7 @@ const SecondaryNavbar = () => {
                 <Link to="/international/admissions/eligibility">Eligibility</Link>
                 <Link to="/international/admissions/fees">Fees</Link>
                 <Link to="/international/admissions/bank-details">Bank Details</Link>
-                <Link to="/international/admissions/scholarship">Scholarship</Link>
-                <Link to="/international/admissions/visa">Visa</Link>
-                <Link to="/international/admissions/offices">Offices</Link>
-                <Link to="/international/admissions/apply">Apply Now</Link>
+               
               </div>
             </div>
             <Link to="/international/collaboration"><FaHandshake /> Collaboration</Link>

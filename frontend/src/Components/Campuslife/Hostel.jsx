@@ -4,6 +4,8 @@ import { FaHome } from 'react-icons/fa';
 import hostelImage from '../../assets/Hostel.png';
 import hostelBg from '../../assets/pattern.jpg';
 import Footer from '../Footer';
+import Query from '../Pages/Query';
+import Banner from '../Banner';
 import '../../styles/global.css'; // Make sure this path is correct
 
 const Hostel = () => {
@@ -71,7 +73,8 @@ const Hostel = () => {
            <p>Each campus has a post office STD, ISD pay phones, copier facility, stationery store, souvenir shop etc. The university has the tie-ups with beauty parlor, travel agency etc.</p>
         </div>
       </div>
-
+     <Banner/>
+     <Query/>
       <Footer />
     </div>
   );

@@ -5,6 +5,7 @@ import Footer from '../Footer';
 import { Link } from "react-router-dom";
 import { FaHome, FaBookOpen, FaThLarge } from "react-icons/fa";
 import Banner from '../Banner';
+import Query from '../Pages/Query';
 import bhumi from '../../assets/Bhumi.jpg';
 import award2 from '../../assets/BIST.jpg';
 import award3 from '../../assets/Medical.jpg';
@@ -249,6 +250,7 @@ case "Awards":
           </div>
         </div>
       </div>
+      <Query/>
 
       <Footer />
     </div>

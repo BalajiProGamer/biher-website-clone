@@ -14,6 +14,7 @@ import gallery6 from '../../assets/ncc6.jpg';
 import gallery7 from '../../assets/ncc7.jpg';
 import gallery8 from '../../assets/ncc8.jpg';
 import gallery9 from '../../assets/ncc9.jpg';
+import Query from '../Pages/Query';
 
 const categoryItems = [
   'About Us',
@@ -148,6 +149,7 @@ const NCC = () => {
     <div>
       <img src={NccImg} alt="NCC" className="ncc-top-image" />
       <Banner />
+      <Query/>
 <header className="ncc-header">
   <FaHome />
   <a href="/" className="ncc-breadcrumb-link">Campus Life</a>

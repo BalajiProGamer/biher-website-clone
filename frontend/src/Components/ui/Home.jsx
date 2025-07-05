@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
+import Query from '../Pages/Query';
 
 import img1 from '../../assets/img.jpg';
 import img2 from '../../assets/img1.jpg';
@@ -117,6 +118,7 @@ export default function AutoSlide() {
       <UniversityPage />
       <CampusDashboard />
       <FeaturedMedia />
+      <Query />
       <Footer />
     </div>
   );
