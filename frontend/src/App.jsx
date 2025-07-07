@@ -55,6 +55,7 @@ import ImageSlide from "./Components/ImageSlider";
 import Admissions from "./Components/International/Admissions";
 import StudyAbroad from "./Components/Pages/StudyAbroad";
 import Collaboration from "./Components/International/Collaboration"; 
+import Exchangeprogram from "./Components/International/ExchangeProgram";
 import HigherStudies from "./Components/International/HigherStudies";
 import ResearchDevelopment from "./Components/Research/ResearchDevelopment";
 import Section from './Components/ui/Section';
@@ -131,6 +132,7 @@ function App() {
         <Route path="/international/admissions" element={<Admissions/>}/>
         <Route path="/international/Collaboration" element={<Collaboration/>}/>
         <Route path="/international/Higher-Studies" element={<HigherStudies/>}/>
+        <Route path="/international/Exchange-program" element={<Exchangeprogram/>}/>
       </Routes>
     </div>
   );

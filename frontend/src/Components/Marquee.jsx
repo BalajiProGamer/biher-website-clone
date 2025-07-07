@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./Marquee.css";
+import "../styles/global.css";
 import { FaBell } from "react-icons/fa";
 import newGif from "../assets/newIcon.gif";
 
@@ -55,6 +55,11 @@ export default function Marquee() {
       <span className="announcement">
         <img src={newGif} alt="New" className="gif-icon" />
         Final Year Project Viva Schedule – Engineering Dept (12th April 2025)
+      </span>
+      <span className="announcement">
+        <img src={newGif} alt="New" className="gif-icon" />
+       ACADEMIC SCHEDULE - [U22 & 23 Batch Engg] ACADEMIC YEAR 2025-2026 ODD TERM
+
       </span>
     </marquee>
   </div>
