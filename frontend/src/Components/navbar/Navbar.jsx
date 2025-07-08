@@ -1,18 +1,15 @@
-  import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/global.css";
 import {
-  FaCertificate,
-  FaFileContract,
-  FaGraduationCap,
-  FaUsers,
-  FaBriefcase,
+  FaUniversity,
   FaSearch,
   FaTrophy,
   FaUser,
   FaUserTie,
-  FaCheckCircle,
+ FaSchool,
   FaCaretDown,
+  FaUserGraduate,
 } from "react-icons/fa";
 
 const Navbar = () => {
@@ -47,56 +44,56 @@ const Navbar = () => {
       <div className={menuOpen ? "nav-links show" : "nav-links"}>
         {/* Open in new tab using <a> instead of <Link> */}
         <a href="https://bharathuniv.directverify.in/student/#/app/request" target="_blank" rel="noopener noreferrer">
-          <FaCertificate /> Certification Verification
+          <FaUniversity /> Certification Verification
         </a>
 
         <Link to="/mou">
-          <FaFileContract /> MOU
+          <FaUniversity /> MOU
         </Link>
         <Link to="/lms">
-          <FaGraduationCap /> LMS
+          <FaUniversity /> LMS
         </Link>
         <Link to="/IQAC">
-          <FaUsers /> IQAC
+          <FaUniversity /> IQAC
         </Link>
         <Link to="/alumni">
-          <FaUsers /> Alumni
+          <FaUniversity /> Alumni
         </Link>
         <Link to="/career">
-          <FaBriefcase /> Career
+          <FaUniversity /> Career
         </Link>
 
         {/* NAD Dropdown */}
         <div className="dropdown-container">
           <span onClick={() => handleDropdownToggle("NAD")}>
-            <FaUser /> NAD <FaCaretDown />
+            <FaSchool /> NAD  <FaCaretDown />
           </span>
           {activeDropdown === "NAD" && (
-          <div className="dropdown-menu show"> {/* <--- ADD 'show' here */}
-        <a href="https://www.digilocker.gov.in/dashboard" target="_blank" rel="noopener noreferrer">
-        <FaUser /> NAD Portal
-        </a>
-        <a href="https://www.bharathuniv.ac.in/esanad/" target="_blank" rel="noopener noreferrer">
-        <FaCheckCircle /> E-Sand Verification
-       </a>
-       </div>
-    )}
+            <div className="dropdown-menu show"> {/* <--- ADD 'show' here */}
+              <a href="https://www.digilocker.gov.in/dashboard" target="_blank" rel="noopener noreferrer">
+                <FaUserGraduate /> NAD Portal
+              </a>
+              <a href="https://www.bharathuniv.ac.in/esanad/" target="_blank" rel="noopener noreferrer">
+                <FaUserGraduate /> E-Sand Verification
+              </a>
+            </div>
+          )}
 
         </div>
 
         {/* Achievements Dropdown */}
         <div className="dropdown-container">
           <span onClick={() => handleDropdownToggle("Achievements")}>
-            <FaTrophy /> Achievements <FaCaretDown />
+            <FaSchool /> Achievements <FaCaretDown />
           </span>
           {activeDropdown === "Achievements" && (
             <div className="dropdown-menu">
-              <a href="https://www.bharathuniv.ac.in/Staff-Awards.php" target="_blank" rel="noopener noreferrer">
-                <FaTrophy /> Staff Award
-              </a>
-              <a href="https://www.bharathuniv.ac.in/student-achiv.php" target="_blank" rel="noopener noreferrer">
-                <FaTrophy /> Student Award
-              </a>
+              <Link to="/achievements/staff-award">
+                <FaUserGraduate /> Staff Award
+              </Link>
+              <Link to="/achievements/student-award">
+                <FaUserGraduate /> Student Award
+              </Link>
             </div>
           )}
         </div>
@@ -104,7 +101,7 @@ const Navbar = () => {
         {/* Login Dropdown */}
         <div className="dropdown-container">
           <span onClick={() => handleDropdownToggle("Login")}>
-            <FaUserTie /> Login <FaCaretDown />
+            <FaSchool /> Login  <FaCaretDown />
           </span>
           {activeDropdown === "Login" && (
             <div className="dropdown-menu">
@@ -112,10 +109,10 @@ const Navbar = () => {
                 <FaUser /> Camu Portal
               </a>
               <a href="https://alumni.bharathuniv.ac.in/user/login.dz" target="_blank" rel="noopener noreferrer">
-                <FaUserTie /> Alumni Login
+                <FaUserGraduate /> Alumni Login
               </a>
               <a href="https://ebharath.bharathuniv.ac.in/" target="_blank" rel="noopener noreferrer">
-                <FaUserTie /> Staff Portal
+                <FaUserGraduate /> Staff Portal
               </a>
             </div>
           )}

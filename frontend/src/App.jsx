@@ -14,6 +14,7 @@ import ExecutiveCouncilMembers from "./Components/About/Goverence/ExecutiveCounc
 import AcademicCouncil from "./Components/About/Goverence/AcademicCouncil"; // Import the Academic Council component
 import FinanceCommittee from "./Components/About/Goverence/FinanceCommittee";
 import Planningmonitoring from "./Components/About/Goverence/Planningmonitoring";
+
 import Marquee from "./Components/Marquee";
 import Footer from "./Components/Footer";
 import LmsForm from "./Components/Navbaroption/Form";
@@ -69,6 +70,8 @@ import FixedLandingSection from "./Components/ui/FixedLandingSection";
 import AboutAlumni from "./Components/Navbaroption/AboutAlumni";
 import Banner from './Components/Banner';
 import Query from "./Components/Pages/Query";
+import StudentAward from "./Components/Pages/StudentAward";
+import StaffAward from './Components/Pages/StaffAward';
 
 function App() {
   const location = useLocation();
@@ -91,6 +94,8 @@ function App() {
         <Route path="/iqac" element={<IQAC />} />
         <Route path="/alumni" element={<Alumni />} />
         <Route path="/career" element={<Career />} />
+         <Route path="/achievements/staff-award" element={<StaffAward />} />
+        <Route path="/achievements/student-award" element={<StudentAward />} />
         /* About pages*/
         <Route path="/about/overview" element={<Overview />} />
         <Route path="/about/leadership" element={<Leadership />} />
@@ -99,6 +104,8 @@ function App() {
         <Route path="/about/governance/statutory/financecommittee" element={< FinanceCommittee/>} />
         <Route path="/about/governance/statutory/ExecutiveCouncilMember" element={< ExecutiveCouncilMembers/>} />
          <Route path="/about/governance/statutory/planningmonitoring" element={< Planningmonitoring/>} />
+        
+         
 
         <Route path="/form" element={<LmsForm />} />
         <Route path="/academics/aeronautical-engineering" element={<AeronauticalEngineering />} />

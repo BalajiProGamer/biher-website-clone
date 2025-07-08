@@ -9,7 +9,7 @@ import {
   FaPalette, FaAtom, FaRobot, FaCode, FaHardHat, FaTooth, FaBolt,
   FaGavel, FaStethoscope, FaCogs, FaChartLine, FaCapsules,
   FaClipboardList, FaLightbulb, FaBriefcase, FaMicroscope, FaHandshake,
-  FaExchangeAlt, FaUserFriends, FaFlag, FaChevronDown,FaUserSecret,
+  FaExchangeAlt, FaUserFriends, FaFlag, FaChevronDown, FaUserSecret,
 
   FaUserNurse, FaWalking            // ⬅ NEW icons
 } from "react-icons/fa";
@@ -43,7 +43,7 @@ const SecondaryNavbar = () => {
             <Link to="/about/overview"><FaUsers /> Overview</Link>
             <Link to="/about/leadership"><FaUserTie /> Leadership Team</Link>
             <div className="submenu">
-              <span className="submenu-label"> <FaUserSecret/> Governance <span className="submenu-icon">»</span></span>
+              <span className="submenu-label"> <FaUserSecret /> Governance <span className="submenu-icon">»</span></span>
               <div className="submenu-content">
                 <div className="submenu">
                   <span className="submenu-label">Statutory Bodies <span className="submenu-icon">»</span></span>
@@ -55,19 +55,22 @@ const SecondaryNavbar = () => {
                   </div>
                 </div>
                 <div className="submenu">
-                  <span className="submenu-label">Non-Statutory Bodies <span className="submenu-icon">»</span></span>
+                  <span className="submenu-label">
+                    Non-Statutory Bodies <span className="submenu-icon">»</span>
+                  </span>
                   <div className="submenu-content">
-                    <Link to="/about/governance/statutory/Commmittee">Committee</Link>
+                    <Link to="/about/governance/statutory/Committees">Committees</Link>
                     <Link to="/about/governance/statutory/studentcouncil">Student Council</Link>
                     <Link to="/about/governance/statutory/studentCouncelling">Student Counselling</Link>
                   </div>
+
                 </div>
               </div>
             </div>
             <Link to=""><FaUniversity /> Administration</Link>
           </div>
         </div>
-          
+
         {/* ——— Academics (UPDATED) ——— */}
         <div className="dropdown dropdown-academics">
           <span className="dropdown-label">Academics <FaChevronDown /></span>
@@ -96,19 +99,19 @@ const SecondaryNavbar = () => {
               <Link to="/academics/management-commerce"><FaChartLine /> School of Management &amp; Commerce</Link>
               <Link to="/academics/nursing"><FaUserNurse /> School of Nursing</Link>
               <Link to="/academics/pharmacy"><FaCapsules /> School of Pharmacy</Link>
-              
+
             </div>
           </div>
         </div>
 
         <a
-  href="https://bharathuniv.ac.in/admission"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="nav-link white-text" // <-- added class
->
-  Admission
-</a>
+          href="https://bharathuniv.ac.in/admission"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="nav-link white-text" // <-- added class
+        >
+          Admission
+        </a>
 
 
         {/* Research */}
@@ -120,7 +123,7 @@ const SecondaryNavbar = () => {
             <Link to="/research/FIST"><FaLightbulb /> FIST</Link>
             <Link to="/research/innovation"><FaLightbulb /> Innovation</Link>
             <Link to="/research/funded-research"><FaBriefcase /> Funded Research</Link>
-            
+
           </div>
         </div>
 
@@ -129,21 +132,21 @@ const SecondaryNavbar = () => {
           <span className="dropdown-label">International <FaChevronDown /></span>
           <div className="dropdown-content dropdown-content-international">
             <div className="submenu">
-              <span className="submenu-label"><FaUserGraduate /> Admissions <span className="submenu-icon">»</span></span>
+              <span className="submenu-label"><FaUniversity /> Admissions <span className="submenu-icon">»</span></span>
               <div className="submenu-content">
                 <Link to="/international/admissions/overview">Overview</Link>
                 <Link to="/international/admissions/eligibility">Eligibility</Link>
                 <Link to="/international/admissions/fees">Fees</Link>
                 <Link to="/international/admissions/bank-details">Bank Details</Link>
-               
+
               </div>
             </div>
             <Link to="/international/collaboration"><FaHandshake /> Collaboration</Link>
             <Link to="/international/exchange-program"><FaExchangeAlt /> Exchange Program</Link>
-            <Link to="/international/higher-studies"><FaUserFriends /> Higher Studies</Link>
+            <Link to="/international/higher-studies"><FaUniversity/> Higher Studies</Link>
             <Link to="/international/other-activities"><FaUsers /> Other Activities</Link>
             <Link to="/international/events"><FaFlag /> Events</Link>
-            
+
           </div>
         </div>
 

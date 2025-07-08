@@ -8898,4 +8898,194 @@ body {
   height: auto;
 }
 
+/* StaffAward css page*/
+.award-banner {
+  background-size: cover;
+  background-position: center;
+  padding: 40px 30px;
+  color: #000;
+}
 
+.banner-text-wrapper {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.banner-subtitle {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  color: #555;
+}
+
+.banner-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.banner-title .highlight {
+  color: #b30000;
+}
+
+.divider {
+  width: 210px;
+  height: 3px;
+  background-color: #b30000;
+  margin: 12px auto 30px;
+}
+
+/* Grid container inside the banner */
+.award-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual award card */
+.award-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  padding: 15px;
+}
+
+.award-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.award-title {
+  color: #b30000;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.breadcrumb-header {
+  background: linear-gradient(to right, #a52a2a, #e31b23);
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.breadcrumb-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: Georgia, ;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.breadcrumb-icon {
+  cursor: pointer;
+  font-size: 18px;
+ 
+}
+
+.breadcrumb-separator {
+  font-size: 18px;
+}
+
+.breadcrumb-text {
+  white-space: nowrap;
+}
+
+/*Student Award*/
+/* Section Title Block */
+.student-title-box {
+  padding: 20px 40px;
+}
+
+.title-label {
+  color: #6c757d;
+  letter-spacing: 6px;
+  font-size: 14px;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  position: relative;
+}
+
+.title-label::before {
+  content: '';
+  display: inline-block;
+  height: 25px;
+  width: 3px;
+  background-color: orange;
+  margin-right: 10px;
+  position: relative;
+  top: 4px;
+}
+
+.title-heading {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 8px;
+  font-family: 'Georgia', serif;
+}
+
+.highlight-red {
+  color: #a30000;
+}
+
+.section-divider {
+  margin-top: 12px;
+  border: 0;
+  border-top: 1px solid #e5b1b1;
+}
+
+/* Background + White Container */
+.student-content-background {
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+}
+
+.student-white-box {
+  background: white;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+
+/* Red Award Box */
+.award-card {
+  background-color: #b92c2c;
+  color: white;
+  padding: 15px;
+  border-radius: 2px;
+  font-family: Georgia, ;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.award-card hr {
+  border-top: 1px solid #eee;
+  margin: 10px 0;
+}
+
+.award-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.award-student {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+}
+
+.award-info {
+  margin-top: 8px;
+  color: #f0f0f0;
+}
