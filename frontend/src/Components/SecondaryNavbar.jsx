@@ -142,7 +142,7 @@ const SecondaryNavbar = () => {
               </div>
             </div>
             <Link to="/international/collaboration"><FaHandshake /> Collaboration</Link>
-            <Link to="/international/exchange-program"><FaExchangeAlt /> Exchange Program</Link>
+            <Link to="/international/visitor"><FaExchangeAlt /> Visitor</Link>
             <Link to="/international/higher-studies"><FaUniversity/> Higher Studies</Link>
             <Link to="/international/other-activities"><FaUsers /> Other Activities</Link>
             <Link to="/international/events"><FaFlag /> Events</Link>

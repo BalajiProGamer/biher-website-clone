@@ -56,8 +56,10 @@ import ImageSlide from "./Components/ImageSlider";
 import Admissions from "./Components/International/Admissions";
 import StudyAbroad from "./Components/Pages/StudyAbroad";
 import Collaboration from "./Components/International/Collaboration"; 
-import Exchangeprogram from "./Components/International/ExchangeProgram";
+import { Visitor } from './Components/International/Visitor';
+import OtherActivities from "./Components/International/OtherActivites";
 import HigherStudies from "./Components/International/HigherStudies";
+import Events from "./Components/International/Events";
 import ResearchDevelopment from "./Components/Research/ResearchDevelopment";
 import Section from './Components/ui/Section';
 import InfoLayout from "./Components/ui/InfoLayout";
@@ -72,6 +74,7 @@ import Banner from './Components/Banner';
 import Query from "./Components/Pages/Query";
 import StudentAward from "./Components/Pages/StudentAward";
 import StaffAward from './Components/Pages/StaffAward';
+import NewsSlider from "./Components/Pages/NewsSlider";
 
 function App() {
   const location = useLocation();
@@ -139,7 +142,9 @@ function App() {
         <Route path="/international/admissions" element={<Admissions/>}/>
         <Route path="/international/Collaboration" element={<Collaboration/>}/>
         <Route path="/international/Higher-Studies" element={<HigherStudies/>}/>
-        <Route path="/international/Exchange-program" element={<Exchangeprogram/>}/>
+        <Route path="/international/other-activities" element={<OtherActivities/>}/>
+        <Route path="/international/visitor" element={<Visitor/>}/>
+        <Route path="/international/Events" element={<Events/>}/>
       </Routes>
     </div>
   );
