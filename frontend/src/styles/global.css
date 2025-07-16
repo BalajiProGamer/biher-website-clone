@@ -9248,7 +9248,7 @@ body {
   display: flex;
   flex-direction: column;
   border-radius: 0 0 8px 8px;
-
+  justify-content: flex-start;
 }
 
 .events-sidebar-header {
@@ -9300,7 +9300,7 @@ body {
   color: #333;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  
 }
 
 
@@ -9324,13 +9324,14 @@ body {
 
 
 /*Other Activites css components*/
-.other-activities-header {
-  background-color: #b22222;
+/* Header */
+.activities-header {
+  background-color:  #b22222;
   color: white;
   padding: 12px 24px;
 }
 
-.other-activities-header-content {
+.activities-header-content {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -9347,7 +9348,7 @@ body {
 }
 
 /* Background image section */
-.other-activities-section {
+.activities-section {
   background-image: url('../assets/pattern.jpg'); /* Replace with actual path */
   background-size: cover;
   background-position: center;
@@ -9355,7 +9356,7 @@ body {
 }
 
 /* Flex layout */
-.other-activities-container {
+.activities-container {
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
@@ -9363,7 +9364,7 @@ body {
 }
 
 /* Sidebar */
-.other-activities-sidebar {
+.activities-sidebar {
   width: 280px;
   background-color: #002f45;
   border-radius: 15px;
@@ -9372,7 +9373,7 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
-.other-activities-sidebar-header {
+.activities-sidebar-header {
   background-color: #ffc107;
   color: #333;
   padding: 14px 18px;
@@ -9385,7 +9386,7 @@ body {
   border-top-right-radius: 15px;
 }
 
-.other-activities-nav-item {
+.activities-nav-item {
   padding: 12px 18px;
   font-size: 15px;
   cursor: pointer;
@@ -9397,15 +9398,14 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.other-activities-nav-item:hover {
+.activities-nav-item:hover {
   background-color: #00425c;
 }
 
-.other-activities-nav-item.active {
+.activities-nav-item.active {
   background-color: #00597e;
 }
 
-/* Book icon */
 .book-icon {
   color: #fff;
   font-size: 16px;
@@ -9413,19 +9413,19 @@ body {
 }
 
 /* Content Area */
-.other-activities-content {
+.activities-content {
   flex: 1;
   background-color: white;
   padding: 24px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
-.other-activities-content h3 {
+.activities-content h3 {
   color: #b40000;
 }
 
-.other-activities-content p {
+.activities-content p {
   line-height: 1.8;
   font-size: 16px;
 }

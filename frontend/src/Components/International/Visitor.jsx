@@ -1,8 +1,11 @@
 import React from 'react'
 import ImageSlider from '../ImageSlider'
+import Query from '../Pages/Query';
 import Banner from '../Banner';
+import NewsSlider from '../Pages/NewsSlider';
+import Footer from '../Footer';
 
-import Query from '../Pages/Query'; 
+
 
 export const Visitor = () => {
   return (
@@ -10,6 +13,8 @@ export const Visitor = () => {
         <ImageSlider/>
         <Query/>
         <Banner/>
+        <NewsSlider/>
+        <Footer/>
     </div>
   )
 }

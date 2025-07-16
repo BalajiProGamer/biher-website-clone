@@ -5,6 +5,8 @@ import ImageSlider from '../ImageSlider';
 import Footer from '../Footer';
 import '../../styles/global.css';
 import NewsSlider from '../Pages/NewsSlider';
+import Query from '../Pages/Query';
+import Banner from '../Banner';
 
 const categories = [
   { key: 'recent', label: 'Recent MoU’s' },
@@ -15,10 +17,74 @@ const categories = [
 
 const contentMap = {
   recent: `Details about recent MoU’s with partner institutions and organizations.`,
-  international: `Information about collaborations with international organizations through MoUs.`,
+
+  international: `BIHER has 126 international MoU's with various universities/organisations around the world. 
+BIHER creates a platform for our students to have an International Exposure of standards by organising 
+Summer Internship Projects Aboard (SIP), Student Exchange Program (SEP), International Credit Transfer Program etc.
+
+BIHER also sponsors its faculties for participation in International Conference and Guest Lectures, 
+visits to international laboratories etc.
+
+BIHER has Sixty plus Visiting / Adjunct faculties from foreign universities/organisations to deliver 
+Teaching / Research methodologies niche areas.`,
+
   research: `Insights into ongoing and completed collaborative research activities.`,
+
   phd: `List of international Ph.D co-supervisors and associated programs.`,
+
+
+recent: `Details about recent MoU’s with partner institutions and organizations.`,
+
+  international: `BIHER has 126 international MoU's with various universities/organisations around the world. 
+BIHER creates a platform for our students to have an International Exposure of standards by organising 
+Summer Internship Projects Aboard (SIP), Student Exchange Program (SEP), International Credit Transfer Program etc.
+
+BIHER also sponsors its faculties for participation in International Conference and Guest Lectures, 
+visits to international laboratories etc.
+
+BIHER has Sixty plus Visiting / Adjunct faculties from foreign universities/organisations to deliver 
+Teaching / Research methodologies niche areas.`,
+
+  research: `Our strategic partnerships have led to the creation of various avenues of collaborative research 
+with distinguished institutions across different academic levels. These projects have been focused on the goal 
+of creating a common platform for meeting of minds with personnel and experts from across the world, 
+to cater for the welfare of humanity, while ensuring the progression of academics in higher education.
+
+Through these partnerships, we have ventures and collaborative research platforms, which have been actively 
+working towards mitigating some of the world’s most pressing issues for the well-being and betterment 
+of humanity as a whole.`,
+
+  phd: `List of international Ph.D co-supervisors and associated programs.`,
+
+ recent: `BIHER has recently signed MoUs with reputed international universities and organizations to promote 
+collaborative teaching, student and faculty exchange programs, and joint research initiatives. 
+These collaborations enhance academic quality and global exposure for students and staff.`,
+
+  international: `BIHER has 126 international MoU's with various universities/organisations around the world. 
+BIHER creates a platform for our students to have an International Exposure of standards by organising 
+Summer Internship Projects Aboard (SIP), Student Exchange Program (SEP), International Credit Transfer Program etc.
+
+BIHER also sponsors its faculties for participation in International Conference and Guest Lectures, 
+visits to international laboratories etc.
+
+BIHER has Sixty plus Visiting / Adjunct faculties from foreign universities/organisations to deliver 
+Teaching / Research methodologies niche areas.`,
+
+  research: `Our strategic partnerships have led to the creation of various avenues of collaborative research 
+with distinguished institutions across different academic levels. These projects have been focused on the goal 
+of creating a common platform for meeting of minds with personnel and experts from across the world, 
+to cater for the welfare of humanity, while ensuring the progression of academics in higher education.
+
+Through these partnerships, we have ventures and collaborative research platforms, which have been actively 
+working towards mitigating some of the world’s most pressing issues for the well-being and betterment 
+of humanity as a whole.`,
+
+  phd: `List of international Ph.D co-supervisors and associated programs.`,
+  
+
 };
+
+
 
 const Collaboration = () => {
   const [selectedKey, setSelectedKey] = useState('recent');
@@ -60,10 +126,16 @@ const Collaboration = () => {
           <div className="collab-content">
             <h3>{categories.find(c => c.key === selectedKey)?.label} :</h3>
             <hr />
-            <p>{contentMap[selectedKey]}</p>
+            {contentMap[selectedKey].split('\n').map((para, index) => (
+              <p key={index} style={{ marginBottom: '1rem', textAlign: 'justify' }}>
+                {para.trim()}
+              </p>
+            ))}
           </div>
         </div>
       </div>
+      <Query/>
+      <Banner/>
 
       <NewsSlider />
       <Footer />

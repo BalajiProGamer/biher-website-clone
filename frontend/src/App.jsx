@@ -41,6 +41,7 @@ import Innovation from "./Components/Research/Innovation";
 import FundedResearch from "./Components/Research/FundedResearch";
 import Publication from "./Components/Research/publication";
 
+
 /* Import campuslife pages*/
 import NCC from "./Components/Campuslife/Ncc";
 import NSS from "./Components/Campuslife/NSS";
@@ -76,6 +77,10 @@ import StudentAward from "./Components/Pages/StudentAward";
 import StaffAward from './Components/Pages/StaffAward';
 import NewsSlider from "./Components/Pages/NewsSlider";
 
+// Rename the second one
+import InternationalOverview from './Components/International/Overview';
+
+
 function App() {
   const location = useLocation();
 
@@ -107,6 +112,7 @@ function App() {
         <Route path="/about/governance/statutory/financecommittee" element={< FinanceCommittee/>} />
         <Route path="/about/governance/statutory/ExecutiveCouncilMember" element={< ExecutiveCouncilMembers/>} />
          <Route path="/about/governance/statutory/planningmonitoring" element={< Planningmonitoring/>} />
+        
         
          
 
@@ -145,6 +151,8 @@ function App() {
         <Route path="/international/other-activities" element={<OtherActivities/>}/>
         <Route path="/international/visitor" element={<Visitor/>}/>
         <Route path="/international/Events" element={<Events/>}/>
+     <Route path="/international/overview" element={<InternationalOverview />} />
+
       </Routes>
     </div>
   );
