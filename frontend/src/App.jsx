@@ -151,7 +151,7 @@ function App() {
         <Route path="/international/other-activities" element={<OtherActivities/>}/>
         <Route path="/international/visitor" element={<Visitor/>}/>
         <Route path="/international/Events" element={<Events/>}/>
-     <Route path="/international/overview" element={<InternationalOverview />} />
+     
 
       </Routes>
     </div>
