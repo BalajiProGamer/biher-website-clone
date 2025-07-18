@@ -1,5 +1,6 @@
-import React from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import React from 'react';
+import { useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import Navbar from "./Components/navbar/Navbar";
 import SecondaryNavbar from "./Components/SecondaryNavbar";
@@ -61,6 +62,7 @@ import { Visitor } from './Components/International/Visitor';
 import OtherActivities from "./Components/International/OtherActivites";
 import HigherStudies from "./Components/International/HigherStudies";
 import Events from "./Components/International/Events";
+import Contact from "./Components/International/Contact"; // Import the Contact component
 import ResearchDevelopment from "./Components/Research/ResearchDevelopment";
 import Section from './Components/ui/Section';
 import InfoLayout from "./Components/ui/InfoLayout";
@@ -76,6 +78,10 @@ import Query from "./Components/Pages/Query";
 import StudentAward from "./Components/Pages/StudentAward";
 import StaffAward from './Components/Pages/StaffAward';
 import NewsSlider from "./Components/Pages/NewsSlider";
+import NorthAmerica from './Components/International/PartnerUniversities/NorthAmerica';
+import Russia from './Components/International/PartnerUniversities/Russia';
+import Japan from './Components/International/PartnerUniversities/Japan';
+
 
 // Rename the second one
 import InternationalOverview from './Components/International/Overview';
@@ -151,6 +157,11 @@ function App() {
         <Route path="/international/other-activities" element={<OtherActivities/>}/>
         <Route path="/international/visitor" element={<Visitor/>}/>
         <Route path="/international/Events" element={<Events/>}/>
+        <Route path="/international/Contact" element={<Contact />} />
+        {/* Partner university pages */}
+        <Route path="/partner-universities/north-america" element={<NorthAmerica />} />
+        <Route path="/partner-universities/russia" element={<Russia />} />
+        <Route path="/partner-universities/japan" element={<Japan />} />
      
 
       </Routes>

@@ -9429,3 +9429,531 @@ body {
   line-height: 1.8;
   font-size: 16px;
 }
+
+
+/* === Contact css page === */ 
+.breadcrumb-containercontact {
+  background: linear-gradient(to right, #9B2D2D, #E71C27);
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.breadcrumb-homecontact {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.breadcrumb-separatorcontact {
+  font-size: 18px;
+}
+
+.breadcrumb-currentcontact{
+  font-size: 16px;
+}
+.contact-content {
+  display: flex;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 24px;
+  gap: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.contact-left {
+  flex: 2;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.contact-left h3 {
+  color: #cc0000;
+  font-size: 20px;
+}
+
+.contact-left p {
+  line-height: 1.6;
+  color: #333;
+  font-size: 15px;
+}
+
+.contact-left h4 {
+  margin-top: 30px;
+  color: #cc0000;
+}
+
+.flag-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.flag-img {
+  width: 80px;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 4px;
+  background: #f9f9f9;
+}
+
+.contact-content {
+  display: flex;
+  max-width: 1200px;
+  margin: 30px auto;
+  gap: 30px;
+  padding: 0 15px;
+}
+
+.contact-left {
+  flex: 2;
+  font-size: 15px;
+}
+
+.contact-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Card Container */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  border: 1px solid #ccc;
+  padding: 16px 20px 24px;
+  position: relative;
+}
+
+/* Star ribbon on top right */
+.card.know-more::before {
+  content: "★";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #c94678;
+  color: #fff;
+  padding: 8px 12px;
+  font-size: 16px;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+/* Card Heading */
+.card h4 {
+  font-size: 17px;
+  color: #003366;
+  font-weight: bold;
+  margin-bottom: 14px;
+  padding-left: 24px;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 6px;
+}
+
+/* Red bookmark icon on left of heading */
+.card h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 12px;
+  height: 16px;
+  background: #900;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
+}
+
+/* Bullet list in Know More */
+.card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 6px;
+}
+
+.card ul li {
+  position: relative;
+  padding-left: 20px;
+  margin: 6px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.card ul li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #003366;
+  font-size: 12px;
+}
+
+/* Contact Form */
+.card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.card form label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.card form input,
+.card form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  background: #f8faff;
+}
+
+.card form textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+.card form button {
+  margin-top: 16px;
+  background-color: #900;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.card form button:hover {
+  background-color: #b30000;
+}
+
+
+/*contact -North america*/
+.breadcrumb-headerNA {
+  background: linear-gradient(to right, #9c261f, #ea2330);
+  padding: 10px 20px;
+  color: white;
+  font-style: italic;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb-containerNA {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumb-linkNA {
+  color: white;
+  text-decoration: none;
+}
+
+.breadcrumb-iconNA {
+  font-size: 1.2rem;
+}
+
+.breadcrumb-separatorNA,
+.breadcrumb-textNA {
+  color: white;
+  font-style: italic;
+}
+
+/* Main Content Layout */
+.north-america-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 30px;
+  gap: 50px; /* Adjusted for balanced space */
+  flex-wrap: wrap;
+}
+
+.north-america-image img {
+  max-width: 520px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.north-america-details {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+  max-width: 650px;
+}
+
+.north-america-details h2 {
+  font-size: 24px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  color: #555;
+  font-weight: 600;
+}
+
+.north-america-details ol {
+  padding-left: 20px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/*Russia css  page*/
+.breadcrumb-headerRU {
+  background: linear-gradient(to right, #9c261f, #ea2330);
+  padding: 10px 20px;
+  color: white;
+  font-style: italic;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb-containerRU {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumb-linkRU {
+  color: white;
+  text-decoration: none;
+}
+
+.breadcrumb-iconRU {
+  font-size: 1.2rem;
+}
+
+.breadcrumb-separatorRU,
+.breadcrumb-textRU {
+  color: white;
+  font-style: italic;
+}
+
+/* Main Content Layout */
+.russia-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 30px;
+  gap: 50px; /* Adjusted for balanced space */
+  flex-wrap: wrap;
+}
+
+.russia-image img {
+  max-width: 520px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.russia-details {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+  max-width: 650px;
+}
+
+.russia-details h2 {
+  font-size: 24px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  color: #555;
+  font-weight: 600;
+}
+
+.russia-details ol {
+  padding-left: 20px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* japan css */
+.breadcrumb-headerJP {
+  background: linear-gradient(to right, #9c261f, #ea2330);
+  padding: 10px 20px;
+  color: white;
+  font-style: italic;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb-containerJP {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumb-linkJP {
+  color: white;
+  text-decoration: none;
+}
+
+.breadcrumb-iconJP {
+  font-size: 1.2rem;
+}
+
+.breadcrumb-separatorJP,
+.breadcrumb-textJP {
+  color: white;
+  font-style: italic;
+}
+
+.japan-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 30px;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.japan-image img {
+  max-width: 520px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.japan-details {
+  flex: 1;
+  min-width: 300px;
+  max-width: 650px;
+  position: relative;
+}
+
+.japan-details h2 {
+  font-size: 24px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  color: #555;
+  font-weight: 600;
+}
+
+.japan-details ol {
+  padding-left: 20px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.japan-details ol li a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.japan-details ol li a:hover {
+  color: #b30000;
+  text-decoration: underline;
+}
+
+
+
+/* ExecutiveCouncilMembers css */
+/* ExecutiveCouncilMembers.css */
+.executive-container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px 20px;
+  
+  display: flex;
+  justify-content: center;
+}
+
+.content-box {
+  max-width: 1200px;
+  width: 100%;
+  background: #fff;
+  border-radius: none;
+  box-shadow: none;
+  display: flex;
+  
+}
+
+.sidebar {
+  width: 260px;
+  
+  background: #f9f9f9;
+  padding: 24px 16px;
+}
+
+.nav-item {
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  background-color: #f2f2f2;
+  color: #000;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-item:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+.nav-item.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.executive-content {
+  flex: 1;
+  padding: 24px 32px;
+  overflow-x: auto;
+}
+
+.heading {
+  color: #a30000;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.subheading {
+  margin-bottom: 20px;
+  color: #a30000;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.executive-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.executive-table th,
+.executive-table td {
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.executive-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}

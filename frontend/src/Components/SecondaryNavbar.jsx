@@ -51,7 +51,6 @@ const SecondaryNavbar = () => {
                     <Link to="/about/governance/statutory/ExecutiveCouncilMember">Executive Council</Link>
                     <Link to="/about/governance/statutory/academiccouncil">Academic Council</Link>
                     <Link to="/about/governance/statutory/financecommittee">Finance Committee</Link>
-                    <Link to="/about/governance/statutory/planningmonitoring">Planning & Monitoring</Link>
                   </div>
                 </div>
                 <div className="submenu">
@@ -138,6 +137,7 @@ const SecondaryNavbar = () => {
                 <Link to="/international/admissions/eligibility">Eligibility</Link>
                 <Link to="/international/admissions/fees">Fees</Link>
                 <Link to="/international/admissions/bank-details">Bank Details</Link>
+                
 
               </div>
             </div>
@@ -146,6 +146,7 @@ const SecondaryNavbar = () => {
             <Link to="/international/higher-studies"><FaUniversity/> Higher Studies</Link>
             <Link to="/international/other-activities"><FaUsers /> Other Activities</Link>
             <Link to="/international/events"><FaFlag /> Events</Link>
+            <Link to="/international/contact"><FaUserFriends /> Contact </Link>
 
           </div>
         </div>
