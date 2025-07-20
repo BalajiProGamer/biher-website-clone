@@ -59,7 +59,7 @@ const SecondaryNavbar = () => {
                   </span>
                   <div className="submenu-content">
                     <Link to="/about/governance/statutory/Committees">Committees</Link>
-                    <Link to="/about/governance/statutory/studentcouncil">Student Council</Link>
+                    <Link to="/about/governance/statutory/studentcouncil">StudentCouncil</Link>
                     <Link to="/about/governance/statutory/studentCouncelling">Student Counselling</Link>
                   </div>
 
@@ -119,9 +119,11 @@ const SecondaryNavbar = () => {
           <div className="dropdown-content dropdown-content-research">
             <Link to="/research/academics-research"><FaMicroscope /> Academics Research</Link>
             <Link to="/research/publication"><FaClipboardList /> Publication</Link>
-            <Link to="/research/FIST"><FaLightbulb /> FIST</Link>
-            <Link to="/research/innovation"><FaLightbulb /> Innovation</Link>
             <Link to="/research/funded-research"><FaBriefcase /> Funded Research</Link>
+            <Link to="/research/consultancy"><FaMicroscope /> Consultancy</Link>
+             <Link to="/research/FIST"><FaLightbulb /> FIST</Link>
+              <Link to="/research/innovation"><FaLightbulb /> Innovation&Incubation Cell</Link>
+              <Link to="/research/ResearchAdvisoryCommittee"><FaLightbulb />ResearchAdvisoryCommittee</Link>
 
           </div>
         </div>

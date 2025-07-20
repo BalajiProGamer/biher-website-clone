@@ -1,216 +1,124 @@
-import React, { useState } from "react";
-import { FaUserPlus, FaSave, FaTrash } from "react-icons/fa";
+import React, { useState } from 'react';
+import '../../../styles/global.css';
+import Footer from '../../Footer';
+import bgImage from '../../../assets/pattern.jpg';
+import GroupIcon from '@mui/icons-material/Group';
+import Query from '../../Pages/Query';
+import Banner from '../../Banner';
+import CheckBoxIcon from '@mui/icons-material/CheckBox';
 
-const styles = {
-  container: {
-    maxWidth: "1000px",
-    margin: "40px auto",
-    padding: "30px",
-    background: "#f9fbfd",
-    borderRadius: "10px",
-    boxShadow: "0 8px 24px rgba(0, 0, 0, 0.06)",
-    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-  },
-  header: {
-    background: "linear-gradient(to right, #003366, #00509e)",
-    color: "#fff",
-    padding: "18px 20px",
-    borderRadius: "8px",
-    fontSize: "22px",
-    fontWeight: "600",
-    marginBottom: "30px",
-    textAlign: "center",
-    boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
-  },
-  formGrid: {
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr",
-    gap: "24px",
-  },
-  field: {
-    display: "flex",
-    flexDirection: "column",
-    position: "relative",
-  },
-  label: {
-    fontSize: "13px",
-    fontWeight: "500",
-    marginBottom: "6px",
-    color: "#2f3542",
-  },
-  input: {
-    padding: "12px",
-    fontSize: "14px",
-    borderRadius: "6px",
-    border: "1px solid #ced6e0",
-    backgroundColor: "#fff",
-    transition: "all 0.2s ease-in-out",
-    boxShadow: "inset 0 1px 3px rgba(0,0,0,0.05)",
-  },
-  inputFocus: {
-    border: "1px solid #00509e",
-  },
-  buttonContainer: {
-    marginTop: "40px",
-    display: "flex",
-    justifyContent: "center",
-    gap: "20px",
-    flexWrap: "wrap",
-  },
-  button: {
-    display: "flex",
-    alignItems: "center",
-    gap: "10px",
-    padding: "12px 22px",
-    fontSize: "15px",
-    fontWeight: "600",
-    color: "#fff",
-    borderRadius: "6px",
-    border: "none",
-    cursor: "pointer",
-    transition: "all 0.2s ease-in-out",
-    boxShadow: "0 4px 10px rgba(0,0,0,0.08)",
-  },
-  addButton: {
-    backgroundColor: "#28a745",
-  },
-  updateButton: {
-    backgroundColor: "#007bff",
-  },
-  deleteButton: {
-    backgroundColor: "#dc3545",
-  },
-};
+const FinanceCommittee = () => {
+  const [activeTab, setActiveTab] = useState('members');
 
-const defaultStudent = {
-  admissionNo: "",
-  firstName: "",
-  lastName: "",
-  fullName: "",
-  email: "",
-  registerNumber: "",
-  dob: "",
-  contactInfo: {
-    phoneNo: "",
-    address: "",
-  },
-};
-
-const ManageStudents = () => {
-  const [student, setStudent] = useState(defaultStudent);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setStudent({ ...student, [name]: value });
-  };
-
-  const handleNestedChange = (section, key, value) => {
-    setStudent((prev) => ({
-      ...prev,
-      [section]: {
-        ...prev[section],
-        [key]: value,
-      },
-    }));
-  };
-
-  const handleAddStudent = () => {
-    console.log("Adding student:", student);
-  };
-
-  const handleUpdateStudent = () => {
-    console.log("Updating student:", student);
-  };
-
-  const handleDeleteStudent = () => {
-    console.log("Deleting student:", student.admissionNo);
-  };
+  const meetingData = [
+    {
+      year: '2015 – 2016',
+      meetings: ['FC Meeting --> 1', 'FC Meeting --> 2', 'FC Meeting --> 3', 'FC Meeting --> 4'],
+    },
+    {
+      year: '2016 – 2017',
+      meetings: ['FC Meeting --> 1', 'FC Meeting --> 2', 'FC Meeting --> 3', 'FC Meeting --> 4'],
+    },
+    {
+      year: '2017 – 2018',
+      meetings: ['FC Meeting --> 1', 'FC Meeting --> 2', 'FC Meeting --> 3', 'FC Meeting --> 4'],
+    },
+    {
+      year: '2018 – 2019',
+      meetings: ['FC Meeting --> 1', 'FC Meeting --> 2', 'FC Meeting --> 3', 'FC Meeting --> 4'],
+    },
+    {
+      year: '2019 – 2020',
+      meetings: ['FC Meeting --> 1', 'FC Meeting --> 2', 'FC Meeting --> 3', 'FC Meeting --> 4'],
+    },
+    {
+      year: '2020 – 2021',
+      meetings: ['FC Meeting --> 1', 'FC Meeting --> 2', 'FC Meeting --> 3', 'FC Meeting --> 4'],
+    },
+  ];
 
   return (
-    <div style={styles.container}>
-      <div style={styles.header}>🎓 Manage Student Details</div>
-
-      <div style={styles.formGrid}>
-        {[
-          { label: "Admission No", name: "admissionNo", value: student.admissionNo },
-          { label: "First Name", name: "firstName", value: student.firstName },
-          { label: "Last Name", name: "lastName", value: student.lastName },
-          { label: "Full Name", name: "fullName", value: student.fullName },
-          { label: "Email", name: "email", value: student.email },
-          { label: "Register Number", name: "registerNumber", value: student.registerNumber },
-        ].map((field) => (
-          <div key={field.name} style={styles.field}>
-            <label style={styles.label}>{field.label}</label>
-            <input
-              type="text"
-              style={styles.input}
-              name={field.name}
-              value={field.value}
-              onChange={handleChange}
-            />
+    <>
+      <div className="academic-container" style={{ backgroundImage: `url(${bgImage})` }}>
+        <div className="content-box">
+          {/* Sidebar */}
+          <div className="sidebar">
+            <div
+              className={`nav-item ${activeTab === 'members' ? 'active' : ''}`}
+              onClick={() => setActiveTab('members')}
+            >
+              FINANCE COMMITTEE 
+            </div>
+            <div
+              className={`nav-item ${activeTab === 'minutes' ? 'active' : ''}`}
+              onClick={() => setActiveTab('minutes')}
+            >
+              MINUTES & MEETING
+            </div>
           </div>
-        ))}
 
-        <div style={styles.field}>
-          <label style={styles.label}>Phone Number</label>
-          <input
-            type="text"
-            style={styles.input}
-            name="phoneNo"
-            value={student.contactInfo.phoneNo}
-            onChange={(e) =>
-              handleNestedChange("contactInfo", "phoneNo", e.target.value)
-            }
-          />
-        </div>
+          {/* Right Content */}
+          <div className="academic-content">
+            {activeTab === 'members' && (
+              <>
+                <h2 className="heading">FINANCE COMMITTEE MEMBERS (2024 - 2025)</h2>
+                <h4 className="subheading">LIST OF MEMBERS (W.E.F Jan 2025):</h4>
 
-        <div style={styles.field}>
-          <label style={styles.label}>Address</label>
-          <input
-            type="text"
-            style={styles.input}
-            name="address"
-            value={student.contactInfo.address}
-            onChange={(e) =>
-              handleNestedChange("contactInfo", "address", e.target.value)
-            }
-          />
-        </div>
+                <table className="academic-table">
+                  <thead>
+                    <tr>
+                      <th>S.No</th>
+                      <th>NAME OF THE MEMBER</th>
+                      <th>DESIGNATION</th>
+                      <th>MEMBERSHIP</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>01</td><td>Dr. M. Sundararajan</td><td>Vice-Chancellor (i/c)</td><td>Chairperson</td></tr>
+                    <tr><td>02</td><td>Dr. R.M. Suresh</td><td>Pro Vice-Chancellor & CoE</td><td>Member</td></tr>
+                    <tr><td>03</td><td>Dr. R.P. Sasi Kumar</td><td>Dean, SBMCH</td><td>Member</td></tr>
+                    <tr><td>04</td><td>Dr. M. Sundararaj</td><td>Dean Academics, BIHER</td><td>Member</td></tr>
+                    <tr><td>05</td><td>Dr. M.R. Renuka Devi</td><td>Professor, School of Medicine, SBMCH</td><td>Member</td></tr>
+                    <tr><td>06</td><td>Dr. K. Saraswathy</td><td>Associate Professor, School of Arts and Science</td><td>Member</td></tr>
+                    <tr><td>07</td><td>Dr. Geetha Priya</td><td>Assistant Professor, School of Dental Sciences</td><td>Member</td></tr>
+                    <tr><td>08</td><td>Dr. G. Baskaran</td><td>Prof, Gandhigram Rural Institute...</td><td>UGC Nominee</td></tr>
+                    <tr><td>09</td><td>Dr. J. Sundeep Aanand</td><td>Secretary, BIHER</td><td>Nominee</td></tr>
+                    <tr><td>10</td><td>Dr. J. Srinisha</td><td>Vice President, Sree Balaji Group</td><td>Nominee</td></tr>
+                  </tbody>
+                </table>
+              </>
+            )}
 
-        <div style={styles.field}>
-          <label style={styles.label}>Date of Birth</label>
-          <input
-            type="date"
-            style={styles.input}
-            name="dob"
-            value={student.dob}
-            onChange={handleChange}
-          />
+            {activeTab === 'minutes' && (
+              <>
+                <h3 className="minutes-heading">Minutes & Meeting (2023–2024):</h3>
+
+                {meetingData.map((yearData, index) => (
+                  <div key={index} className="minutes-box">
+                    <div className="minutes-header">
+                      <GroupIcon style={{ color: 'white', marginRight: '8px', verticalAlign: 'middle' }} />
+                      {yearData.year}
+                    </div>
+                    <ul className="meeting-list">
+                      {yearData.meetings.map((meeting, idx) => (
+                        <li key={idx}>
+                          <CheckBoxIcon style={{ color: '#333', fontSize: '16px', marginRight: '6px', verticalAlign: 'middle' }} />
+                          {meeting}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </>
+            )}
+          </div>
         </div>
       </div>
-
-      <div style={styles.buttonContainer}>
-        <button
-          style={{ ...styles.button, ...styles.addButton }}
-          onClick={handleAddStudent}
-        >
-          <FaUserPlus /> Add
-        </button>
-        <button
-          style={{ ...styles.button, ...styles.updateButton }}
-          onClick={handleUpdateStudent}
-        >
-          <FaSave /> Update
-        </button>
-        <button
-          style={{ ...styles.button, ...styles.deleteButton }}
-          onClick={handleDeleteStudent}
-        >
-          <FaTrash /> Delete
-        </button>
-      </div>
-    </div>
+      <Query />
+      <Banner />
+      <Footer />
+    </>
   );
 };
 
-export default ManageStudents;
+export default FinanceCommittee;

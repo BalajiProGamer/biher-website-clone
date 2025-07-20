@@ -14,7 +14,9 @@ import Leadership from "./Components/About/Leadership";
 import ExecutiveCouncilMembers from "./Components/About/Goverence/ExecutiveCouncilMembers"; // Import the Executive Council Members component
 import AcademicCouncil from "./Components/About/Goverence/AcademicCouncil"; // Import the Academic Council component
 import FinanceCommittee from "./Components/About/Goverence/FinanceCommittee";
-import Planningmonitoring from "./Components/About/Goverence/Planningmonitoring";
+import Committees from "./Components/About/Goverence/Committee";
+import { StudentCouncil } from './Components/About/Goverence/StudentCouncil';
+
 
 import Marquee from "./Components/Marquee";
 import Footer from "./Components/Footer";
@@ -41,7 +43,8 @@ import AcademicsResearch from "./Components/Research/AcademicsResearch"; /* Impo
 import Innovation from "./Components/Research/Innovation";
 import FundedResearch from "./Components/Research/FundedResearch";
 import Publication from "./Components/Research/publication";
-
+import Consultancy from "./Components/Research/Consultancy"; // Import Consultancy page
+import ResearchAdvisoryCommittee from "./Components/Research/ResearchAdvisoryCommittee"; // Import ResearchAdvisoryCommittee page
 
 /* Import campuslife pages*/
 import NCC from "./Components/Campuslife/Ncc";
@@ -116,9 +119,8 @@ function App() {
         <Route path="/about/governance/statutory/ExecutiveCouncilMember" element={< ExecutiveCouncilMembers/>} />
         <Route path="/about/governance/statutory/academiccouncil" element={< AcademicCouncil/>} />
         <Route path="/about/governance/statutory/financecommittee" element={< FinanceCommittee/>} />
-        <Route path="/about/governance/statutory/ExecutiveCouncilMember" element={< ExecutiveCouncilMembers/>} />
-         <Route path="/about/governance/statutory/planningmonitoring" element={< Planningmonitoring/>} />
-        
+        <Route path="/about/governance/statutory/Committees" element={< Committees/>} />
+        <Route path="/about/governance/statutory/studentcouncil" element={< StudentCouncil/>} />
         
          
 
@@ -144,7 +146,11 @@ function App() {
         <Route path="/research/Innovation" element={<Innovation />} />
         <Route path="/research/funded-research" element={<FundedResearch/>}/>
         <Route path="/research/publication" element={<Publication/>} />
+        <Route path="/research/consultancy" element={<Consultancy />} /> {/* Added Consultancy route */}
+        <Route path="/research/researchadvisorycommittee" element={<ResearchAdvisoryCommittee />} /> {/* Added ResearchAdvisoryCommittee route */}
+        
 
+        /* Campus Life pages */
         <Route path="/campuslife/Ncc" element={<NCC/>}/>
         <Route path="/campuslife/NSS" element={<NSS/>}/>
         <Route path="/campuslife/RRC" element={<RRC/>}/>
