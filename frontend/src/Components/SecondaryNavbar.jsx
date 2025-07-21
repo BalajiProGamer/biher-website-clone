@@ -165,6 +165,7 @@ const SecondaryNavbar = () => {
             <Link to="/campuslife/hostel"><FaBuilding /> Hostel</Link>
             <Link to="/campuslife/library"><FaBook /> Library</Link>
             <Link to="/campuslife/transport"><FaClipboardList /> Transport</Link>
+             <a href="https://www.bharathuniv.ac.in/nba/I.10_Rules_Policy_Service%20book_BIST.pdf" target="_blank" rel="noopener noreferrer"><FaBook /> Service Regulation</a>
           </div>
         </div>
       </div>

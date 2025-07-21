@@ -16,6 +16,7 @@ import AcademicCouncil from "./Components/About/Goverence/AcademicCouncil"; // I
 import FinanceCommittee from "./Components/About/Goverence/FinanceCommittee";
 import Committees from "./Components/About/Goverence/Committee";
 import { StudentCouncil } from './Components/About/Goverence/StudentCouncil';
+import StudentCouncelling from './Components/About/Goverence/StudentCouncelling'; // 
 
 
 import Marquee from "./Components/Marquee";
@@ -58,9 +59,10 @@ import Library from "./Components/Campuslife/Library";
  
 import Home from "./Components/ui/Home"; // Import the Home component
 import ImageSlide from "./Components/ImageSlider";
-import Admissions from "./Components/International/Admissions";
+import Admissions from "./Components/International/Admission";
 import StudyAbroad from "./Components/Pages/StudyAbroad";
 import Collaboration from "./Components/International/Collaboration"; 
+import Admission from './Components/International/Admission';
 import { Visitor } from './Components/International/Visitor';
 import OtherActivities from "./Components/International/OtherActivites";
 import HigherStudies from "./Components/International/HigherStudies";
@@ -121,7 +123,7 @@ function App() {
         <Route path="/about/governance/statutory/financecommittee" element={< FinanceCommittee/>} />
         <Route path="/about/governance/statutory/Committees" element={< Committees/>} />
         <Route path="/about/governance/statutory/studentcouncil" element={< StudentCouncil/>} />
-        
+        <Route path="/about/governance/statutory/studentCouncelling" element={< StudentCouncelling/>} />
          
 
         <Route path="/form" element={<LmsForm />} />
@@ -157,7 +159,7 @@ function App() {
         <Route path="/campuslife/Hostel" element={<Hostel/>}/>
         <Route path="/campuslife/Library" element={<Library/>}/>
         <Route path="/campuslife/Transport" element={<Transport/>}/>
-        <Route path="/international/admissions" element={<Admissions/>}/>
+        <Route path="/international/admission" element={< Admission/>}/>
         <Route path="/international/Collaboration" element={<Collaboration/>}/>
         <Route path="/international/Higher-Studies" element={<HigherStudies/>}/>
         <Route path="/international/other-activities" element={<OtherActivities/>}/>

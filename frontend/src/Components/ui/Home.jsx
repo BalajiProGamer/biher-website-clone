@@ -65,10 +65,10 @@ export default function AutoSlide() {
 
       {/* Right‑side banners */}
       <div className="banners-container">
-        <a className="banner-button red" href="#" target="_blank">
+        <a className="banner-button red" href="https://admissions.bharathuniv.ac.in/" target="_blank">
           🎓 2025 Admission Open for UG/PG
         </a>
-        <a className="banner-button blue" href="#" target="_blank">
+        <a className="banner-button blue" href="https://docs.google.com/forms/d/e/1FAIpQLSfzaEBGmJv5c3Y-73VOkxYr9aaGqgh3L8d9VtOwjFnG0kS2cQ/viewform" target="_blank">
           🎓 Ph.D Admission Application Form
         </a>
       </div>
