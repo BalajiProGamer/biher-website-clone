@@ -11347,3 +11347,646 @@ body {
   background-color: #f9f9f9;
 }
 
+/* international Admission css components*/
+/* Fees css components*/
+.fees-header {
+  background: linear-gradient(to right, #8e2c2c, #e61b23);
+  color: #fff;
+  padding: 12px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fees-breadcrumb {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.fees-home-icon {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.breadcrumb-arrow {
+  margin: 0 5px;
+}
+
+.breadcrumb-overview {
+  font-style: italic;
+}
+
+.fees-main {
+  background-size: cover;
+  background-repeat: repeat;
+  min-height: 100vh;
+  padding: 40px;
+  padding-left: 80px;
+  padding-right: 40px;
+  display: flex;
+  gap: 30px;
+}
+
+.fees-sidebar {
+  width: 220px;
+  background: #032539;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: sans-serif;
+  height: fit-content;
+}
+
+.fees-sidebar-header {
+  background-color: #ffc107;
+  color: #000;
+  padding: 10px 12px;
+  font-weight: bold;
+  font-size: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fees-category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fees-category-item {
+  padding: 9px 19px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.fees-category-item.active {
+  background-color: #043d5d;
+}
+
+.fees-content {
+  flex: 1;
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Make it match sidebar height */
+}
+
+.fees-title {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.fees-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.fees-title {
+  font-size: 18px;
+  color: #b30000;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+}
+
+.fees-content ul {
+  padding-left: 20px;
+  margin-top: 15px;
+}
+
+.fees-content li {
+  margin-bottom: 10px;
+  list-style-type: circle;
+}
+
+.fees-content h3 {
+  color: #b30000;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.fees-content p {
+  margin-bottom: 16px;
+  text-align: justify;
+}
+.fee-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+  color: #333;
+}
+
+.fee-table th {
+  background-color: #006699;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+.fee-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.fee-table .group-header td {
+  background-color: #660000;
+  color: #fff;
+  font-weight: bold;
+}
+.bank-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+  color: #333;
+}
+
+.bank-table th {
+  background: linear-gradient(to right, #005b8d, #0077b6);
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.bank-table td {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+.apply-link:hover {
+  background-color: #e7e9f5;
+}
+
+/*international Otheractivities css components*/
+.gre-header {
+  background: linear-gradient(to right, #8e2c2c, #e61b23);
+  color: #fff;
+  padding: 12px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gre-breadcrumb {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.gre-home-icon {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.breadcrumb-arrow {
+  margin: 0 5px;
+}
+
+.breadcrumb-overview {
+  font-style: italic;
+}
+
+.gre-main {
+  background-size: cover;
+  background-repeat: repeat;
+  min-height: 100vh;
+  padding: 40px;
+  padding-left: 80px;
+  padding-right: 40px;
+  display: flex;
+  gap: 30px;
+}
+
+.gre-sidebar {
+  width: 220px;
+  background: #032539;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: sans-serif;
+  height: fit-content;
+}
+
+.gre-sidebar-header {
+  background-color: #ffc107;
+  color: #000;
+  padding: 10px 12px;
+  font-weight: bold;
+  font-size: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gre-category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gre-category-item {
+  padding: 9px 19px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.gre-category-item.active {
+  background-color: #043d5d;
+}
+
+.gre-content {
+  flex: 1;
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.gre-title {
+  font-size: 18px;
+  color: #b30000;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+}
+
+.gre-content ul {
+  padding-left: 20px;
+  margin-top: 15px;
+}
+
+.gre-content li {
+  margin-bottom: 10px;
+  list-style-type: circle;
+}
+
+.gre-content h3 {
+  color: #b30000;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.gre-content p {
+  margin-bottom: 16px;
+  text-align: justify;
+}
+.gre-section {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.gre-section h3 {
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 6px;
+  color: #8e0000;
+}
+/* Mou s css components*/
+.mous-header {
+  background: linear-gradient(to right, #8e2c2c, #e61b23);
+  color: #fff;
+  padding: 12px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mous-breadcrumb {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.mous-home-icon {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.breadcrumb-arrow {
+  margin: 0 5px;
+}
+
+.breadcrumb-overview {
+  font-style: italic;
+}
+
+.mous-main {
+  background-size: cover;
+  background-repeat: repeat;
+  min-height: 100vh;
+  padding: 40px;
+  padding-left: 80px;
+  padding-right: 40px;
+  display: flex;
+  gap: 30px;
+}
+
+.mous-sidebar {
+  width: 220px;
+  background: #032539;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: sans-serif;
+  height: fit-content;
+}
+
+.mous-sidebar-header {
+  background-color: #ffc107;
+  color: #000;
+  padding: 10px 12px;
+  font-weight: bold;
+  font-size: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mous-category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mous-category-item {
+  padding: 9px 19px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.mous-category-item.active {
+  background-color: #043d5d;
+}
+
+.mous-content {
+  flex: 1;
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.mous-title {
+  font-size: 18px;
+  color: #b30000;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+}
+
+.mous-content ul {
+  padding-left: 20px;
+  margin-top: 15px;
+}
+
+.mous-content li {
+  margin-bottom: 10px;
+  list-style-type: circle;
+}
+
+.mous-content h3 {
+  color: #b30000;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.mous-content p {
+  margin-bottom: 16px;
+  text-align: justify;
+}
+.collab-research-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: justify;
+  padding-top: 8px;
+}
+.mous-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #b22222; /* deep red */
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+.mou-org-section {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.mou-title {
+  color: #b22222;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.mou-divider {
+  border: none;
+  border-top: 1px solid #d8c6c6;
+  margin-bottom: 16px;
+}
+.honorary-professors-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.honorary-professors-section h3 {
+    color: #8e0000; /* A deep red color often used for headings */
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 1.8em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.professor-profile-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates a responsive grid with minimum 300px wide columns */
+    gap: 30px; /* Space between grid items */
+    justify-items: center; /* Center items in the grid */
+    margin-top: 20px;
+}
+
+.professor-profile {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex; /* Use flexbox for image and details layout within each profile */
+    flex-direction: column; /* Stack image and details vertically */
+    align-items: center; /* Center align items horizontally */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 100%; /* Ensure profiles take full width of their grid column */
+    max-width: 350px; /* Max width for individual profile cards */
+}
+
+.professor-profile:hover {
+    transform: translateY(-5px); /* Slightly lift card on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.professor-profile img {
+    width: 120px; /* Fixed width for the image */
+    height: 120px; /* Fixed height for the image */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    margin-bottom: 15px;
+    border: 3px solid #8e0000; /* Border around the image */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.professor-details {
+    flex-grow: 1; /* Allows details section to take available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space between name, details, and button */
+}
+
+.professor-details h4 {
+    color: #333;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.professor-details p {
+    color: #555;
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    display: flex; /* For icon and text alignment */
+    align-items: center;
+    justify-content: center; /* Center align text */
+}
+
+.professor-details p .fa-book {
+    color: #8e0000;
+    margin-right: 8px;
+    font-size: 1em;
+}
+
+.professor-profile button {
+    background-color: #8e0000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.professor-profile button:hover {
+    background-color: #6a0000; /* Darker red on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .professor-profile-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust column width for smaller screens */
+    }
+
+    .honorary-professors-section h3 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .professor-profile-container {
+        grid-template-columns: 1fr; /* Stack profiles on very small screens */
+    }
+
+    .professor-profile {
+        padding: 15px;
+    }
+
+    .professor-details h4 {
+        font-size: 1.1em;
+    }
+
+    .professor-details p {
+        font-size: 0.9em;
+    }
+}

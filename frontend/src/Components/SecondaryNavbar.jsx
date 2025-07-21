@@ -139,10 +139,12 @@ const SecondaryNavbar = () => {
         <FaUniversity /> Admission <span className="submenu-icon">»</span>
       </Link>
       <div className="submenu-content">
-        <Link to="/international/admissions/overview">Overview</Link>
-        <Link to="/international/admissions/eligibility">Eligibility</Link>
-        <Link to="/international/admissions/fees">Fees</Link>
-        <Link to="/international/admissions/bank-details">Bank Details</Link>
+        <Link to="/international/admission/overviews">Overviews</Link>
+        <Link to="/international/admission/eligibility">Eligibility</Link>
+        <Link to="/international/admission/fees">Fees</Link>
+        <Link to="/international/admission/bank-details">Bank Details</Link>
+        <Link to="/international/admission/apply">Apply</Link>
+        <Link to="/international/admission/biherscholarship">BIHER Scholarship</Link>
       </div>
     </div>
 
@@ -153,8 +155,9 @@ const SecondaryNavbar = () => {
       </Link>
       <div className="submenu-content">
         <Link to="/international/collaboration/mou">MoUs</Link>
-        <Link to="/international/collaboration/partners">Partner Institutions</Link>
-        <Link to="/international/collaboration/student-exchange">Student Exchange</Link>
+        <Link to="/international/collaboration/collaboration-research">Collaboration Research</Link>
+        <Link to="/international/collaboration/honorary-professor">Honorary professors</Link>
+        <Link to="/international/collaboration/international">International Ph.D Supervisors</Link>
       </div>
     </div>
 
@@ -164,9 +167,10 @@ const SecondaryNavbar = () => {
         <FaUsers /> Other Activities <span className="submenu-icon">»</span>
       </Link>
       <div className="submenu-content">
-        <Link to="/international/other-activities/cultural">Cultural Exchange</Link>
-        <Link to="/international/other-activities/internships">International Internships</Link>
-        <Link to="/international/other-activities/volunteering">Volunteering Programs</Link>
+        <Link to="/international/other-activities/global">Global Internship</Link>
+        <Link to="/international/other-activities/international">International Scholarships</Link>
+        <Link to="/international/other-activities/ielts">IELTS</Link>
+        <Link to="/international/other-activities/gre">GRE</Link>
       </div>
     </div>
     

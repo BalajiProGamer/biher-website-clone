@@ -88,6 +88,31 @@ import Russia from './Components/International/PartnerUniversities/Russia';
 import Japan from './Components/International/PartnerUniversities/Japan';
 
 
+//international Admission component
+import Apply from './Components/International/Admission/Apply';
+import Overviews from './Components/International/Admission/Overviews';
+import Eligibility from './Components/International/Admission/Eligibility';
+import Fees from './Components/International/Admission/Fees'; 
+import BankDetails from './Components/International/Admission/Bankdetails';
+import Biherscholarship from './Components/International/Admission/Biherscholarship';
+
+// Import the International collaboration component
+import Collaborationresearch from './Components/International/Collaboration/Collaborationresearch';
+import Honoraryprofessors from './Components/International/Collaboration/Honoraryprofessors';
+import InternationalPhDSupervisors from './Components/International/Collaboration/InternationalPhDSupervisors';
+
+import Mous from './Components/International/Collaboration/Mous';
+
+//Import the International otheractivities component
+import GRE from './Components/International/Otheractivities/GRE';
+import IELTS from './Components/International/Otheractivities/IELTS';
+import GlobalInternship from './Components/International/Otheractivities/GlobalInternship';
+import InternationalScholarships from './Components/International/Otheractivities/InternationalScholarships';
+
+
+
+
+
 // Rename the second one
 import InternationalOverview from './Components/International/Overview';
 
@@ -170,7 +195,28 @@ function App() {
         <Route path="/partner-universities/north-america" element={<NorthAmerica />} />
         <Route path="/partner-universities/russia" element={<Russia />} />
         <Route path="/partner-universities/japan" element={<Japan />} />
-     
+     /* International Admission pages */
+        <Route path="/international/admission/overviews" element={<Overviews />} />    
+        <Route path="/international/admission/eligibility" element={<Eligibility />} />
+        <Route path="/international/admission/fees" element={<Fees />} />
+        <Route path="/international/admission/bank-details" element={<BankDetails />} />
+        <Route path="/international/admission/apply" element={<Apply />} />
+        <Route path="/international/admission/biherscholarship" element={<Biherscholarship />} />
+        
+        {/* International Collaboration pages */} 
+        <Route path="/international/collaboration/mou" element={<Mous />} />
+        <Route path="/international/collaboration/collaboration-research" element={<Collaborationresearch />} />
+        <Route path="/international/collaboration/honorary-professor" element={<Honoraryprofessors />} />
+        <Route path="/international/collaboration/international" element={<InternationalPhDSupervisors />} />
+        
+        {/* International Other Activities pages */}
+        <Route path="/international/other-activities/global" element={<GlobalInternship />} />
+        <Route path="/international/other-activities/international" element={<InternationalScholarships />} />
+        <Route path="/international/other-activities/ielts" element={<IELTS />}/>
+        <Route path="/international/other-activities/gre" element={<GRE />} />
+        
+        {/* International Overview page */}
+
 
       </Routes>
     </div>
