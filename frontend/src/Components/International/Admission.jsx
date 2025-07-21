@@ -4,7 +4,7 @@ import Footer from '../Footer'
 import StudyAbroad from '../Pages/StudyAbroad'
 
 
-const Admissions = () => {
+const Admission = () => {
   return (
     <div>
       <ImageSlider />
@@ -18,4 +18,4 @@ const Admissions = () => {
   )
 }
 
-export default Admissions
+export default Admission

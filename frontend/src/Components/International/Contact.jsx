@@ -38,7 +38,7 @@ const Contact = () => {
           <FaHome />
         </Link>
         <span className="breadcrumb-separatorcontact">» <em>Contact</em></span>
-        <span className="breadcrumb-currentcontact">Contact</span>
+        <span className="breadcrumb-currentcontact"></span>
       </div>
 
       <div className="contact-content">

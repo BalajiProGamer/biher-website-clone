@@ -2387,6 +2387,95 @@ select:disabled {
 .dropdown-research      .dropdown-content { min-width: 260px; }
 .dropdown-campus        .dropdown-content { min-width: 260px; }
  
+/* Container for International dropdown */
+.secondary-navbar .dropdown-international {
+  position: relative;
+}
+
+/* Main dropdown content */
+.secondary-navbar .dropdown-international .dropdown-content-international {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: #fff;
+  min-width: 250px;
+  border-radius: 6px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+/* Show dropdown on hover */
+.secondary-navbar .dropdown-international:hover .dropdown-content-international {
+  display: block;
+}
+
+/* Submenu inside International */
+.secondary-navbar .dropdown-international .submenu {
+  position: relative;
+}
+
+/* Submenu label style */
+.secondary-navbar .dropdown-international .submenu-label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;  /* Ensures left alignment */
+  gap: 10px;
+  padding: 10px 16px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #333;
+  background-color: #f9f9f9;
+  text-decoration: none;
+}
+
+
+/* Submenu icon (») */
+.secondary-navbar .dropdown-international .submenu-icon {
+  margin-left: auto;
+   font-size: 14px;
+  color: #999;
+}
+
+/* Submenu content (right-aligned) */
+.secondary-navbar .dropdown-international .submenu-content {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  min-width: 240px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1100;
+}
+
+/* Show submenu on hover */
+.secondary-navbar .dropdown-international .submenu:hover .submenu-content {
+  display: block;
+}
+
+/* Links inside dropdown and submenu */
+.secondary-navbar .dropdown-international .dropdown-content-international a,
+.secondary-navbar .dropdown-international .submenu-content a {
+  
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+  padding: 10px 14px;
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s;
+}
+
+
+
+.secondary-navbar .dropdown-international .dropdown-content-international a:hover,
+.secondary-navbar .dropdown-international .submenu-content a:hover {
+  background-color: #f0f0f0;
+}
 
 
 

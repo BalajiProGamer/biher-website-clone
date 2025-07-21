@@ -129,29 +129,54 @@ const SecondaryNavbar = () => {
         </div>
 
         {/* International */}
-        <div className="dropdown dropdown-international">
-          <span className="dropdown-label">International <FaChevronDown /></span>
-          <div className="dropdown-content dropdown-content-international">
-            <div className="submenu">
-              <span className="submenu-label"><FaUniversity /> Admissions <span className="submenu-icon">»</span></span>
-              <div className="submenu-content">
-                <Link to="/international/admissions/overview">Overview</Link>
-                <Link to="/international/admissions/eligibility">Eligibility</Link>
-                <Link to="/international/admissions/fees">Fees</Link>
-                <Link to="/international/admissions/bank-details">Bank Details</Link>
-                
+       <div className="dropdown dropdown-international">
+  <span className="dropdown-label">International <FaChevronDown /></span>
 
-              </div>
-            </div>
-            <Link to="/international/collaboration"><FaHandshake /> Collaboration</Link>
-            <Link to="/international/visitor"><FaExchangeAlt /> Visitor</Link>
-            <Link to="/international/higher-studies"><FaUniversity/> Higher Studies</Link>
-            <Link to="/international/other-activities"><FaUsers /> Other Activities</Link>
-            <Link to="/international/events"><FaFlag /> Events</Link>
-            <Link to="/international/contact"><FaUserFriends /> Contact </Link>
+  <div className="dropdown-content dropdown-content-international">
+    {/* Admissions with submenu */}
+    <div className="submenu">
+      <Link to="/international/admission" className="submenu-label">
+        <FaUniversity /> Admission <span className="submenu-icon">»</span>
+      </Link>
+      <div className="submenu-content">
+        <Link to="/international/admissions/overview">Overview</Link>
+        <Link to="/international/admissions/eligibility">Eligibility</Link>
+        <Link to="/international/admissions/fees">Fees</Link>
+        <Link to="/international/admissions/bank-details">Bank Details</Link>
+      </div>
+    </div>
 
-          </div>
-        </div>
+   {/* Collaboration Submenu */}
+    <div className="submenu">
+      <Link to="/international/collaboration" className="submenu-label">
+        <FaHandshake /> Collaboration <span className="submenu-icon">»</span>
+      </Link>
+      <div className="submenu-content">
+        <Link to="/international/collaboration/mou">MoUs</Link>
+        <Link to="/international/collaboration/partners">Partner Institutions</Link>
+        <Link to="/international/collaboration/student-exchange">Student Exchange</Link>
+      </div>
+    </div>
+
+    {/* Other Activities Submenu */}
+    <div className="submenu">
+      <Link to="/international/other-activities" className="submenu-label">
+        <FaUsers /> Other Activities <span className="submenu-icon">»</span>
+      </Link>
+      <div className="submenu-content">
+        <Link to="/international/other-activities/cultural">Cultural Exchange</Link>
+        <Link to="/international/other-activities/internships">International Internships</Link>
+        <Link to="/international/other-activities/volunteering">Volunteering Programs</Link>
+      </div>
+    </div>
+    
+    <Link to="/international/visitor"><FaExchangeAlt /> Visitor</Link>
+    <Link to="/international/higher-studies"><FaUniversity /> Higher Studies</Link>
+    <Link to="/international/events"><FaFlag /> Events</Link>
+    <Link to="/international/contact"><FaUserFriends /> Contact</Link>
+  </div>
+</div>
+
 
         {/* Campus Life */}
         <div className="dropdown dropdown-campus">
