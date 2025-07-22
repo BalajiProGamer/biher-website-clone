@@ -11990,3 +11990,880 @@ body {
         font-size: 0.9em;
     }
 }
+// ...existing code...
+
+/* ===== MOBILE RESPONSIVE GLOBAL STYLES ===== */
+@media (max-width: 900px) {
+  .mous-main,
+  .overview-main,
+  .fees-main,
+  .gre-main,
+  .collab-container,
+  .activities-container,
+  .events-container,
+  .university-container,
+  .alumni-layout,
+  .iqac-container,
+  .nss-layout-container,
+  .ncc-card,
+  .research-advisory-card,
+  .committee-container,
+  .student-columns,
+  .student-counselling-container,
+  .publication-layout,
+  .award-grid,
+  .student-content-background,
+  .student-white-box,
+  .executive-container,
+  .academic-container,
+  .finance-committee-container,
+  .content-box,
+  .contact-content,
+  .north-america-content,
+  .russia-content,
+  .japan-content {
+    flex-direction: column !important;
+    gap: 18px !important;
+    padding: 16px !important;
+    max-width: 100vw !important;
+  }
+  .mous-sidebar,
+  .overview-sidebar,
+  .fees-sidebar,
+  .gre-sidebar,
+  .collab-sidebar,
+  .activities-sidebar,
+  .events-sidebar,
+  .sidebar,
+  .iqac-sidebar,
+  .nss-sidebar,
+  .ncc-sidebar,
+  .research-advisory-sidebar,
+  .committee-column,
+  .student-column,
+  .publication-sidebar,
+  .award-card,
+  .contact-left,
+  .contact-right,
+  .universitypage-sidebar,
+  .universitypage-main-content {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding: 12px !important;
+    box-sizing: border-box !important;
+  }
+  .mous-content,
+  .overview-content,
+  .fees-content,
+  .gre-content,
+  .collab-content,
+  .activities-content,
+  .events-content,
+  .main-content,
+  .alumni-content,
+  .iqac-content,
+  .nss-content,
+  .ncc-content,
+  .research-advisory-content,
+  .committee-content-box,
+  .student-council-box,
+  .student-counselling-content,
+  .publication-collapsible,
+  .award-card,
+  .student-white-box,
+  .executive-content,
+  .academic-content,
+  .finance-committee-content,
+  .contact-left,
+  .contact-right,
+  .universitypage-main-content {
+    padding: 12px !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    min-width: 0 !important;
+    max-width: 100vw !important;
+  }
+  .navbar,
+  .secondary-navbar,
+  .marquee-container {
+    padding: 0 8px !important;
+    height: auto !important;
+    font-size: 13px !important;
+  }
+  .navbar .nav-links,
+  .secondary-nav-links {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+  .footer__container {
+    flex-direction: column !important;
+    gap: 30px !important;
+    padding: 0 10px !important;
+  }
+  .footer__bottom {
+    flex-direction: column !important;
+    gap: 10px !important;
+    padding: 10px 0 !important;
+  }
+  .slide-caption {
+    max-width: 95vw !important;
+    left: 2% !important;
+    padding: 0.5rem !important;
+    font-size: 1rem !important;
+  }
+  .banner-button {
+    padding: 12px 8px !important;
+    font-size: 13px !important;
+  }
+  .professor-profile-container {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+  .professor-profile {
+    max-width: 100vw !important;
+    padding: 10px !important;
+  }
+  .professor-profile img {
+    width: 90px !important;
+    height: 90px !important;
+  }
+  .professor-details h4 {
+    font-size: 1em !important;
+  }
+  .professor-details p {
+    font-size: 0.9em !important;
+  }
+  .breadcrumb-bar,
+  .breadcrumb-header,
+  .breadcrumb-headerNA,
+  .breadcrumb-headerRU,
+  .breadcrumb-headerJP,
+  .mous-header,
+  .overview-header,
+  .fees-header,
+  .gre-header,
+  .collab-header,
+  .activities-header,
+  .events-header {
+    padding: 8px !important;
+    font-size: 13px !important;
+  }
+  .slide-container,
+  .slide-inner,
+  .slide-img,
+  .alumni-image-container,
+  .alumni-background-image,
+  .alumni-overlay-image {
+    height: 180px !important;
+    min-height: 120px !important;
+    max-height: 220px !important;
+  }
+  .award-img,
+  .gallery-item img,
+  .card-image,
+  .universitypage-card-image {
+    height: 120px !important;
+    min-height: 80px !important;
+    max-height: 140px !important;
+  }
+  .award-card,
+  .student-white-box,
+  .committee-content-box,
+  .student-council-box {
+    padding: 10px !important;
+  }
+  .student-title-box,
+  .title-section {
+    padding: 10px !important;
+  }
+  .student-heading,
+  .student-subtitle,
+  .committee-title,
+  .mous-title,
+  .overview-title,
+  .fees-title,
+  .gre-title,
+  .collab-content h3,
+  .activities-content h3,
+  .events-content h3 {
+    font-size: 1.1em !important;
+    margin-bottom: 8px !important;
+  }
+  .breadcrumb-arrow,
+  .breadcrumb-separator,
+  .breadcrumb-separatorcontact,
+  .breadcrumb-separatorNA,
+  .breadcrumb-separatorRU,
+  .breadcrumb-separatorJP {
+    margin: 0 2px !important;
+  }
+  .query-modal {
+    max-width: 98vw !important;
+    padding: 10px !important;
+  }
+  .query-form {
+    padding: 10px !important;
+    gap: 8px !important;
+  }
+  .query-row {
+    flex-direction: column !important;
+    gap: 6px !important;
+  }
+  .qr-image {
+    width: 90vw !important;
+    height: 180px !important;
+  }
+  .flag-grid {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)) !important;
+    gap: 8px !important;
+  }
+  .flag-img {
+    width: 60px !important;
+  }
+  .minutes-header,
+  .download-header {
+    font-size: 15px !important;
+    padding: 8px !important;
+  }
+  .minutes-box,
+  .download-block {
+    padding: 8px !important;
+  }
+  .meeting-list li,
+  .download-list li {
+    font-size: 13px !important;
+    padding: 6px 0 !important;
+  }
+  .committee-columns,
+  .student-columns,
+  .policy-grid {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .committee-column,
+  .student-column,
+  .policy-card {
+    max-width: 100vw !important;
+    min-width: 0 !important;
+  }
+  .audit-item,
+  .achievement-box,
+  .policy-box {
+    padding: 10px !important;
+    font-size: 14px !important;
+  }
+  .modal-box,
+  .custom-modal-box {
+    width: 98vw !important;
+    padding: 10px !important;
+  }
+  .modal-img,
+  .custom-registrar-img {
+    width: 80px !important;
+    height: auto !important;
+  }
+  .modal-content,
+  .custom-modal-body {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .modal-text,
+  .custom-modal-title {
+    font-size: 1em !important;
+  }
+  .controller-content {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .controller-img {
+    width: 80px !important;
+  }
+  .controller-right {
+    min-width: 0 !important;
+  }
+  .faculty-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 10px !important;
+  }
+  .faculty-image {
+    width: 80px !important;
+    margin-right: 0 !important;
+    margin-bottom: 8px !important;
+  }
+  .faculty-details {
+    font-size: 13px !important;
+  }
+  .faculty-name {
+    font-size: 15px !important;
+  }
+  .breadcrumb-bar,
+  .breadcrumb-header,
+  .breadcrumb-headerNA,
+  .breadcrumb-headerRU,
+  .breadcrumb-headerJP {
+    font-size: 13px !important;
+    padding: 6px !important;
+  }
+  .slide-caption h2,
+  .alumni-main-heading,
+  .banner-title,
+  .chronicle-title,
+  .research-about-title,
+  .research-vision-title,
+  .research-mission-title {
+    font-size: 1.2em !important;
+  }
+  .breadcrumb-content,
+  .breadcrumb-containercontact,
+  .breadcrumb-containerNA,
+  .breadcrumb-containerRU,
+  .breadcrumb-containerJP {
+    gap: 6px !important;
+    font-size: 13px !important;
+  }
+  .breadcrumb-homecontact,
+  .breadcrumb-linkNA,
+  .breadcrumb-linkRU,
+  .breadcrumb-linkJP {
+    font-size: 13px !important;
+  }
+  .breadcrumb-currentcontact,
+  .breadcrumb-textNA,
+  .breadcrumb-textRU,
+  .breadcrumb-textJP {
+    font-size: 13px !important;
+  }
+  .breadcrumb-icon,
+  .breadcrumb-iconNA,
+  .breadcrumb-iconRU,
+  .breadcrumb-iconJP {
+    font-size: 15px !important;
+  }
+  .breadcrumb-separatorcontact,
+  .breadcrumb-separatorNA,
+  .breadcrumb-separatorRU,
+  .breadcrumb-separatorJP {
+    font-size: 15px !important;
+  }
+  .minutes-heading,
+  .custom-chancellor-heading,
+  .custom-modal-title,
+  .controller-heading,
+  .policy-title {
+    font-size: 1.1em !important;
+  }
+  .custom-chancellor-divider {
+    height: 2px !important;
+    margin-bottom: 10px !important;
+  }
+  .custom-registrar-content {
+    gap: 10px !important;
+  }
+  .custom-registrar-card {
+    width: 100% !important;
+    padding: 10px !important;
+  }
+  .custom-modal-close {
+    font-size: 18px !important;
+    top: 6px !important;
+    right: 8px !important;
+  }
+  .custom-close-button {
+    padding: 6px 12px !important;
+    font-size: 13px !important;
+  }
+  .controller-email-block {
+    padding: 4px 8px !important;
+    font-size: 13px !important;
+  }
+  .controller-arrow {
+    font-size: 13px !important;
+    padding: 4px 8px !important;
+  }
+  .modal-close {
+    font-size: 18px !important;
+    top: 6px !important;
+    right: 8px !important;
+  }
+  .modal-btn {
+    padding: 6px 12px !important;
+    font-size: 13px !important;
+  }
+  .email-link {
+    font-size: 13px !important;
+    padding: 4px 8px !important;
+  }
+  .modal-divider {
+    height: 1px !important;
+    margin: 4px 0 8px !important;
+  }
+  .modal-content {
+    gap: 10px !important;
+  }
+  .modal-img {
+    width: 80px !important;
+    height: auto !important;
+  }
+  .modal-text {
+    font-size: 13px !important;
+  }
+  .registrar-content {
+    gap: 10px !important;
+  }
+  .registrar-card {
+    width: 100% !important;
+    padding: 10px !important;
+  }
+  .registrar-img {
+    width: 80px !important;
+    height: auto !important;
+  }
+  .chancellor-heading {
+    font-size: 1.1em !important;
+    margin-bottom: 8px !important;
+  }
+  .arrow-button {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 13px !important;
+    padding: 4px !important;
+  }
+  .controller-wrapper {
+    padding: 10px !important;
+  }
+  .controller-heading {
+    font-size: 1.1em !important;
+  }
+  .controller-divider {
+    height: 1px !important;
+    margin: 6px 0 10px !important;
+  }
+  .controller-content {
+    gap: 10px !important;
+  }
+  .controller-img {
+    width: 80px !important;
+    height: auto !important;
+  }
+  .controller-right {
+    min-width: 0 !important;
+  }
+  .controller-name {
+    font-size: 15px !important;
+  }
+  .controller-title {
+    font-size: 13px !important;
+    margin: 2px 0 8px !important;
+  }
+  .controller-email-block {
+    padding: 4px 8px !important;
+    font-size: 13px !important;
+  }
+  .controller-arrow {
+    font-size: 13px !important;
+    padding: 4px 8px !important;
+  }
+  .faculty-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 10px !important;
+  }
+  .faculty-image {
+    width: 80px !important;
+    margin-right: 0 !important;
+    margin-bottom: 8px !important;
+  }
+  .faculty-details {
+    font-size: 13px !important;
+  }
+  .faculty-name {
+    font-size: 15px !important;
+  }
+  .breadcrumb-bar,
+  .breadcrumb-header,
+  .breadcrumb-headerNA,
+  .breadcrumb-headerRU,
+  .breadcrumb-headerJP {
+    font-size: 13px !important;
+    padding: 6px !important;
+  }
+  .slide-caption h2,
+  .alumni-main-heading,
+  .banner-title,
+  .chronicle-title,
+  .research-about-title,
+  .research-vision-title,
+  .research-mission-title {
+    font-size: 1.2em !important;
+  }
+  .breadcrumb-content,
+  .breadcrumb-containercontact,
+  .breadcrumb-containerNA,
+  .breadcrumb-containerRU,
+  .breadcrumb-containerJP {
+    gap: 6px !important;
+    font-size: 13px !important;
+  }
+  .breadcrumb-homecontact,
+  .breadcrumb-linkNA,
+  .breadcrumb-linkRU,
+  .breadcrumb-linkJP {
+    font-size: 13px !important;
+  }
+  .breadcrumb-currentcontact,
+  .breadcrumb-textNA,
+  .breadcrumb-textRU,
+  .breadcrumb-textJP {
+    font-size: 13px !important;
+  }
+  .breadcrumb-icon,
+  .breadcrumb-iconNA,
+  .breadcrumb-iconRU,
+  .breadcrumb-iconJP {
+    font-size: 15px !important;
+  }
+  .breadcrumb-separatorcontact,
+  .breadcrumb-separatorNA,
+  .breadcrumb-separatorRU,
+  .breadcrumb-separatorJP {
+    font-size: 15px !important;
+  }
+  .minutes-heading,
+  .custom-chancellor-heading,
+  .custom-modal-title,
+  .controller-heading,
+  .policy-title {
+    font-size: 1.1em !important;
+  }
+  .custom-chancellor-divider {
+    height: 2px !important;
+    margin-bottom: 10px !important;
+  }
+  .custom-registrar-content {
+    gap: 10px !important;
+  }
+  .custom-registrar-card {
+    width: 100% !important;
+    padding: 10px !important;
+  }
+  .custom-modal-close {
+    font-size: 18px !important;
+    top: 6px !important;
+    right: 8px !important;
+  }
+  .custom-close-button {
+    padding: 6px 12px !important;
+    font-size: 13px !important;
+  }
+  .controller-email-block {
+    padding: 4px 8px !important;
+    font-size: 13px !important;
+  }
+  .controller-arrow {
+    font-size: 13px !important;
+    padding: 4px 8px !important;
+  }
+  .modal-close {
+    font-size: 18px !important;
+    top: 6px !important;
+    right: 8px !important;
+  }
+  .modal-btn {
+    padding: 6px 12px !important;
+    font-size: 13px !important;
+  }
+  .email-link {
+    font-size: 13px !important;
+    padding: 4px 8px !important;
+  }
+  .modal-divider {
+    height: 1px !important;
+    margin: 4px 0 8px !important;
+  }
+  .modal-content {
+    gap: 10px !important;
+  }
+  .modal-img {
+    width: 80px !important;
+    height: auto !important;
+  }
+  .modal-text {
+    font-size: 13px !important;
+  }
+  .registrar-content {
+    gap: 10px !important;
+  }
+  .registrar-card {
+    width: 100% !important;
+    padding: 10px !important;
+  }
+  .registrar-img {
+    width: 80px !important;
+    height: auto !important;
+  }
+  .chancellor-heading {
+    font-size: 1.1em !important;
+    margin-bottom: 8px !important;
+  }
+  .arrow-button {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 13px !important;
+    padding: 4px !important;
+  }
+  .controller-wrapper {
+    padding: 10px !important;
+  }
+  .controller-heading {
+    font-size: 1.1em !important;
+  }
+  .controller-divider {
+    height: 1px !important;
+    margin: 6px 0 10px !important;
+  }
+  .controller-content {
+    gap: 10px !important;
+  }
+  .controller-img {
+    width: 80px !important;
+    height: auto !important;
+  }
+  .controller-right {
+    min-width: 0 !important;
+  }
+  .controller-name {
+    font-size: 15px !important;
+  }
+  .controller-title {
+    font-size: 13px !important;
+    margin: 2px 0 8px !important;
+  }
+  .controller-email-block {
+    padding: 4px 8px !important;
+    font-size: 13px !important;
+  }
+  .controller-arrow {
+    font-size: 13px !important;
+    padding: 4px 8px !important;
+  }
+  .faculty-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 10px !important;
+  }
+  .faculty-image {
+    width: 80px !important;
+    margin-right: 0 !important;
+    margin-bottom: 8px !important;
+  }
+  .faculty-details {
+    font-size: 13px !important;
+  }
+  .faculty-name {
+    font-size: 15px !important;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  body {
+    padding-top: 80px !important;
+  }
+  .navbar,
+  .secondary-navbar,
+  .marquee-container {
+    font-size: 11px !important;
+    padding: 0 2px !important;
+    height: auto !important;
+  }
+  .footer__container {
+    padding: 0 2px !important;
+    gap: 10px !important;
+  }
+  .footer__bottom {
+    padding: 6px 0 !important;
+    gap: 4px !important;
+  }
+  .slide-caption {
+    font-size: 0.9em !important;
+    padding: 0.3rem !important;
+  }
+  .banner-button {
+    padding: 8px 4px !important;
+    font-size: 11px !important;
+  }
+  .professor-profile {
+    padding: 6px !important;
+    max-width: 100vw !important;
+  }
+  .professor-profile img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  .professor-details h4 {
+    font-size: 0.9em !important;
+  }
+  .professor-details p {
+    font-size: 0.8em !important;
+  }
+  .breadcrumb-bar,
+  .breadcrumb-header,
+  .breadcrumb-headerNA,
+  .breadcrumb-headerRU,
+  .breadcrumb-headerJP,
+  .mous-header,
+  .overview-header,
+  .fees-header,
+  .gre-header,
+  .collab-header,
+  .activities-header,
+  .events-header {
+    font-size: 11px !important;
+    padding: 4px !important;
+  }
+  .slide-container,
+  .slide-inner,
+  .slide-img,
+  .alumni-image-container,
+  .alumni-background-image,
+  .alumni-overlay-image {
+    height: 90px !important;
+    min-height: 60px !important;
+    max-height: 120px !important;
+  }
+  .award-img,
+  .gallery-item img,
+  .card-image,
+  .universitypage-card-image {
+    height: 60px !important;
+    min-height: 40px !important;
+    max-height: 80px !important;
+  }
+  .award-card,
+  .student-white-box,
+  .committee-content-box,
+  .student-council-box {
+    padding: 6px !important;
+  }
+  .student-title-box,
+  .title-section {
+    padding: 6px !important;
+  }
+  .student-heading,
+  .student-subtitle,
+  .committee-title,
+  .mous-title,
+  .overview-title,
+  .fees-title,
+  .gre-title,
+  .collab-content h3,
+  .activities-content h3,
+  .events-content h3 {
+    font-size: 1em !important;
+    margin-bottom: 4px !important;
+  }
+  .breadcrumb-arrow,
+  .breadcrumb-separator,
+  .breadcrumb-separatorcontact,
+  .breadcrumb-separatorNA,
+  .breadcrumb-separatorRU,
+  .breadcrumb-separatorJP {
+    margin: 0 1px !important;
+  }
+  .query-modal {
+    max-width: 99vw !important;
+    padding: 4px !important;
+  }
+  .query-form {
+    padding: 4px !important;
+    gap: 4px !important;
+  }
+  .query-row {
+    gap: 2px !important;
+  }
+  .qr-image {
+    width: 99vw !important;
+    height: 80px !important;
+  }
+  .flag-grid {
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr)) !important;
+    gap: 4px !important;
+  }
+  .flag-img {
+    width: 40px !important;
+  }
+  .minutes-header,
+  .download-header {
+    font-size: 11px !important;
+    padding: 4px !important;
+  }
+  .minutes-box,
+  .download-block {
+    padding: 4px !important;
+  }
+  .meeting-list li,
+  .download-list li {
+    font-size: 10px !important;
+    padding: 2px 0 !important;
+  }
+  .committee-columns,
+  .student-columns,
+  .policy-grid {
+    gap: 4px !important;
+  }
+  .committee-column,
+  .student-column,
+  .policy-card {
+    max-width: 99vw !important;
+  }
+  .audit-item,
+  .achievement-box,
+  .policy-box {
+    padding: 4px !important;
+    font-size: 11px !important;
+  }
+  .modal-box,
+  .custom-modal-box {
+    width: 99vw !important;
+    padding: 4px !important;
+  }
+  .modal-img,
+  .custom-registrar-img {
+    width: 40px !important;
+    height: auto !important;
+  }
+  .modal-content,
+  .custom-modal-body {
+    gap: 4px !important;
+  }
+  .modal-text,
+  .custom-modal-title {
+    font-size: 0.9em !important;
+  }
+  .controller-content {
+    gap: 4px !important;
+  }
+  .controller-img {
+    width: 40px !important;
+  }
+  .controller-right {
+    min-width: 0 !important;
+  }
+  .faculty-card {
+    padding: 4px !important;
+  }
+  .faculty-image {
+    width: 40px !important;
+    margin-bottom: 4px !important;
+  }
+  .faculty-details {
+    font-size: 10px !important;
+  }
+  .faculty-name {
+    font-size: 11px !important;
+  }
+}
+
